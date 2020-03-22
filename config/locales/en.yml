@@ -189,3 +189,4 @@ en:
       nhs_number:
         label: NHS Number
         custom_error: NHS number is required
+        invalid_nhs_number: NHS number is not valid

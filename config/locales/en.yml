@@ -189,4 +189,8 @@ en:
       nhs_number:
         label: NHS Number
         custom_error: NHS number is required
-        invalid_nhs_number: NHS number is not valid
+      errors:
+        missing: NHS number is required
+        must_be_a_number: NHS number must be a number
+        must_be_ten_digits: NHS number must be ten digits
+        must_have_checksum: NHS number must be valid

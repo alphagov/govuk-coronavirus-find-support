@@ -45,5 +45,3 @@ RSpec.describe CoronavirusForm::NhsNumberController, type: :controller do
     end
   end
 end
-
-

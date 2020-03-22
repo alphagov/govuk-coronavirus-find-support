@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe NhsNumberValidatorHelper, :type => :helper do
+RSpec.describe NhsNumberValidatorHelper, type: :helper do
   context "with a correct length number" do
     it "returns true when a valid nhs number is passed in" do
       [1234567881, 9434765919, 9434765870, 9434765919, 4012032135].each do |n|

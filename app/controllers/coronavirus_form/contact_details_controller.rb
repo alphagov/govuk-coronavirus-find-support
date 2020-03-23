@@ -2,18 +2,21 @@
 
 class CoronavirusForm::ContactDetailsController < ApplicationController
   def show
+    session[:contact_details] ||= {}
     render "coronavirus_form/#{PAGE}"
   end
 
   def submit
-    contact_details = {
-      phone_number_calls: sanitize(params[:phone_number_calls]&.strip).presence,
-      phone_number_texts: sanitize(params[:phone_number_texts]&.strip).presence,
-      email: sanitize(params[:email]&.strip).presence,
-    }
-    session[:contact_details] = contact_details
+    session[:contact_details] ||= {}
+    session[:contact_details][:phone_number_calls] = sanitize(params[:phone_number_calls]&.strip).presence
+    session[:contact_details][:phone_number_texts] = sanitize(params[:phone_number_texts]&.strip).presence
+    session[:contact_details][:email] = sanitize(params[:email]&.strip).presence
 
-    invalid_fields = contact_details[:email] ? validate_email_address("email", contact_details[:email]) : []
+    invalid_fields = if session[:contact_details].dig(:email)
+        validate_email_address("email", session[:contact_details].dig(:email))
+      else
+        []
+      end
 
     if invalid_fields.any?
       flash.now[:validation] = invalid_fields

@@ -13,9 +13,9 @@ class CoronavirusForm::ContactDetailsController < ApplicationController
     session[:contact_details][:email] = sanitize(params[:email]&.strip).presence
 
     invalid_fields = if session[:contact_details].dig(:email)
-        validate_email_address("email", session[:contact_details].dig(:email))
-      else
-        []
+                       validate_email_address("email", session[:contact_details].dig(:email))
+                     else
+                       []
       end
 
     if invalid_fields.any?

@@ -2,20 +2,20 @@
 
 class CoronavirusForm::DateOfBirthController < ApplicationController
   def show
-    session["date_of_birth"] ||= {}
+    session[:date_of_birth] ||= {}
     render "coronavirus_form/#{PAGE}"
   end
 
   def submit
-    session["date_of_birth"] ||= {}
-    session["date_of_birth"]["day"] = sanitize(params.dig("date_of_birth", "day")&.strip).presence
-    session["date_of_birth"]["month"] = sanitize(params.dig("date_of_birth", "month")&.strip).presence
-    session["date_of_birth"]["year"] = sanitize(params.dig("date_of_birth", "year")&.strip).presence
+    session[:date_of_birth] ||= {}
+    session[:date_of_birth]["day"] = sanitize(params.dig("date_of_birth", "day")&.strip).presence
+    session[:date_of_birth]["month"] = sanitize(params.dig("date_of_birth", "month")&.strip).presence
+    session[:date_of_birth]["year"] = sanitize(params.dig("date_of_birth", "year")&.strip).presence
 
     invalid_fields = validate_date_of_birth(
-      session["date_of_birth"]["year"],
-      session["date_of_birth"]["month"],
-      session["date_of_birth"]["day"],
+      session[:date_of_birth]["year"],
+      session[:date_of_birth]["month"],
+      session[:date_of_birth]["day"],
       "date_of_birth",
     )
 

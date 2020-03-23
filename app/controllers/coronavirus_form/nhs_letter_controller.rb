@@ -2,16 +2,17 @@
 
 class CoronavirusForm::NhsLetterController < ApplicationController
   def show
+    session[:nhs_letter] ||= ""
     render "coronavirus_form/#{PAGE}"
   end
 
   def submit
-    nhs_letter = sanitize(params[:nhs_letter]).presence
-    session[:nhs_letter] = nhs_letter
+    session[:nhs_letter] ||= ""
+    session[:nhs_letter] = sanitize(params[:nhs_letter]).presence
 
     invalid_fields = validate_radio_field(
       PAGE,
-      radio: nhs_letter,
+      radio: session[:nhs_letter],
     )
 
     if invalid_fields.any?

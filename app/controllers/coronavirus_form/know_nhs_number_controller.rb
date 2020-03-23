@@ -2,18 +2,19 @@
 
 class CoronavirusForm::KnowNhsNumberController < ApplicationController
   def show
+    session[:know_nhs_number] ||= ""
     render "coronavirus_form/#{PAGE}"
   end
 
   def submit
-    know_nhs_number = sanitize(params[:know_nhs_number]).presence
-    session[:know_nhs_number] = know_nhs_number
+    session[:know_nhs_number] ||= ""
+    session[:know_nhs_number] = sanitize(params[:know_nhs_number]).presence
 
     session[:nhs_number] = nil if I18n.t("coronavirus_form.questions.know_nhs_number.options.option_no.label")
 
     invalid_fields = validate_radio_field(
       PAGE,
-      radio: know_nhs_number,
+      radio: session[:know_nhs_number],
     )
 
     if invalid_fields.any?

@@ -4,16 +4,17 @@ class CoronavirusForm::LiveInEnglandController < ApplicationController
   skip_before_action :check_first_question
 
   def show
+    session[:live_in_england] ||= ""
     render "coronavirus_form/#{PAGE}"
   end
 
   def submit
-    live_in_england = sanitize(params[:live_in_england]).presence
-    session[:live_in_england] = live_in_england
+    session[:live_in_england] ||= ""
+    session[:live_in_england] = sanitize(params[:live_in_england]).presence
 
     invalid_fields = validate_radio_field(
       PAGE,
-      radio: live_in_england,
+      radio: session[:live_in_england],
     )
 
     if invalid_fields.any?

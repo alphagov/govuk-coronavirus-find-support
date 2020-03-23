@@ -4,6 +4,7 @@ class CoronavirusForm::NhsNumberController < ApplicationController
   include NhsNumberValidatorHelper
 
   def show
+    session[:nhs_number] ||= ""
     render "coronavirus_form/#{PAGE}"
   end
 

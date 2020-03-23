@@ -2,16 +2,17 @@
 
 class CoronavirusForm::EssentialSuppliesController < ApplicationController
   def show
+    session[:essential_supplies] ||= ""
     render "coronavirus_form/#{PAGE}"
   end
 
   def submit
-    essential_supplies = sanitize(params[:essential_supplies]).presence
-    session[:essential_supplies] = essential_supplies
+    session[:essential_supplies] ||= ""
+    session[:essential_supplies] = sanitize(params[:essential_supplies]).presence
 
     invalid_fields = validate_radio_field(
       PAGE,
-      radio: essential_supplies,
+      radio: session[:essential_supplies],
     )
 
     if invalid_fields.any?

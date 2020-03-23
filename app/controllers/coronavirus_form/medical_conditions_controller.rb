@@ -2,16 +2,17 @@
 
 class CoronavirusForm::MedicalConditionsController < ApplicationController
   def show
+    session[:medical_conditions] ||= ""
     render "coronavirus_form/#{PAGE}"
   end
 
   def submit
-    medical_conditions = sanitize(params[:medical_conditions]).presence
-    session[:medical_conditions] = medical_conditions
+    session[:medical_conditions] ||= ""
+    session[:medical_conditions] = sanitize(params[:medical_conditions]).presence
 
     invalid_fields = validate_radio_field(
       PAGE,
-      radio: medical_conditions,
+      radio: session[:medical_conditions],
     )
 
     if invalid_fields.any?

@@ -19,3 +19,12 @@ Then(/I can see the (.*) radio button options$/) do |form_page|
     expect(page).to have_content(item[:label])
   end
 end
+
+When(/^I visit "(.*)"/) do |slug|
+  visit slug
+end
+
+Then(/I will be redirected to "(.*)"/) do |slug|
+  expect(page.status_code).to eq(200)
+  expect(page).to have_current_path(slug)
+end

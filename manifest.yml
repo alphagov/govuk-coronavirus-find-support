@@ -1,10 +1,10 @@
 ---
 applications:
-- name: govuk-coronavirus-vulnerable-people-form
+- name: govuk-coronavirus-find-support
   buildpack: ruby_buildpack
   memory: 2G
   services:
-  - govuk-coronavirus-vulnerable-people-form-db
+  - govuk-coronavirus-find-support-db
   - logit-ssl-drain
   - splunk-ssl-drain
   env:
@@ -15,4 +15,3 @@ applications:
     # AWS_ACCESS_KEY_ID: '' # set by concourse with cf set-env
     # AWS_SECRET_ACCESS_KEY: '' # set by concourse with cf set-env
     # SECRET_KEY_BASE: '' # set by concourse with cf set-env
-    # AWS_DYNAMODB_SUBMISSIONS_TABLE_NAME: '' # set by concourse with cf set-env

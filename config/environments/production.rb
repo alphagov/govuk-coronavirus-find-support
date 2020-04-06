@@ -5,10 +5,8 @@ Rails.application.configure do
   # config/application.rb.
 
   config.hosts = [
-    "coronavirus-vulnerable-people.service.gov.uk",
-    "d18j9d8kwes7fb.cloudfront.net",
-    "govuk-coronavirus-vulnerable-people-form-prod.cloudapps.digital",
-    "govuk-coronavirus-vulnerable-people-form-stg.cloudapps.digital",
+    "govuk-coronavirus-find-support-prod.cloudapps.digital",
+    "govuk-coronavirus-find-support-stg.cloudapps.digital",
   ]
 
   # Code is not reloaded between requests.

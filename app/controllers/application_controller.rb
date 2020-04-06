@@ -43,8 +43,6 @@ private
   end
 
   def check_first_question
-    if session[:live_in_england].blank?
-      redirect_to controller: "coronavirus_form/live_in_england", action: "show"
-    end
+    # TODO - do we need to implement this? Or can people be deep linked into the form?
   end
 end

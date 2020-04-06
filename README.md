@@ -1,6 +1,8 @@
-# CoronavirusForm
+# GOV.UK coronavirus - find support
 
-This is an application for submitting a form.
+[![Build Status](https://travis-ci.com/alphagov/govuk-coronavirus-find-support.svg?branch=master)](https://travis-ci.com/alphagov/govuk-coronavirus-find-support)
+
+Helps people in the UK find relevant support during the Covid-19 pandemic.
 
 ## Getting started
 
@@ -9,22 +11,34 @@ locally on your machine.
 
 ### Prequisites
 
-You'll need an Amazon DynamoDB local instance running in a docker container. 
+You will need Postgres installed in order for bundler to install the `pg` gem (and `libpq-dev` if on Linux).  
 
 You'll need a JavaScript runtime: https://github.com/rails/execjs  
 Clone the app and run `bundle` locally.  
 
-### Running DynamoDB 
+### Running Postgres
+
+#### Locally
+
+    brew install postgres
+    postgres -D /usr/local/var/postgres
+
+Then set up your local database
+
+    rails db:setup
 
 #### Docker
-Run the following to set up the local version of DynamoDB
 
-```
-    docker pull amazon/dynamodb-local 
-    docker run -d -p 8000:8000 amazon/dynamodb-local 
-```
+    docker pull postgres
+    docker run -d -e POSTGRES_PASSWORD=password -e POSTGRES_USER=user -e POSTGRES_DB=coronavirus_form_development -p 5432:5432 postgres
 
-### Running the application (DynamoDB will need to be running)
+Then set up your Docker database
+
+    DATABASE_URL="postgres://user:password@localhost:5432/coronavirus_form_development" rails db:setup
+
+You'll then need to specify the `DATABASE_URL` environment variable before the below tasks.
+
+### Running the application (Postgres will need to be running)
 
     foreman start
 
@@ -36,7 +50,7 @@ Run the following to set up the local version of DynamoDB
 ## Deployment pipeline
 
 Every commit to master is deployed to GOV.UK PaaS by
-[this concourse pipeline](https://cd.gds-reliability.engineering/teams/govuk-tools/pipelines/govuk-corona-vulnerable-people-form),
+[this concourse pipeline](https://cd.gds-reliability.engineering/teams/govuk-tools/pipelines/govuk-corona-find-support),
 which is configured in [concourse/pipeline.yml](concourse/pipeline.yml).
 
 The concourse pipeline has credentials for the `govuk-forms-deployer` user in

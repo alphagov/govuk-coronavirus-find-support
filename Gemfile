@@ -4,19 +4,18 @@ ruby File.read(".ruby-version").strip
 
 source "https://rubygems.org"
 
-gem "rails", "~> 6.0.2"
-
 gem "asset_sync"
 gem "bootsnap", "~> 1"
-gem "dynamoid"
 gem "fog-aws"
 gem "govuk_app_config", "~> 2.1.1"
-gem "govuk_publishing_components", "~> 21.37.0"
+gem "govuk_publishing_components", "~> 21.38.0"
 gem "lograge"
+gem "pg", "~> 1"
 gem "puma", "~> 4.3"
+gem "rails", "~> 6.0.2"
+
 gem "sass-rails", "< 6"
 gem "sentry-raven", "~> 3.0"
-gem "timecop"
 gem "uglifier", "~> 4.2"
 
 group :development do
@@ -31,6 +30,7 @@ group :test do
   gem "mini_racer", "~> 0.2"
   gem "scss-lint", "~> 0.7.0", require: false
   gem "simplecov", "~> 0.16"
+  gem "timecop"
 end
 
 group :development, :test do

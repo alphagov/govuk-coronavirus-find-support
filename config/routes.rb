@@ -12,4 +12,6 @@ Rails.application.routes.draw do
 
     get "/session-expired", to: "session_expired#show"
   end
+
+  mount GovukPublishingComponents::Engine, at: "/component-guide"
 end

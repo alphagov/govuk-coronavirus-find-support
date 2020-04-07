@@ -14,7 +14,7 @@ gem "pg", "~> 1"
 gem "puma", "~> 4.3"
 gem "rails", "~> 6.0.2"
 
-gem "sass-rails", "< 6"
+gem "sass-rails", "< 7"
 gem "sentry-raven", "~> 3.0"
 gem "uglifier", "~> 4.2"
 

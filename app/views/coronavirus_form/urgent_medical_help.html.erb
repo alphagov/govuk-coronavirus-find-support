@@ -1,0 +1,33 @@
+<% content_for :title do %><%= t("coronavirus_form.questions.urgent_medical_help.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("coronavirus_form.questions.urgent_medical_help.title") %>" />
+<% end %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+<% end %>
+
+<%= form_tag({},
+  "data-module": "track-coronavirus-form-vulnerable-people-urgent_medical_help",
+  "data-question-key": "urgent_medical_help",
+  "id": "urgent_medical_help",
+  "novalidate": "true",
+) do %>
+
+<%= render "govuk_publishing_components/components/radio", {
+  heading: t("coronavirus_form.questions.urgent_medical_help.title"),
+  is_page_heading: true,
+  name: "urgent_medical_help",
+  error_message: error_items("urgent_medical_help"),
+  description: t("coronavirus_form.questions.urgent_medical_help.description"),
+  items: t("coronavirus_form.questions.urgent_medical_help.options").map do |option|
+    {
+      id: "option_#{option.parameterize.underscore}",
+      value: option.parameterize.underscore,
+      text: option,
+      checked: @form_responses[:urgent_medical_help] == option,
+    }
+  end
+} %>
+<%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
+<% end %>

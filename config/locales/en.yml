@@ -105,4 +105,10 @@ en:
       <p class="govuk-body">We do this for your security. We've deleted all the details you entered to protect your data.</p>
   coronavirus_form:
     errors: {}
-    questions: {}
+    questions:
+      still_working:
+        title: "Are you still going in to work even though you’re not a key worker?"
+        options:
+          - "Yes"
+          - "I do not know if I’m a key worker"
+          - "No"

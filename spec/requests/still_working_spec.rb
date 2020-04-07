@@ -41,5 +41,12 @@ RSpec.describe "still-working" do
 
       expect(response).to redirect_to(next_question_path)
     end
+
+    xit "shows an error when no radio button selected" do
+      post still_working_path
+
+      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.still_working.title"))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.still_working.custom_select_error"))
+    end
   end
 end

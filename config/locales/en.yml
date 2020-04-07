@@ -108,6 +108,7 @@ en:
     questions:
       still_working:
         title: "Are you still going in to work even though you’re not a key worker?"
+        title_caption: "Going in to work"
         options:
           - "Yes"
           - "I do not know if I’m a key worker"

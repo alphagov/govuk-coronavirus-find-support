@@ -104,7 +104,11 @@ en:
 
       <p class="govuk-body">We do this for your security. We've deleted all the details you entered to protect your data.</p>
   coronavirus_form:
-    errors: {}
+    errors:
+      page_title_prefix: 'Error: '
+      heading: "There is a problem"
+      radio_field: "Select %{field}"
+      checkbox_field: "Select at least one %{field}"
     questions:
       still_working:
         title: "Are you still going in to work even though you’re not a key worker?"

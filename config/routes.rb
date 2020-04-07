@@ -10,6 +10,9 @@ Rails.application.routes.draw do
     get "/privacy", to: "privacy#show"
     get "/accessibility-statement", to: "accessibility_statement#show"
 
+    get "/still-working", to: "still_working#show"
+    post "/still-working", to: "still_working#submit"
+
     get "/session-expired", to: "session_expired#show"
   end
 

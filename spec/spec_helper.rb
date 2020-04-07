@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "byebug"
+require "rack_session_access/capybara"
 require "simplecov"
 
 ENV["RAILS_ENV"] ||= "test"

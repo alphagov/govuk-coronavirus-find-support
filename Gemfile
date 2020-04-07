@@ -12,6 +12,7 @@ gem "govuk_publishing_components", "~> 21.38.4"
 gem "lograge"
 gem "pg", "~> 1"
 gem "puma", "~> 4.3"
+gem "rack_session_access", "~> 0.2"
 gem "rails", "~> 6.0.2"
 
 gem "sass-rails", "< 6"

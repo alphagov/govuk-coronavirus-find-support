@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     get "/urgent-medical-help", to: "urgent_medical_help#show"
     post "/urgent-medical-help", to: "urgent_medical_help#submit"
 
+    # Question: Are you able to get food?
+    get "/get-food", to: "get_food#show"
+    post "/get-food", to: "get_food#submit"
+
     # Question: Have you been made unemployed or put on temporary leave (furloughed)?
     get "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#show"
     post "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#submit"

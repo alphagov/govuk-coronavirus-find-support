@@ -1,0 +1,59 @@
+en:
+  find_support:
+    defaults:
+      options:
+        yes: "Yes"
+        soon: "I might be soon"
+        no: "No"
+        not_sure: "Not sure"
+      errors:
+        one_required: "You must select an answer"
+    groups:
+      paying_bills: "Paying bills"
+      getting_food: "Getting food"
+      not_in_work: "Being unemployed or not having any work"
+      going_in_to_work: "Going in to work"
+      feeling_unsafe: "Feeling unsafe"
+      housing: "Having somewhere to live"
+      mental_health: "Mental health and wellbeing"
+    questions:
+      are_you_out_of_employment:
+        title: "Have you been made unemployed or put on temporary leave (furloughed)?"
+      are_you_non_keyworker_still_going_to_work:
+        title: "Are you still going in to work even though you’re not a key worker?"
+        special_options:
+          not_sure: "I do not know if I’m a key worker"
+      are_you_off_work_ill_or_isolating:
+        title: "Are you off work because you’re ill or self_isolating?"
+      work_concern_household_with_covid_19:
+        title: "Are you worried about going into work because you live with someone vulnerable to coronavirus?"
+      self_employed_or_sole_trader:
+        title: "Are you self_employed or a sole trader?"
+      hard_to_afford_housing:
+        title: "Are you finding it hard to afford rent, your mortgage or bills?"
+      hard_to_afford_food:
+        title: "Are you finding it hard to afford food?"
+      able_to_get_food:
+        title: "Are you able to get food?"
+      feeling_unsafe:
+        title: "Do you feel safe where you live?"
+        special_options:
+          yes_but_someone_else: "Yes but I’m concerned about the safety of someone else"
+      housing:
+        title: "Do you have somewhere to live?"
+        options:
+          soon: "I do now but I might lose it"
+      eviction:
+        title: "Have you been evicted?"
+        special_options:
+          soon: "I might be evicted soon"
+      mental_health:
+        title: "Are you worried about your mental health or someone else's mental health?"
+      leave_home_if_necessary:
+        title: "Are you able to leave your home if absolutely necessary?"
+        special_options:
+          household_isolation: "I cannot go out because I have coronavirus, or someone in my household does"
+          at_risk: "I cannot leave home because I think I’m at risk of severe illness from coronavirus"
+          disability: "I cannot go out because I have a disability"
+          other: " I’m unable to leave my home for another reason"
+

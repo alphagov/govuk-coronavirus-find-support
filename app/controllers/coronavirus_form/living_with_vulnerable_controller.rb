@@ -8,6 +8,7 @@ class CoronavirusForm::LivingWithVulnerableController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      group,
       radio: @form_responses[:living_with_vulnerable],
     )
 
@@ -28,4 +29,8 @@ private
   end
 
   def previous_path; end
+
+  def group
+    "going_in_to_work"
+  end
 end

@@ -8,6 +8,7 @@ class CoronavirusForm::HaveSomewhereToLiveController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      group,
       radio: @form_responses[:have_somewhere_to_live],
     )
 
@@ -29,5 +30,9 @@ private
 
   def previous_path
     "/" # TODO: fix with proper previous path
+  end
+
+  def group
+    "somewhere_to_live"
   end
 end

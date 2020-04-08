@@ -8,6 +8,7 @@ class CoronavirusForm::MentalHealthWorriesController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      group,
       radio: @form_responses[:mental_health_worries],
     )
 
@@ -28,4 +29,8 @@ private
   end
 
   def previous_path; end
+
+  def group
+    "mental_health"
+  end
 end

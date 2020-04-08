@@ -1,6 +1,6 @@
-<% content_for :title do %><%= t("coronavirus_form.questions.#{question}.title") %><% end %>
+<% content_for :title do %><%= t("coronavirus_form.groups.#{group}.questions.#{question}.title") %><% end %>
 <% content_for :meta_tags do %>
-  <meta name="description" content="<%= t("coronavirus_form.questions.#{question}.title") %>" />
+  <meta name="description" content="<%= t("coronavirus_form.groups.#{group}.questions.#{question}.title") %>" />
 <% end %>
 
 <% content_for :back_link do %>
@@ -15,11 +15,12 @@
 ) do %>
 
 <%= render "govuk_publishing_components/components/radio", {
-  heading: t("coronavirus_form.questions.#{question}.title"),
+  heading: t("coronavirus_form.groups.#{group}.questions.#{question}.title"),
+  heading_caption: t("coronavirus_form.groups.#{group}.title", { default: false }),
   is_page_heading: true,
   name: question,
   error_message: error_items(question),
-  items: t("coronavirus_form.questions.#{question}.options").map do |option|
+  items: t("coronavirus_form.groups.#{group}.questions.#{question}.options").map do |option|
       {
         value: option,
         text: option,

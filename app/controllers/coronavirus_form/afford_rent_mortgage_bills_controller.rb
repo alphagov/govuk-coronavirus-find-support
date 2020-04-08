@@ -8,6 +8,7 @@ class CoronavirusForm::AffordRentMortgageBillsController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      group,
       radio: @form_responses[:afford_rent_mortgage_bills],
     )
 
@@ -28,4 +29,8 @@ private
   end
 
   def previous_path; end
+
+  def group
+    "paying_bills"
+  end
 end

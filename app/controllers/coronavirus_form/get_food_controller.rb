@@ -8,6 +8,7 @@ class CoronavirusForm::GetFoodController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      "getting_food",
       radio: @form_responses[:get_food],
     )
 

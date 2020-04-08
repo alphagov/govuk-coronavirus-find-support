@@ -8,6 +8,7 @@ class CoronavirusForm::StillWorkingController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      "going_in_to_work",
       radio: @form_responses[:still_working],
     )
 

@@ -8,6 +8,7 @@ class CoronavirusForm::SelfEmployedController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      "being_unemployed",
       radio: @form_responses[:self_employed],
     )
 

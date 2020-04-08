@@ -10,6 +10,7 @@ class CoronavirusForm::UrgentMedicalHelpController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      "help",
       radio: @form_responses[:urgent_medical_help],
     )
 

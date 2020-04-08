@@ -8,6 +8,7 @@ class CoronavirusForm::FeelSafeController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      "feeling_unsafe",
       radio: @form_responses[:feel_safe],
     )
 

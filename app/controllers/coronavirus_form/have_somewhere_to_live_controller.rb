@@ -8,6 +8,7 @@ class CoronavirusForm::HaveSomewhereToLiveController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      "somewhere_to_live",
       radio: @form_responses[:have_somewhere_to_live],
     )
 

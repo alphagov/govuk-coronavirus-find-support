@@ -126,6 +126,7 @@ en:
             - "Having somewhere to live"
             - "Mental health and wellbeing"
             - "I’m not sure"
+        custom_select_error: "Please choose at least one option. If you don’t know, please choose \"I’m not sure\""
       help: # NHS question and 'What do you need help with'.
         # No title needed for this group.
         questions:

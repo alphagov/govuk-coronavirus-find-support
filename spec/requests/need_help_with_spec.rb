@@ -46,7 +46,7 @@ RSpec.describe "need-help-with" do
       post need_help_with_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.questions.need_help_with.title"))
-      expect(response.body).to have_content(I18n.t("coronavirus_form.errors.checkbox_field", field: I18n.t("coronavirus_form.questions.need_help_with.title").downcase))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.need_help_with.custom_select_error"))
     end
   end
 end

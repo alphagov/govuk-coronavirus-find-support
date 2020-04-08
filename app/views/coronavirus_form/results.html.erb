@@ -15,3 +15,12 @@
     </div>
   <% end %>
 </div>
+
+<% if no_results?(@form_responses) %>
+  <%= render partial: "no_results"  %>
+<% else %>
+  <% result_groups(@form_responses).each do |group| %>
+    <%= render partial: "result_group", locals: { group: group }  %>
+  <% end %>
+<% end %>
+

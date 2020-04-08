@@ -117,6 +117,14 @@ en:
           - "Yes"
           - "No"
         custom_select_error: "Select yes if you need urgent medical help"
+      have_you_been_made_unemployed:
+        title: "Have you been made unemployed or put on temporary leave (furloughed)?"
+        title_caption: "Being unemployed or not having any work"
+        options:
+          - "Yes"
+          - "I might be soon"
+          - "No"
+          - "Not sure"
       still_working:
         title: "Are you still going in to work even though you’re not a key worker?"
         options:

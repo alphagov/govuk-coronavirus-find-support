@@ -3,6 +3,15 @@ RSpec.describe QuestionsHelper, type: :helper do
     allow(helper).to receive(:questions_to_ask).and_return(%w(question_1 question_2))
   end
 
+  describe "#determine_user_questions" do
+    it "returns questions in correct order" do
+      groups = %i(paying_bills getting_food)
+      expected_questions = %w(afford_rent_mortgage_bills afford_food get_food)
+
+      expect(helper.determine_user_questions(groups)).to eq(expected_questions)
+    end
+  end
+
   describe "#next_question" do
     it "returns the next question key" do
       expect(helper.next_question("question_1")).to eq("question_2")

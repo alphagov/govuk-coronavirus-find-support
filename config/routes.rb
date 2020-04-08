@@ -10,8 +10,16 @@ Rails.application.routes.draw do
     get "/privacy", to: "privacy#show"
     get "/accessibility-statement", to: "accessibility_statement#show"
 
+    # Question: Do you need urgent medical help?
+    get "/urgent-medical-help", to: "urgent_medical_help#show"
+    post "/urgent-medical-help", to: "urgent_medical_help#submit"
+
+    # Question: Are you still going in to work even though you're not a key worker?
     get "/still-working", to: "still_working#show"
     post "/still-working", to: "still_working#submit"
+
+    get "/living-with-vulnerable", to: "living_with_vulnerable#show"
+    post "/living-with-vulnerable", to: "living_with_vulnerable#submit"
 
     get "/session-expired", to: "session_expired#show"
   end

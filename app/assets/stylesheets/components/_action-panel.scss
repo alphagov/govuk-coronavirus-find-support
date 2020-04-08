@@ -1,0 +1,14 @@
+.app-c-action-panel {
+  @include govuk-font($size: 19);
+
+  background-color: $app-covid-grey;
+  border: $govuk-border-width solid transparent;
+  box-sizing: border-box;
+  color: govuk-colour('white');
+  margin-bottom: govuk-spacing(3);
+  padding: govuk-spacing(7) - $govuk-border-width;
+
+  @include govuk-media-query($until: tablet) {
+    padding: govuk-spacing(6) - $govuk-border-width;
+  }
+}

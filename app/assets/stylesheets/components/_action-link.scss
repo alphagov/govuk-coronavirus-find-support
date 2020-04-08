@@ -1,6 +1,3 @@
-$app-covid-yellow: #ffe114;
-$app-covid-grey: #272828;
-
 .app-c-action-link {
   @include govuk-font($size: 19, $weight: bold);
   @include govuk-link-common;

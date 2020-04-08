@@ -8,7 +8,7 @@ class CoronavirusForm::HaveYouBeenMadeUnemployedController < ApplicationControll
 
     invalid_fields = validate_radio_field(
       controller_name,
-      "being_unemployed",
+      group,
       radio: @form_responses[:have_you_been_made_unemployed],
     )
 
@@ -30,5 +30,9 @@ private
 
   def previous_path
     "/" # TODO: fix with proper previous path
+  end
+
+  def group
+    "being_unemployed"
   end
 end

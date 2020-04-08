@@ -24,11 +24,13 @@ class ApplicationController < ActionController::Base
 
 private
 
-  helper_method :previous_path
+  helper_method :previous_path, :group
 
   def previous_path
     raise NotImplementedError, "Define a previous path"
   end
+
+  def group; end
 
   def log_validation_error(invalid_fields)
     logger.info do

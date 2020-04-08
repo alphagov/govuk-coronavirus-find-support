@@ -8,7 +8,7 @@ class CoronavirusForm::FeelSafeController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
-      "feeling_unsafe",
+      group,
       radio: @form_responses[:feel_safe],
     )
 
@@ -30,5 +30,9 @@ private
 
   def previous_path
     "/"
+  end
+
+  def group
+    "feeling_unsafe"
   end
 end

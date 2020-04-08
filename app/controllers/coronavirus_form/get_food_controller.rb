@@ -8,7 +8,7 @@ class CoronavirusForm::GetFoodController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
-      "getting_food",
+      group,
       radio: @form_responses[:get_food],
     )
 
@@ -29,4 +29,8 @@ private
   end
 
   def previous_path; end
+
+  def group
+    "getting_food"
+  end
 end

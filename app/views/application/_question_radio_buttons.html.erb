@@ -1,0 +1,33 @@
+<% content_for :title do %><%= t("coronavirus_form.questions.#{question}.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("coronavirus_form.questions.#{question}.title") %>" />
+<% end %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+<% end %>
+
+<%= form_tag({},
+  "data-module": "track-coronavirus-form-find-support-#{question.sub('_','-')}",
+  "data-question-key": question,
+  "id": question,
+  "novalidate": "true"
+) do %>
+
+<%= render "govuk_publishing_components/components/radio", {
+  heading: t("coronavirus_form.questions.#{question}.title"),
+  is_page_heading: true,
+  name: question,
+  error_message: error_items(question),
+  items: t("coronavirus_form.questions.#{question}.options").map do |option|
+      {
+        value: option,
+        text: option,
+        id: "option_#{option.parameterize.underscore}",
+        checked: @form_responses[question.to_sym] == option,
+      }
+    end
+} %>
+
+<%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
+<% end %>

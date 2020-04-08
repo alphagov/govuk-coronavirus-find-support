@@ -22,7 +22,7 @@ RSpec.describe "still-working" do
         visit still_working_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.questions.still_working.title"))
-        expect(page.find("input##{selected_option.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
       end
     end
   end

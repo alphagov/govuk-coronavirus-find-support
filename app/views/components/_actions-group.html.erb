@@ -1,0 +1,25 @@
+<%
+  title ||= nil
+  subsections ||= []
+%>
+<section class="app-c-actions-group">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-m"><%= title %></h2>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <% subsections.each do |subsection| %>
+        <h3 class="govuk-heading-s"><%= subsection[:title] %></h3>
+        <% if subsection[:items].any? %>
+          <ul class="govuk-list">
+            <% subsection[:items].each do |item| %>
+              <li>
+                <%= link_to item[:text], item[:href], class: "govuk-link" %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</section>

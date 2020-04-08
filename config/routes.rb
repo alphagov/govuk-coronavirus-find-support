@@ -72,6 +72,8 @@ Rails.application.routes.draw do
     # Results
     get "/results", to: "results#show"
 
+    get "/clear-session", to: "session#delete"
+
     get "/session-expired", to: "session_expired#show"
   end
 

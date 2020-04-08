@@ -33,6 +33,6 @@ private
   end
 
   def previous_path
-    "/"
+    previous_question(controller_name)
   end
 end

@@ -28,9 +28,11 @@ private
     session[:afford_rent_mortgage_bills] = @form_responses[:afford_rent_mortgage_bills]
   end
 
-  def previous_path; end
-
   def group
     "paying_bills"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

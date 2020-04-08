@@ -28,9 +28,11 @@ private
     session[:self_employed] = @form_responses[:self_employed]
   end
 
-  def previous_path; end
-
   def group
     "being_unemployed"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

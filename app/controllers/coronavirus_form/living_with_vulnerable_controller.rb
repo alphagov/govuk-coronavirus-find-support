@@ -28,9 +28,11 @@ private
     session[:living_with_vulnerable] = @form_responses[:living_with_vulnerable]
   end
 
-  def previous_path; end
-
   def group
     "going_in_to_work"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

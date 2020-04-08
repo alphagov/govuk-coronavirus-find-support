@@ -28,9 +28,11 @@ private
     session[:mental_health_worries] = @form_responses[:mental_health_worries]
   end
 
-  def previous_path; end
-
   def group
     "mental_health"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

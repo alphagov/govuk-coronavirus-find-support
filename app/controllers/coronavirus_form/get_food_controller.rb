@@ -28,9 +28,11 @@ private
     session[:get_food] = @form_responses[:get_food]
   end
 
-  def previous_path; end
-
   def group
     "getting_food"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

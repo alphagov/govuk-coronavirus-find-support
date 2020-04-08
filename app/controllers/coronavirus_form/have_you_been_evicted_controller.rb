@@ -29,7 +29,7 @@ private
   end
 
   def previous_path
-    "/" # TODO: fix with proper previous path
+    previous_question(controller_name)
   end
 
   def group

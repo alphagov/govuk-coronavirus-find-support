@@ -28,9 +28,11 @@ private
     session[:still_working] = @form_responses[:still_working]
   end
 
-  def previous_path; end
-
   def group
     "going_in_to_work"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

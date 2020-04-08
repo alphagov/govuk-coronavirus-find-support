@@ -170,3 +170,10 @@ en:
           - "I might be evicted soon"
           - "No"
           - "Not sure"
+      feel_safe:
+        title: "Do you feel safe where you live?"
+        options:
+          - "Yes"
+          - "Yes but I’m concerned about the safety of someone else"
+          - "No"
+          - "Not sure"

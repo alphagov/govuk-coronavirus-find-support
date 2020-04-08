@@ -18,10 +18,15 @@ Rails.application.routes.draw do
     get "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#show"
     post "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#submit"
 
+    # Question: Are you off work because you’re ill or self-isolating?
+    get "/are-you-off-work-ill", to: "are_you_off_work_ill#show"
+    post "/are-you-off-work-ill", to: "are_you_off_work_ill#submit"
+
     # Question: Are you still going in to work even though you're not a key worker?
     get "/still-working", to: "still_working#show"
     post "/still-working", to: "still_working#submit"
 
+    # Question: Are you worried about going into work because you live with someone vulnerable to coronavirus?
     get "/living-with-vulnerable", to: "living_with_vulnerable#show"
     post "/living-with-vulnerable", to: "living_with_vulnerable#submit"
 

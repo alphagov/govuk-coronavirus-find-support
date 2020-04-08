@@ -125,6 +125,13 @@ en:
           - "I might be soon"
           - "No"
           - "Not sure"
+      are_you_off_work_ill:
+        title: "Are you off work because you’re ill or self-isolating?"
+        title_caption: "Going in to work"
+        options:
+          - "Yes"
+          - "No"
+        custom_select_error: "Select yes if you’re off work because you’re ill or self-isolating"
       still_working:
         title: "Are you still going in to work even though you’re not a key worker?"
         options:

@@ -1,0 +1,33 @@
+<% content_for :title do %><%= t("coronavirus_form.questions.are_you_off_work_ill.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("coronavirus_form.questions.are_you_off_work_ill.title") %>" />
+<% end %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+<% end %>
+
+<%= form_tag({},
+  "data-module": "track-coronavirus-form-vulnerable-people-are-you-off-work-ill",
+  "data-question-key": "are_you_off_work_ill",
+  "id": "are_you_off_work_ill",
+  "novalidate": "true",
+) do %>
+
+<%= render "govuk_publishing_components/components/radio", {
+  heading: t("coronavirus_form.questions.are_you_off_work_ill.title"),
+  heading_caption: t("coronavirus_form.questions.are_you_off_work_ill.title_caption"),
+  is_page_heading: true,
+  name: "are_you_off_work_ill",
+  error_message: error_items("are_you_off_work_ill"),
+  items: t("coronavirus_form.questions.are_you_off_work_ill.options").map do |option|
+    {
+      id: "option_#{option.parameterize.underscore}",
+      value: option.parameterize.underscore,
+      text: option,
+      checked: @form_responses[:are_you_off_work_ill] == option,
+    }
+  end
+} %>
+<%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
+<% end %>

@@ -28,15 +28,24 @@ RSpec.describe "need-help-with" do
   end
 
   describe "POST /need-help-with" do
-    let(:selected) { ["Feeling unsafe"] }
+    let(:selected) { ["Being unemployed or not having any work"] }
 
     it "updates the session store" do
       post need_help_with_path, params: { need_help_with: selected }
 
-      expected_key = selected.first.parameterize.underscore.to_sym
+      expected_key = "being_unemployed".to_sym
 
       expect(session[:need_help_with]).to eq(selected)
-      expect(session[:selected_groups]).to match(hash_including(expected_key => true))
+      expect(session[:selected_groups]).to include(expected_key)
+    end
+
+    it "updates the session with an empty hash if the user selects I'm not sure" do
+      selected = ["I’m not sure"]
+
+      post need_help_with_path, params: { need_help_with: selected }
+
+      expect(session[:need_help_with]).to eq(selected)
+      expect(session[:selected_groups]).to be_empty
     end
 
     xit "redirects to the next question" do

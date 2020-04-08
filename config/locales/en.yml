@@ -119,13 +119,6 @@ en:
           need_help_with:
             title: "What do you need to find help with?"
             options:
-              - "Feeling unsafe"
-              - "Paying bills"
-              - "Getting food"
-              - "Being unemployed or not having any work"
-              - "Going in to work"
-              - "Having somewhere to live"
-              - "Mental health and wellbeing"
               - "I’m not sure"
             custom_select_error: "Please choose at least one option. If you don’t know, please choose \"I’m not sure\""
       help: # NHS question and 'What do you need help with'.

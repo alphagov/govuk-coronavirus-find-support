@@ -19,14 +19,7 @@
   is_page_heading: true,
   name: "#{controller_name}[]",
   error: error_items(controller_name),
-  items: t("coronavirus_form.groups.#{group}.questions.#{controller_name}.options").map do |option|
-      {
-        value: option,
-        label: option,
-        id: "option_#{option.parameterize.underscore}",
-        checked: @form_responses.fetch(controller_name.to_sym, []).include?(option),
-      }
-    end
+  items: items
 } %>
 
 <%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>

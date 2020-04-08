@@ -1,0 +1,17 @@
+<% content_for :title do %><%= t('get_help_from_nhs.title') %><% end %>
+
+<%= render "components/action-panel" do %>
+  <%= render "govuk_publishing_components/components/title", {
+    title:t("get_help_from_nhs.title"),
+    margin_top: 0,
+    margin_bottom: 4,
+    inverse: true
+  } %>
+
+  <%= render "components/action-link", {
+    text: t('get_help_from_nhs.link_text'),
+    href: t('get_help_from_nhs.link_href'),
+    target: "_blank",
+    inverse: true
+  } %>
+<% end %>

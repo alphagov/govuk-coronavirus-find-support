@@ -1,0 +1,15 @@
+<%
+  data_attributes ||= nil
+  inverse ||= nil
+  target ||= nil
+  css_classes = %w(app-c-action-link)
+  css_classes << "app-c-action-link--inverse" if inverse
+%>
+<%= link_to href, target: target, class: css_classes, data: data_attributes do %>
+  <svg class="app-c-action-link__icon" xmlns="http://www.w3.org/2000/svg" width="39" height="39" viewBox="0 0 39 39" role="presentation" focusable="false">
+    <circle cx="19.5" cy="19.5" r="19.5"/>
+    <path d="M24.0343 20L14.1812 10.1469L17.0096 7.31848L29.6912 20L17.0096 32.6815L14.1812 29.8531L24.0343 20Z"/>
+    <path d="M0.000423781 18L25.1328 18L25.1328 22L0.000423431 22L0.000423781 18Z"/>
+  </svg>
+  <span class="app-c-action-link__text"><%= text %></span>
+<% end %>

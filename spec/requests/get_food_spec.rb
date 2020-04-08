@@ -1,4 +1,8 @@
 RSpec.describe "get-food" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(get_food feel_safe))
+  end
+
   describe "GET /get-food" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options").sample }
 
@@ -36,10 +40,10 @@ RSpec.describe "get-food" do
       expect(session[:get_food]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post get_food_path, params: { get_food: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     it "shows an error when no radio button selected" do

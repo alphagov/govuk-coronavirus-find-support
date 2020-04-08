@@ -1,4 +1,8 @@
 RSpec.describe "living-with-vulnerable" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(living_with_vulnerable feel_safe))
+  end
+
   describe "GET /living-with-vulnerable" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.options").sample }
 
@@ -36,10 +40,10 @@ RSpec.describe "living-with-vulnerable" do
       expect(session[:living_with_vulnerable]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post living_with_vulnerable_path, params: { living_with_vulnerable: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     xit "shows an error when no radio button selected" do

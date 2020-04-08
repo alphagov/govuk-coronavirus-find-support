@@ -1,4 +1,8 @@
 RSpec.describe "still-working" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(still_working feel_safe))
+  end
+
   describe "GET /still-working" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.going_in_to_work.questions.still_working.options").sample }
 
@@ -36,10 +40,10 @@ RSpec.describe "still-working" do
       expect(session[:still_working]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post still_working_path, params: { still_working: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     xit "shows an error when no radio button selected" do

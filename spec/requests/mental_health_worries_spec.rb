@@ -1,4 +1,8 @@
 RSpec.describe "mental-health-worries" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(mental_health_worries feel_safe))
+  end
+
   describe "GET /mental-health-worries" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.options").sample }
 
@@ -36,10 +40,10 @@ RSpec.describe "mental-health-worries" do
       expect(session[:mental_health_worries]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post mental_health_worries_path, params: { mental_health_worries: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     xit "shows an error when no radio button selected" do

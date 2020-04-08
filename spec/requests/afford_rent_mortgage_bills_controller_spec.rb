@@ -1,4 +1,8 @@
 RSpec.describe "afford-rent-mortgage-bills" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(afford_rent_mortgage_bills feel_safe))
+  end
+
   describe "GET /afford-rent-mortgage-bills" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.paying_bills.questions.afford_rent_mortgage_bills.options").sample }
 
@@ -36,10 +40,10 @@ RSpec.describe "afford-rent-mortgage-bills" do
       expect(session[:afford_rent_mortgage_bills]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post afford_rent_mortgage_bills_path, params: { afford_rent_mortgage_bills: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     xit "shows an error when no radio button selected" do

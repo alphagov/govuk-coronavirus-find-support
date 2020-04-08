@@ -18,7 +18,7 @@ class CoronavirusForm::AreYouOffWorkIllController < ApplicationController
       render controller_path
     else
       update_session_store
-      # redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 

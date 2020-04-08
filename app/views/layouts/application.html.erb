@@ -26,8 +26,6 @@
     <div class="govuk-width-container">
       <% if yield(:back_link).present? %>
         <%= yield(:back_link) %>
-      <% else %>
-        <%= render "breadcrumbs" %>
       <% end %>
       <main class="govuk-main-wrapper<%= " govuk-main-wrapper--l" if yield(:back_link).blank?%>" id="main-content" role="main">
         <div class="govuk-grid-row">

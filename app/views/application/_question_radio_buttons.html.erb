@@ -13,22 +13,27 @@
   "id": question,
   "novalidate": "true"
 ) do %>
+  <%= render "govuk_publishing_components/components/radio", {
+    heading: t("coronavirus_form.groups.#{group}.questions.#{question}.title"),
+    heading_caption: t("coronavirus_form.groups.#{group}.title", { default: false }),
+    is_page_heading: true,
+    name: question,
+    error_message: error_items(question),
+    items: t("coronavirus_form.groups.#{group}.questions.#{question}.options").map do |option|
+        {
+          value: option,
+          text: option,
+          id: "option_#{option.parameterize.underscore}",
+          checked: @form_responses[question.to_sym] == option,
+        }
+      end
+  } %>
+  <%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
+<% end %>
 
-<%= render "govuk_publishing_components/components/radio", {
-  heading: t("coronavirus_form.groups.#{group}.questions.#{question}.title"),
-  heading_caption: t("coronavirus_form.groups.#{group}.title", { default: false }),
-  is_page_heading: true,
-  name: question,
-  error_message: error_items(question),
-  items: t("coronavirus_form.groups.#{group}.questions.#{question}.options").map do |option|
-      {
-        value: option,
-        text: option,
-        id: "option_#{option.parameterize.underscore}",
-        checked: @form_responses[question.to_sym] == option,
-      }
-    end
-} %>
-
-<%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
+<% content_for :escape_link do %>
+  <%= render "components/escape-link", {
+    text: "Leave this site",
+    href: "https://www.gov.uk/",
+  } %>
 <% end %>

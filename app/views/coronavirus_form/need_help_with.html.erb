@@ -24,3 +24,10 @@
 
 <%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
 <% end %>
+
+<% content_for :escape_link do %>
+  <%= render "components/escape-link", {
+    text: "Leave this site",
+    href: "https://www.gov.uk/",
+  } %>
+<% end %>

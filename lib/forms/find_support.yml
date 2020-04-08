@@ -1,0 +1,113 @@
+_
+find_support:
+- key: are_you_out_of_employment
+  group: not_in_work
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: are_you_non_keyworker_still_going_to_work
+  group: going_in_to_work
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: are_you_off_work_ill_or_isolating
+  group: not_in_work
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: work_concern_household_with_covid_19
+  group: going_in_to_work
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: self_employed_or_sole_trader
+  group: not_in_work
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: hard_to_afford_housing
+  group: money
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: hard_to_afford_food
+  group: money
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: able_to_get_food
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "no"
+    _ "not_sure"
+- key: feeling_unsafe
+  group: feeling_unsafe
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: housing
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: eviction
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: mental_health
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"
+- key: leave_home_if_necessary
+  type: radio
+  required: true
+  options:
+    _ "yes"
+    _ "soon"
+    _ "no"
+    _ "not_sure"

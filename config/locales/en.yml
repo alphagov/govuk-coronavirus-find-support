@@ -123,4 +123,9 @@ en:
           - "Yes"
           - "I do not know if I’m a key worker"
           - "No"
-
+      living_with_vulnerable:
+        title: "Are you worried about going into work because you live with someone vulnerable to coronavirus?"
+        options:
+          - "Yes"
+          - "No"
+          - "Not sure"

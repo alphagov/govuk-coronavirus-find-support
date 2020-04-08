@@ -18,6 +18,9 @@ Rails.application.routes.draw do
     get "/still-working", to: "still_working#show"
     post "/still-working", to: "still_working#submit"
 
+    get "/living-with-vulnerable", to: "living_with_vulnerable#show"
+    post "/living-with-vulnerable", to: "living_with_vulnerable#submit"
+
     get "/session-expired", to: "session_expired#show"
   end
 

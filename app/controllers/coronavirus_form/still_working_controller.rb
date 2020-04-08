@@ -15,9 +15,6 @@ class CoronavirusForm::StillWorkingController < ApplicationController
       flash.now[:validation] = invalid_fields
       log_validation_error(invalid_fields)
       render controller_path
-    elsif session["check_answers_seen"]
-      update_session_store
-      redirect_to check_your_answers_url
     else
       update_session_store
       #redirect_to nil

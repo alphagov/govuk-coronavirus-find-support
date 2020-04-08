@@ -104,11 +104,23 @@ en:
 
       <p class="govuk-body">We do this for your security. We've deleted all the details you entered to protect your data.</p>
   coronavirus_form:
-    errors: {}
-    questions:
+    errors:
+      page_title_prefix: 'Error: '
+      heading: "There is a problem"
+      radio_field: "Select %{field}"
+      checkbox_field: "Select at least one %{field}"
+    questions: # These need to be in the order in which they should be asked.
+      urgent_medical_help:
+        title: "Do you need urgent medical help?"
+        description: "You can check if you have coronavirus (COVID-19) symptoms and get medical advice"
+        options:
+          - "Yes"
+          - "No"
+        custom_select_error: "Select yes if you need urgent medical help"
       still_working:
         title: "Are you still going in to work even though you’re not a key worker?"
         options:
           - "Yes"
           - "I do not know if I’m a key worker"
           - "No"
+

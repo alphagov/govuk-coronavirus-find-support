@@ -1,0 +1,49 @@
+$app-covid-yellow: #ffe114;
+$app-covid-grey: #272828;
+
+.app-c-action-link {
+  @include govuk-font($size: 19, $weight: bold);
+  @include govuk-link-common;
+  @include govuk-link-style-default;
+
+  display: inline-block;
+  text-decoration: none;
+}
+
+.app-c-action-link__icon {
+  margin-right: govuk-spacing(3);
+  vertical-align: middle;
+
+  circle {
+    fill: $app-covid-yellow;
+  }
+
+  path {
+    fill: $app-covid-grey;
+  }
+}
+
+.app-c-action-link__text {
+  line-height: 39px;
+  text-decoration: underline;
+}
+
+.app-c-action-link {
+  &:focus {
+    .app-c-action-link__text {
+      text-decoration: none;
+    }
+  }
+}
+
+.app-c-action-link--inverse {
+  &:link,
+  &:visited,
+  &:hover {
+    color: govuk-colour('white');
+  }
+
+  &:focus {
+    color: $govuk-focus-text-colour;
+  }
+}

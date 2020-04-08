@@ -144,3 +144,9 @@ en:
           - "Yes"
           - "No"
           - "Not sure"
+      afford_food:
+        title: "Are you finding it hard to afford food?"
+        options:
+          - "Yes"
+          - "No"
+          - "Not sure"

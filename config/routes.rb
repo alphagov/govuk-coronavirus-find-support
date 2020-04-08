@@ -30,6 +30,10 @@ Rails.application.routes.draw do
     get "/living-with-vulnerable", to: "living_with_vulnerable#show"
     post "/living-with-vulnerable", to: "living_with_vulnerable#submit"
 
+    # Question: "Are you finding it hard to afford food?"
+    get "/afford-food", to: "afford_food#show"
+    post "/afford-food", to: "afford_food#submit"
+
     get "/session-expired", to: "session_expired#show"
   end
 

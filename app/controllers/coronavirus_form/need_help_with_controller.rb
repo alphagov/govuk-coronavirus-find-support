@@ -26,6 +26,13 @@ private
 
   def update_session_store
     session[:need_help_with] = @form_responses[:need_help_with]
+
+    selected_groups = @form_responses[:need_help_with].map do|item|
+      key = item.parameterize.underscore.to_sym
+      [key, true]
+    end
+
+    session[:selected_groups] = Hash[selected_groups]
   end
 
   def previous_path

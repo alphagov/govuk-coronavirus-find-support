@@ -33,7 +33,10 @@ RSpec.describe "need-help-with" do
     it "updates the session store" do
       post need_help_with_path, params: { need_help_with: selected }
 
+      expected_key = selected.first.parameterize.underscore.to_sym
+
       expect(session[:need_help_with]).to eq(selected)
+      expect(session[:selected_groups]).to match(hash_including(expected_key => true))
     end
 
     xit "redirects to the next question" do

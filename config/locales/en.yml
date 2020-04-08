@@ -163,3 +163,10 @@ en:
           - "Yes"
           - "No"
           - "Not sure"
+      have_you_been_evicted:
+        title: "Have you been evicted?"
+        options:
+          - "Yes"
+          - "I might be evicted soon"
+          - "No"
+          - "Not sure"

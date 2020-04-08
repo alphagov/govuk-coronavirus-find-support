@@ -3,6 +3,7 @@
 class ApplicationController < ActionController::Base
   include ActionView::Helpers::SanitizeHelper
   include FieldValidationHelper
+  include QuestionsHelper
 
   rescue_from ActionController::InvalidAuthenticityToken, with: :session_expired
 

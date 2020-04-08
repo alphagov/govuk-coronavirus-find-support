@@ -8,6 +8,7 @@ class CoronavirusForm::AbleToLeaveController < ApplicationController
 
     invalid_fields = validate_radio_field(
       controller_name,
+      group,
       radio: @form_responses[:able_to_leave],
     )
 
@@ -25,6 +26,10 @@ private
 
   def update_session_store
     session[:able_to_leave] = @form_responses[:able_to_leave]
+  end
+
+  def group
+    "leave_home"
   end
 
   def previous_path

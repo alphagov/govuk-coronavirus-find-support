@@ -34,6 +34,10 @@ Rails.application.routes.draw do
     get "/afford-food", to: "afford_food#show"
     post "/afford-food", to: "afford_food#submit"
 
+    # Question: Are you worried about your mental health or someone else's mental health?
+    get "/mental-health-worries", to: "mental_health_worries#show"
+    post "/mental-health-worries", to: "mental_health_worries#submit"
+
     get "/session-expired", to: "session_expired#show"
   end
 

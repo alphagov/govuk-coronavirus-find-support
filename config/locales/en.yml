@@ -209,3 +209,11 @@ en:
           - "I cannot leave home because I think I’m at risk of severe illness from coronavirus"
           - "I cannot go out because I have a disability"
           - "I’m unable to leave my home for another reason"
+  results:
+    header:
+      context: Coronavirus (COVID-19)
+      title: Information based on your answers
+      start_again_text: Start again
+    feedback:
+      text: Help us improve
+      link_text: Give feedback on this service

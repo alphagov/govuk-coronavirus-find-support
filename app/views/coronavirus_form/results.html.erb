@@ -1,0 +1,17 @@
+<div class="covid">
+  <%= render "govuk_publishing_components/components/inverse_header", {
+    full_width: true
+  } do %>
+    <div class="gem-c-title gem-c-title--inverse gem-c-title--bottom-margin">
+      <p class="gem-c-title__context">
+        <%= t("results.header.context") %>
+      </p>
+      <h1 class="gem-c-title__text">
+        <%= t("results.header.title") %>
+      </h1>
+      <a href="<%= clear_session_path %>" class="covid__page-start-again">
+        <%= t("results.header.start_again_text") %>
+      </a>
+    </div>
+  <% end %>
+</div>

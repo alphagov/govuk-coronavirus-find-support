@@ -49,6 +49,10 @@ Rails.application.routes.draw do
     get "/mental-health-worries", to: "mental_health_worries#show"
     post "/mental-health-worries", to: "mental_health_worries#submit"
 
+    # Question: Have you got somewhere to live?
+    get "/have-somewhere-to-live", to: "have_somewhere_to_live#show"
+    post "/have-somewhere-to-live", to: "have_somewhere_to_live#submit"
+
     # Question: Have you been evicted?
     get "/have-you-been-evicted", to: "have_you_been_evicted#show"
     post "/have-you-been-evicted", to: "have_you_been_evicted#submit"

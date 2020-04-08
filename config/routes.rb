@@ -17,6 +17,18 @@ Rails.application.routes.draw do
     # NHS Triage: Get urgent help from the NHS now
     get "/get-help-from-nhs", to: "get_help_from_nhs#show"
 
+    # Question: "Do you feel safe where you live?"
+    get "/feel-safe", to: "feel_safe#show"
+    post "/feel-safe", to: "feel_safe#submit"
+
+    # Question: Are you finding it hard to afford rent, your mortgage or bills?
+    get "/afford-rent-mortgage-bills", to: "afford_rent_mortgage_bills#show"
+    post "/afford-rent-mortgage-bills", to: "afford_rent_mortgage_bills#submit"
+
+    # Question: "Are you finding it hard to afford food?"
+    get "/afford-food", to: "afford_food#show"
+    post "/afford-food", to: "afford_food#submit"
+
     # Question: Are you able to get food?
     get "/get-food", to: "get_food#show"
     post "/get-food", to: "get_food#submit"
@@ -41,14 +53,6 @@ Rails.application.routes.draw do
     get "/living-with-vulnerable", to: "living_with_vulnerable#show"
     post "/living-with-vulnerable", to: "living_with_vulnerable#submit"
 
-    # Question: "Are you finding it hard to afford food?"
-    get "/afford-food", to: "afford_food#show"
-    post "/afford-food", to: "afford_food#submit"
-
-    # Question: Are you worried about your mental health or someone else's mental health?
-    get "/mental-health-worries", to: "mental_health_worries#show"
-    post "/mental-health-worries", to: "mental_health_worries#submit"
-
     # Question: Have you got somewhere to live?
     get "/have-somewhere-to-live", to: "have_somewhere_to_live#show"
     post "/have-somewhere-to-live", to: "have_somewhere_to_live#submit"
@@ -57,13 +61,9 @@ Rails.application.routes.draw do
     get "/have-you-been-evicted", to: "have_you_been_evicted#show"
     post "/have-you-been-evicted", to: "have_you_been_evicted#submit"
 
-    # Question: "Do you feel safe where you live?"
-    get "/feel-safe", to: "feel_safe#show"
-    post "/feel-safe", to: "feel_safe#submit"
-
-    # Question: Are you finding it hard to afford rent, your mortgage or bills?
-    get "/afford-rent-mortgage-bills", to: "afford_rent_mortgage_bills#show"
-    post "/afford-rent-mortgage-bills", to: "afford_rent_mortgage_bills#submit"
+    # Question: Are you worried about your mental health or someone else's mental health?
+    get "/mental-health-worries", to: "mental_health_worries#show"
+    post "/mental-health-worries", to: "mental_health_worries#submit"
 
     get "/session-expired", to: "session_expired#show"
   end

@@ -9,7 +9,7 @@ class CoronavirusForm::NeedHelpWithController < ApplicationController
     invalid_fields = validate_checkbox_field(
       controller_name,
       values: @form_responses[:need_help_with],
-      allowed_values: I18n.t("coronavirus_form.questions.#{controller_name}.options"),
+      allowed_values: I18n.t("coronavirus_form.groups.#{group}.questions.#{controller_name}.options"),
     )
 
     if invalid_fields.any?
@@ -37,5 +37,9 @@ private
 
   def previous_path
     "/"
+  end
+
+  def group
+    "filter_questions"
   end
 end

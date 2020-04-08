@@ -6,8 +6,8 @@ RSpec.describe "need-help-with" do
       it "shows the form" do
         visit need_help_with_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.questions.need_help_with.title"))
-        I18n.t("coronavirus_form.questions.need_help_with.options").each do |option|
+        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
+        I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.options").each do |option|
           expect(page.body).to have_content(option)
         end
       end
@@ -21,7 +21,7 @@ RSpec.describe "need-help-with" do
       it "shows the form with prefilled response" do
         visit need_help_with_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.questions.need_help_with.title"))
+        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
         expect(page.find("input#option_#{selected.first.parameterize.underscore}")).to be_checked
       end
     end
@@ -48,8 +48,8 @@ RSpec.describe "need-help-with" do
     it "shows an error when no checkboxes are selected" do
       post need_help_with_path
 
-      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.need_help_with.title"))
-      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.need_help_with.custom_select_error"))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.custom_select_error"))
     end
   end
 end

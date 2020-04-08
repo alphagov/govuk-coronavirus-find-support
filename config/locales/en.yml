@@ -201,3 +201,11 @@ en:
           - "Yes"
           - "No"
           - "Not sure"
+      able_to_leave:
+        title: "Are you able to leave your home if absolutely necessary?"
+        options:
+          - "Yes"
+          - "I cannot go out because I have coronavirus, or someone in my household does"
+          - "I cannot leave home because I think I’m at risk of severe illness from coronavirus"
+          - "I cannot go out because I have a disability"
+          - "I’m unable to leave my home for another reason"

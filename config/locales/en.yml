@@ -144,3 +144,15 @@ en:
           - "Yes"
           - "No"
           - "Not sure"
+      afford_food:
+        title: "Are you finding it hard to afford food?"
+        options:
+          - "Yes"
+          - "No"
+          - "Not sure"
+      mental_health_worries:
+        title: "Are you worried about your mental health or someone else‘s mental health?"
+        options:
+          - "Yes"
+          - "No"
+          - "Not sure"

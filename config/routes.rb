@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     get "/urgent-medical-help", to: "urgent_medical_help#show"
     post "/urgent-medical-help", to: "urgent_medical_help#submit"
 
+    # NHS Triage: Get urgent help from the NHS now
+    get "/get-help-from-nhs", to: "get_help_from_nhs#show"
+
     # Question: Are you able to get food?
     get "/get-food", to: "get_food#show"
     post "/get-food", to: "get_food#submit"

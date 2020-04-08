@@ -1,13 +1,13 @@
 RSpec.describe "mental-health-worries" do
   describe "GET /mental-health-worries" do
-    let(:selected_option) { I18n.t("coronavirus_form.questions.mental_health_worries.options").sample }
+    let(:selected_option) { I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.options").sample }
 
     context "without session data" do
       it "shows the form" do
         visit mental_health_worries_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.questions.mental_health_worries.title"))
-        I18n.t("coronavirus_form.questions.mental_health_worries.options").each do |option|
+        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
+        I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.options").each do |option|
           expect(page.body).to have_content(option)
         end
       end
@@ -21,14 +21,14 @@ RSpec.describe "mental-health-worries" do
       it "shows the form with prefilled response" do
         visit mental_health_worries_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.questions.mental_health_worries.title"))
+        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
         expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
       end
     end
   end
 
   describe "POST /mental-health-worries" do
-    let(:selected_option) { I18n.t("coronavirus_form.questions.mental_health_worries.options").sample }
+    let(:selected_option) { I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.options").sample }
 
     it "updates the session store" do
       post mental_health_worries_path, params: { mental_health_worries: selected_option }
@@ -45,8 +45,8 @@ RSpec.describe "mental-health-worries" do
     xit "shows an error when no radio button selected" do
       post mental_health_worries_path
 
-      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.mental_health_worries.title"))
-      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.mental_health_worries.custom_select_error"))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.custom_select_error"))
     end
   end
 end

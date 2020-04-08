@@ -154,7 +154,6 @@ en:
               - "Not sure"
           get_food:
             title: "Are you able to get food?"
-            title_caption: "Getting food"
             options:
               - "Yes"
               - "No"

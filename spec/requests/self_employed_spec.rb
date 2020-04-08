@@ -1,13 +1,13 @@
 RSpec.describe "self-employed" do
   describe "GET /self-employed" do
-    let(:selected_option) { I18n.t("coronavirus_form.questions.self_employed.options").sample }
+    let(:selected_option) { I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options").sample }
 
     context "without session data" do
       it "shows the form" do
         visit self_employed_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.questions.self_employed.title"))
-        I18n.t("coronavirus_form.questions.self_employed.options").each do |option|
+        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
+        I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options").each do |option|
           expect(page.body).to have_content(option)
         end
       end
@@ -21,14 +21,14 @@ RSpec.describe "self-employed" do
       it "shows the form with prefilled response" do
         visit self_employed_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.questions.self_employed.title"))
+        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
         expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
       end
     end
   end
 
   describe "POST /self-employed" do
-    let(:selected_option) { I18n.t("coronavirus_form.questions.self_employed.options").sample }
+    let(:selected_option) { I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options").sample }
 
     it "updates the session store" do
       post self_employed_path, params: { self_employed: selected_option }
@@ -45,8 +45,8 @@ RSpec.describe "self-employed" do
     xit "shows an error when no radio button selected" do
       post self_employed_path
 
-      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.self_employed.title"))
-      expect(response.body).to have_content(I18n.t("coronavirus_form.questions.self_employed.custom_select_error"))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.custom_select_error"))
     end
   end
 end

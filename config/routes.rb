@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     get "/are-you-off-work-ill", to: "are_you_off_work_ill#show"
     post "/are-you-off-work-ill", to: "are_you_off_work_ill#submit"
 
+    # Question: Are you self-employed or a sole trader?
+    get "/self-employed", to: "self_employed#show"
+    post "/self-employed", to: "self_employed#submit"
+
     # Question: Are you still going in to work even though you're not a key worker?
     get "/still-working", to: "still_working#show"
     post "/still-working", to: "still_working#submit"

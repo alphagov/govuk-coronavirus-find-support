@@ -138,6 +138,13 @@ en:
           - "Yes"
           - "I do not know if I’m a key worker"
           - "No"
+      self_employed:
+        title: "Are you self-employed or a sole trader?"
+        title_caption: "Being unemployed or not having any work"
+        options:
+          - "Yes"
+          - "No"
+          - "Not sure"
       living_with_vulnerable:
         title: "Are you worried about going into work because you live with someone vulnerable to coronavirus?"
         options:

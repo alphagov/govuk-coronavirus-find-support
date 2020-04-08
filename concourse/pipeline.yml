@@ -51,7 +51,7 @@ jobs:
     plan:
       - get: govuk-coronavirus-find-support
         trigger: true
-      - set_pipeline: govuk-corona-find-support
+      - set_pipeline: govuk-corona-find-support-form
         file: govuk-coronavirus-find-support/concourse/pipeline.yml
 
   - name: build-feature-tests-image

@@ -1,0 +1,33 @@
+<% content_for :title do %><%= t("coronavirus_form.questions.need_help_with.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("coronavirus_form.questions.need_help_with.title") %>" />
+<% end %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+<% end %>
+
+<%= form_tag({},
+  "data-module": "track-coronavirus-form-find-support-need-help-with",
+  "data-question-key": "need_help_with",
+  "id": "need_help_with",
+  "novalidate": "true"
+) do %>
+
+<%= render "govuk_publishing_components/components/checkboxes", {
+  heading: t("coronavirus_form.questions.need_help_with.title"),
+  is_page_heading: true,
+  name: "need_help_with[]",
+  error: error_items("need_help_with"),
+  items: t("coronavirus_form.questions.need_help_with.options").map do |option|
+      {
+        value: option,
+        label: option,
+        id: "option_#{option.parameterize.underscore}",
+        checked: @form_responses.fetch(:need_help_with, []).include?(option),
+      }
+    end
+} %>
+
+<%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
+<% end %>

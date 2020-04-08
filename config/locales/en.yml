@@ -176,6 +176,13 @@ en:
           - "Yes"
           - "No"
           - "Not sure"
+      have_somewhere_to_live:
+        title: "Do you have somewhere to live?"
+        options:
+          - "Yes"
+          - "I do now but I might lose it"
+          - "No"
+          - "Not sure"
       have_you_been_evicted:
         title: "Have you been evicted?"
         options:

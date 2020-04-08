@@ -3,8 +3,8 @@ en:
     groups:
       paying_bills: "Paying bills"
       getting_food: "Getting food"
-      not_in_work: "Being unemployed or not having any work"
+      being_unemployed: "Being unemployed or not having any work"
       going_in_to_work: "Going in to work"
-      feeling_unsafe: "Feeling unsafe"
-      housing: "Having somewhere to live"
+      feel_unsafe: "Feeling unsafe"
+      somewhere_to_live: "Having somewhere to live"
       mental_health: "Mental health and wellbeing"

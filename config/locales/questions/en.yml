@@ -1,47 +1,81 @@
 en:
   find_support:
-    are_you_out_of_employment:
-      title: "Have you been made unemployed or put on temporary leave (furloughed)?"
-    are_you_non_keyworker_still_going_to_work:
-      title: "Are you still going in to work even though you’re not a key worker?"
-      options:
-        not_sure: "I do not know if I’m a key worker"
-    are_you_off_work_ill_or_isolating:
-      title: "Are you off work because you’re ill or self_isolating?"
-    work_concern_household_with_covid_19:
-      title: "Are you worried about going into work because you live with someone vulnerable to coronavirus?"
-    self_employed_or_sole_trader:
-      title: "Are you self_employed or a sole trader?"
-    hard_to_afford_housing:
-      title: "Are you finding it hard to afford rent, your mortgage or bills?"
-    hard_to_afford_food:
-      title: "Are you finding it hard to afford food?"
-    able_to_get_food:
-      title: "Are you able to get food?"
-    feeling_unsafe:
+    feel_safe:
       title: "Do you feel safe where you live?"
       options:
+        yes: "Yes"
         yes_but_someone_else: "Yes but I’m concerned about the safety of someone else"
-    housing:
-      title: "Do you have somewhere to live?"
+        no: "No"
+        not_sure: "Not sure"
+    afford_rent_mortgage_bills:
+      title: "Are you finding it hard to afford rent, your mortgage or bills?"
       options:
-        soon: "I do now but I might lose it"
-    eviction:
-      title: "Have you been evicted?"
+        yes: "Yes"
+        no: "No"
+        not_sure: "Not sure"
+    afford_food:
+      title: "Are you finding it hard to afford food?"
       options:
-        soon: "I might be evicted soon"
-    mental_health:
-      title: "Are you worried about your mental health or someone else's mental health?"
-    leave_home_if_necessary:
-      title: "Are you able to leave your home if absolutely necessary?"
+        yes: "Yes"
+        no: "No"
+        not_sure: "Not sure"
+    get_food:
+      title: "Are you able to get food?"
       options:
-        household_isolation: "I cannot go out because I have coronavirus, or someone in my household does"
-        at_risk: "I cannot leave home because I think I’m at risk of severe illness from coronavirus"
-        disability: "I cannot go out because I have a disability"
-        other: " I’m unable to leave my home for another reason"
-    fallbacks:
+        yes: "Yes"
+        no: "No"
+        not_sure: "Not sure"
+    have_you_been_made_unemployed:
+      title: "Have you been made unemployed or put on temporary leave (furloughed)?"
+      title_caption: "Being unemployed or not having any work"
       options:
         yes: "Yes"
         soon: "I might be soon"
+        no: "No"
+        not_sure: "Not sure"
+    are_you_off_work_ill:
+      title: "Are you off work because you’re ill or self-isolating?"
+      title_caption: "Going in to work"
+      options:
+        yes: "Yes"
+        no: "No"
+      custom_select_error: "Select yes if you’re off work because you’re ill or self-isolating"
+    self_employed:
+      title: "Are you self-employed or a sole trader?"
+      title_caption: "Being unemployed or not having any work"
+      options:
+        yes: "Yes"
+        no: "No"
+        not_sure: "Not sure"
+    still_working:
+      title: "Are you still going in to work even though you’re not a key worker?"
+      options:
+        yes: "Yes"
+        not_sure: "I do not know if I’m a key worker"
+        no: "No"
+    living_with_vulnerable:
+      title: "Are you worried about going into work because you live with someone vulnerable to coronavirus?"
+      options:
+        yes: "Yes"
+        no: "No"
+        not_sure: "Not sure"
+    have_somewhere_to_live:
+      title: "Do you have somewhere to live?"
+      options:
+        yes: "Yes"
+        soon: "I do now but I might lose it"
+        no: "No"
+        not_sure: "Not sure"
+    have_you_been_evicted:
+      title: "Have you been evicted?"
+      options:
+        yes: "Yes"
+        soon: "I might be evicted soon"
+        no: "No"
+        not_sure: "Not sure"
+    mental_health_worries:
+      title: "Are you worried about your mental health or someone else‘s mental health?"
+      options:
+        yes: "Yes"
         no: "No"
         not_sure: "Not sure"

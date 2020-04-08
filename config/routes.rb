@@ -54,6 +54,10 @@ Rails.application.routes.draw do
     get "/feel-safe", to: "feel_safe#show"
     post "/feel-safe", to: "feel_safe#submit"
 
+    # Question: Are you finding it hard to afford rent, your mortgage or bills?
+    get "/afford-rent-mortgage-bills", to: "afford_rent_mortgage_bills#show"
+    post "/afford-rent-mortgage-bills", to: "afford_rent_mortgage_bills#submit"
+
     get "/session-expired", to: "session_expired#show"
   end
 

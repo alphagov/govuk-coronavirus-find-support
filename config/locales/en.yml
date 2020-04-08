@@ -117,6 +117,12 @@ en:
           - "Yes"
           - "No"
         custom_select_error: "Select yes if you need urgent medical help"
+      afford_rent_mortgage_bills:
+        title: "Are you finding it hard to afford rent, your mortgage or bills?"
+        options:
+          - "Yes"
+          - "No"
+          - "Not sure"
       get_food:
         title: "Are you able to get food?"
         title_caption: "Getting food"

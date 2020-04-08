@@ -65,6 +65,10 @@ Rails.application.routes.draw do
     get "/mental-health-worries", to: "mental_health_worries#show"
     post "/mental-health-worries", to: "mental_health_worries#submit"
 
+    # Question: Are you able to leave your home if absolutely necessary?
+    get "/able-to-leave", to: "able_to_leave#show"
+    post "/able-to-leave", to: "able_to_leave#submit"
+
     get "/session-expired", to: "session_expired#show"
   end
 

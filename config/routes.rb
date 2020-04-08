@@ -69,6 +69,9 @@ Rails.application.routes.draw do
     get "/able-to-leave", to: "able_to_leave#show"
     post "/able-to-leave", to: "able_to_leave#submit"
 
+    # Results
+    get "/results", to: "results#show"
+
     get "/session-expired", to: "session_expired#show"
   end
 

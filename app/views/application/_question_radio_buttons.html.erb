@@ -16,7 +16,7 @@
 
 <%= render "govuk_publishing_components/components/radio", {
   heading: t("coronavirus_form.groups.#{group}.questions.#{question}.title"),
-  heading_caption: t("coronavirus_form.groups.#{group}.title"),
+  heading_caption: t("coronavirus_form.groups.#{group}.title", { default: false }),
   is_page_heading: true,
   name: question,
   error_message: error_items(question),

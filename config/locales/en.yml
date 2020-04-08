@@ -115,7 +115,7 @@ en:
       checkbox_field: "Select at least one %{field}"
     groups:
       help: # NHS question and 'What do you need help with'.
-        title: false # No title needed for this group.
+        # No title needed for this group.
         questions:
           urgent_medical_help:
             title: "Do you need urgent medical help?"

@@ -320,6 +320,41 @@ en:
               - "I’m unable to leave my home for another reason"
             custom_select_error: "Select if you are able to leave your home or not"
   results_link:
+    feel_unsafe:
+      title: "Feeling Safe"
+      results:
+        feel_safe:
+          title: "If you or someone you know are not feeling safe where you live"
+          show_options:
+            - "Yes but I’m concerned about the safety of someone else"
+            - "No"
+            - "Not sure"
+          links:
+            - text: 'If you’re in immediate danger call <a href="tel:999" class="govuk-link">999</a> and ask for the Police.'
+            - text: 'If you’re in danger and unable to talk on the phone, call <a href="tel:999" class="govuk-link">999</a>, and then press 55.'
+            - text: 'Call the National Domestic Abuse Helpline on <a href="tel:0808 2000 247" class="govuk-link">0808 2000 247</a>'
+            - text: 'If you’re a child call Childline on <a href="tel:0800 1111" class="govuk-link">0800 1111</a>'
+            - text: 'Find helplines <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-and-domestic-abuse/coronavirus-covid-19-support-for-victims-of-domestic-abuse" class="govuk-link">if you’re a victim of domestic abuse or feel at risk of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services" class="govuk-link">victim or witness of a crime</a> (these pages have no quick escape)'
+            - text: "Get safety advice for survivors from Woman's Aid"
+              href: "https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/"
+            - text: "Get information from Nexus NI if you’re in Northern Ireland"
+              href: "https://nexusni.org/domestic-and-sexual-abuse-24-hour-helpline/"
+            - text: "Get help from Live Fear Free if you live in Wales"
+              href: "https://gov.wales/live-fear-free"
+            - text: "Get help from Women's Aid Scotland"
+              href: "https://womensaid.scot/"
+            - text: "Get information for children from Childline"
+              href: "https://www.childline.org.uk/"
+            - text: "Get information if you are in care or leaving care from Coram Voice"
+              href: "https://coramvoice.org.uk/"
+            - text: "Get information if you are child in Wales"
+              href: "https://www.childcomwales.org.uk/coronavirus/"
+            - text: "Contact NSPCC if you are concerned about a child"
+              href: "https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/"
+            - text: "Find helplines if you are an older person living in Wales"
+              href: "https://www.olderpeoplewales.com/en/coronavirus.aspx"
+            - text: "Find victim support helplines if you live in Wales"
+              href: "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales"
     have_you_been_made_unemployed:
       show_options:
         - "I might be soon"

@@ -502,46 +502,49 @@ en:
           links:
             - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
               href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
-    do_you_have_somewhere_to_live:
-      show_options:
-        - "I do now but I might lose it"
-        - "No"
-        - "Not sure"
-      links:
-        - text: "Get information if you are legally homeless from Shelter"
-          href: "https://england.shelter.org.uk/housing_advice/homelessness/rules/legally_homeless"
-        - text: 'If you’re in Northern Ireland call the Housing Executive on <a href="tel:+443448920908" class="govuk-link">03448 920 908</a>'
-        - text: "Get information from Housing Rights if you live in Northern Ireland"
-          href: "https://www.housingadviceni.org/homeless/coronavirus"
-        - text: "Get coronavirus housing information from Shelter Wales"
-          href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
-        - text: "Get information if you are homeless in Scotland"
-          href: "https://www.mygov.scot/homelessness/"
-        - text: "Get help if you are homeless from Shelter Scotland"
-          href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"
-    have_you_been_evicted:
-      show_options:
-        - "Yes"
-        - "I might be evicted soon"
-        - "Not sure"
-      links:
-        - text: "Get information about your rights as a tenant"
-          href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
-        - text: "Get coronavirus housing advice from Shelter"
-          href: "https://england.shelter.org.uk/housing_advice/coronavirus"
-        - text: 'If you’re in Northern Ireland call the Housing Executive on <a href="tel:+443448920908" class="govuk-link">03448 920 908</a>'
-        - text: "Get information from the Housing Executive if you live in Northern Ireland"
-          href: "https://www.nihe.gov.uk/My-Housing-Executive/Advice-for-Housing-Executive-Tenants/Covid-19-(Coronavirus)"
-        - text: "Get information from Housing Rights if you live in Northern Ireland"
-          href: "https://www.housingadviceni.org/coronavirus"
-        - text: "Get information on evictions if you live in Wales"
-          href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
-        - text: "Get coronavirus housing information from Shelter Wales"
-          href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
-        - text: "Find out how to get help if you’re being evicted in Scotland"
-          href: "https://www.mygov.scot/private-tenant-eviction/getting-help/"
-        - text: "Get coronavirus information from Shelter Scotland"
-          href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19"
+    somewhere_to_live:
+      title: "Having somewhere to live"
+      results:
+        do_you_have_somewhere_to_live:
+          show_options:
+            - "I do now but I might lose it"
+            - "No"
+            - "Not sure"
+          links:
+            - text: "Get information if you are legally homeless from Shelter"
+              href: "https://england.shelter.org.uk/housing_advice/homelessness/rules/legally_homeless"
+            - text: 'If you’re in Northern Ireland call the Housing Executive on <a href="tel:+443448920908" class="govuk-link">03448 920 908</a>'
+            - text: "Get information from Housing Rights if you live in Northern Ireland"
+              href: "https://www.housingadviceni.org/homeless/coronavirus"
+            - text: "Get coronavirus housing information from Shelter Wales"
+              href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
+            - text: "Get information if you are homeless in Scotland"
+              href: "https://www.mygov.scot/homelessness/"
+            - text: "Get help if you are homeless from Shelter Scotland"
+              href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"
+        have_you_been_evicted:
+          show_options:
+            - "Yes"
+            - "I might be evicted soon"
+            - "Not sure"
+          links:
+            - text: "Get information about your rights as a tenant"
+              href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
+            - text: "Get coronavirus housing advice from Shelter"
+              href: "https://england.shelter.org.uk/housing_advice/coronavirus"
+            - text: 'If you’re in Northern Ireland call the Housing Executive on <a href="tel:+443448920908" class="govuk-link">03448 920 908</a>'
+            - text: "Get information from the Housing Executive if you live in Northern Ireland"
+              href: "https://www.nihe.gov.uk/My-Housing-Executive/Advice-for-Housing-Executive-Tenants/Covid-19-(Coronavirus)"
+            - text: "Get information from Housing Rights if you live in Northern Ireland"
+              href: "https://www.housingadviceni.org/coronavirus"
+            - text: "Get information on evictions if you live in Wales"
+              href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
+            - text: "Get coronavirus housing information from Shelter Wales"
+              href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
+            - text: "Find out how to get help if you’re being evicted in Scotland"
+              href: "https://www.mygov.scot/private-tenant-eviction/getting-help/"
+            - text: "Get coronavirus information from Shelter Scotland"
+              href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19"
     mental_health_worries:
       show_options:
         - "Yes"

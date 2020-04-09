@@ -186,7 +186,7 @@ en:
             title: "What do you need to find help with?"
             options:
               - "I’m not sure"
-            custom_select_error: 'Please choose at least one option. If you don’t know, please choose \"I’m not sure\"'
+            custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
       help: # NHS question and 'What do you need help with'.
         # No title needed for this group.
         questions:
@@ -196,7 +196,7 @@ en:
             options:
               - "Yes"
               - "No"
-        custom_select_error: "Select yes if you need urgent medical help"
+            custom_select_error: "Select yes if you need urgent medical help"
       feeling_unsafe:
         title: "Feeling unsafe"
         questions:
@@ -207,6 +207,7 @@ en:
               - "Yes but I’m concerned about the safety of someone else"
               - "No"
               - "Not sure"
+            custom_select_error: "Select if you feel safe where you live or if you are worried about someone else"
       paying_bills:
         title: "Paying bills"
         questions:
@@ -216,6 +217,7 @@ en:
               - "Yes"
               - "No"
               - "Not sure"
+            custom_select_error: "Select yes if you’re finding it hard to afford your rent, your mortgage or bills"
       getting_food:
         title: "Getting food"
         questions:
@@ -225,6 +227,7 @@ en:
               - "Yes"
               - "No"
               - "Not sure"
+            custom_select_error: "Select yes if you’re finding it hard to afford food"
           get_food:
             title: "Are you able to get food?"
             options:
@@ -242,6 +245,7 @@ en:
               - "I might be soon"
               - "No"
               - "Not sure"
+            custom_select_error: "Select if you’ve been made unemployed, or put on temporary leave (furloughed)"
           are_you_off_work_ill:
             title: "Are you off work because you’re ill or self-isolating?"
             title_caption: "Going in to work"
@@ -256,6 +260,7 @@ en:
               - "Yes"
               - "No"
               - "Not sure"
+            custom_select_error: "Select yes if you’re self-employed or a sole trader"
       going_in_to_work:
         title: "Going in to work"
         questions:
@@ -265,12 +270,14 @@ en:
               - "Yes"
               - "I do not know if I’m a key worker"
               - "No"
+            custom_select_error: "Select if you’re still going in to work even though you’re not a key worker"
           living_with_vulnerable:
             title: "Are you worried about going into work because you live with someone vulnerable to coronavirus?"
             options:
               - "Yes"
               - "No"
               - "Not sure"
+            custom_select_error: "Select yes if you’re worried about going in to work because you live with someone vulnerable to coronavirus"
       somewhere_to_live:
         title: "Having somewhere to live"
         questions:
@@ -281,6 +288,7 @@ en:
               - "I do now but I might lose it"
               - "No"
               - "Not sure"
+            custom_select_error: "Select if you have somewhere to live"
           have_you_been_evicted:
             title: "Have you been evicted?"
             options:
@@ -288,6 +296,7 @@ en:
               - "I might be evicted soon"
               - "No"
               - "Not sure"
+            custom_select_error: "Select if you have been evicted or might be soon"
       mental_health:
         title: "Mental health and wellbeing"
         questions:
@@ -297,6 +306,7 @@ en:
               - "Yes"
               - "No"
               - "Not sure"
+            custom_select_error: "Select yes if you are worried about your mental health or someone else’s mental health"
       leave_home: # Q: Are you able to leave your home if absolutely neccessary?
         questions:
           able_to_leave:
@@ -307,6 +317,7 @@ en:
               - "I cannot leave home because I think I’m at risk of severe illness from coronavirus"
               - "I cannot go out because I have a disability"
               - "I’m unable to leave my home for another reason"
+            custom_select_error: "Select if you are able to leave your home or not"
   results_link:
     have_you_been_made_unemployed:
       show_options:

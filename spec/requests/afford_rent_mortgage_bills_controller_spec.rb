@@ -58,7 +58,7 @@ RSpec.describe "afford-rent-mortgage-bills" do
       expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
-    xit "shows an error when no radio button selected" do
+    it "shows an error when no radio button selected" do
       post afford_rent_mortgage_bills_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.paying_bills.questions.afford_rent_mortgage_bills.title"))

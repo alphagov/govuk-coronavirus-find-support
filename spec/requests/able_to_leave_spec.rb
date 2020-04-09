@@ -62,7 +62,7 @@ RSpec.describe "able-to-leave" do
       post able_to_leave_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
-      expect(response.body).to have_content(I18n.t("coronavirus_form.errors.radio_field", field: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title").downcase))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.custom_select_error"))
     end
   end
 end

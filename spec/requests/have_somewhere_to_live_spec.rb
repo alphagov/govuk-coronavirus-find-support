@@ -58,7 +58,7 @@ RSpec.describe "have-somewhere-to-live" do
       expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
-    xit "shows an error when no radio button selected" do
+    it "shows an error when no radio button selected" do
       post have_somewhere_to_live_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_somewhere_to_live.title"))

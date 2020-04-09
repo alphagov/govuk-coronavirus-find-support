@@ -58,7 +58,7 @@ RSpec.describe "still-working" do
       expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
-    xit "shows an error when no radio button selected" do
+    it "shows an error when no radio button selected" do
       post still_working_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.still_working.title"))

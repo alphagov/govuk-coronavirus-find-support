@@ -322,7 +322,7 @@ en:
   results_link:
     feel_unsafe:
       feel_safe:
-        title: "If you do not feel safe where you live or you’re worried about someone else"
+        heading: "If you do not feel safe where you live or you’re worried about someone else"
         show_options:
           - "Yes but I’m concerned about the safety of someone else"
           - "No"
@@ -355,7 +355,7 @@ en:
             href: "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales"
     paying_bills:
       afford_rent_mortgage_bills:
-        title: "If you’re finding it hard to afford rent, your mortgage or bills"
+        heading: "If you’re finding it hard to afford rent, your mortgage or bills"
         show_options:
           - "Yes"
           - "Not sure"
@@ -384,7 +384,7 @@ en:
             href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19#Paying_rent"
     getting_food:
       afford_food:
-        title: "If you’re finding it hard to afford food"
+        heading: "If you’re finding it hard to afford food"
         show_options:
           - "Yes"
           - "Not sure"
@@ -401,7 +401,7 @@ en:
             href: "https://www.mygov.scot/school-meals/"
           - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email covid19@adviceni.net or text ‘ACTION’ to 81025'
       get_food:
-        title: "If you are finding it hard to get food"
+        heading: "If you are finding it hard to get food"
         show_options:
           - "Yes"
           - "Not sure"
@@ -415,7 +415,7 @@ en:
             href: "https://www.consumercouncil.org.uk/coronavirus/vulnerable"
     being_unemployed:
       have_you_been_made_unemployed:
-        title: "If you’ve been made unemployed, or put on temporary leave (furloughed)"
+        heading: "If you’ve been made unemployed, or put on temporary leave (furloughed)"
         show_options:
           - "I might be soon"
           - "No"
@@ -446,7 +446,7 @@ en:
           - text: "Find help with benefits if you live in Scotland"
             href: "https://www.mygov.scot/benefits-support/"
       are_you_off_work_ill:
-        title: "If you’re off work because you’re ill or self isolating"
+        heading: "If you’re off work because you’re ill or self isolating"
         show_options:
           - "Yes"
           - "Not sure"
@@ -460,7 +460,7 @@ en:
           - text: "Get information on the help you can get if you're self-employed or work in the gig economy from the Money Advice Service"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
       self_employed:
-        title: "If you’re self employed or a sole trader"
+        heading: "If you’re self employed or a sole trader"
         show_options:
           - "Yes"
           - "Not sure"
@@ -471,7 +471,7 @@ en:
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
     going_in_to_work:
       still_working:
-        title: "If you’re still going in to work even though you’re a key worker"
+        heading: "If you’re still going in to work even though you’re a key worker"
         show_options:
           - "Yes"
           - "I do not know if I’m a key worker"
@@ -487,7 +487,7 @@ en:
           - text: "Find out if you're a key worker if you live in Scotland"
             href: "https://www.gov.scot/publications/coronavirus-guide-schools-early-learning-closures/pages/key-workers/"
       living_with_vulnerable:
-        title: "If you’re worried about going in to work because you live with someone vulnerable to coronavirus"
+        heading: "If you’re worried about going in to work because you live with someone vulnerable to coronavirus"
         show_options:
           - "Yes"
           - "Not sure"
@@ -496,7 +496,7 @@ en:
             href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
     somewhere_to_live:
       do_you_have_somewhere_to_live:
-        title: "If you do not have somewhere to live"
+        heading: "If you do not have somewhere to live"
         show_options:
           - "I do now but I might lose it"
           - "No"
@@ -514,7 +514,7 @@ en:
           - text: "Get help if you are homeless from Shelter Scotland"
             href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"
       have_you_been_evicted:
-        title: "If you’ve been evicted"
+        heading: "If you’ve been evicted"
         show_options:
           - "Yes"
           - "I might be evicted soon"
@@ -539,7 +539,7 @@ en:
             href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19"
     mental_health:
       mental_health_worries:
-        title: "If you’re worried about your mental health or someone else’s mental health"
+        heading: "If you’re worried about your mental health or someone else’s mental health"
         show_options:
           - "Yes"
           - "Not sure"

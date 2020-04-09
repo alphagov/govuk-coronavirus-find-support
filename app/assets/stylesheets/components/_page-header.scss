@@ -1,0 +1,22 @@
+.app-c-page-header {
+  @include govuk-font($size: 19);
+
+  background-color: $app-covid-grey;
+  border-top: 10px solid $app-covid-yellow;
+  color: govuk-colour('white');
+  margin-top: -10px;
+  padding: govuk-spacing(7) 0;
+  position: relative;
+
+  .govuk-link {
+    &:link,
+    &:visited,
+    &:hover {
+      color: govuk-colour('white');
+    }
+
+    &:focus {
+      color: $govuk-focus-text-colour;
+    }
+  }
+}

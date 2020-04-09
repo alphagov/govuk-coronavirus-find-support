@@ -1,0 +1,12 @@
+name: Page header
+description: COVID-19 header
+accessibility_criteria: |
+  Elements must have sufficient color contrast
+examples:
+  default:
+    data:
+      block: |
+        <div class="gem-c-title gem-c-title--inverse">
+            <p class="gem-c-title__context">Coronavirus (COVID-19)</p>
+            <h1 class="gem-c-title__text">Information based on your answers</h1>
+          </div>

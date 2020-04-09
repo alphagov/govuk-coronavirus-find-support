@@ -20,11 +20,22 @@ class CoronavirusForm::AbleToLeaveController < ApplicationController
       render controller_path
     else
       update_session_store
+      write_responses
       redirect_to results_path
     end
   end
 
 private
+
+  # We're using this method to reduce the precision of timekeeping so that
+  # responses cannot be correlated with analytics data
+  def time_hour_floor
+    Time.current.beginning_of_hour
+  end
+
+  def write_responses
+    FormResponse.create(form_response: session, created_at: time_hour_floor)
+  end
 
   def update_session_store
     session[:able_to_leave] = @form_responses[:able_to_leave]

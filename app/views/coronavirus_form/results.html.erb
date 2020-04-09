@@ -1,3 +1,8 @@
+<% content_for :title do %><%= t('coronavirus_form.results.header.title') %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t('coronavirus_form.results.header.title') %>" />
+<% end %>
+
 <% content_for :page_header do %>
   <%= render "govuk_publishing_components/components/title", {
     context: t("coronavirus_form.results.header.context"),

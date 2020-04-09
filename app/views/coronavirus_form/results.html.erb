@@ -9,6 +9,12 @@
   <%= link_to t("results.header.start_again_text"), clear_session_path, class: "govuk-link" %>
 <% end %>
 
+<pre>
+<code>
+<%= @form_responses %>
+</code>
+</pre>
+
 <% if no_results?(@form_responses) %>
   <%= render partial: "no_results"  %>
 <% else %>

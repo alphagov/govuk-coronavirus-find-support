@@ -14,12 +14,8 @@
   <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link" %>
 <% end %>
 
-<% if no_results?(@form_responses) %>
-  <%= render partial: "no_results"  %>
-<% else %>
-  <% result_groups(@form_responses).each do |group| %>
-    <%= render partial: "result_group", locals: { group: group }  %>
-  <% end %>
+<% result_groups(session).each do |group| %>
+  <%= render partial: "result_group", locals: { group: group }  %>
 <% end %>
 
 <%= render "components/callout", {

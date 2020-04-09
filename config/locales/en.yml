@@ -329,7 +329,7 @@ en:
         link_text: Give feedback on this service
         link_href: "https://www.gov.uk/done/find-coronavirus-support"
   results_link:
-    feel_unsafe:
+    feeling_unsafe:
       feel_safe:
         heading: "If you do not feel safe where you live or you’re worried about someone else"
         show_options:

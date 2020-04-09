@@ -1,0 +1,12 @@
+name: Callout
+description: An excerpt of text that has been pulled out and used as a visual clue to draw the eye to the text.
+body: |
+  They are used to help direct a user's attention to important pieces of information.
+shared_accessibility_criteria:
+  - link
+examples:
+  default:
+    data:
+      title: Help us improve
+      block: |
+        <a href="#" class="govuk-link">Give feedback on this service</a>

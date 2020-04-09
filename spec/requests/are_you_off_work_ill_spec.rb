@@ -1,6 +1,22 @@
 RSpec.describe "still-working" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(are_you_off_work_ill feel_safe))
+  end
+
   describe "GET /still-working" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options").sample }
+
+    context "without any questions to ask in the session data" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
+      end
+
+      it "redirects to filter question" do
+        get are_you_off_work_ill_path
+
+        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+      end
+    end
 
     context "without session data" do
       it "shows the form" do
@@ -36,10 +52,10 @@ RSpec.describe "still-working" do
       expect(session[:are_you_off_work_ill]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post are_you_off_work_ill_path, params: { are_you_off_work_ill: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     xit "shows an error when no radio button selected" do

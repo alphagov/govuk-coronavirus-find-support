@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::FeelSafeController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       feel_safe: strip_tags(params[:feel_safe]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::FeelSafeController < ApplicationController
       render controller_path
     else
       update_session_store
-      # redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -29,7 +31,7 @@ private
   end
 
   def previous_path
-    "/"
+    previous_question(controller_name)
   end
 
   def group

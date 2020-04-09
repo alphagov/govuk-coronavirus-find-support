@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::GetFoodController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       get_food: strip_tags(params[:get_food]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::GetFoodController < ApplicationController
       render controller_path
     else
       update_session_store
-      #redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -28,9 +30,11 @@ private
     session[:get_food] = @form_responses[:get_food]
   end
 
-  def previous_path; end
-
   def group
     "getting_food"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

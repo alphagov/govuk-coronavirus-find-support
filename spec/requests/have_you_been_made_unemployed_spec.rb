@@ -1,6 +1,22 @@
 RSpec.describe "have-you-been-made-unemployed" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(have_you_been_made_unemployed feel_safe))
+  end
+
   describe "GET /have-you-been-made-unemployed" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options").sample }
+
+    context "without any questions to ask in the session data" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
+      end
+
+      it "redirects to filter question" do
+        get have_you_been_made_unemployed_path
+
+        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+      end
+    end
 
     context "without session data" do
       it "shows the form" do
@@ -36,10 +52,10 @@ RSpec.describe "have-you-been-made-unemployed" do
       expect(session[:have_you_been_made_unemployed]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     xit "shows an error when no radio button selected" do

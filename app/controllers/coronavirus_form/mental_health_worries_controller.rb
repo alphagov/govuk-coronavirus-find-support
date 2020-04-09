@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::MentalHealthWorriesController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       mental_health_worries: strip_tags(params[:mental_health_worries]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::MentalHealthWorriesController < ApplicationController
       render controller_path
     else
       update_session_store
-      #redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -28,9 +30,11 @@ private
     session[:mental_health_worries] = @form_responses[:mental_health_worries]
   end
 
-  def previous_path; end
-
   def group
     "mental_health"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AffordRentMortgageBillsController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       afford_rent_mortgage_bills: strip_tags(params[:afford_rent_mortgage_bills]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::AffordRentMortgageBillsController < ApplicationController
       render controller_path
     else
       update_session_store
-      #redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -28,9 +30,11 @@ private
     session[:afford_rent_mortgage_bills] = @form_responses[:afford_rent_mortgage_bills]
   end
 
-  def previous_path; end
-
   def group
     "paying_bills"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

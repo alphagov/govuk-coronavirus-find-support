@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AbleToLeaveController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       able_to_leave: strip_tags(params[:able_to_leave]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::AbleToLeaveController < ApplicationController
       render controller_path
     else
       update_session_store
-      # redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -33,6 +35,6 @@ private
   end
 
   def previous_path
-    "/"
+    previous_question(controller_name)
   end
 end

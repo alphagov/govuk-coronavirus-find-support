@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::SelfEmployedController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       self_employed: strip_tags(params[:self_employed]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::SelfEmployedController < ApplicationController
       render controller_path
     else
       update_session_store
-      #redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -28,9 +30,11 @@ private
     session[:self_employed] = @form_responses[:self_employed]
   end
 
-  def previous_path; end
-
   def group
     "being_unemployed"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

@@ -1,6 +1,22 @@
 RSpec.describe "able-to-leave" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(able_to_leave feel_safe))
+  end
+
   describe "GET /able-to-leave" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options").sample }
+
+    context "without any questions to ask in the session data" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
+      end
+
+      it "redirects to filter question" do
+        get able_to_leave_path
+
+        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+      end
+    end
 
     context "without session data" do
       it "shows the form" do
@@ -36,10 +52,10 @@ RSpec.describe "able-to-leave" do
       expect(session[:able_to_leave]).to eq(selected_option)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post able_to_leave_path, params: { able_to_leave: selected_option }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
     it "shows an error when no radio button selected" do

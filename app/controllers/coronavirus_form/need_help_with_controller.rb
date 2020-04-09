@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::NeedHelpWithController < ApplicationController
+  before_action :check_first_question_answered
+
   def submit
     @form_responses = {
       need_help_with: Array(params[:need_help_with]).map { |item| strip_tags(item).presence }.compact,
@@ -18,7 +20,7 @@ class CoronavirusForm::NeedHelpWithController < ApplicationController
       render controller_path
     else
       update_session_store
-      # redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -71,11 +73,11 @@ private
       groups_hash.key(item) if groups_hash.has_value?(item)
     end
 
-    session[:selected_groups] = selected_groups.compact
+    session[:questions_to_ask] = determine_user_questions(selected_groups.compact)
   end
 
   def previous_path
-    "/"
+    urgent_medical_help_path
   end
 
   def group

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::HaveYouBeenEvictedController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       have_you_been_evicted: strip_tags(params[:have_you_been_evicted]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::HaveYouBeenEvictedController < ApplicationController
       render controller_path
     else
       update_session_store
-      # redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -29,7 +31,7 @@ private
   end
 
   def previous_path
-    "/" # TODO: fix with proper previous path
+    previous_question(controller_name)
   end
 
   def group

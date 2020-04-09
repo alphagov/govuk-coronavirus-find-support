@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::LivingWithVulnerableController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       living_with_vulnerable: strip_tags(params[:living_with_vulnerable]).presence,
@@ -18,7 +20,7 @@ class CoronavirusForm::LivingWithVulnerableController < ApplicationController
       render controller_path
     else
       update_session_store
-      #redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -28,9 +30,11 @@ private
     session[:living_with_vulnerable] = @form_responses[:living_with_vulnerable]
   end
 
-  def previous_path; end
-
   def group
     "going_in_to_work"
+  end
+
+  def previous_path
+    previous_question(controller_name)
   end
 end

@@ -75,7 +75,7 @@ private
   end
 
   def previous_path
-    "/"
+    urgent_medical_help_path
   end
 
   def group

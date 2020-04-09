@@ -16,9 +16,12 @@ class CoronavirusForm::UrgentMedicalHelpController < ApplicationController
       flash.now[:validation] = invalid_fields
       log_validation_error(invalid_fields)
       render controller_path
+    elsif @form_responses[:urgent_medical_help] == I18n.t("coronavirus_form.groups.#{group}.questions.#{controller_name}.options").first
+      update_session_store
+      redirect_to get_help_from_nhs_path
     else
       update_session_store
-      # redirect_to nil
+      redirect_to need_help_with_path
     end
   end
 

@@ -545,29 +545,32 @@ en:
               href: "https://www.mygov.scot/private-tenant-eviction/getting-help/"
             - text: "Get coronavirus information from Shelter Scotland"
               href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19"
-    mental_health_worries:
-      show_options:
-        - "Yes"
-        - "Not sure"
-      links:
-        - text: "Get information on coronavirus and your wellbeing from Mind"
-          href: "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8"
-        - text: "Get information about looking after your mental health during coronavirus"
-          href: "https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing"
-        - text: "Get information about looking after your mental health from the NHS"
-          href: "https://www.nhs.uk/oneyou/every-mind-matters"
-        - text: "Get information about supporting the mental health and wellbeing of children and young people"
-          href: "https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak"
-        - text: "Get information about taking care of your mental health if you live in Northern Ireland"
-          href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-taking-care-your-mental-health-and-wellbeing"
-        - text: "Get information about taking care of your mental health if you live in Wales"
-          href: "https://phw.nhs.wales/topics/latest-information-on-novel-coronavirus-covid-19/staying-well-at-home/how-are-you-feeling/"
-        - text: "Get information about coronavirus and your mental wellbeing from the Scottish Association for Mental Health"
-          href: "https://www.samh.org.uk/about-mental-health/self-help-and-wellbeing/coronavirus-and-your-mental-wellbeing"
-        - text: "Find your local loneliness service"
-          href: "https://www.redcross.org.uk/get-help/get-help-with-loneliness/find-your-local-loneliness-service"
-        - text: 'If you need urgent help now, call the Samaritans on <a href="tel:03448 920 908" class="govuk-link">116 123</a>116 123</a>'
-        - text: "If you need urgent help text ‘Shout’ to 85258"
-        - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
-        - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
-        - text: "If it’s an emergency, call 999"
+    mental_health:
+      title: "Mental health and wellbeing"
+      results:
+        mental_health_worries:
+          show_options:
+            - "Yes"
+            - "Not sure"
+          links:
+            - text: "Get information on coronavirus and your wellbeing from Mind"
+              href: "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8"
+            - text: "Get information about looking after your mental health during coronavirus"
+              href: "https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing"
+            - text: "Get information about looking after your mental health from the NHS"
+              href: "https://www.nhs.uk/oneyou/every-mind-matters"
+            - text: "Get information about supporting the mental health and wellbeing of children and young people"
+              href: "https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak"
+            - text: "Get information about taking care of your mental health if you live in Northern Ireland"
+              href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-taking-care-your-mental-health-and-wellbeing"
+            - text: "Get information about taking care of your mental health if you live in Wales"
+              href: "https://phw.nhs.wales/topics/latest-information-on-novel-coronavirus-covid-19/staying-well-at-home/how-are-you-feeling/"
+            - text: "Get information about coronavirus and your mental wellbeing from the Scottish Association for Mental Health"
+              href: "https://www.samh.org.uk/about-mental-health/self-help-and-wellbeing/coronavirus-and-your-mental-wellbeing"
+            - text: "Find your local loneliness service"
+              href: "https://www.redcross.org.uk/get-help/get-help-with-loneliness/find-your-local-loneliness-service"
+            - text: 'If you need urgent help now, call the Samaritans on <a href="tel:03448 920 908" class="govuk-link">116 123</a>116 123</a>'
+            - text: "If you need urgent help text ‘Shout’ to 85258"
+            - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
+            - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
+            - text: "If it’s an emergency, call 999"

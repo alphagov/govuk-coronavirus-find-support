@@ -10,6 +10,13 @@ RSpec.describe QuestionsHelper, type: :helper do
 
       expect(helper.determine_user_questions(groups)).to eq(expected_questions)
     end
+
+    it "returns all questions when no groups selected" do
+      groups = []
+      all_questions = I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
+
+      expect(helper.determine_user_questions(groups)).to eq(all_questions)
+    end
   end
 
   describe "#next_question" do

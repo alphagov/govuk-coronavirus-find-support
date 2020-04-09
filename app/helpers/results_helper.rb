@@ -1,11 +1,14 @@
 module ResultsHelper
   def result_groups(session)
     relevant_group_keys.index_with do |group_key|
-      {
-        heading: I18n.t("coronavirus_form.groups.#{group_key}.title"),
-        questions: filter_questions_by_session(group_key, session),
-      }
-    end
+      filtered_questions = filter_questions_by_session(group_key, session)
+      unless filtered_questions.empty?
+        {
+          heading: I18n.t("coronavirus_form.groups.#{group_key}.title"),
+          questions: filtered_questions,
+        }
+      end
+    end.compact
   end
 
   def filter_questions_by_session(group_key, session)

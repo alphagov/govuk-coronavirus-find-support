@@ -15,7 +15,10 @@
 <% end %>
 
 <% result_groups(session).each do |group| %>
-  <%= render partial: "result_group", locals: { group: group }  %>
+  <%= render "components/actions-group", {
+    title: group[1][:heading],
+    subsections: group[1][:questions]
+  } %>
 <% end %>
 
 <%= render "components/callout", {

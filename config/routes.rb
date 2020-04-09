@@ -73,6 +73,9 @@ Rails.application.routes.draw do
     get "/need-help-with", to: "need_help_with#show"
     post "/need-help-with", to: "need_help_with#submit"
 
+    # Results
+    get "/results", to: "results#show"
+
     get "/session-expired", to: "session_expired#show"
   end
 

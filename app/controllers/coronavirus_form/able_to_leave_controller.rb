@@ -20,7 +20,7 @@ class CoronavirusForm::AbleToLeaveController < ApplicationController
       render controller_path
     else
       update_session_store
-      redirect_to controller: next_question(controller_name), action: "show"
+      redirect_to results_path
     end
   end
 

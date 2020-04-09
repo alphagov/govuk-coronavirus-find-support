@@ -58,7 +58,7 @@ RSpec.describe "have-you-been-made-unemployed" do
       expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
-    xit "shows an error when no radio button selected" do
+    it "shows an error when no radio button selected" do
       post have_you_been_made_unemployed_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))

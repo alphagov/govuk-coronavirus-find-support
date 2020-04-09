@@ -62,7 +62,7 @@ RSpec.describe "feel-safe" do
       post feel_safe_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.title"))
-      expect(response.body).to have_content(I18n.t("coronavirus_form.errors.radio_field", field: I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.title").downcase))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.custom_select_error"))
     end
   end
 end

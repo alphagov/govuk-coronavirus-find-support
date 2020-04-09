@@ -58,7 +58,7 @@ RSpec.describe "mental-health-worries" do
       expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end
 
-    xit "shows an error when no radio button selected" do
+    it "shows an error when no radio button selected" do
       post mental_health_worries_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))

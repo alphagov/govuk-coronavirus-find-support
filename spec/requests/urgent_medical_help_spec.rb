@@ -47,7 +47,7 @@ RSpec.describe "urgent-medical-help" do
       expect(response).to redirect_to(get_help_from_nhs_path)
     end
 
-    xit "shows an error when no radio button selected" do
+    it "shows an error when no radio button selected" do
       post urgent_medical_help_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.title"))

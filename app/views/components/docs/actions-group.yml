@@ -13,8 +13,7 @@ examples:
           items:
             - text: "Get information on getting referred to a food bank from Citizens Advice"
               href: "#"
-            - text: "Get information on getting support from a food bank from the Trussell Trust"
-              href: "#"
+            - text: 'Get information on getting support from a food bank from the <a href="#" class="govuk-link">Trussell Trust</a>'
         - title: "If you’re you unable to get food:"
           items:
             - text: "Find your local council to contact them for support"

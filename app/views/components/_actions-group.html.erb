@@ -14,7 +14,11 @@
           <ul class="govuk-list">
             <% subsection[:items].each do |item| %>
               <li>
-                <%= link_to item[:text], item[:href], class: "govuk-link" %>
+                <% if item[:href] %>
+                  <%= link_to item[:text], item[:href], class: "govuk-link" %>
+                <% else %>
+                  <%= sanitize(item[:text]) %>
+                <% end %>
               </li>
             <% end %>
           </ul>

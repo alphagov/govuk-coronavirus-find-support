@@ -22,9 +22,8 @@
   <% end %>
 <% end %>
 
-<div>
-  <%= t("coronavirus_form.results.feedback.text") %>
-  <a href="/feedback">
-    <%= t("coronavirus_form.results.feedback.link_text") %>
-  </a>
-</div>
+<%= render "components/callout", {
+  title: "Help us improve"
+} do %>
+  <%= link_to t("coronavirus_form.results.feedback.link_text"), t("coronavirus_form.results.feedback.link_href"), class: "govuk-link" %>
+<% end %>

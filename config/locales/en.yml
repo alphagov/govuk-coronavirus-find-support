@@ -319,6 +319,15 @@ en:
               - "I cannot go out because I have a disability"
               - "I’m unable to leave my home for another reason"
             custom_select_error: "Select if you are able to leave your home or not"
+    results:
+      header:
+        context: Coronavirus (COVID-19)
+        title: Information based on your answers
+        start_again_text: Start again
+      feedback:
+        text: Help us improve
+        link_text: Give feedback on this service
+        link_href: "https://www.gov.uk/done/coronavirus-support-from-business"
   results_link:
     feel_unsafe:
       feel_safe:
@@ -565,11 +574,3 @@ en:
           - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
           - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
           - text: "If it’s an emergency, call 999"
-  results:
-    header:
-      context: Coronavirus (COVID-19)
-      title: Information based on your answers
-      start_again_text: Start again
-    feedback:
-      text: Help us improve
-      link_text: Give feedback on this service

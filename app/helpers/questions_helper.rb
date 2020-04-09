@@ -36,4 +36,8 @@ module QuestionsHelper
   def questions_to_ask
     session[:questions_to_ask]
   end
+
+  def first_question_seen?
+    session[:urgent_medical_help].present?
+  end
 end

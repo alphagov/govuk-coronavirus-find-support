@@ -1,10 +1,23 @@
 RSpec.describe "need-help-with" do
   before do
     allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(get_food feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:first_question_seen?).and_return(true)
   end
 
   describe "GET /need-help-with" do
     let(:selected) { ["Feeling unsafe"] }
+
+    context "without user having answered urgent medical help question" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:first_question_seen?).and_return(false)
+      end
+
+      it "redirects to urgent medical help question" do
+        get need_help_with_path
+
+        expect(response).to redirect_to(controller: "urgent_medical_help", action: "show")
+      end
+    end
 
     context "without session data" do
       it "shows the form" do

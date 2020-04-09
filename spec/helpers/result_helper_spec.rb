@@ -60,7 +60,6 @@ RSpec.describe ResultsHelper, type: :helper do
         },
       )
     end
-
   end
 
   describe "#filter_questions_by_session" do

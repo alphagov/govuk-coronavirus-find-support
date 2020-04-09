@@ -1,6 +1,6 @@
 module ResultsHelper
   def result_groups(session)
-    relevant_group_keys.index_with do |group_key|
+    groups = relevant_group_keys.index_with do |group_key|
       filtered_questions = filter_questions_by_session(group_key, session)
       unless filtered_questions.empty?
         {
@@ -8,7 +8,8 @@ module ResultsHelper
           questions: filtered_questions,
         }
       end
-    end.compact
+    end
+    groups.compact
   end
 
   def filter_questions_by_session(group_key, session)
@@ -33,6 +34,6 @@ module ResultsHelper
   end
 
   def selected_groups
-    @selected_groups ||= session["selected_groups"]
+    session["selected_groups"]
   end
 end

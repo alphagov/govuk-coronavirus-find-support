@@ -22,7 +22,7 @@ RSpec.describe ResultsHelper, type: :helper do
   end
 
   describe "#result_groups" do
-    it "should return all group questions if all the session responses meet criteria" do
+    it "should return a group data structure with a heading and filtered questions" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
         "have_you_been_made_unemployed": "I might be soon",
@@ -41,23 +41,26 @@ RSpec.describe ResultsHelper, type: :helper do
       )
     end
 
-    it "should return filtered group questions if the session responses do not meet criteria" do
+    it "should filter out empty groups" do
       session.merge!({
-        "selected_groups": %i[being_unemployed],
+        "selected_groups": %i[being_unemployed getting_food],
         "have_you_been_made_unemployed": "I might be soon",
-        "are_you_off_work_ill": "No",
+        "are_you_off_work_ill": "Yes",
         "self_employed": "Yes",
+        "afford_food": "No",
       })
       expect(result_groups(session)).to eq(
         being_unemployed: {
           heading:  I18n.t("coronavirus_form.groups.being_unemployed.title"),
           questions: [
             I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
+            I18n.t("results_link.being_unemployed.are_you_off_work_ill"),
             I18n.t("results_link.being_unemployed.self_employed"),
           ],
-        }
+        },
       )
     end
+
   end
 
   describe "#filter_questions_by_session" do

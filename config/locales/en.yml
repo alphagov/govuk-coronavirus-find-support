@@ -324,7 +324,7 @@ en:
       title: "Feeling Safe"
       results:
         feel_safe:
-          title: "If you or someone you know are not feeling safe where you live"
+          title: "If you do not feel safe where you live or you’re worried about someone else"
           show_options:
             - "Yes but I’m concerned about the safety of someone else"
             - "No"
@@ -359,7 +359,7 @@ en:
       title: "Paying bills"
       results:
         afford_rent_mortgage_bills:
-          title: "If you're finding it hard to pay rent or bills"
+          title: "If you’re finding it hard to afford rent, your mortgage or bills"
           show_options:
             - "Yes"
             - "Not sure"
@@ -390,7 +390,7 @@ en:
       title: "Getting food"
       results:
         afford_food:
-          title: "If you're finding it hard to afford food"
+          title: "If you’re finding it hard to afford food"
           show_options:
             - "Yes"
             - "Not sure"
@@ -423,7 +423,7 @@ en:
       title: "Being unemployed or not having any work"
       results:
         have_you_been_made_unemployed:
-          title: "If you’ve been made unemployed or put on temporary leave (furloughed)"
+          title: "If you’ve been made unemployed, or put on temporary leave (furloughed)"
           show_options:
             - "I might be soon"
             - "No"
@@ -454,7 +454,7 @@ en:
             - text: "Find help with benefits if you live in Scotland"
               href: "https://www.mygov.scot/benefits-support/"
         are_you_off_work_ill:
-          title: "If you are off work ill"
+          title: "If you’re off work because you’re ill or self isolating"
           show_options:
             - "Yes"
             - "Not sure"
@@ -468,7 +468,7 @@ en:
             - text: "Get information on the help you can get if you're self-employed or work in the gig economy from the Money Advice Service"
               href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
         self_employed:
-          title: "If you are self employed"
+          title: "If you’re self employed or a sole trader"
           show_options:
             - "Yes"
             - "Not sure"
@@ -481,6 +481,7 @@ en:
       title: "Going in to work"
       results:
         still_working:
+          title: "If you’re still going in to work even though you’re a key worker"
           show_options:
             - "Yes"
             - "I do not know if I’m a key worker"
@@ -496,6 +497,7 @@ en:
             - text: "Find out if you're a key worker if you live in Scotland"
               href: "https://www.gov.scot/publications/coronavirus-guide-schools-early-learning-closures/pages/key-workers/"
         living_with_vulnerable:
+          title: "If you’re worried about going in to work because you live with someone vulnerable to coronavirus"
           show_options:
             - "Yes"
             - "Not sure"
@@ -506,6 +508,7 @@ en:
       title: "Having somewhere to live"
       results:
         do_you_have_somewhere_to_live:
+          title: "If you do not have somewhere to live"
           show_options:
             - "I do now but I might lose it"
             - "No"
@@ -523,6 +526,7 @@ en:
             - text: "Get help if you are homeless from Shelter Scotland"
               href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"
         have_you_been_evicted:
+          title: "If you’ve been evicted"
           show_options:
             - "Yes"
             - "I might be evicted soon"
@@ -549,6 +553,7 @@ en:
       title: "Mental health and wellbeing"
       results:
         mental_health_worries:
+          title: "If you’re worried about your mental health or someone else’s mental health"
           show_options:
             - "Yes"
             - "Not sure"

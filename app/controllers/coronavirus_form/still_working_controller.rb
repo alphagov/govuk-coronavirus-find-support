@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::StillWorkingController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       still_working: strip_tags(params[:still_working]).presence,

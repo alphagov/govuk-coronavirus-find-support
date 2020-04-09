@@ -6,6 +6,18 @@ RSpec.describe "have-you-been-evicted" do
   describe "GET /have-you-been-evicted" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_you_been_evicted.options").sample }
 
+    context "without any questions to ask in the session data" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
+      end
+
+      it "redirects to filter question" do
+        get have_you_been_evicted_path
+
+        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+      end
+    end
+
     context "without session data" do
       it "shows the form" do
         visit have_you_been_evicted_path

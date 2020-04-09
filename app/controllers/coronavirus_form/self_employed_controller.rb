@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::SelfEmployedController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       self_employed: strip_tags(params[:self_employed]).presence,

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::LivingWithVulnerableController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       living_with_vulnerable: strip_tags(params[:living_with_vulnerable]).presence,

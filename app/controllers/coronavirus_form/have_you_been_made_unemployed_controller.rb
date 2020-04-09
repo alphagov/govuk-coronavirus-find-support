@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::HaveYouBeenMadeUnemployedController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       have_you_been_made_unemployed: strip_tags(params[:have_you_been_made_unemployed]).presence,

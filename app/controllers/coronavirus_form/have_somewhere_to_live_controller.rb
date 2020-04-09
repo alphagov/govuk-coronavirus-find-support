@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::HaveSomewhereToLiveController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       have_somewhere_to_live: strip_tags(params[:have_somewhere_to_live]).presence,

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AffordRentMortgageBillsController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       afford_rent_mortgage_bills: strip_tags(params[:afford_rent_mortgage_bills]).presence,

@@ -28,8 +28,6 @@ module QuestionsHelper
     end
   end
 
-private
-
   def questions_to_ask
     session[:questions_to_ask]
   end

@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AreYouOffWorkIllController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       are_you_off_work_ill: strip_tags(params[:are_you_off_work_ill]).presence,

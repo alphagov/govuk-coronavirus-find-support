@@ -7,8 +7,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::InvalidAuthenticityToken, with: :session_expired
 
-  before_action :check_first_question, only: [:show]
-
   def show
     @form_responses = session.to_hash.with_indifferent_access
     respond_to do |format|
@@ -46,7 +44,9 @@ private
     redirect_to session_expired_path
   end
 
-  def check_first_question
-    # TODO - do we need to implement this? Or can people be deep linked into the form?
+  def check_filter_question_answered
+    if questions_to_ask.blank?
+      redirect_to controller: "need_help_with", action: "show"
+    end
   end
 end

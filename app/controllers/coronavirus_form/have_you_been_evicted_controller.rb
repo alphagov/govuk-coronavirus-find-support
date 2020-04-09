@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::HaveYouBeenEvictedController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       have_you_been_evicted: strip_tags(params[:have_you_been_evicted]).presence,

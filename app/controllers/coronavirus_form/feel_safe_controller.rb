@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::FeelSafeController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       feel_safe: strip_tags(params[:feel_safe]).presence,

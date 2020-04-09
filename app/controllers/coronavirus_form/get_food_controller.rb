@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::GetFoodController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       get_food: strip_tags(params[:get_food]).presence,

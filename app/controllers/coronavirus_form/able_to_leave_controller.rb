@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AbleToLeaveController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       able_to_leave: strip_tags(params[:able_to_leave]).presence,

@@ -6,6 +6,18 @@ RSpec.describe "afford-food" do
   describe "GET /afford-food" do
     let(:selected_option) { I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.options").sample }
 
+    context "without any questions to ask in the session data" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
+      end
+
+      it "redirects to filter question" do
+        get afford_food_path
+
+        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+      end
+    end
+
     context "without session data" do
       it "shows the form" do
         visit afford_food_path

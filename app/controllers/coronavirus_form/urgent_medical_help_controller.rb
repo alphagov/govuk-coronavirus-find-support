@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::UrgentMedicalHelpController < ApplicationController
-  skip_before_action :check_first_question
-
   def submit
     @form_responses = {
       urgent_medical_help: strip_tags(params[:urgent_medical_help]).presence,

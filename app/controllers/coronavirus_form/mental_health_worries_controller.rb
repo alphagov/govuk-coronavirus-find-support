@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::MentalHealthWorriesController < ApplicationController
+  before_action :check_filter_question_answered
+
   def submit
     @form_responses = {
       mental_health_worries: strip_tags(params[:mental_health_worries]).presence,

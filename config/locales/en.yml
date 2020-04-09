@@ -336,7 +336,7 @@ en:
           - "Yes but I’m concerned about the safety of someone else"
           - "No"
           - "Not sure"
-        links:
+        items:
           - text: "If you’re in immediate danger call 999 and ask for the Police."
           - text: "If you’re in danger and unable to talk on the phone, call 999, and then press 55."
           - text: 'Call the National Domestic Abuse Helpline on <a href="tel:0808 2000 247" class="govuk-link">0808 2000 247</a>'
@@ -368,7 +368,7 @@ en:
         show_options:
           - "Yes"
           - "Not sure"
-        links:
+        items:
           - text: "Find out what to do if you're finding it hard to pay rent"
             href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
           - text: "Find information on the policies in place if you're finding it hard to pay energy bills"
@@ -397,7 +397,7 @@ en:
         show_options:
           - "Yes"
           - "Not sure"
-        links:
+        items:
           - text: "Find out if you’re eligible for Universal Credit"
             href: "https://www.gov.uk/universal-credit/eligibility"
           - text: "If you are at least 10 weeks pregnant or have a child under 4, find out if you can apply for Healthy Start vouchers"
@@ -414,7 +414,7 @@ en:
         show_options:
           - "Yes"
           - "Not sure"
-        links:
+        items:
           - text: "If you can, then ask friends, family, or other people in your community to get food for you."
           - text: "You might be able to ask local shops to help you get food or do an online food order."
           - text: "Find your local council to contact them for support"
@@ -429,7 +429,7 @@ en:
           - "I might be soon"
           - "No"
           - "Not sure"
-        links:
+        items:
           - text: "What to do if you have lost your job"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job"
           - text: "What to do if you’re laid-off"
@@ -459,7 +459,7 @@ en:
         show_options:
           - "Yes"
           - "Not sure"
-        links:
+        items:
           - text: "Check if you’re eligible for statutory sick pay"
             href: "https://www.gov.uk/statutory-sick-pay"
           - text: "What to do if you’re employed but cannot work"
@@ -473,7 +473,7 @@ en:
         show_options:
           - "Yes"
           - "Not sure"
-        links:
+        items:
           - text: "What to do if you're self-employed and getting less work"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
           - text: "Get information on what you can do if you're self employed or a sole trader from the Money Advice Service"
@@ -484,7 +484,7 @@ en:
         show_options:
           - "Yes"
           - "I do not know if I’m a key worker"
-        links:
+        items:
           - text: "Find out if you should be going to work"
             href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
           - text: "Find out if you’re a key worker"
@@ -500,7 +500,7 @@ en:
         show_options:
           - "Yes"
           - "Not sure"
-        links:
+        items:
           - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
             href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
     somewhere_to_live:
@@ -510,7 +510,7 @@ en:
           - "I do now but I might lose it"
           - "No"
           - "Not sure"
-        links:
+        items:
           - text: "Get information if you are legally homeless from Shelter"
             href: "https://england.shelter.org.uk/housing_advice/homelessness/rules/legally_homeless"
           - text: 'If you’re in Northern Ireland call the Housing Executive on <a href="tel:+443448920908" class="govuk-link">03448 920 908</a>'
@@ -528,7 +528,7 @@ en:
           - "Yes"
           - "I might be evicted soon"
           - "Not sure"
-        links:
+        items:
           - text: "Get information about your rights as a tenant"
             href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
           - text: "Get coronavirus housing advice from Shelter"
@@ -552,7 +552,7 @@ en:
         show_options:
           - "Yes"
           - "Not sure"
-        links:
+        items:
           - text: "Get information on coronavirus and your wellbeing from Mind"
             href: "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8"
           - text: "Get information about looking after your mental health during coronavirus"

@@ -477,28 +477,31 @@ en:
               href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
             - text: "Get information on what you can do if you're self employed or a sole trader from the Money Advice Service"
               href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
-    still_working:
-      show_options:
-        - "Yes"
-        - "I do not know if I’m a key worker"
-      links:
-        - text: "Find out if you should be going to work"
-          href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
-        - text: "Find out if you’re a key worker"
-          href: "https://www.gov.uk/government/publications/coronavirus-covid-19-maintaining-educational-provision/guidance-for-schools-colleges-and-local-authorities-on-maintaining-educational-provision"
-        - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
-          href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
-        - text: "Find out if you’re a key worker if you live in Wales"
-          href: "https://gov.wales/coronavirus-key-critical-workers"
-        - text: "Find out if you're a key worker if you live in Scotland"
-          href: "https://www.gov.scot/publications/coronavirus-guide-schools-early-learning-closures/pages/key-workers/"
-    living_with_vulnerable:
-      show_options:
-        - "Yes"
-        - "Not sure"
-      links:
-        - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
-          href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
+    going_in_to_work:
+      title: "Going in to work"
+      results:
+        still_working:
+          show_options:
+            - "Yes"
+            - "I do not know if I’m a key worker"
+          links:
+            - text: "Find out if you should be going to work"
+              href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
+            - text: "Find out if you’re a key worker"
+              href: "https://www.gov.uk/government/publications/coronavirus-covid-19-maintaining-educational-provision/guidance-for-schools-colleges-and-local-authorities-on-maintaining-educational-provision"
+            - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
+              href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
+            - text: "Find out if you’re a key worker if you live in Wales"
+              href: "https://gov.wales/coronavirus-key-critical-workers"
+            - text: "Find out if you're a key worker if you live in Scotland"
+              href: "https://www.gov.scot/publications/coronavirus-guide-schools-early-learning-closures/pages/key-workers/"
+        living_with_vulnerable:
+          show_options:
+            - "Yes"
+            - "Not sure"
+          links:
+            - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
+              href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
     do_you_have_somewhere_to_live:
       show_options:
         - "I do now but I might lose it"

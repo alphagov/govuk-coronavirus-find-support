@@ -120,7 +120,7 @@ en:
             title: "What do you need to find help with?"
             options:
               - "I’m not sure"
-            custom_select_error: "Please choose at least one option. If you don’t know, please choose \"I’m not sure\""
+            custom_select_error: 'Please choose at least one option. If you don’t know, please choose \"I’m not sure\"'
       help: # NHS question and 'What do you need help with'.
         # No title needed for this group.
         questions:
@@ -455,4 +455,4 @@ en:
         - text: "If you need urgent help text ‘Shout’ to 85258"
         - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:0808 808 8000" class="govuk-link">0808 808 8000</a>'
         - text: 'If you need urgent help and you’re in Wales call <a href="tel:0800 132 737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
-        - text: "If it’s an emergency, call <a href="tel:999" class="govuk-link">999</a>"
+        - text: 'If it’s an emergency, call <a href="tel:999" class="govuk-link">999</a>'

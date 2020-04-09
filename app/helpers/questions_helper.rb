@@ -14,29 +14,31 @@ module QuestionsHelper
   end
 
   def next_question(current_question)
-    return questions_to_ask.first if current_question == FILTER_QUESTION
+    return first_question if current_question == FILTER_QUESTION
+    return FINAL_QUESTION if current_question == last_question
 
     current_question_index = questions_to_ask.index(current_question)
-    if current_question_index == (questions_to_ask.length - 1)
-      FINAL_QUESTION
-    else
-      questions_to_ask[current_question_index + 1]
-    end
+    questions_to_ask[current_question_index + 1]
   end
 
   def previous_question(current_question)
-    return questions_to_ask.last if current_question == FINAL_QUESTION
+    return last_question if current_question == FINAL_QUESTION
+    return FILTER_QUESTION if current_question == first_question
 
     current_question_index = questions_to_ask.index(current_question)
-    if current_question_index.zero?
-      FILTER_QUESTION
-    else
-      questions_to_ask[current_question_index + -1]
-    end
+    questions_to_ask[current_question_index + -1]
   end
 
   def questions_to_ask
     session[:questions_to_ask]
+  end
+
+  def first_question
+    questions_to_ask.first
+  end
+
+  def last_question
+    questions_to_ask.last
   end
 
   def first_question_seen?

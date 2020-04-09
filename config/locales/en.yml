@@ -184,6 +184,7 @@ en:
         questions:
           need_help_with:
             title: "What do you need to find help with?"
+            hint_text: "Select all that apply"
             options:
               - "I’m not sure"
             custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"

@@ -419,58 +419,64 @@ en:
             - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email <a href="mailto:covid19@adviceni.net">covid19@adviceni.net</a> or text: ’ACTION’ to 81025'
             - text: "Get information on getting food deliveries if you live in Northern Ireland from The Consumer Council"
               href: "https://www.consumercouncil.org.uk/coronavirus/vulnerable"
-    have_you_been_made_unemployed:
-      show_options:
-        - "I might be soon"
-        - "No"
-        - "Not sure"
-      links:
-        - text: "What to do if you have lost your job"
-          href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job"
-        - text: "What to do if you’re laid-off"
-          href: "https://www.gov.uk/lay-offs-short-timeworking"
-        - text: "Find out about your rights if you have been dismissed"
-          href: "https://www.gov.uk/dismissal"
-        - text: "What to do if you’ve been furloughed"
-          href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
-        - text: "Get information about what to do if your employer has told you not to work from Citizens Advice"
-          href: "https://www.citizensadvice.org.uk/work/coronavirus-if-your-employer-has-told-you-not-to-work/"
-        - text: "Get information about the financial support you might be able to get from Acas"
-          href: "https://www.acas.org.uk/coronavirus/if-the-employer-needs-to-close-the-workplace"
-        - text: "Get information on applying for Universal Credit from Citizens Advice"
-          href: "https://www.citizensadvice.org.uk/benefits/universal-credit/"
-        - text: "Get advice on benefits if you live in Northern Ireland from Advice NI"
-          href: "https://www.adviceni.net/"
-        - text: "Contact Working Wales if you’ve been made redundant in Wales"
-          href: "https://workingwales.gov.wales/"
-        - text: "Contact Citizens Advice Wales"
-          href: "https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/"
-        - text: "Get help if you’ve been made redundant in Scotland"
-          href: "https://www.mygov.scot/help-redundancy/"
-        - text: "Find help with benefits if you live in Scotland"
-          href: "https://www.mygov.scot/benefits-support/"
-    are_you_off_work_ill:
-      show_options:
-        - "Yes"
-        - "Not sure"
-      links:
-        - text: "Check if you’re eligible for statutory sick pay"
-          href: "https://www.gov.uk/statutory-sick-pay"
-        - text: "What to do if you’re employed but cannot work"
-          href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
-        - text: "Get information on getting statutory sick pay if you're self-isolating from Acas"
-          href: "https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay"
-        - text: "Get information on the help you can get if you're self-employed or work in the gig economy from the Money Advice Service"
-          href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
-    self_employed:
-      show_options:
-        - "Yes"
-        - "Not sure"
-      links:
-        - text: "What to do if you're self-employed and getting less work"
-          href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
-        - text: "Get information on what you can do if you're self employed or a sole trader from the Money Advice Service"
-          href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
+    being_unemployed:
+      title: "Being unemployed or not having any work"
+      results:
+        have_you_been_made_unemployed:
+          title: "If you’ve been made unemployed or put on temporary leave (furloughed)"
+          show_options:
+            - "I might be soon"
+            - "No"
+            - "Not sure"
+          links:
+            - text: "What to do if you have lost your job"
+              href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job"
+            - text: "What to do if you’re laid-off"
+              href: "https://www.gov.uk/lay-offs-short-timeworking"
+            - text: "Find out about your rights if you have been dismissed"
+              href: "https://www.gov.uk/dismissal"
+            - text: "What to do if you’ve been furloughed"
+              href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
+            - text: "Get information about what to do if your employer has told you not to work from Citizens Advice"
+              href: "https://www.citizensadvice.org.uk/work/coronavirus-if-your-employer-has-told-you-not-to-work/"
+            - text: "Get information about the financial support you might be able to get from Acas"
+              href: "https://www.acas.org.uk/coronavirus/if-the-employer-needs-to-close-the-workplace"
+            - text: "Get information on applying for Universal Credit from Citizens Advice"
+              href: "https://www.citizensadvice.org.uk/benefits/universal-credit/"
+            - text: "Get advice on benefits if you live in Northern Ireland from Advice NI"
+              href: "https://www.adviceni.net/"
+            - text: "Contact Working Wales if you’ve been made redundant in Wales"
+              href: "https://workingwales.gov.wales/"
+            - text: "Contact Citizens Advice Wales"
+              href: "https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/"
+            - text: "Get help if you’ve been made redundant in Scotland"
+              href: "https://www.mygov.scot/help-redundancy/"
+            - text: "Find help with benefits if you live in Scotland"
+              href: "https://www.mygov.scot/benefits-support/"
+        are_you_off_work_ill:
+          title: "If you are off work ill"
+          show_options:
+            - "Yes"
+            - "Not sure"
+          links:
+            - text: "Check if you’re eligible for statutory sick pay"
+              href: "https://www.gov.uk/statutory-sick-pay"
+            - text: "What to do if you’re employed but cannot work"
+              href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
+            - text: "Get information on getting statutory sick pay if you're self-isolating from Acas"
+              href: "https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay"
+            - text: "Get information on the help you can get if you're self-employed or work in the gig economy from the Money Advice Service"
+              href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
+        self_employed:
+          title: "If you are self employed"
+          show_options:
+            - "Yes"
+            - "Not sure"
+          links:
+            - text: "What to do if you're self-employed and getting less work"
+              href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
+            - text: "Get information on what you can do if you're self employed or a sole trader from the Money Advice Service"
+              href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
     still_working:
       show_options:
         - "Yes"

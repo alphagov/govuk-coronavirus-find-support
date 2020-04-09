@@ -73,6 +73,7 @@ private
       groups_hash.key(item) if groups_hash.has_value?(item)
     end
 
+    session[:selected_groups] = selected_groups.compact
     session[:questions_to_ask] = determine_user_questions(selected_groups.compact)
   end
 

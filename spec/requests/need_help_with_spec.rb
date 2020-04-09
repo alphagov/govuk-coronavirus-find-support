@@ -51,8 +51,10 @@ RSpec.describe "need-help-with" do
       post need_help_with_path, params: { need_help_with: selected }
 
       expected_questions = I18n.t("coronavirus_form.groups.being_unemployed.questions").stringify_keys.keys
+      expected_groups = [:being_unemployed]
 
       expect(session[:need_help_with]).to eq(selected)
+      expect(session[:selected_groups]).to eq(expected_groups)
       expect(session[:questions_to_ask]).to eq(expected_questions)
     end
 
@@ -64,6 +66,7 @@ RSpec.describe "need-help-with" do
       all_questions = I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
 
       expect(session[:need_help_with]).to eq(selected)
+      expect(session[:selected_groups]).to be_empty
       expect(session[:questions_to_ask]).to eq(all_questions)
     end
 

@@ -23,9 +23,8 @@
   <% end %>
 <% end %>
 
-<div>
-  <%= t("results.feedback.text") %>
-  <a href="/feedback">
-    <%= t("results.feedback.link_text") %>
-  </a>
-</div>
+<%= render "components/callout", {
+  title: "Help us improve"
+} do %>
+  <%= link_to t("results.feedback.link_text"), t("results.feedback.link_href"), class: "govuk-link" %>
+<% end %>

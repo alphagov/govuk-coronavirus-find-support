@@ -114,6 +114,13 @@ en:
       radio_field: "Select %{field}"
       checkbox_field: "Select at least one %{field}"
     groups:
+      filter_questions:
+        questions:
+          need_help_with:
+            title: "What do you need to find help with?"
+            options:
+              - "I’m not sure"
+            custom_select_error: "Please choose at least one option. If you don’t know, please choose \"I’m not sure\""
       help: # NHS question and 'What do you need help with'.
         # No title needed for this group.
         questions:

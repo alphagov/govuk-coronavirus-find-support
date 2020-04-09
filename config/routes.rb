@@ -69,6 +69,10 @@ Rails.application.routes.draw do
     get "/able-to-leave", to: "able_to_leave#show"
     post "/able-to-leave", to: "able_to_leave#submit"
 
+    # Question: What do you need to find help with?
+    get "/need-help-with", to: "need_help_with#show"
+    post "/need-help-with", to: "need_help_with#submit"
+
     get "/session-expired", to: "session_expired#show"
   end
 

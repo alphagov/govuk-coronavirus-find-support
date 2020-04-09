@@ -1,0 +1,26 @@
+<% content_for :title do %><%= t("coronavirus_form.groups.#{group}.questions.#{controller_name}.title") %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("coronavirus_form.groups.#{group}.questions.#{controller_name}.title") %>" />
+<% end %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+<% end %>
+
+<%= form_tag({},
+  "data-module": "track-coronavirus-form-find-support-#{controller_name.sub('_','-')}",
+  "data-question-key": controller_name,
+  "id": "need_help_with",
+  "novalidate": "true"
+) do %>
+
+<%= render "govuk_publishing_components/components/checkboxes", {
+  heading: t("coronavirus_form.groups.#{group}.questions.#{controller_name}.title"),
+  is_page_heading: true,
+  name: "#{controller_name}[]",
+  error: error_items(controller_name),
+  items: items
+} %>
+
+<%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
+<% end %>

@@ -235,6 +235,7 @@ en:
               - "Yes"
               - "No"
               - "Not sure"
+            custom_select_error: "Select yes if you are able to get food"
       being_unemployed:
         title: "Being unemployed or not having any work"
         questions:

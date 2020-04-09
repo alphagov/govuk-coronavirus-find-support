@@ -355,6 +355,37 @@ en:
               href: "https://www.olderpeoplewales.com/en/coronavirus.aspx"
             - text: "Find victim support helplines if you live in Wales"
               href: "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales"
+    paying_bills:
+      title: "Paying bills"
+      results:
+        afford_rent_mortgage_bills:
+          title: "If you're finding it hard to pay rent or bills"
+          show_options:
+            - "Yes"
+            - "Not sure"
+          links:
+            - text: "Find out what to do if you're finding it hard to pay rent"
+              href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
+            - text: "Find information on the policies in place if you're finding it hard to pay energy bills"
+              href: "https://www.gov.uk/government/news/government-agrees-measures-with-energy-industry-to-support-vulnerable-people-through-covid-19"
+            - text: "Get information on what do if you cannot pay your rent or mortgage from Shelter"
+              href: "https://england.shelter.org.uk/housing_advice/coronavirus#Rent_payment_problems"
+            - text: "Get information on what do if you cannot pay your rent, mortgage or bills from Citizens Advice"
+              href: "https://www.citizensadvice.org.uk/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/"
+            - text: "Get help from Housing Rights if you live in Northern Ireland"
+              href: "https://www.housingrights.org.uk/"
+            - text: "Get information if you're finding it hard to pay rent and you live in Wales"
+              href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
+            - text: "Get coronavirus housing information from Shelter Wales"
+              href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
+            - text: "Get information about your rights if you have a private landlord in Scotland"
+              href: "https://www.mygov.scot/private-rental-rights/"
+            - text: "Get coronavirus housing information from Shelter Scotland"
+              href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19"
+            - text: "Get information about your rights if you have a social landlord in Scotland"
+              href: "https://www.mygov.scot/social-rental-rights/"
+            - text: "Get coronavirus housing information from Shelter Scotland"
+              href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19#Paying_rent"
     have_you_been_made_unemployed:
       show_options:
         - "I might be soon"
@@ -429,33 +460,6 @@ en:
       links:
         - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
           href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
-    afford_rent_mortgage_bills:
-      show_options:
-        - "Yes"
-        - "Not sure"
-      links:
-        - text: "Find out what to do if you're finding it hard to pay rent"
-          href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
-        - text: "Find information on the policies in place if you're finding it hard to pay energy bills"
-          href: "https://www.gov.uk/government/news/government-agrees-measures-with-energy-industry-to-support-vulnerable-people-through-covid-19"
-        - text: "Get information on what do if you cannot pay your rent or mortgage from Shelter"
-          href: "https://england.shelter.org.uk/housing_advice/coronavirus#Rent_payment_problems"
-        - text: "Get information on what do if you cannot pay your rent, mortgage or bills from Citizens Advice"
-          href: "https://www.citizensadvice.org.uk/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/"
-        - text: "Get help from Housing Rights if you live in Northern Ireland"
-          href: "https://www.housingrights.org.uk/"
-        - text: "Get information if you're finding it hard to pay rent and you live in Wales"
-          href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
-        - text: "Get coronavirus housing information from Shelter Wales"
-          href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
-        - text: "Get information about your rights if you have a private landlord in Scotland"
-          href: "https://www.mygov.scot/private-rental-rights/"
-        - text: "Get coronavirus housing information from Shelter Scotland"
-          href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19"
-        - text: "Get information about your rights if you have a social landlord in Scotland"
-          href: "https://www.mygov.scot/social-rental-rights/"
-        - text: "Get coronavirus housing information from Shelter Scotland"
-          href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19#Paying_rent"
     afford_food:
       show_options:
         - "Yes"

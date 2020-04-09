@@ -14,10 +14,10 @@ module QuestionsHelper
   end
 
   def next_question(current_question)
+    return questions_to_ask.first if current_question == FILTER_QUESTION
+
     current_question_index = questions_to_ask.index(current_question)
-    if current_question_index.nil?
-      questions_to_ask.first
-    elsif current_question_index == (questions_to_ask.length - 1)
+    if current_question_index == (questions_to_ask.length - 1)
       FINAL_QUESTION
     else
       questions_to_ask[current_question_index + 1]

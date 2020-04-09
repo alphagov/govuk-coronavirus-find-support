@@ -28,8 +28,8 @@ RSpec.describe QuestionsHelper, type: :helper do
       expect(helper.next_question("question_2")).to eq("able_to_leave")
     end
 
-    it "returns the first question for an unknown current question" do
-      expect(helper.next_question("foo")).to eq("question_1")
+    it "returns the first question for the need help with question" do
+      expect(helper.next_question("need_help_with")).to eq("question_1")
     end
   end
 

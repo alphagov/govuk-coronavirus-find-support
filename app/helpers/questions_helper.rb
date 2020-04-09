@@ -1,5 +1,5 @@
 module QuestionsHelper
-  RESULTS_PAGE = "results".freeze
+  FINAL_QUESTION = "able_to_leave".freeze
   FILTER_QUESTION = "need_help_with".freeze
 
   def determine_user_questions(groups)
@@ -18,13 +18,15 @@ module QuestionsHelper
     if current_question_index.nil?
       questions_to_ask.first
     elsif current_question_index == (questions_to_ask.length - 1)
-      RESULTS_PAGE
+      FINAL_QUESTION
     else
       questions_to_ask[current_question_index + 1]
     end
   end
 
   def previous_question(current_question)
+    return questions_to_ask.last if current_question == FINAL_QUESTION
+
     current_question_index = questions_to_ask.index(current_question)
     if current_question_index.zero?
       FILTER_QUESTION

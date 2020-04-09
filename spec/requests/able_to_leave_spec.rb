@@ -52,10 +52,10 @@ RSpec.describe "able-to-leave" do
       expect(session[:able_to_leave]).to eq(selected_option)
     end
 
-    it "redirects to the next question" do
+    it "redirects to the results page" do
       post able_to_leave_path, params: { able_to_leave: selected_option }
 
-      expect(response).to redirect_to(controller: "feel_safe", action: "show")
+      expect(response).to redirect_to(results_path)
     end
 
     it "shows an error when no radio button selected" do

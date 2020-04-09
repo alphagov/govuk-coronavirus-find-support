@@ -24,8 +24,8 @@ RSpec.describe QuestionsHelper, type: :helper do
       expect(helper.next_question("question_1")).to eq("question_2")
     end
 
-    it "returns the results page key for the final item" do
-      expect(helper.next_question("question_2")).to eq("results")
+    it "returns the final compulsory question for the final item" do
+      expect(helper.next_question("question_2")).to eq("able_to_leave")
     end
 
     it "returns the first question for an unknown current question" do
@@ -40,6 +40,10 @@ RSpec.describe QuestionsHelper, type: :helper do
 
     it "returns the filter question page key for the first item" do
       expect(helper.previous_question("question_1")).to eq("need_help_with")
+    end
+
+    it "returns the last question for the able to leave question" do
+      expect(helper.previous_question("able_to_leave")).to eq("question_2")
     end
   end
 end

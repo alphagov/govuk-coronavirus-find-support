@@ -18,7 +18,7 @@ class CoronavirusForm::NeedHelpWithController < ApplicationController
       render controller_path
     else
       update_session_store
-      # redirect_to nil
+      redirect_to controller: next_question(controller_name), action: "show"
     end
   end
 
@@ -71,7 +71,7 @@ private
       groups_hash.key(item) if groups_hash.has_value?(item)
     end
 
-    session[:selected_groups] = selected_groups.compact
+    session[:questions_to_ask] = determine_user_questions(selected_groups.compact)
   end
 
   def previous_path

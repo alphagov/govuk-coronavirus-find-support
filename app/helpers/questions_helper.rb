@@ -15,7 +15,9 @@ module QuestionsHelper
 
   def next_question(current_question)
     current_question_index = questions_to_ask.index(current_question)
-    if current_question_index == (questions_to_ask.length - 1)
+    if current_question_index.nil?
+      questions_to_ask.first
+    elsif current_question_index == (questions_to_ask.length - 1)
       RESULTS_PAGE
     else
       questions_to_ask[current_question_index + 1]

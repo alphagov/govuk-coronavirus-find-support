@@ -27,6 +27,10 @@ RSpec.describe QuestionsHelper, type: :helper do
     it "returns the results page key for the final item" do
       expect(helper.next_question("question_2")).to eq("results")
     end
+
+    it "returns the first question for an unknown current question" do
+      expect(helper.next_question("foo")).to eq("question_1")
+    end
   end
 
   describe "#previous_question" do

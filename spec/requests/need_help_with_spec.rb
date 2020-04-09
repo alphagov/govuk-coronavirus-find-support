@@ -1,4 +1,8 @@
 RSpec.describe "need-help-with" do
+  before do
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(get_food feel_safe))
+  end
+
   describe "GET /need-help-with" do
     let(:selected) { ["Feeling unsafe"] }
 
@@ -33,25 +37,27 @@ RSpec.describe "need-help-with" do
     it "updates the session store" do
       post need_help_with_path, params: { need_help_with: selected }
 
-      expected_key = "being_unemployed".to_sym
+      expected_questions = I18n.t("coronavirus_form.groups.being_unemployed.questions").stringify_keys.keys
 
       expect(session[:need_help_with]).to eq(selected)
-      expect(session[:selected_groups]).to include(expected_key)
+      expect(session[:questions_to_ask]).to eq(expected_questions)
     end
 
-    it "updates the session with an empty hash if the user selects I'm not sure" do
+    it "updates the session with all questions if the user selects I'm not sure" do
       selected = ["I’m not sure"]
 
       post need_help_with_path, params: { need_help_with: selected }
 
+      all_questions = I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
+
       expect(session[:need_help_with]).to eq(selected)
-      expect(session[:selected_groups]).to be_empty
+      expect(session[:questions_to_ask]).to eq(all_questions)
     end
 
-    xit "redirects to the next question" do
+    it "redirects to the next question" do
       post need_help_with_path, params: { need_help_with: selected }
 
-      expect(response).to redirect_to(next_question_path)
+      expect(response).to redirect_to(get_food_path)
     end
 
     it "shows an error when no checkboxes are selected" do

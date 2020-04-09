@@ -23,7 +23,7 @@ module ResultsHelper
     # :help and :filter_questions which are not really groups
     # empty.
     if selected_groups.blank?
-      return I18n.t("coronavirus_form.groups").keys - %i[filter_questions help]
+      return I18n.t("coronavirus_form.groups").keys - %i[filter_questions help leave_home]
     end
 
     selected_groups # Otherwise we can use selected groups

@@ -12,7 +12,6 @@ RSpec.describe ResultsHelper, type: :helper do
           going_in_to_work
           somewhere_to_live
           mental_health
-          leave_home
       ])
     end
 

@@ -23,35 +23,58 @@ en:
   privacy_page:
     title: Privacy
     body_text: |
-      <p class="govuk-body">Last updated: 31 March 2020</p>
+      <p class="govuk-body">Last updated: 9 April 2020</p>
       <p class="govuk-body">This service is run by the Cabinet Office, working with:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>the Ministry of Housing, Communities & Local Government</li>
-        <li>the Department for Environment Food & Rural Affairs</li>
-        <li>the Department for Work & Pensions</li>
-        <li>the National Health Service (NHS)</li>
+        <li>Acas</li>
+        <li>Advice NI</li>
+        <li>Department of Business, Energy & Industrial Strategy</li>
+        <li>Childline</li>
+        <li>Children’s Commissioner for Wales</li>
+        <li>Citizens Advice</li>
+        <li>Citizens Advice Wales</li>
+        <li>Coram Voice</li>
+        <li>Department for Digital, Culture, Media & Sport</li>
+        <li>Department for Environment, Food & Rural Affairs</li>
+        <li>Department for Education</li>
+        <li>Department of Health & Social Care</li>
+        <li>Department for Work & Pensions</li>
+        <li>Housing Advice NI</li>
+        <li>Housing Rights</li>
+        <li>Ministry of Housing, Communities & Local Government</li>
+        <li>MIND</li>
+        <li>Money Advice Service</li>
+        <li>Nexus NI</li>
+        <li>NHS</li>
+        <li>NHS Wales</li>
+        <li>NHSX</li>
+        <li>Northern Ireland Executive</li>
+        <li>NSPCC</li>
+        <li>Older People Wales</li>
+        <li>British Red Cross</li>
+        <li>Scottish Association for Mental Health</li>
+        <li>Scottish Government</li>
+        <li>Shelter (England, Scotland, Wales, Cymru)</li>
+        <li>Victim Support Wales</li>
+        <li>Welsh Government</li>
+        <li>Women’s Aid (England & Scotland)</li>
       </ul>
-      <p class="govuk-body">We’ll use the personal information you provide through this service to help make sure that people with a medical condition that makes them extremely vulnerable to coronavirus get the support they need.</p>
-      <p class="govuk-body">We’ll also use it to check your needs against data provided to us by the NHS, and to contact you with further advice or information.</p>
+      <p class="govuk-body">We’ll use the information you provide through this service to help make sure that people who are affected by COVID-19 (coronavirus) and the wider effects of the crisis get the support they need.</p>
       <p class="govuk-body">This privacy notice covers:</p>
       <ul class="govuk-list govuk-list--bullet">
-        <li>the online service, where you can enter the information that we need to get support to you where you live</li>
-        <li>the automated telephone service, where you can provide the same information over the phone</li>
+        <li>the online service, where you can enter the information that we need to understand your needs to source the support to you</li>
       </ul>
+
       <h2 class="govuk-heading-m">Lawful basis for processing your personal information</h2>
-      <p class="govuk-body">Under the General Data Protection Regulation (GDPR), we are processing this information on the basis that we’re carrying out a task in the public interest and to protect the vital interests of people more vulnerable to coronavirus.</p>
-      <p class="govuk-body">This lawful basis applies to:</p>
-      <ul class="govuk-list govuk-list--bullet">
-      <li>information shared with us by the NHS</li>
-      <li> provided to us through the online service or the automated telephone service</li>
-      </ul>
-      <p class="govuk-body">Some of the information we hold is sensitive health and care information. This is classed as ‘special category’ personal data within the meaning of Schedule 1 to the Data Protection Act 2018, meaning we must state a further lawful basis for processing it. We’re also relying on substantial public interest and governmental purpose to process this information.</p>
+      <p class="govuk-body">Although we are not collecting any personal data from you, we are asking you to provide information about your personal circumstances. As we are collecting this information at individual level, we apply controls to ensure this information is anonymous and cannot identify you.</p>
+      <p class="govuk-body">We are processing this information on the basis that we’re carrying out a task in the public interest and to protect the vital interests of people more vulnerable to coronavirus.</p>
+
       <h2 class="govuk-heading-m">What we do with your information</h2>
-      <p class="govuk-body">When you submit information through the online service or the automated telephone service, we will compare your information to information shared with us by the NHS.</p>
-      <p class="govuk-body">We ask for information about you and those who are supporting you through the online service and the automated telephone service. We may ask for more information as part of your subsequent interactions with the service.</p>
-      <p class="govuk-body">We’ll share relevant parts of your information with other government departments, NHS bodies, local authorities and other public sector and private sector organisations - depending on what’s necessary to get people the support they need.</p>
-      <p class="govuk-body">We may share your personal information with other public sector bodies in order to make sure that we and they have accurate data on who is vulnerable to coronavirus and to make sure we get help to the people who need it.</p>
-      <p class="govuk-body">We may share your personal information (except for confidential health and care information) with trusted supermarkets and other suppliers, so they can prioritise your orders if you have indicated that you need help getting basic supplies.</p>
+      <p class="govuk-body">When you submit information through the online service, we will record data about the session (the journey that you take) and what answers have been selected for each session ID. This information will be stored in line with our processing and storage policy outlined below.</p>
+      <p class="govuk-body">However, this is anonymous and there is no personally identifiable information that is shared with us or other organisations, nor any way to identify which user selected which answers.</p>
+      <p class="govuk-body">We ask for information about you and those who are supporting you through the online service. We may ask for more information as part of your subsequent interactions with the service.</p>
+      <p class="govuk-body">We may share information on the usage of our service with organisations that we have worked on this service with (as listed above) in order to make sure that we and they have accurate data on who is vulnerable to coronavirus and to make sure we get help to the people who need it.</p>
+
       <h2 class="govuk-heading-m">How long we keep your information</h2>
       <p class="govuk-body">We will only keep your personal information for as long as we need it:</p>
       <ul class="govuk-list govuk-list--bullet">
@@ -59,42 +82,22 @@ en:
         <li>to make sure this service is meeting overall demand from vulnerable people</li>
         <li>to help with the overall government response to coronavirus</li>
       </ul>
-      <h2 class="govuk-heading-m">Where your data is processed and stored</h2>
 
-      <p class="govuk-body">Your personal data may be transferred outside the UK while being processed by the Cabinet Office. If this happens, we’ll make sure you’re given the same level of technical and legal data protection as you are within the UK.</p>
+      <h2 class="govuk-heading-m">Where your data is processed and stored</h2>
+      <p class="govuk-body">Your information may be transferred outside the UK while being processed by the Cabinet Office. If this happens, we’ll make sure you’re given the same level of technical and legal data protection as you are within the UK.</p>
+
       <h2 class="govuk-heading-m">How we protect your information</h2>
-      <p class="govuk-body">We’re committed to doing all that we can to keep your information secure. We have set up systems and processes to prevent unauthorised access to or disclosure of the data we collect about you – for example, we protect your data using varying levels of encryption. All third parties that process personal data as part of this online service and the automated telephone service are required to keep that data secure. Our data processor is Amazon Web Services, who provide cloud hosting services.</p>
+      <p class="govuk-body">We’re committed to doing all that we can to keep your information secure. We have set up systems and processes to prevent unauthorised access to or disclosure of the data we collect about you – for example, we protect your data using varying levels of encryption. All third parties that process personal data as part of this online service are required to keep that data secure. Our data processor is Amazon Web Services, who provide cloud hosting services.</li>
 
       <h2 class="govuk-heading-m">Your rights</h2>
-      <p class="govuk-body">In certain circumstances you have the right to ask for your information to be deleted by contacting the data controller. We may need to refuse your request if the information is needed as part of the emergency response to coronavirus.</p>
-      <p class="govuk-body">You also have the right to request:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>information about how your personal information is processed, and to request a copy of that personal data</li>
-        <li>that any inaccuracies in your personal information are rectified without delay</li>
-        <li>that any incomplete personal information is updated - you can include the missing information in your request</li>
-        <li>that the processing of your personal information is restricted in certain circumstances - for example, where accuracy is contested</li>
-      </ul>
-      <p class="govuk-body">You also have the right to object to the processing of your data.</p>
-      <p class="govuk-body">If you want to make any of these requests, contact us using the details below.</p>
+      <p class="govuk-body">In certain circumstances you have the right to ask for your information to be deleted by contacting the data controller. As the information you are providing is not defined as personal data, these rights are not applicable. If you want to make any of these requests, contact us using the details below.</p>
+
       <h2 class="govuk-heading-m">Questions and complaints</h2>
-      <p class="govuk-body">The contact details for the data controller are:</p>
-      <ul class="govuk-list">
-        <li>Cabinet Office (Government Digital Service),<br>The White Chapel Building,<br> 10 Whitechapel High Street, <br>London, E1 8QS</li>
-        <li><a class="govuk-link" href="mailto:gds-privacy-office@digital.cabinet-office.gov.uk">gds-privacy-office@digital.cabinet-office.gov.uk</a></li>
-      </ul>
-      <p class="govuk-body">The contact details for the data controller’s Data Protection Officer are:</p>
-      <ul class="govuk-list">
-        <li>Stephen Jones,<br> Data Protection Officer,<br> Cabinet Office,<br> 70 Whitehall,<br> London, SW1A 2AS</li>
-        <li><a class="govuk-link" href="mailto:dpo@cabinetoffice.gov.uk">dpo@cabinetoffice.gov.uk</a></li>
-      </ul>
+      <p class="govuk-body">The contact details for the data controller is: Cabinet Office (Government Digital Service), The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS, or <a href="mailto:gds-privacy-office@digital.cabinet-office.gov.uk">gds-privacy-office@digital.cabinet-office.gov.uk</a>.</p>
+      <p class="govuk-body">The contact details for the data controller’s Data Protection Officer are: Stephen Jones, Data Protection Officer, Cabinet Office, 70 Whitehall, London, SW1A 2AS, or <a href="mailto:dpo@cabinetoffice.gov.uk">dpo@cabinetoffice.gov.uk</a>.</p>
       <p class="govuk-body">The Data Protection Officer provides independent advice and monitoring of Cabinet Office’s use of personal information.</p>
-      <p class="govuk-body">If you consider that your personal information has been misused or mishandled, you can make a complaint to the Information Commissioner, who is an independent regulator. The Information Commissioner can be contacted at:</p>
-      <ul class="govuk-list">
-        <li>Information Commissioner’s Office, <br>Wycliffe House,<br> Water Lane,<br> Wilmslow,<br> Cheshire, SK9 5AF</li>
-        <li><a class="govuk-link" href="tel:+443031231113">0303 123 1113</a></li>
-        <li><a class="govuk-link" href="mailto:casework@ico.org.uk">casework@ico.org.uk</a></li>
-      </ul>
-      <p class="govuk-body">Any complaint to the Information Commissioner won’t affect your right to seek redress through the courts.</p>
+      <p class="govuk-body">If you consider that your personal information has been misused or mishandled, you can make a complaint to the Information Commissioner, who is an independent regulator. The Information Commissioner can be contacted at:  Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF, or 0303 123 1113, or <a href="mailto:casework@ico.org.uk">casework@ico.org.uk</a>. Any complaint to the Information Commissioner won’t affect your right to seek redress through the courts.</p>
+
       <h2 class="govuk-heading-m">Changes to this notice</h2>
       <p class="govuk-body">We may change this privacy notice. When we make changes to this notice, the ‘last updated’ date at the top of this page will also change. Any changes to this privacy notice will apply to you and your information immediately. If these changes affect how your personal information is processed, the Cabinet Office will take reasonable steps to make sure you know.</p>
   session_expired:

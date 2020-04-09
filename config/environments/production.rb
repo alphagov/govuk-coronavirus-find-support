@@ -38,6 +38,8 @@ Rails.application.configure do
     config.public_file_server.enabled = false
   end
 
+  config.analytics_tracking_id = ENV["GA_VIEW_ID"]
+
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 

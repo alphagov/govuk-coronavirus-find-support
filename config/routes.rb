@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   scope module: "coronavirus_form" do
     get "/privacy", to: "privacy#show"
+    get "/cookies", to: "cookies#show"
     get "/accessibility-statement", to: "accessibility_statement#show"
 
     # Question: Do you need urgent medical help?

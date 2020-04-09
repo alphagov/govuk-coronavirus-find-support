@@ -1,5 +1,9 @@
 <% content_for :title do %><%= t('get_help_from_nhs.title') %><% end %>
 
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: @previous_page } %>
+<% end %>
+
 <%= render "components/action-panel" do %>
   <%= render "govuk_publishing_components/components/title", {
     title:t("get_help_from_nhs.title"),

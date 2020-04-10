@@ -60,6 +60,9 @@
         </div>
       </main>
     </div>
+    <% if yield(:escape_link).present? %>
+      <%= yield(:escape_link) %>
+    <% end %>
     <%= render "govuk_publishing_components/components/layout_footer", {
       meta: {
         items: [

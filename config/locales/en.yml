@@ -423,9 +423,9 @@ en:
           - "No"
           - "Not sure"
         items:
-          - "More information on how to get food will be available in this service soon."
-          - "If you can, ask friends, family or other people in your community to get food for you."
-          - "You might be able to phone your local shops or restaurants to get a food delivery, or get food online."
+          - text: "More information on how to get food will be available in this service soon."
+          - text: "If you can, ask friends, family or other people in your community to get food for you."
+          - text: "You might be able to phone your local shops or restaurants to get a food delivery, or get food online."
     being_unemployed:
       have_you_been_made_unemployed:
         title: "If you’ve been made unemployed, or put on temporary leave (furloughed):"

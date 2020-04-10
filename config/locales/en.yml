@@ -507,7 +507,7 @@ en:
           - text: "Get information on what to do if you're worried about going to work because of coronavirus from Citizens Advice"
             href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
     somewhere_to_live:
-      do_you_have_somewhere_to_live:
+      have_somewhere_to_live:
         title: "If you do not have somewhere to live or might become homeless:"
         show_options:
           - "I do now but I might lose it"

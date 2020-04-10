@@ -93,10 +93,10 @@ en:
       <p class="govuk-body">In certain circumstances you have the right to ask for your information to be deleted by contacting the data controller. As the information you are providing is not defined as personal data, these rights are not applicable. If you want to make any of these requests, contact us using the details below.</p>
 
       <h2 class="govuk-heading-m">Questions and complaints</h2>
-      <p class="govuk-body">The contact details for the data controller is: Cabinet Office (Government Digital Service), The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS, or <a href="mailto:gds-privacy-office@digital.cabinet-office.gov.uk">gds-privacy-office@digital.cabinet-office.gov.uk</a>.</p>
-      <p class="govuk-body">The contact details for the data controller’s Data Protection Officer are: Stephen Jones, Data Protection Officer, Cabinet Office, 70 Whitehall, London, SW1A 2AS, or <a href="mailto:dpo@cabinetoffice.gov.uk">dpo@cabinetoffice.gov.uk</a>.</p>
+      <p class="govuk-body">The contact details for the data controller is: Cabinet Office (Government Digital Service), The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS, or <a href="mailto:gds-privacy-office@digital.cabinet-office.gov.uk" class="govuk-link">gds-privacy-office@digital.cabinet-office.gov.uk</a>.</p>
+      <p class="govuk-body">The contact details for the data controller’s Data Protection Officer are: Stephen Jones, Data Protection Officer, Cabinet Office, 70 Whitehall, London, SW1A 2AS, or <a href="mailto:dpo@cabinetoffice.gov.uk" class="govuk-link">dpo@cabinetoffice.gov.uk</a>.</p>
       <p class="govuk-body">The Data Protection Officer provides independent advice and monitoring of Cabinet Office’s use of personal information.</p>
-      <p class="govuk-body">If you consider that your personal information has been misused or mishandled, you can make a complaint to the Information Commissioner, who is an independent regulator. The Information Commissioner can be contacted at:  Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF, or 0303 123 1113, or <a href="mailto:casework@ico.org.uk">casework@ico.org.uk</a>. Any complaint to the Information Commissioner won’t affect your right to seek redress through the courts.</p>
+      <p class="govuk-body">If you consider that your personal information has been misused or mishandled, you can make a complaint to the Information Commissioner, who is an independent regulator. The Information Commissioner can be contacted at:  Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF, or 0303 123 1113, or <a href="mailto:casework@ico.org.uk" class="govuk-link">casework@ico.org.uk</a>. Any complaint to the Information Commissioner won’t affect your right to seek redress through the courts.</p>
 
       <h2 class="govuk-heading-m">Changes to this notice</h2>
       <p class="govuk-body">We may change this privacy notice. When we make changes to this notice, the ‘last updated’ date at the top of this page will also change. Any changes to this privacy notice will apply to you and your information immediately. If these changes affect how your personal information is processed, the Cabinet Office will take reasonable steps to make sure you know.</p>
@@ -408,7 +408,7 @@ en:
             href: "https://www.mygov.scot/best-start-grant-best-start-foods/"
           - text: "Get information about getting free school meals during coronavirus if you live in Scotland"
             href: "https://www.mygov.scot/school-meals/"
-          - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email covid19@adviceni.net or text ‘ACTION’ to 81025'
+          - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email <a href="mailto:covid19@adviceni.net" class="govuk-link">covid19@adviceni.net</a> or text ‘ACTION’ to 81025'
       get_food:
         title: "If you are finding it hard to get food:"
         show_options:
@@ -419,7 +419,7 @@ en:
           - text: "You might be able to ask local shops to help you get food or do an online food order."
           - text: "Find your local council to contact them for support"
             href: "https://www.gov.uk/find-local-council/"
-          - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email <a href="mailto:covid19@adviceni.net">covid19@adviceni.net</a> or text: ’ACTION’ to 81025'
+          - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email <a href="mailto:covid19@adviceni.net" class="govuk-link">covid19@adviceni.net</a> or text: ’ACTION’ to 81025'
           - text: "Get information on getting food deliveries if you live in Northern Ireland from The Consumer Council"
             href: "https://www.consumercouncil.org.uk/coronavirus/vulnerable"
     being_unemployed:
@@ -569,7 +569,7 @@ en:
             href: "https://www.samh.org.uk/about-mental-health/self-help-and-wellbeing/coronavirus-and-your-mental-wellbeing"
           - text: "Find your local loneliness service"
             href: "https://www.redcross.org.uk/get-help/get-help-with-loneliness/find-your-local-loneliness-service"
-          - text: 'If you need urgent help now, call the Samaritans on <a href="tel:03448 920 908" class="govuk-link">116 123</a>116 123</a>'
+          - text: 'If you need urgent help now, call the Samaritans on <a href="tel:116 123" class="govuk-link">116 123</a>'
           - text: "If you need urgent help text ‘Shout’ to 85258"
           - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
           - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'

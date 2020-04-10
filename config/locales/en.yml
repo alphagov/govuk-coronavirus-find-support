@@ -208,7 +208,7 @@ en:
             title: "Do you feel safe where you live?"
             options:
               - "Yes"
-              - "Yes but I’m concerned about the safety of someone else"
+              - "Yes, but I’m concerned about the safety of someone else"
               - "No"
               - "Not sure"
             custom_select_error: "Select if you feel safe where you live or if you are worried about someone else"

@@ -332,6 +332,12 @@ en:
         text: Help us improve
         link_text: Give feedback on this service
         link_href: "https://www.gov.uk/done/find-coronavirus-support"
+      no_results: |
+        <p class="govuk-body">Based on your answers, there’s no specific information for you in this service at the moment. It will be updated regularly.</p>
+
+        <p class="govuk-body"><a href="https://www.gov.uk/coronavirus" class="govuk-link">Find all information on coronavirus, including how to protect yourself and get financial support</a></p>
+
+        <p class="govuk-body"><a href="https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/" class="govuk-link">Find information about what you can do from Citizens Advice</a></p>
   results_link:
     feeling_unsafe:
       feel_safe:

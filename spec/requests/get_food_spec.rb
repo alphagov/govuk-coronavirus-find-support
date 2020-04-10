@@ -62,7 +62,7 @@ RSpec.describe "get-food" do
       post get_food_path
 
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.get_food.title"))
-      expect(response.body).to have_content(I18n.t("coronavirus_form.errors.radio_field", field: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.title").downcase))
+      expect(response.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.get_food.custom_select_error"))
     end
   end
 end

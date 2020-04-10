@@ -487,7 +487,7 @@ en:
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
     going_in_to_work:
       still_working:
-        title: "If you’re still going in to work even though you’re not a key worker:"
+        title: "If you’re still going in to work even though you’re a key worker, or not sure if you’re a key worker:"
         show_options:
           - "Yes"
           - "I do not know if I’m a key worker"
@@ -512,7 +512,7 @@ en:
             href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
     somewhere_to_live:
       do_you_have_somewhere_to_live:
-        title: "If you do not have somewhere to live:"
+        title: "If you do not have somewhere to live or might become homeless:"
         show_options:
           - "I do now but I might lose it"
           - "No"
@@ -530,7 +530,7 @@ en:
           - text: "Get help if you are homeless from Shelter Scotland"
             href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"
       have_you_been_evicted:
-        title: "If you’ve been evicted:"
+        title: "If you’ve been evicted or might be soon:"
         show_options:
           - "Yes"
           - "I might be evicted soon"

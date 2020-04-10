@@ -31,3 +31,7 @@ $app-covid-grey: #272828;
 @import 'components/callout';
 @import 'components/page-header';
 @import 'components/actions-group';
+
+.govuk-footer {
+  clear: both;
+}

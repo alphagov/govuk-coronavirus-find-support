@@ -2,6 +2,4 @@
   data_attributes ||= {}
   data_attributes[:module] = 'app-escape-link'
 %>
-<div class="app-c-escape-link">
-  <%= link_to text, href, class: "govuk-link", rel: "nofollow", data: data_attributes %>
-</div>
+<%= link_to text, href, class: "app-c-escape-link govuk-link", rel: "nofollow", data: data_attributes %>

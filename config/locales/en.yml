@@ -416,6 +416,8 @@ en:
             href: "https://www.mygov.scot/best-start-grant-best-start-foods/"
           - text: "Get information about getting free school meals during coronavirus if you live in Scotland"
             href: "https://www.mygov.scot/school-meals/"
+          - text: "Check if you're eligible for the Discretionary Assistance Fund if you live in Wales"
+            href: "https://gov.wales/discretionary-assistance-fund-daf"
           - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email <a href="mailto:covid19@adviceni.net" class="govuk-link">covid19@adviceni.net</a> or text ‘ACTION’ to 81025'
       get_food:
         title: "If you are finding it hard to get food:"
@@ -454,6 +456,8 @@ en:
             href: "https://workingwales.gov.wales/"
           - text: "Contact Citizens Advice Wales"
             href: "https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/"
+          - text: "Check if you're eligible for the Discretionary Assistance Fund if you live in Wales"
+            href: "https://gov.wales/discretionary-assistance-fund-daf"
           - text: "Get help if you’ve been made redundant in Scotland"
             href: "https://www.mygov.scot/help-redundancy/"
           - text: "Find help with benefits if you live in Scotland"
@@ -471,6 +475,8 @@ en:
             href: "https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay"
           - text: "Get information on the help you can get if you're self-employed or work in the gig economy from the Money Advice Service"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
+          - text: "Check if you're eligible for the Discretionary Assistance Fund if you live in Wales"
+            href: "https://gov.wales/discretionary-assistance-fund-daf"
       self_employed:
         title: "If you’re self employed or a sole trader:"
         show_options:

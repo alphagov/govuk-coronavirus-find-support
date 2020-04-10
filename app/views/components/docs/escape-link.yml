@@ -1,0 +1,11 @@
+name: Escape link
+description: Gives users a quick exit from a website.
+shared_accessibility_criteria:
+  - link
+examples:
+  default:
+    data:
+      text: Leave this site
+      href: 'https://www.gov.uk/'
+      data_attributes:
+        tracking: GT-1234

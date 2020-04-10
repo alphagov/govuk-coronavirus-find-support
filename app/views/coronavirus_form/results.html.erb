@@ -26,3 +26,10 @@
 } do %>
   <%= link_to t("coronavirus_form.results.feedback.link_text"), t("coronavirus_form.results.feedback.link_href"), class: "govuk-link" %>
 <% end %>
+
+<% content_for :escape_link do %>
+  <%= render "components/escape-link", {
+    text: t("leave_this_website.link_text"),
+    href: t("leave_this_website.link_href"),
+  } %>
+<% end %>

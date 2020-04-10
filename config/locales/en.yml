@@ -106,6 +106,9 @@ en:
       <p class="govuk-body">Your session has ended because you have not done anything for 4 hours. You'll have to start again.</p>
 
       <p class="govuk-body">We do this for your security. We've deleted all the details you entered to protect your data.</p>
+  leave_this_website:
+    link_text: "Leave this site"
+    link_href: "https://www.bbc.co.uk/"
   get_help_from_nhs:
     title: Get urgent help from the NHS now
     link_text: Go to NHS 111 online

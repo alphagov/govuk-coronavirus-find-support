@@ -14,7 +14,8 @@ RSpec.describe CoronavirusForm::AbleToLeaveController, type: :controller do
       post :submit, params: { able_to_leave: "Yes" }
 
       expect(FormResponse.first.form_response).to eq(
-        [["questions_to_ask", %w(foo)], %w(able_to_leave Yes)],
+        "questions_to_ask" => %w(foo),
+        "able_to_leave" => "Yes",
       )
       expect(FormResponse.first.created_at).to eq(Time.utc(2020, 3, 1, 10, 0, 0))
     end

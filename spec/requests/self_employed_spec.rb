@@ -41,6 +41,18 @@ RSpec.describe "self-employed" do
         expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
       end
     end
+
+    context "without this question in the sesion data" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+      end
+
+      it "redirects to session expired" do
+        get self_employed_path
+
+        expect(response).to redirect_to session_expired_path
+      end
+    end
   end
 
   describe "POST /self-employed" do

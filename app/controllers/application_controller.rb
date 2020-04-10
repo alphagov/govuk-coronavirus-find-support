@@ -67,6 +67,10 @@ private
     end
   end
 
+  def check_current_question_selected
+    session_expired unless questions_to_ask.include?(controller_name)
+  end
+
   def check_session_exists
     session_expired unless last_question_seen?
   end

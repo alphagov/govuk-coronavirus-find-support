@@ -2,6 +2,7 @@
 
 class CoronavirusForm::SelfEmployedController < ApplicationController
   before_action :check_filter_question_answered
+  before_action :check_current_question_selected
 
   def submit
     @form_responses = {

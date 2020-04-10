@@ -554,7 +554,7 @@ en:
       mental_health_worries:
         title: "If you’re worried about your mental health or someone else’s mental health:"
         show_options:
-          - "Yes"
+          - "Yes, I am"
           - "Not sure"
         items:
           - text: "Get information on coronavirus and your wellbeing from Mind"

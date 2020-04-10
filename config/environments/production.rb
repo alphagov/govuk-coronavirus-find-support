@@ -7,6 +7,7 @@ Rails.application.configure do
   config.hosts = [
     "govuk-coronavirus-find-support-prod.cloudapps.digital",
     "govuk-coronavirus-find-support-stg.cloudapps.digital",
+    "find-coronavirus-support.service.gov.uk",
   ]
 
   # Code is not reloaded between requests.

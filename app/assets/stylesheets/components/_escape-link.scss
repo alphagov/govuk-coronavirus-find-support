@@ -1,29 +1,23 @@
 .app-c-escape-link {
-  @include govuk-width-container;
+  @include govuk-font($size: 19, $weight: bold);
 
   bottom: 0;
+  float: right;
+  padding: govuk-spacing(4) govuk-spacing(3);
   position: fixed;
   position: sticky; // scss-lint:disable DuplicateProperty
   right: 0;
-  text-align: right;
 
-  .govuk-link {
-    @include govuk-font($size: 19, $weight: bold);
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    background-color: govuk-colour('black');
+    color: govuk-colour('white');
+  }
 
-    display: inline-block;
-    padding: govuk-spacing(4) govuk-spacing(3);
-
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
-      background-color: govuk-colour('black');
-      color: govuk-colour('white');
-    }
-
-    &:focus {
-      background-color: $govuk-focus-colour;
-      color: $govuk-focus-text-colour;
-    }
+  &:focus {
+    background-color: $govuk-focus-colour;
+    color: $govuk-focus-text-colour;
   }
 }

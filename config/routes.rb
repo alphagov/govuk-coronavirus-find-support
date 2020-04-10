@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get "/healthcheck", to: proc { [200, {}, %w[OK]] }
 
-  get "/", to: redirect("https://www.gov.uk/")
+  get "/", to: redirect("https://www.gov.uk/find-coronavirus-support")
 
   scope module: "coronavirus_form" do
     get "/privacy", to: "privacy#show"

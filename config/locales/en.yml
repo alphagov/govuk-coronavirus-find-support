@@ -484,7 +484,7 @@ en:
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
     going_in_to_work:
       still_working:
-        title: "If you’re still going in to work even though you’re a key worker:"
+        title: "If you’re still going in to work even though you’re not a key worker:"
         show_options:
           - "Yes"
           - "I do not know if I’m a key worker"

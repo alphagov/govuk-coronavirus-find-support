@@ -429,7 +429,7 @@ en:
         title: "If you’ve been made unemployed, or put on temporary leave (furloughed):"
         show_options:
           - "I might be soon"
-          - "No"
+          - "Yes"
           - "Not sure"
         items:
           - text: "What to do if you have lost your job"
@@ -460,7 +460,6 @@ en:
         title: "If you’re off work because you’re ill or self isolating:"
         show_options:
           - "Yes"
-          - "Not sure"
         items:
           - text: "Check if you’re eligible for statutory sick pay"
             href: "https://www.gov.uk/statutory-sick-pay"

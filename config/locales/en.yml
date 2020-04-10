@@ -416,7 +416,7 @@ en:
       get_food:
         title: "If you are finding it hard to get food:"
         show_options:
-          - "Yes"
+          - "No"
           - "Not sure"
         items:
           - text: "If you can, then ask friends, family, or other people in your community to get food for you."

@@ -306,10 +306,10 @@ en:
         title: "Mental health and wellbeing"
         questions:
           mental_health_worries:
-            title: "Are you worried about your mental health or someone else’s mental health?"
+            title: "Are you worried about either your mental health or someone else’s mental health?"
             options:
-              - "Yes"
-              - "No"
+              - "Yes, I am"
+              - "No, I’m not"
               - "Not sure"
             custom_select_error: "Select yes if you are worried about your mental health or someone else’s mental health"
       leave_home: # Q: Are you able to leave your home if absolutely neccessary?
@@ -364,7 +364,7 @@ en:
             href: "https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/"
           - text: "Find helplines if you are an older person living in Wales"
             href: "https://www.olderpeoplewales.com/en/coronavirus.aspx"
-          - text: "Find victim support helplines if you live in Wales"
+          - text: "Find victim support helplines if you live in Wales (in Welsh)"
             href: "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales"
     paying_bills:
       afford_rent_mortgage_bills:

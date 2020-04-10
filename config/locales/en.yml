@@ -423,13 +423,9 @@ en:
           - "No"
           - "Not sure"
         items:
-          - text: "If you can, then ask friends, family, or other people in your community to get food for you."
-          - text: "You might be able to ask local shops to help you get food or do an online food order."
-          - text: "Find your local council to contact them for support"
-            href: "https://www.gov.uk/find-local-council/"
-          - text: 'If you are in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email <a href="mailto:covid19@adviceni.net" class="govuk-link">covid19@adviceni.net</a> or text: ’ACTION’ to 81025'
-          - text: "Get information on getting food deliveries if you live in Northern Ireland from The Consumer Council"
-            href: "https://www.consumercouncil.org.uk/coronavirus/vulnerable"
+          - "More information on how to get food will be available in this service soon."
+          - "If you can, ask friends, family or other people in your community to get food for you."
+          - "You might be able to phone your local shops or restaurants to get a food delivery, or get food online."
     being_unemployed:
       have_you_been_made_unemployed:
         title: "If you’ve been made unemployed, or put on temporary leave (furloughed):"

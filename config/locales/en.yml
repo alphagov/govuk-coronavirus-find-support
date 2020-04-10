@@ -418,7 +418,7 @@ en:
             href: "https://www.mygov.scot/school-meals/"
           - text: "Check if you're eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
-          - text: 'If you're in Northern Ireland call the coronavirus Community Helpline on <a href="tel:+448088020020" class="govuk-link">0808 802 0020</a>, email <a href="mailto:covid19@adviceni.net" class="govuk-link">covid19@adviceni.net</a> or text ‘ACTION’ to 81025'
+          - text: "If you're in Northern Ireland call the coronavirus Community Helpline on <a href=\"tel:+448088020020\" class=\"govuk-link\">0808 802 0020</a>, email <a href=\"mailto:covid19@adviceni.net\" class=\"govuk-link\">covid19@adviceni.net</a> or text ‘ACTION’ to 81025"
       get_food:
         title: "If you're finding it hard to get food:"
         show_options:

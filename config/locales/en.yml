@@ -2,7 +2,7 @@ en:
   accessibility_statement:
     title: Accessibility statement
     body_text: |
-      <p class="govuk-body">This accessibility statement applies to the service on GOV.UK to get coronavirus support as an extremely vulnerable person.</p>
+      <p class="govuk-body">This accessibility statement applies to the service on GOV.UK to find what coronavirus support is available.</p>
       <p class="govuk-body">This website is run by the Government Digital Service. It is designed to be used by as many people as possible. The text should be clear and simple to understand. You should be able to:</p>
       <ul class="govuk-list govuk-list--bullet">
         <li>zoom in up to 300% without problems</li>
@@ -18,8 +18,8 @@ en:
       <p class="govuk-body">The Government Digital Service is committed to making its websites accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
       <p class="govuk-body">This website is fully compliant with the Web Content Accessibility Guidelines version 2.1 AA standard.</p>
       <h2 class="govuk-heading-m">How we tested this website</h2>
-      <p class="govuk-body">This website was last tested on 27 March 2020. The test was carried out by the Government Digital Service, based on the <a class="govuk-link" href="https://design-system.service.gov.uk/accessibility/">accessibility statement for the GOV.UK Design System</a>.</p>
-      <p class="govuk-body">This statement was prepared on 27 March 2020. It was last updated on 27 March 2020.</p>
+      <p class="govuk-body">This website was last tested on 10 April 2020. The test was carried out by the Government Digital Service, based on the <a class="govuk-link" href="https://design-system.service.gov.uk/accessibility/">accessibility statement for the GOV.UK Design System</a>.</p>
+      <p class="govuk-body">This statement was prepared on 10 April 2020. It was last updated on 10 April 2020.</p>
   privacy_page:
     title: Privacy
     body_text: |

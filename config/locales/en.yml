@@ -343,7 +343,7 @@ en:
       feel_safe:
         title: "If you do not feel safe where you live or you’re worried about someone else:"
         show_options:
-          - "Yes but I’m concerned about the safety of someone else"
+          - "Yes, but I’m concerned about the safety of someone else"
           - "No"
           - "Not sure"
         items:

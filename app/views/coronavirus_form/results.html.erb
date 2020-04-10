@@ -1,0 +1,28 @@
+<% content_for :title do %><%= t('coronavirus_form.results.header.title') %><% end %>
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t('coronavirus_form.results.header.title') %>" />
+<% end %>
+
+<% content_for :page_header do %>
+  <%= render "govuk_publishing_components/components/title", {
+    context: t("coronavirus_form.results.header.context"),
+    title: t("coronavirus_form.results.header.title"),
+    inverse: true,
+    margin_top: 0,
+    margin_bottom: 6,
+  } %>
+  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link" %>
+<% end %>
+
+<% result_groups(session).each do |group| %>
+  <%= render "components/actions-group", {
+    title: group[1][:heading],
+    subsections: group[1][:questions]
+  } %>
+<% end %>
+
+<%= render "components/callout", {
+  title: "Help us improve"
+} do %>
+  <%= link_to t("coronavirus_form.results.feedback.link_text"), t("coronavirus_form.results.feedback.link_href"), class: "govuk-link" %>
+<% end %>

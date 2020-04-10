@@ -1,0 +1,20 @@
+name: Actions group
+description: A set of actions grouped by topic
+body: |
+  Optional markdown providing further detail about the component
+shared_accessibility_criteria:
+  - link
+examples:
+  default:
+    data:
+      title: Getting food
+      subsections:
+        - title: "If you’re finding it hard to afford food:"
+          items:
+            - text: "Get information on getting referred to a food bank from Citizens Advice"
+              href: "#"
+            - text: 'Get information on getting support from a food bank from the <a href="#" class="govuk-link">Trussell Trust</a>'
+        - title: "If you’re you unable to get food:"
+          items:
+            - text: "Find your local council to contact them for support"
+              href: "#"

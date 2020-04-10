@@ -1,0 +1,12 @@
+.app-c-callout {
+  @include govuk-font(19);
+  @include govuk-responsive-padding(4);
+
+  background-color: govuk-colour('light-grey');
+  margin-bottom: govuk-spacing(6);
+}
+
+.app-c-callout__title {
+  @extend %govuk-heading-s;
+  margin-bottom: govuk-spacing(2);
+}

@@ -42,15 +42,18 @@
       },
     } %>
     <%= render "govuk_publishing_components/components/layout_header", { environment: "public" } %>
+    <% if yield(:page_header).present? %>
+      <%= render "components/page-header" do %>
+        <%= yield(:page_header) %>
+      <% end %>
+    <% end %>
     <div class="govuk-width-container">
       <% if yield(:back_link).present? %>
         <%= yield(:back_link) %>
-      <% else %>
-        <%= render "breadcrumbs" %>
       <% end %>
       <main class="govuk-main-wrapper<%= " govuk-main-wrapper--l" if yield(:back_link).blank?%>" id="main-content" role="main">
         <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds-from-desktop">
+          <div class="<%= current_page?(results_path) ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds-from-desktop" %>">
             <%= render "error_summary" %>
             <%= yield %>
           </div>

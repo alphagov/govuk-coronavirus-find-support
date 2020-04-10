@@ -66,4 +66,8 @@ private
       redirect_to controller: "need_help_with", action: "show"
     end
   end
+
+  def check_session_exists
+    session_expired unless last_question_seen?
+  end
 end

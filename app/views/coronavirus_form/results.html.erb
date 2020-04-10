@@ -14,11 +14,15 @@
   <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link" %>
 <% end %>
 
-<% result_groups(session).each do |group| %>
-  <%= render "components/actions-group", {
-    title: group[1][:heading],
-    subsections: group[1][:questions]
-  } %>
+<% if result_groups(session).empty? %>
+  <%= sanitize(t("coronavirus_form.results.no_results")) %>
+<% else %>
+  <% result_groups(session).each do |group| %>
+    <%= render "components/actions-group", {
+      title: group[1][:heading],
+      subsections: group[1][:questions]
+    } %>
+  <% end %>
 <% end %>
 
 <%= render "components/callout", {

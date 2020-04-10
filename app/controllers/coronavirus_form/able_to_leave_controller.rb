@@ -34,7 +34,12 @@ private
   end
 
   def write_responses
-    FormResponse.create(form_response: session, created_at: time_hour_floor)
+    redacted_session = session.to_hash.without("session_id", "_csrf_token")
+
+    FormResponse.create(
+      form_response: redacted_session,
+      created_at: time_hour_floor,
+    )
   end
 
   def update_session_store

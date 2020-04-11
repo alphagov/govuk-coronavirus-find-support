@@ -277,7 +277,7 @@ en:
               - "No"
             custom_select_error: "Select if you’re still going in to work even though you’re not a key worker"
           living_with_vulnerable:
-            title: "Are you worried about going into work because you live with someone vulnerable to coronavirus?"
+            title: "Are you worried about going in to work because you live with someone vulnerable to coronavirus?"
             options:
               - "Yes"
               - "No"

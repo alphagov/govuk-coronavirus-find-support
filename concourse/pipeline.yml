@@ -14,6 +14,17 @@ resources:
       uri: https://github.com/alphagov/govuk-coronavirus-find-support
       branch: master
 
+  - name: git-test-image-deps
+    icon: github-circle
+    type: git
+    source:
+      uri:  https://github.com/alphagov/govuk-coronavirus-find-support
+      branch: master
+      paths:
+        - features/Dockerfile
+        - Gemfile
+        - Gemfile.lock
+
   - name: govuk-coronavirus-find-support-feature-tests
     type: git
     icon: github-circle
@@ -46,6 +57,13 @@ resources:
       repository: ((readonly_private_ecr_repo_url))
       tag: govuk-coronavirus-find-support-feature-tests
 
+  - name: tests-image
+    type: docker-image
+    icon: docker
+    source:
+      repository: ((readonly_private_ecr_repo_url))
+      tag: govuk-coronavirus-find-support-tests
+
 jobs:
   - name: update-pipeline
     plan:
@@ -53,6 +71,45 @@ jobs:
         trigger: true
       - set_pipeline: govuk-corona-find-support-form
         file: govuk-coronavirus-find-support/concourse/pipeline.yml
+
+  - name: build-tests-image
+    serial: true
+    build_logs_to_retain: 100
+    plan:
+      - get: git-test-image-deps
+        trigger: true
+      - put: tests-image
+        params:
+          build: git-test-image-deps
+          dockerfile: git-test-image-deps/features/Dockerfile
+
+  - name: run-quality-checks
+    plan:
+      - in_parallel:
+        - get: tests-image
+          passed:
+            - build-tests-image
+        - get: govuk-coronavirus-find-support
+          trigger: true
+        - task: run-tests-task
+          image: tests-image
+          config:
+            inputs:
+              - name: govuk-coronavirus-find-support
+            outputs:
+              - name: committer-details
+            platform: linux
+            run:
+              dir: govuk-coronavirus-find-support
+              path: bash
+              args:
+                - -c
+                - |
+                  set -ue
+                  cat .git/committer > ../committer-details/last-committer
+                  # Start the Postgres DB
+                  /etc/init.d/postgresql start
+                  bundle exec rake
 
   - name: build-feature-tests-image
     serial: true
@@ -135,4 +192,3 @@ jobs:
           # TODO: this should point at the production URL
           URL: 'https://govuk-coronavirus-find-support-prod.cloudapps.digital/urgent-medical-help'
           MESSAGE: "Checks that the application deployed to production is not serving HTTP error codes. If this fails, you should investigate immediately."
-

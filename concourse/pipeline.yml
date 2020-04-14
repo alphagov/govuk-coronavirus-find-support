@@ -18,8 +18,8 @@ resources:
     icon: github-circle
     type: git
     source:
-    uri:  https://github.com/alphagov/govuk-coronavirus-business-volunteer-form
-    branch: master
+      uri:  https://github.com/alphagov/govuk-coronavirus-business-volunteer-form
+      branch: master
     paths:
       - features/Dockerfile
       - Gemfile

@@ -34,11 +34,11 @@ RSpec.describe "mental-health-worries" do
         page.set_rack_session(mental_health_worries: selected_option)
       end
 
-      it "shows the form with prefilled response" do
+      it "shows the form without prefilled response" do
         visit mental_health_worries_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
-        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).not_to be_checked
       end
     end
 

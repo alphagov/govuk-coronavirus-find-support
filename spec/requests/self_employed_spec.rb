@@ -34,11 +34,11 @@ RSpec.describe "self-employed" do
         page.set_rack_session(self_employed: selected_option)
       end
 
-      it "shows the form with prefilled response" do
+      it "shows the form without prefilled response" do
         visit self_employed_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
-        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).not_to be_checked
       end
     end
 

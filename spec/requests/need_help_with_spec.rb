@@ -35,11 +35,11 @@ RSpec.describe "need-help-with" do
         page.set_rack_session(need_help_with: selected)
       end
 
-      it "shows the form with prefilled response" do
+      it "shows the form without prefilled response" do
         visit need_help_with_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
-        expect(page.find("input#option_#{selected.first.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected.first.parameterize.underscore}")).not_to be_checked
       end
     end
   end

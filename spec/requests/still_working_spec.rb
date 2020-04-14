@@ -34,11 +34,11 @@ RSpec.describe "still-working" do
         page.set_rack_session(still_working: selected_option)
       end
 
-      it "shows the form with prefilled response" do
+      it "shows the form without prefilled response" do
         visit still_working_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.still_working.title"))
-        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).not_to be_checked
       end
     end
 

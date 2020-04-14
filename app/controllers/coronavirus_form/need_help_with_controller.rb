@@ -34,7 +34,7 @@ private
         value: title,
         label: title,
         id: "option_#{key}",
-        checked: @form_responses.fetch(controller_name.to_sym, []).include?(title),
+        checked: false,
       }
     end
 
@@ -43,7 +43,7 @@ private
         value: option,
         label: option,
         id: "option_#{option.parameterize.underscore}",
-        checked: @form_responses.fetch(controller_name.to_sym, []).include?(option),
+        checked: false,
       }
     end
 

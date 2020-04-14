@@ -34,11 +34,11 @@ RSpec.describe "have-you-been-evicted" do
         page.set_rack_session(have_you_been_evicted: selected_option)
       end
 
-      it "shows the form with prefilled response" do
+      it "shows the form without prefilled response" do
         visit have_you_been_evicted_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_you_been_evicted.title"))
-        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).not_to be_checked
       end
     end
 

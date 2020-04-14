@@ -352,9 +352,9 @@ en:
           - text: 'Call the National Domestic Abuse Helpline on <a href="tel:0808 2000 247" class="govuk-link">0808 2000 247</a>'
           - text: 'If you’re a child call Childline on <a href="tel:0800 1111" class="govuk-link">0800 1111</a>'
           - text: 'Find helplines <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-and-domestic-abuse/coronavirus-covid-19-support-for-victims-of-domestic-abuse" class="govuk-link">if you’re a victim of domestic abuse or feel at risk of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services" class="govuk-link">victim or witness of a crime</a> (these pages have no quick escape)'
-          - text: "Get safety advice for survivors (Women's Aid)"
+          - text: "Get safety advice for survivors (Women’s Aid)"
             href: "https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/"
-          - text: "Get help if you're in Northern Ireland (Nexus NI)"
+          - text: "Get help if you’re in Northern Ireland (Nexus NI)"
             href: "https://nexusni.org/domestic-and-sexual-abuse-24-hour-helpline/"
           - text: "Get help if you live in Wales (Live Fear Free)"
             href: "https://gov.wales/live-fear-free"
@@ -362,7 +362,7 @@ en:
             href: "https://womensaid.scot/"
           - text: "Get help for children (Childline)"
             href: "https://www.childline.org.uk/"
-          - text: "Get advice if you‘re a child in Wales"
+          - text: "Get advice if you’re a child in Wales"
             href: "https://www.childcomwales.org.uk/coronavirus/"
           - text: "Contact NSPCC if you‘re concerned about a child"
             href: "https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/"
@@ -377,9 +377,9 @@ en:
           - "Yes"
           - "Not sure"
         items:
-          - text: "What to do if you're finding it hard to pay rent"
+          - text: "What to do if you’re finding it hard to pay rent"
             href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
-          - text: "Help you can get if you're finding it hard to pay energy bills"
+          - text: "Help you can get if you’re finding it hard to pay energy bills"
             href: "https://www.gov.uk/government/news/government-agrees-measures-with-energy-industry-to-support-vulnerable-people-through-covid-19"
           - text: "What to do if you cannot pay your rent or mortgage (Shelter)"
             href: "https://england.shelter.org.uk/housing_advice/coronavirus#Rent_payment_problems"
@@ -387,7 +387,7 @@ en:
             href: "https://www.citizensadvice.org.uk/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/"
           - text: "Get help from the housing and debt helpline for Northern Ireland (Housing Rights)"
             href: "https://www.housingrights.org.uk/"
-          - text: "What to do if you're finding it hard to pay rent and you live in Wales"
+          - text: "What to do if you’re finding it hard to pay rent and you live in Wales"
             href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
           - text: "Get coronavirus housing advice for Wales (Shelter)"
             href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
@@ -406,7 +406,7 @@ en:
         items:
           - text: "Find out if you’re eligible for Universal Credit"
             href: "https://www.gov.uk/universal-credit/eligibility"
-          - text: "Apply for Healthy Start vouchers if you're 10 or more weeks pregnant or have a child under 4"
+          - text: "Apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
             href: "https://www.healthystart.nhs.uk/healthy-start-vouchers/do-i-qualify/"
           - text: "Find out if you‘re eligible for the Scottish Welfare Fund if you live in Scotland"
             href: "https://www.mygov.scot/scottish-welfare-fund/"
@@ -469,9 +469,9 @@ en:
             href: "https://www.gov.uk/statutory-sick-pay"
           - text: "What to do if you’re employed but cannot work"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
-          - text: "Find out about getting statutory sick pay if you're self-isolating (Acas)"
+          - text: "Find out about getting statutory sick pay if you’re self-isolating (Acas)"
             href: "https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay"
-          - text: "Find out about the help you can get if you're self-employed or work in the gig economy (Money Advice Service)"
+          - text: "Find out about the help you can get if you’re self-employed or work in the gig economy (Money Advice Service)"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
           - text: "Check if you‘re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
@@ -483,7 +483,7 @@ en:
         items:
           - text: "What to do if you‘re self-employed and getting less or no work"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
-          - text: "What you can do if you're self employed or a sole trader (Money Advice Service)"
+          - text: "What you can do if you’re self employed or a sole trader (Money Advice Service)"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
     going_in_to_work:
       still_working:
@@ -496,7 +496,7 @@ en:
             href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
           - text: "Find out if you’re a key worker"
             href: "https://www.gov.uk/government/publications/coronavirus-covid-19-maintaining-educational-provision/guidance-for-schools-colleges-and-local-authorities-on-maintaining-educational-provision"
-          - text: "What to do if you're worried about going to work because of coronavirus (Citizens Advice)"
+          - text: "What to do if you’re worried about going to work because of coronavirus (Citizens Advice)"
             href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
           - text: "Find out if you’re a key worker if you live in Wales"
             href: "https://gov.wales/coronavirus-key-critical-workers"
@@ -508,7 +508,7 @@ en:
           - "Yes"
           - "Not sure"
         items:
-          - text: "What to do if you're worried about going to work because of coronavirus (Citizens Advice)"
+          - text: "What to do if you’re worried about going to work because of coronavirus (Citizens Advice)"
             href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
     somewhere_to_live:
       have_somewhere_to_live:
@@ -525,7 +525,7 @@ en:
             href: "https://www.housingadviceni.org/homeless/coronavirus"
           - text: "Get coronavirus housing information for Wales (Shelter)"
             href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
-          - text: "Get help if you‘re homeless in Scotland"
+          - text: "Get help if you’re homeless in Scotland"
             href: "https://www.mygov.scot/homelessness/"
           - text: "Get help if you‘re homeless from Shelter Scotland"
             href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"

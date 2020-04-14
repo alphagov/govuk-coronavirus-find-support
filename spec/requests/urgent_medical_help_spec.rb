@@ -19,11 +19,11 @@ RSpec.describe "urgent-medical-help" do
         page.set_rack_session(urgent_medical_help: selected_no)
       end
 
-      it "shows the form with prefilled response" do
+      it "shows the form without prefilled response" do
         visit urgent_medical_help_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.title"))
-        expect(page.find("input#option_#{selected_no.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected_no.parameterize.underscore}")).not_to be_checked
       end
     end
   end

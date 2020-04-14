@@ -34,11 +34,11 @@ RSpec.describe "afford-food" do
         page.set_rack_session(afford_food: selected_option)
       end
 
-      it "shows the form with prefilled response" do
+      it "shows the form without prefilled response" do
         visit afford_food_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.title"))
-        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).to be_checked
+        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).not_to be_checked
       end
     end
 

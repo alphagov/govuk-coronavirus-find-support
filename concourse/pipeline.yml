@@ -76,12 +76,12 @@ jobs:
     serial: true
     build_logs_to_retain: 100
     plan:
-      - get: git-tests-image-deps
+      - get: git-test-image-deps
         trigger: true
       - put: tests-image
         params:
           build: build-tests-image-deps
-          dockerfile: git-tests-image-deps/features/Dockerfile
+          dockerfile: git-test-image-deps/features/Dockerfile
 
   - name: run-quality-checks
     plan:

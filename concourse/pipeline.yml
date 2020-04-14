@@ -20,10 +20,10 @@ resources:
     source:
       uri:  https://github.com/alphagov/govuk-coronavirus-business-volunteer-form
       branch: master
-    paths:
-      - features/Dockerfile
-      - Gemfile
-      - Gemfile.lock
+      paths:
+        - features/Dockerfile
+        - Gemfile
+        - Gemfile.lock
 
   - name: govuk-coronavirus-find-support-feature-tests
     type: git

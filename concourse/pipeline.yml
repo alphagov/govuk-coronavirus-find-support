@@ -14,7 +14,7 @@ resources:
       uri:  https://github.com/alphagov/govuk-coronavirus-find-support
       branch: master
       paths:
-        - features/Dockerfile
+        - concourse/Dockerfile
         - Gemfile
         - Gemfile.lock
 
@@ -49,7 +49,7 @@ jobs:
       - put: tests-image
         params:
           build: git-master-gems-dockerfile
-          dockerfile: git-master-gems-dockerfile/features/Dockerfile
+          dockerfile: git-master-gems-dockerfile/concourse/Dockerfile
 
   - name: run-quality-checks
     serial: true

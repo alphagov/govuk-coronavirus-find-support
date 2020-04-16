@@ -91,7 +91,7 @@ jobs:
         passed: [run-quality-checks]
       - task: deploy-to-paas
         config:
-        file: govuk-coronavirus-find-support/concourse/tasks/deploy-to-govuk-paas.yml
+        file: git-master/concourse/tasks/deploy-to-govuk-paas.yml
         params:
           CF_SPACE: staging
           INSTANCES: 5
@@ -113,7 +113,7 @@ jobs:
         passed:
           - build-tests-image
       - task: smoke-test
-        file: govuk-coronavirus-find-support/concourse/tasks/smoke-test.yml
+        file: git-master/concourse/tasks/smoke-test.yml
         params:
           URL: 'https://govuk-coronavirus-find-support-stg.cloudapps.digital/urgent-medical-help'
           MESSAGE: "Checks that the application deployed to staging is not serving HTTP error codes"
@@ -125,7 +125,7 @@ jobs:
         trigger: true
         passed: [smoke-test-staging]
       - task: deploy-to-paas
-        file: govuk-coronavirus-find-support/concourse/tasks/deploy-to-govuk-paas.yml
+        file: git-master/concourse/tasks/deploy-to-govuk-paas.yml
         params:
           CF_SPACE: production
           INSTANCES: 30
@@ -145,7 +145,7 @@ jobs:
         trigger: true
         passed: [deploy-to-prod]
       - task: smoke-test
-        file: govuk-coronavirus-find-support/concourse/tasks/smoke-test.yml
+        file: git-master/concourse/tasks/smoke-test.yml
         timeout: 5m
         params:
           # TODO: this should point at the production URL

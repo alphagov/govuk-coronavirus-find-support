@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "byebug"
+require "capybara/apparition"
 require "rack_session_access/capybara"
 require "simplecov"
 
@@ -10,6 +11,8 @@ require "rspec/rails"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 SimpleCov.start
+
+Capybara.javascript_driver = :apparition
 
 RSpec.configure do |config|
   config.expose_dsl_globally = false

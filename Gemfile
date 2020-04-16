@@ -27,9 +27,11 @@ group :test do
   gem "apparition", "~> 0.5.0", require: false
   gem "capybara", "~> 3.32.1", require: false
   gem "mini_racer", "~> 0.2"
+  gem "selenium-webdriver", "~> 3.142"
   gem "scss-lint", "~> 0.7.0", require: false
   gem "simplecov", "~> 0.16"
   gem "timecop"
+  gem "webdrivers", "~> 4.3"
 end
 
 group :development, :test do

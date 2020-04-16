@@ -5,8 +5,11 @@ require "csv"
 class CoronavirusForm::DataExportController < ApplicationController
   def show
     respond_to do |format|
-      format.html { render controller_path }
-      format.csv { render csv: produce_csv(usage_statistics(params[:start_date], params[:end_date])), filename: "data-export" }
+      format.html
+      format.csv do
+        render csv: produce_csv(usage_statistics(params[:start_date], params[:end_date])),
+          filename: "data-export"
+      end
     end
   end
 
@@ -21,15 +24,15 @@ class CoronavirusForm::DataExportController < ApplicationController
       question_text = questions.dig(question, :title)
       counts = FormResponse
         .where(created_at: start_date..end_date)
-        .select(Arel.sql(%{created_at::date, form_response -> '#{question}', COUNT(*)}))
-        .group(Arel.sql(%{created_at::date, form_response -> '#{question}'}))
-        .pluck(Arel.sql(%{created_at::date, form_response -> '#{question}', COUNT(*)}))
-        .reject { |form_responses| form_responses[1].nil? }
+        .select(Arel.sql("created_at::date, form_response -> '#{question}', COUNT(*)"))
+        .group(Arel.sql("created_at::date, form_response -> '#{question}'"))
+        .pluck(Arel.sql("created_at::date, form_response -> '#{question}', COUNT(*)"))
+        .reject { |form_responses| form_responses.second.nil? }
         .map do |form_responses|
           {
-            date: form_responses[0].strftime("%Y-%m-%d"),
-            response: Array(form_responses[1]).join(";"),
-            count: form_responses[2],
+            date: form_responses.first.strftime("%Y-%m-%d"),
+            response: Array(form_responses.second).join(";"),
+            count: form_responses.third,
           }
         end
       results[question_text] = counts if counts.present?

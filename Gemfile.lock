@@ -80,6 +80,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
+    childprocess (3.0.0)
     coderay (1.1.2)
     colorize (0.8.1)
     concurrent-ruby (1.1.6)
@@ -292,6 +293,7 @@ GEM
     rubocop-rspec (1.38.1)
       rubocop (>= 0.68.1)
     ruby-progressbar (1.10.1)
+    rubyzip (2.3.0)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -314,6 +316,9 @@ GEM
     scss-lint (0.7.0)
       colorize
       sass
+    selenium-webdriver (3.142.7)
+      childprocess (>= 0.5, < 4.0)
+      rubyzip (>= 1.2.2)
     sentry-raven (3.0.0)
       faraday (>= 1.0)
     simplecov (0.18.5)
@@ -378,6 +383,7 @@ DEPENDENCIES
   rubocop-govuk
   sass-rails (< 6)
   scss-lint (~> 0.7.0)
+  selenium-webdriver
   sentry-raven (~> 3.0)
   simplecov (~> 0.16)
   timecop

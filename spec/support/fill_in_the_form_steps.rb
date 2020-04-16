@@ -8,12 +8,20 @@ module FillInTheFormSteps
   def and_does_not_need_urgent_medical_help
     expect(page).to have_content(I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.title"))
 
+    # choose "No", allow_label_click: true
+    # choose "No", visible: false
+
     choose "No"
+
+    # within '.govuk-form-group' do
+    #   click_on(class: ".gem-c-button--bottom-margin")
+    # end
 
     click_on "Continue"
   end
 
   def and_needs_help_with_all_options
+
     expect(page).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
 
     check I18n.t("coronavirus_form.groups.feeling_unsafe.title")

@@ -11,6 +11,10 @@ require "rspec/rails"
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 SimpleCov.start
 
+Capybara.configure do |config|
+  config.automatic_label_click = true
+end
+
 RSpec.configure do |config|
   config.expose_dsl_globally = false
   config.infer_spec_type_from_file_location!

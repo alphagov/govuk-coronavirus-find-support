@@ -108,7 +108,8 @@ en:
       <p class="govuk-body">We do this for your security. We've deleted all the details you entered to protect your data.</p>
   leave_this_website:
     link_text: "Leave this site"
-    link_href: "https://www.bbc.co.uk/"
+    link_href: "clear-session?ext_r=true"
+    link_redirect_to: "https://www.bbc.co.uk/"
   get_help_from_nhs:
     title: Get urgent help from the NHS now
     link_text: Go to NHS 111 online

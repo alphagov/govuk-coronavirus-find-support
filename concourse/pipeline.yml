@@ -77,7 +77,7 @@ jobs:
                 set -eu
                 service postgresql start
                 su - postgres -c "psql -c \"create role root with createdb login password 'password';\""
-                export DATABASE_URL="postgres://root:password@localhost:5432/coronavirus_form_development"
+                export DATABASE_URL="postgres://root:password@localhost:5432/coronavirus_find_support_form_development"
                 bundle install
                 bundle exec rails db:setup
                 bundle exec rails db:migrate

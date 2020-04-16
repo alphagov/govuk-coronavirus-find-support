@@ -1,106 +1,75 @@
 ---
-resource_types:
-  - name: travis
-    type: docker-image
-    source:
-      repository: rbakergds/travis-resource
-      tag: latest
-
 resources:
-  - name: govuk-coronavirus-find-support
+  - name: git-master
     type: git
     icon: github-circle
     source:
       uri: https://github.com/alphagov/govuk-coronavirus-find-support
       branch: master
 
-  - name: git-tests-image-deps
+  - name: git-master-gems-dockerfile
     icon: github-circle
     type: git
     source:
       uri:  https://github.com/alphagov/govuk-coronavirus-find-support
       branch: master
       paths:
-        - features/Dockerfile
+        - concourse/Dockerfile
         - Gemfile
         - Gemfile.lock
-
-  - name: govuk-coronavirus-find-support-feature-tests
-    type: git
-    icon: github-circle
-    source:
-      uri: https://github.com/alphagov/govuk-coronavirus-find-support
-      branch: master
-      paths:
-        - Gemfile*
-        - .ruby-version
-        - features/
 
   - name: every-day
     type: time
     source:
       interval: 24h
 
-  - name: govuk-coronavirus-find-support-travis-build
-    type: travis
-    icon: sync
-    source:
-      repository: alphagov/govuk-coronavirus-find-support
-      travis-token: ((travis-api-token))
-      branch: master
-      pro: true
-
-  - name: feature-tests-image
-    type: docker-image
-    icon: docker
-    source:
-      repository: ((readonly_private_ecr_repo_url))
-      tag: govuk-coronavirus-find-support-feature-tests
-
   - name: tests-image
     type: docker-image
     icon: docker
     source:
       repository: ((readonly_private_ecr_repo_url))
-      tag: govuk-coronavirus-find-support-tests
+      tag: govuk-coronavirus-find-support-tests-image
 
 jobs:
   - name: update-pipeline
     plan:
-      - get: govuk-coronavirus-find-support
+      - get: git-master
         trigger: true
       - set_pipeline: govuk-corona-find-support-form
-        file: govuk-coronavirus-find-support/concourse/pipeline.yml
+        file: git-master/concourse/pipeline.yml
 
   - name: build-tests-image
     serial: true
     build_logs_to_retain: 100
     plan:
-      - get: git-tests-image-deps
+      - get: every-day
+        trigger: true
+      - get: git-master-gems-dockerfile
         trigger: true
       - put: tests-image
         params:
-          build: git-tests-image-deps
-          dockerfile: git-tests-image-deps/features/Dockerfile
+          build: git-master-gems-dockerfile
+          dockerfile: git-master-gems-dockerfile/concourse/Dockerfile
 
   - name: run-quality-checks
+    serial: true
     plan:
-      - in_parallel:
-        - get: tests-image
-          passed:
-            - build-tests-image
-        - get: govuk-coronavirus-find-support
-          trigger: true
+      - get: tests-image
+        passed:
+          - build-tests-image
+        trigger: true
+      - get: git-master
+        trigger: true
       - task: run-tests-task
         image: tests-image
         config:
           inputs:
-            - name: govuk-coronavirus-find-support
+            - name: git-master
           outputs:
             - name: committer-details
           platform: linux
           run:
-            dir: govuk-coronavirus-find-support
+            dir: git-master
             path: bash
             args:
               - -c
@@ -109,28 +78,17 @@ jobs:
                 service postgresql start
                 su - postgres -c "psql -c \"create role root with createdb login password 'password';\""
                 export DATABASE_URL="postgres://root:password@localhost:5432/coronavirus_form_development"
+                bundle install
                 bundle exec rails db:setup
                 bundle exec rails db:migrate
                 bundle exec rake
 
-  - name: build-feature-tests-image
-    serial: true
-    plan:
-      - get: every-day
-        trigger: true
-      - get: govuk-coronavirus-find-support-feature-tests
-        trigger: true
-      - put: feature-tests-image
-        params:
-          build: govuk-coronavirus-find-support-feature-tests
-          dockerfile: govuk-coronavirus-find-support-feature-tests/features/Dockerfile
-
   - name: deploy-to-staging
     serial: true
     plan:
-      - get: govuk-coronavirus-find-support-travis-build
+      - get: git-master
         trigger: true
-      - get: govuk-coronavirus-find-support
+        passed: [run-quality-checks]
       - task: deploy-to-paas
         config:
         file: govuk-coronavirus-find-support/concourse/tasks/deploy-to-govuk-paas.yml
@@ -148,9 +106,12 @@ jobs:
 
   - name: smoke-test-staging
     plan:
-      - get: govuk-coronavirus-find-support
+      - get: git-master
         trigger: true
         passed: [deploy-to-staging]
+      - get: tests-image
+        passed:
+          - build-tests-image
       - task: smoke-test
         file: govuk-coronavirus-find-support/concourse/tasks/smoke-test.yml
         params:
@@ -160,7 +121,7 @@ jobs:
   - name: deploy-to-prod
     serial: true
     plan:
-      - get: govuk-coronavirus-find-support
+      - get: git-master
         trigger: true
         passed: [smoke-test-staging]
       - task: deploy-to-paas
@@ -180,7 +141,7 @@ jobs:
   - name: smoke-test-prod
     serial: true
     plan:
-      - get: govuk-coronavirus-find-support
+      - get: git-master
         trigger: true
         passed: [deploy-to-prod]
       - task: smoke-test

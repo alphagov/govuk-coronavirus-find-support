@@ -50,4 +50,4 @@ jobs:
         RAILS_ENV: test
         DB_USERNAME: postgres
       run: |
-        bundle exec rake
+        bundle exec rake spec:features

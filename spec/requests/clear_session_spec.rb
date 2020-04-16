@@ -40,7 +40,7 @@ RSpec.describe "clear-session" do
         expect(session[:have_you_been_made_unemployed]).to be_nil
       end
 
-      it "redirects the user to root" do
+      it "redirects the user to an external website" do
         get clear_session_path, params: { ext_r: true }
         expect(response).to redirect_to(I18n.t("leave_this_website.link_redirect_to"))
       end

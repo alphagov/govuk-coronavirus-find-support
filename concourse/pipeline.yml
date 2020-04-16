@@ -156,10 +156,6 @@ jobs:
         params:
           URL: 'https://govuk-coronavirus-find-support-stg.cloudapps.digital/urgent-medical-help'
           MESSAGE: "Checks that the application deployed to staging is not serving HTTP error codes"
-      #- task: run-cucumber-specs
-      #  file: govuk-coronavirus-find-support/concourse/tasks/run-cucumber-specs.yml
-      #  params:
-      #    TEST_URL: 'https://gds:((basic-auth-password))@govuk-coronavirus-find-support-stg.cloudapps.digital'
 
   - name: deploy-to-prod
     serial: true

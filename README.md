@@ -1,7 +1,5 @@
 # GOV.UK coronavirus - find support
 
-[![Build Status](https://travis-ci.com/alphagov/govuk-coronavirus-find-support.svg?branch=master)](https://travis-ci.com/alphagov/govuk-coronavirus-find-support)
-
 ![Run tests](https://github.com/alphagov/govuk-coronavirus-find-support/workflows/Run%20tests/badge.svg)
 
 Helps people in the UK find relevant support during the Covid-19 pandemic.

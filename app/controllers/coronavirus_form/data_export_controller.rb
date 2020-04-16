@@ -5,7 +5,7 @@ require "csv"
 class CoronavirusForm::DataExportController < ApplicationController
   def show
     respond_to do |format|
-      format.html { render controller_path }
+      format.html
       format.csv do
         render csv: produce_csv(usage_statistics(params[:start_date], params[:end_date])),
           filename: "data-export"

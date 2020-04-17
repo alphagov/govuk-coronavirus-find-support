@@ -199,8 +199,10 @@ en:
             title: "Do you need urgent medical help?"
             description: "You can check if you have coronavirus (COVID-19) symptoms and get medical advice"
             options:
-              - "Yes"
-              - "No"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
             custom_select_error: "Select yes if you need urgent medical help"
       feeling_unsafe:
         title: "Feeling unsafe"
@@ -208,10 +210,14 @@ en:
           feel_safe:
             title: "Do you feel safe where you live?"
             options:
-              - "Yes"
-              - "Yes, but I’m concerned about the safety of someone else"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_yes_someone_else:
+                label: "Yes, but I’m concerned about the safety of someone else"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select if you feel safe where you live or if you‘re worried about someone else"
       paying_bills:
         title: "Paying bills"
@@ -219,9 +225,12 @@ en:
           afford_rent_mortgage_bills:
             title: "Are you finding it hard to afford rent, your mortgage or bills?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you’re finding it hard to afford your rent, your mortgage or bills"
       getting_food:
         title: "Getting food"
@@ -229,16 +238,22 @@ en:
           afford_food:
             title: "Are you finding it hard to afford food?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you’re finding it hard to afford food"
           get_food:
             title: "Are you able to get food?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you‘re able to get food"
       being_unemployed:
         title: "Being unemployed or not having any work"
@@ -247,25 +262,34 @@ en:
             title: "Have you been told to stop working?"
             title_caption: "Being unemployed or not having any work"
             options:
-              - "Yes, I’ve been made unemployed, or might be soon"
-              - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes, I’ve been made unemployed, or might be soon"
+              option_might_be:
+                label: "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select if you’ve been made unemployed, or put on temporary leave (furloughed)"
           are_you_off_work_ill:
             title: "Are you off work because you’re ill or self-isolating?"
             title_caption: "Going in to work"
             options:
-              - "Yes"
-              - "No"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
             custom_select_error: "Select yes if you’re off work because you’re ill or self-isolating"
           self_employed:
             title: "Are you self-employed or a sole trader?"
             title_caption: "Being unemployed or not having any work"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you’re self-employed or a sole trader"
       going_in_to_work:
         title: "Going in to work"
@@ -273,9 +297,12 @@ en:
           living_with_vulnerable:
             title: "Are you worried about going in to work?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you’re worried about going in to work"
       somewhere_to_live:
         title: "Having somewhere to live"
@@ -283,18 +310,26 @@ en:
           have_somewhere_to_live:
             title: "Do you have somewhere to live?"
             options:
-              - "Yes"
-              - "I do now but I might lose it"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_may_lose:
+                label: "I do now but I might lose it"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select if you have somewhere to live"
           have_you_been_evicted:
             title: "Have you been evicted?"
             options:
-              - "Yes"
-              - "I might be evicted soon"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_soon:
+                label: "I might be evicted soon"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select if you have been evicted or might be soon"
       mental_health:
         title: "Mental health and wellbeing"
@@ -302,20 +337,28 @@ en:
           mental_health_worries:
             title: "Are you worried about either your mental health or someone else’s mental health?"
             options:
-              - "Yes, I am"
-              - "No, I’m not"
-              - "Not sure"
+              option_yes:
+                label: "Yes, I am"
+              option_no:
+                label: "No, I’m not"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you‘re worried about your mental health or someone else’s mental health"
       leave_home: # Q: Are you able to leave your home if absolutely neccessary?
         questions:
           able_to_leave:
             title: "Are you able to leave your home for food, medicine, or health reasons?"
             options:
-              - "Yes"
-              - "I should not leave home because I have coronavirus symptoms, or someone in my household does"
-              - "I should not leave home because I think I’m at high risk of severe illness from coronavirus"
-              - "I cannot go out because I have a disability"
-              - "I’m unable to leave my home for another reason"
+              option_yes:
+                label: "Yes"
+              option_has_symptoms:
+                label: "I should not leave home because I have coronavirus symptoms, or someone in my household does"
+              option_high_risk:
+                label: "I should not leave home because I think I’m at high risk of severe illness from coronavirus"
+              option_disability:
+                label: "I cannot go out because I have a disability"
+              option_other:
+                label: "I’m unable to leave my home for another reason"
             custom_select_error: "Select if you‘re able to leave your home or not"
     results:
       header:
@@ -486,7 +529,7 @@ en:
           - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
           - text: "Find help with benefits if you live in Scotland"
-            href: "https://www.mygov.scot/benefits-support/" 
+            href: "https://www.mygov.scot/benefits-support/"
     going_in_to_work:
       living_with_vulnerable:
         title: "If you’re worried about going in to work"

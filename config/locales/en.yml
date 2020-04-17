@@ -278,12 +278,12 @@ en:
               - "No"
             custom_select_error: "Select if you’re still going in to work even though you’re not a key worker"
           living_with_vulnerable:
-            title: "Are you worried about going in to work because you live with someone vulnerable to coronavirus?"
+            title: "Are you worried about going in to work?"
             options:
               - "Yes"
               - "No"
               - "Not sure"
-            custom_select_error: "Select yes if you’re worried about going in to work because you live with someone vulnerable to coronavirus"
+            custom_select_error: "Select yes if you’re worried about going in to work"
       somewhere_to_live:
         title: "Having somewhere to live"
         questions:
@@ -504,11 +504,13 @@ en:
           - text: "Find out if you‘re a key worker if you live in Scotland"
             href: "https://www.gov.scot/publications/coronavirus-guide-schools-early-learning-closures/pages/key-workers/"
       living_with_vulnerable:
-        title: "If you’re worried about going in to work because you live with someone vulnerable to coronavirus"
+        title: "If you’re worried about going in to work"
         show_options:
           - "Yes"
           - "Not sure"
         items:
+          - text: "Find out if you should be going to work"
+            href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
           - text: "What to do if you’re worried about going to work because of coronavirus (Citizens Advice)"
             href: "https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working/"
     somewhere_to_live:

@@ -1,11 +1,13 @@
 RSpec.describe "still-working" do
+  let(:options) { I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options") }
+  let(:selected_option) { options.keys.sample }
+  let(:selected_option_text) { I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.#{selected_option}.label") }
+
   before do
     allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(are_you_off_work_ill feel_safe))
   end
 
   describe "GET /still-working" do
-    let(:selected_option) { I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options").sample }
-
     context "without any questions to ask in the session data" do
       before do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
@@ -23,22 +25,22 @@ RSpec.describe "still-working" do
         visit are_you_off_work_ill_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
-        I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options").each do |option|
-          expect(page.body).to have_content(option)
+        I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options").each do |_, option|
+          expect(page.body).to have_content(option[:label])
         end
       end
     end
 
     context "with session data" do
       before do
-        page.set_rack_session(are_you_off_work_ill: selected_option)
+        page.set_rack_session(are_you_off_work_ill: selected_option_text)
       end
 
       it "shows the form without prefilled response" do
         visit are_you_off_work_ill_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
-        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).not_to be_checked
+        expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end
 
@@ -56,16 +58,14 @@ RSpec.describe "still-working" do
   end
 
   describe "POST /still-working" do
-    let(:selected_option) { I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options").sample }
-
     it "updates the session store" do
-      post are_you_off_work_ill_path, params: { are_you_off_work_ill: selected_option }
+      post are_you_off_work_ill_path, params: { are_you_off_work_ill: selected_option_text }
 
-      expect(session[:are_you_off_work_ill]).to eq(selected_option)
+      expect(session[:are_you_off_work_ill]).to eq(selected_option_text)
     end
 
     it "redirects to the next question" do
-      post are_you_off_work_ill_path, params: { are_you_off_work_ill: selected_option }
+      post are_you_off_work_ill_path, params: { are_you_off_work_ill: selected_option_text }
 
       expect(response).to redirect_to(controller: "feel_safe", action: "show")
     end

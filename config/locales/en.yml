@@ -382,7 +382,7 @@ en:
           - text: "Find information on the policies in place if you're finding it hard to pay energy bills"
             href: "https://www.gov.uk/government/news/government-agrees-measures-with-energy-industry-to-support-vulnerable-people-through-covid-19"
           - text: "Get information on what do if you cannot pay your rent or mortgage from Shelter"
-            href: "https://england.shelter.org.uk/housing_advice/coronavirus#Rent_payment_problems"
+            href: "https://england.shelter.org.uk/housing_advice/coronavirus"
           - text: "Get information on what do if you cannot pay your rent, mortgage or bills from Citizens Advice"
             href: "https://www.citizensadvice.org.uk/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/"
           - text: "Get help from Housing Rights if you live in Northern Ireland"
@@ -397,8 +397,6 @@ en:
             href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19"
           - text: "Get information about your rights if you have a social landlord in Scotland"
             href: "https://www.mygov.scot/social-rental-rights/"
-          - text: "Get coronavirus housing information from Shelter Scotland"
-            href: "https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19#Paying_rent"
     getting_food:
       afford_food:
         title: "If you’re finding it hard to afford food:"

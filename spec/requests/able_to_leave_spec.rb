@@ -1,11 +1,13 @@
 RSpec.describe "able-to-leave" do
+  let(:options) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options") }
+  let(:selected_option) { options.keys.sample }
+  let(:selected_option_text) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.#{selected_option}.label") }
+
   before do
     allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(able_to_leave feel_safe))
   end
 
   describe "GET /able-to-leave" do
-    let(:selected_option) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options").sample }
-
     context "without any questions to ask in the session data" do
       before do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
@@ -23,37 +25,35 @@ RSpec.describe "able-to-leave" do
         visit able_to_leave_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
-        I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options").each do |option|
-          expect(page.body).to have_content(option)
+        I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options").each do |_, option|
+          expect(page.body).to have_content(option[:label])
         end
       end
     end
 
     context "with session data" do
       before do
-        page.set_rack_session(able_to_leave: selected_option)
+        page.set_rack_session(able_to_leave: selected_option_text)
       end
 
       it "shows the form without prefilled response" do
         visit able_to_leave_path
 
         expect(page.body).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
-        expect(page.find("input#option_#{selected_option.parameterize.underscore}")).not_to be_checked
+        expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end
   end
 
   describe "POST /able-to-leave" do
-    let(:selected_option) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options").sample }
-
     it "updates the session store" do
-      post able_to_leave_path, params: { able_to_leave: selected_option }
+      post able_to_leave_path, params: { able_to_leave: selected_option_text }
 
-      expect(session[:able_to_leave]).to eq(selected_option)
+      expect(session[:able_to_leave]).to eq(selected_option_text)
     end
 
     it "redirects to the results page" do
-      post able_to_leave_path, params: { able_to_leave: selected_option }
+      post able_to_leave_path, params: { able_to_leave: selected_option_text }
 
       expect(response).to redirect_to(results_path)
     end

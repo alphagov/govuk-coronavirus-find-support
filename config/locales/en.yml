@@ -498,7 +498,7 @@ en:
           - text: "Find out if you’re a key worker"
             href: "https://www.gov.uk/government/publications/coronavirus-covid-19-maintaining-educational-provision/guidance-for-schools-colleges-and-local-authorities-on-maintaining-educational-provision"
           - text: "What to do if you’re worried about going to work because of coronavirus (Citizens Advice)"
-            href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
+            href: "https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working/"
           - text: "Find out if you’re a key worker if you live in Wales"
             href: "https://gov.wales/coronavirus-key-critical-workers"
           - text: "Find out if you‘re a key worker if you live in Scotland"
@@ -510,7 +510,7 @@ en:
           - "Not sure"
         items:
           - text: "What to do if you’re worried about going to work because of coronavirus (Citizens Advice)"
-            href: "https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
+            href: "https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working/"
     somewhere_to_live:
       have_somewhere_to_live:
         title: "If you do not have somewhere to live or might become homeless"

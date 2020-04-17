@@ -1,5 +1,5 @@
 RSpec.describe "clear-session" do
-  let(:selected_no) { I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.options").last }
+  let(:selected_no) { I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.options.option_no.label") }
 
   describe "GET /clear-session" do
     context "without a redirect parameter" do

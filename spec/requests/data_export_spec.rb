@@ -13,9 +13,9 @@ RSpec.describe "data-export" do
     let(:expected_lines) do
       [
         %{question,answer,date,count},
-        %{Are you able to leave your home if absolutely necessary?,Yes,2020-04-10,2},
-        %{Are you able to leave your home if absolutely necessary?,Yes,2020-04-11,1},
-        %{Are you able to leave your home if absolutely necessary?,No,2020-04-11,1},
+        %{"Are you able to leave your home for food, medicine, or health reasons?",Yes,2020-04-10,2},
+        %{"Are you able to leave your home for food, medicine, or health reasons?",Yes,2020-04-11,1},
+        %{"Are you able to leave your home for food, medicine, or health reasons?",No,2020-04-11,1},
         %{Are you able to get food?,Yes,2020-04-10,1},
         %{Are you able to get food?,No,2020-04-10,1},
         %{Are you able to get food?,Yes,2020-04-11,1},

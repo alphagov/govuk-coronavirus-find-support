@@ -316,11 +316,11 @@ en:
       leave_home: # Q: Are you able to leave your home if absolutely neccessary?
         questions:
           able_to_leave:
-            title: "Are you able to leave your home if absolutely necessary?"
+            title: "Are you able to leave your home for food, medicine, or health reasons?"
             options:
               - "Yes"
-              - "I cannot go out because I have coronavirus, or someone in my household does"
-              - "I cannot leave home because I think I’m at risk of severe illness from coronavirus"
+              - "I should not leave home because I have coronavirus symptoms, or someone in my household does"
+              - "I should not leave home because I think I’m at high risk of severe illness from coronavirus"
               - "I cannot go out because I have a disability"
               - "I’m unable to leave my home for another reason"
             custom_select_error: "Select if you‘re able to leave your home or not"

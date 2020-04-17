@@ -25,7 +25,7 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should return a group data structure with a heading and filtered questions" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
-        "have_you_been_made_unemployed": "I might be soon",
+        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
         "are_you_off_work_ill": "Yes",
         "self_employed": "Yes",
       })
@@ -44,7 +44,7 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should filter out empty groups" do
       session.merge!({
         "selected_groups": %i[being_unemployed getting_food],
-        "have_you_been_made_unemployed": "I might be soon",
+        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
         "are_you_off_work_ill": "Yes",
         "self_employed": "Yes",
         "afford_food": "No",
@@ -66,7 +66,7 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should return all group questions if all the session responses meet criteria" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
-        "have_you_been_made_unemployed": "I might be soon",
+        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
         "are_you_off_work_ill": "Yes",
         "self_employed": "Yes",
       })
@@ -80,7 +80,7 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should return filtered group questions if the session responses do not meet criteria" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
-        "have_you_been_made_unemployed": "I might be soon",
+        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
         "are_you_off_work_ill": "No",
         "self_employed": "Yes",
       })

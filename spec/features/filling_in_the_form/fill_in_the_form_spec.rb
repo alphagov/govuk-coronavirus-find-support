@@ -13,7 +13,7 @@ RSpec.feature "Fill in the form" do
     and_is_finding_it_hard_to_afford_rent_mortgage_bills
     and_is_finding_it_hard_to_afford_food
     and_is_unable_to_get_food
-    and_has_been_made_unemployed_or_furloughed
+    and_has_been_told_to_stop_working
     and_is_off_work_because_ill_or_self_isolating
     and_is_self_employed_or_a_sole_trader
     and_is_still_going_in_to_work_but_is_not_a_key_worker

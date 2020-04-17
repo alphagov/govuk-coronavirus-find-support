@@ -247,8 +247,8 @@ en:
             title: "Have you been told to stop working?"
             title_caption: "Being unemployed or not having any work"
             options:
-              - "Yes, I‘ve been made unemployed, or might be soon"
-              - "Yes, I‘ve been put on temporary leave (on furlough), or might be soon"
+              - "Yes, I’ve been made unemployed, or might be soon"
+              - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
               - "No"
               - "Not sure"
             custom_select_error: "Select if you’ve been made unemployed, or put on temporary leave (furloughed)"
@@ -431,8 +431,8 @@ en:
       have_you_been_made_unemployed:
         title: "If you’ve been made unemployed, or put on temporary leave (furloughed)"
         show_options:
-          - "Yes, I‘ve been made unemployed, or might be soon"
-          - "Yes, I‘ve been put on temporary leave (on furlough), or might be soon"
+          - "Yes, I’ve been made unemployed, or might be soon"
+          - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
           - "Not sure"
         items:
           - text: "What to do if you‘ve lost your job"

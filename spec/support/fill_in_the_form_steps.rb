@@ -60,10 +60,10 @@ module FillInTheFormSteps
     click_on "Continue"
   end
 
-  def and_has_been_made_unemployed_or_furloughed
+  def and_has_been_told_to_stop_working
     expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))
 
-    choose "Yes"
+    choose "Yes, I’ve been made unemployed, or might be soon"
 
     click_on "Continue"
   end

@@ -270,13 +270,6 @@ en:
       going_in_to_work:
         title: "Going in to work"
         questions:
-          still_working:
-            title: "Are you still going in to work even though you’re not a key worker?"
-            options:
-              - "Yes"
-              - "I do not know if I’m a key worker"
-              - "No"
-            custom_select_error: "Select if you’re still going in to work even though you’re not a key worker"
           living_with_vulnerable:
             title: "Are you worried about going in to work because you live with someone vulnerable to coronavirus?"
             options:
@@ -487,22 +480,6 @@ en:
           - text: "What you can do if you’re self employed or a sole trader (Money Advice Service)"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
     going_in_to_work:
-      still_working:
-        title: "If you’re still going in to work if you’re not a key worker, or not sure if you’re a key worker"
-        show_options:
-          - "Yes"
-          - "I do not know if I’m a key worker"
-        items:
-          - text: "Find out if you should be going to work"
-            href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
-          - text: "Find out if you’re a key worker"
-            href: "https://www.gov.uk/government/publications/coronavirus-covid-19-maintaining-educational-provision/guidance-for-schools-colleges-and-local-authorities-on-maintaining-educational-provision"
-          - text: "What to do if you’re worried about going to work because of coronavirus (Citizens Advice)"
-            href: "https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working/"
-          - text: "Find out if you’re a key worker if you live in Wales"
-            href: "https://gov.wales/coronavirus-key-critical-workers"
-          - text: "Find out if you‘re a key worker if you live in Scotland"
-            href: "https://www.gov.scot/publications/coronavirus-guide-schools-early-learning-closures/pages/key-workers/"
       living_with_vulnerable:
         title: "If you’re worried about going in to work because you live with someone vulnerable to coronavirus"
         show_options:

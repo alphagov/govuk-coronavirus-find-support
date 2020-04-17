@@ -46,10 +46,6 @@ Rails.application.routes.draw do
     get "/self-employed", to: "self_employed#show"
     post "/self-employed", to: "self_employed#submit"
 
-    # Question: Are you still going in to work even though you're not a key worker?
-    get "/still-working", to: "still_working#show"
-    post "/still-working", to: "still_working#submit"
-
     # Question: Are you worried about going into work because you live with someone vulnerable to coronavirus?
     get "/living-with-vulnerable", to: "living_with_vulnerable#show"
     post "/living-with-vulnerable", to: "living_with_vulnerable#submit"

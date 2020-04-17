@@ -16,7 +16,6 @@ RSpec.feature "Fill in the form" do
     and_has_been_made_unemployed_or_furloughed
     and_is_off_work_because_ill_or_self_isolating
     and_is_self_employed_or_a_sole_trader
-    and_is_still_going_in_to_work_but_is_not_a_key_worker
     and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
     and_has_nowhere_to_live
     and_has_been_evicted

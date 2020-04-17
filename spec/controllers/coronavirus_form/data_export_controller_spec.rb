@@ -18,7 +18,7 @@ RSpec.describe CoronavirusForm::DataExportController, type: :controller do
 
     it "returns a hash containing aggregated form responses" do
       expected_response = {
-        "Are you able to leave your home if absolutely necessary?" => [
+        "Are you able to leave your home for food, medicine, or health reasons?" => [
           {
             response: "Yes",
             date: "2020-04-10",

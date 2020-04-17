@@ -127,7 +127,7 @@ module FillInTheFormSteps
   def and_is_not_able_to_leave_home_if_absolutely_necessary
     expect(page).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
 
-    choose "I cannot go out because I have coronavirus, or someone in my household does"
+    choose "I should not leave home because I have coronavirus symptoms, or someone in my household does"
 
     click_on "Continue"
   end

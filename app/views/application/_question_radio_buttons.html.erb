@@ -19,11 +19,11 @@
     is_page_heading: true,
     name: question,
     error_message: error_items(question),
-    items: t("coronavirus_form.groups.#{group}.questions.#{question}.options").map do |option|
+    items: t("coronavirus_form.groups.#{group}.questions.#{question}.options").map do |option_key, item|
         {
-          value: option,
-          text: option,
-          id: "option_#{option.parameterize.underscore}",
+          value: item[:label],
+          text: item[:label],
+          id: option_key,
           checked: false,
         }
       end

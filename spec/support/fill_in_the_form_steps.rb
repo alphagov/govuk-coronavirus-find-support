@@ -10,7 +10,7 @@ module FillInTheFormSteps
 
     choose "No"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_needs_help_with_all_options
@@ -25,7 +25,7 @@ module FillInTheFormSteps
     check I18n.t("coronavirus_form.groups.mental_health.title")
     check I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.options").first
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_feels_unsafe_where_they_live
@@ -33,7 +33,7 @@ module FillInTheFormSteps
 
     choose "No"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_finding_it_hard_to_afford_rent_mortgage_bills
@@ -41,7 +41,7 @@ module FillInTheFormSteps
 
     choose "Yes"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_finding_it_hard_to_afford_food
@@ -49,7 +49,7 @@ module FillInTheFormSteps
 
     choose "Yes"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_unable_to_get_food
@@ -57,7 +57,7 @@ module FillInTheFormSteps
 
     choose "No"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_has_been_told_to_stop_working
@@ -65,7 +65,7 @@ module FillInTheFormSteps
 
     choose "Yes, I’ve been made unemployed, or might be soon"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_off_work_because_ill_or_self_isolating
@@ -73,7 +73,7 @@ module FillInTheFormSteps
 
     choose "Yes"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_self_employed_or_a_sole_trader
@@ -81,7 +81,7 @@ module FillInTheFormSteps
 
     choose "Yes"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
@@ -89,7 +89,7 @@ module FillInTheFormSteps
 
     choose "Yes"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_has_nowhere_to_live
@@ -97,7 +97,7 @@ module FillInTheFormSteps
 
     choose "No"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_has_been_evicted
@@ -105,7 +105,7 @@ module FillInTheFormSteps
 
     choose "Yes"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_worried_about_mental_health
@@ -113,7 +113,7 @@ module FillInTheFormSteps
 
     choose "Yes, I am"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_not_able_to_leave_home_if_absolutely_necessary
@@ -121,7 +121,7 @@ module FillInTheFormSteps
 
     choose "I should not leave home because I have coronavirus symptoms, or someone in my household does"
 
-    click_on "Continue"
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def they_view_the_results_page

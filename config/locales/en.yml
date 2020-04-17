@@ -178,6 +178,7 @@ en:
               - text: This helps us count how many people visit the service by tracking if you’ve visited before
               - text: 3 years
   coronavirus_form:
+    submit_and_next: "Continue"
     errors:
       page_title_prefix: 'Error: '
       title: "There is a problem:"

@@ -76,6 +76,14 @@ module FillInTheFormSteps
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
+  def and_has_not_been_told_to_stop_working
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))
+
+    choose I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_no.label")
+
+    click_on I18n.t("coronavirus_form.submit_and_next")
+  end
+
   def and_is_off_work_because_ill_or_self_isolating
     expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
 
@@ -164,6 +172,9 @@ module FillInTheFormSteps
 
   def they_are_provided_with_information_about_being_unemployed
     expect(page).to have_content(I18n.t("results_link.being_unemployed.have_you_been_made_unemployed.title"))
+  end
+
+  def they_are_provided_with_information_about_being_off_work_ill
     expect(page).to have_content(I18n.t("results_link.being_unemployed.are_you_off_work_ill.title"))
   end
 

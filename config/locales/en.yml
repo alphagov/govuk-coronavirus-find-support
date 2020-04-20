@@ -285,6 +285,9 @@ en:
                 label: "No"
               not_sure:
                 label: "Not sure"
+            skip_next_question_options:
+              - "Yes, I’ve been made unemployed, or might be soon"
+              - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
             custom_select_error: "Select if you’ve been made unemployed, or put on temporary leave (furloughed)"
           are_you_off_work_ill:
             title: "Are you off work because you’re ill or self-isolating?"

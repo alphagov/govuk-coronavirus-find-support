@@ -14,7 +14,7 @@ RSpec.feature "Fill in the form" do
     and_is_finding_it_hard_to_afford_food
     and_is_unable_to_get_food
     and_is_not_self_employed_or_a_sole_trader
-    and_has_been_told_to_stop_working
+    and_has_not_been_told_to_stop_working
     and_is_off_work_because_ill_or_self_isolating
     and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
     and_has_nowhere_to_live
@@ -25,10 +25,21 @@ RSpec.feature "Fill in the form" do
     they_are_provided_with_information_about_feeling_unsafe
     they_are_provided_with_information_about_paying_bills
     they_are_provided_with_information_about_getting_food
-    they_are_provided_with_information_about_being_unemployed
     they_are_provided_with_information_about_going_in_to_work
     they_are_provided_with_information_about_having_somewhere_to_live
     they_are_provided_with_information_about_mental_health
+    they_are_given_a_link_for_providing_feedback
+  end
+
+  scenario "Complete the form when not self employed but furloughed" do
+    given_a_user_is_struggling_because_of_coronavirus
+    and_does_not_need_urgent_medical_help
+    and_needs_help_with_being_unemployed
+    and_is_not_self_employed_or_a_sole_trader
+    and_has_been_told_to_stop_working
+    and_is_not_able_to_leave_home_if_absolutely_necessary
+    they_view_the_results_page
+    they_are_provided_with_information_about_being_unemployed
     they_are_given_a_link_for_providing_feedback
   end
 

@@ -4,7 +4,7 @@ RSpec.describe "have-you-been-made-unemployed" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(have_you_been_made_unemployed feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(have_you_been_made_unemployed are_you_off_work_ill feel_safe))
   end
 
   describe "GET /have-you-been-made-unemployed" do
@@ -58,16 +58,28 @@ RSpec.describe "have-you-been-made-unemployed" do
   end
 
   describe "POST /still-working" do
+    let(:positive_response) { I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.skip_next_question_options").sample }
+    let(:negative_response) do
+      (I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options").map { |_, option| option[:label] } -
+        I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.skip_next_question_options")).sample
+    end
     it "updates the session store" do
-      post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: selected_option_text }
+      post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: positive_response }
 
-      expect(session[:have_you_been_made_unemployed]).to eq(selected_option_text)
+      expect(session[:have_you_been_made_unemployed]).to eq(positive_response)
     end
 
-    it "redirects to the next question" do
-      post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: selected_option_text }
+    it "redirects to the next question for no response" do
+      post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: negative_response }
 
-      expect(response).to redirect_to(feel_safe_path)
+      expect(session[:questions_to_ask]).to eq(%w(have_you_been_made_unemployed are_you_off_work_ill feel_safe))
+      expect(response).to redirect_to(are_you_off_work_ill_path)
+    end
+
+    it "removes irrelevant question for yes response" do
+      post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: positive_response }
+
+      expect(session[:questions_to_ask]).to eq(%w(have_you_been_made_unemployed feel_safe))
     end
 
     it "shows an error when no radio button selected" do

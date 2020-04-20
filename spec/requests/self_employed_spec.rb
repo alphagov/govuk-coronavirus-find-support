@@ -16,7 +16,7 @@ RSpec.describe "self-employed" do
       it "redirects to filter question" do
         get self_employed_path
 
-        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -67,7 +67,7 @@ RSpec.describe "self-employed" do
     it "redirects to the next question" do
       post self_employed_path, params: { self_employed: selected_option_text }
 
-      expect(response).to redirect_to(controller: "feel_safe", action: "show")
+      expect(response).to redirect_to(feel_safe_path)
     end
 
     it "shows an error when no radio button selected" do

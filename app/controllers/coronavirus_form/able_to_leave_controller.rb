@@ -21,7 +21,7 @@ class CoronavirusForm::AbleToLeaveController < ApplicationController
     else
       update_session_store
       write_responses
-      redirect_to results_path
+      redirect_to results_url
     end
   end
 

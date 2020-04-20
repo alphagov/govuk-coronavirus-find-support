@@ -18,10 +18,10 @@ class CoronavirusForm::UrgentMedicalHelpController < ApplicationController
       render controller_path
     elsif @form_responses[:urgent_medical_help] == I18n.t("coronavirus_form.groups.#{group}.questions.#{controller_name}.options.option_yes.label")
       update_session_store
-      redirect_to get_help_from_nhs_path
+      redirect_to get_help_from_nhs_url
     else
       update_session_store
-      redirect_to need_help_with_path
+      redirect_to need_help_with_url
     end
   end
 

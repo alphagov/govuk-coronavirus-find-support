@@ -16,7 +16,7 @@ RSpec.describe "get-food" do
       it "redirects to filter question" do
         get get_food_path
 
-        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -67,7 +67,7 @@ RSpec.describe "get-food" do
     it "redirects to the next question" do
       post get_food_path, params: { get_food: selected_option_text }
 
-      expect(response).to redirect_to(controller: "feel_safe", action: "show")
+      expect(response).to redirect_to(feel_safe_path)
     end
 
     it "shows an error when no radio button selected" do

@@ -52,18 +52,18 @@ private
 
   def session_expired
     reset_session
-    redirect_to session_expired_path
+    redirect_to session_expired_url
   end
 
   def check_first_question_answered
     unless first_question_seen?
-      redirect_to controller: "urgent_medical_help", action: "show"
+      redirect_to urgent_medical_help_url
     end
   end
 
   def check_filter_question_answered
     if questions_to_ask.blank?
-      redirect_to controller: "need_help_with", action: "show"
+      redirect_to need_help_with_url
     end
   end
 

@@ -21,7 +21,7 @@ class CoronavirusForm::HaveYouBeenMadeUnemployedController < ApplicationControll
       render controller_path
     else
       update_session_store
-      redirect_to controller: next_question(controller_name), action: "show"
+      redirect_to polymorphic_url(next_question(controller_name))
     end
   end
 

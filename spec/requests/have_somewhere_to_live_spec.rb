@@ -16,7 +16,7 @@ RSpec.describe "have-somewhere-to-live" do
       it "redirects to filter question" do
         get have_somewhere_to_live_path
 
-        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -67,7 +67,7 @@ RSpec.describe "have-somewhere-to-live" do
     it "redirects to the next question" do
       post have_somewhere_to_live_path, params: { have_somewhere_to_live: selected_option_text }
 
-      expect(response).to redirect_to(controller: "feel_safe", action: "show")
+      expect(response).to redirect_to(feel_safe_path)
     end
 
     it "shows an error when no radio button selected" do

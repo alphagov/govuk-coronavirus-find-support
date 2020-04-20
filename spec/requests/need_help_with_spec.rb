@@ -15,7 +15,7 @@ RSpec.describe "need-help-with" do
       it "redirects to urgent medical help question" do
         get need_help_with_path
 
-        expect(response).to redirect_to(controller: "urgent_medical_help", action: "show")
+        expect(response).to redirect_to(urgent_medical_help_path)
       end
     end
 

@@ -16,7 +16,7 @@ RSpec.describe "feel-safe" do
       it "redirects to filter question" do
         get feel_safe_path
 
-        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -67,7 +67,7 @@ RSpec.describe "feel-safe" do
     it "redirects to the next question" do
       post feel_safe_path, params: { feel_safe: selected_option_text }
 
-      expect(response).to redirect_to(controller: "get_food", action: "show")
+      expect(response).to redirect_to(get_food_path)
     end
 
     it "shows an error when no radio button selected" do

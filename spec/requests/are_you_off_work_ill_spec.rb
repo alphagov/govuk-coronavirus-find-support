@@ -16,7 +16,7 @@ RSpec.describe "still-working" do
       it "redirects to filter question" do
         get are_you_off_work_ill_path
 
-        expect(response).to redirect_to(controller: "need_help_with", action: "show")
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -67,7 +67,7 @@ RSpec.describe "still-working" do
     it "redirects to the next question" do
       post are_you_off_work_ill_path, params: { are_you_off_work_ill: selected_option_text }
 
-      expect(response).to redirect_to(controller: "feel_safe", action: "show")
+      expect(response).to redirect_to(feel_safe_path)
     end
 
     it "shows an error when no radio button selected" do

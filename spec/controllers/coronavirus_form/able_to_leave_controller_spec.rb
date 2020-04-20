@@ -9,19 +9,19 @@ RSpec.describe CoronavirusForm::AbleToLeaveController, type: :controller do
     end
 
     it "saves the form response to the database" do
-      session[:questions_to_ask] = %w(foo)
+      session[:questions_to_ask] = %w(get_food)
 
       post :submit, params: { able_to_leave: "Yes" }
 
       expect(FormResponse.first.form_response).to eq(
-        "questions_to_ask" => %w(foo),
+        "questions_to_ask" => %w(get_food),
         "able_to_leave" => "Yes",
       )
       expect(FormResponse.first.created_at).to eq(Time.utc(2020, 3, 1, 10, 0, 0))
     end
 
     it "does not save the session id or csrf token to the database" do
-      session[:questions_to_ask] = %w(foo)
+      session[:questions_to_ask] = %w(get_food)
 
       post :submit, params: { able_to_leave: "Yes" }
 

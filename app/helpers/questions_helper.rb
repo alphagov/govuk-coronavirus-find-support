@@ -4,7 +4,7 @@ module QuestionsHelper
 
   def determine_user_questions(groups)
     if groups.empty?
-      I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
+      all_questions
     else
       questions_to_ask = groups.map do |group|
         I18n.t("coronavirus_form.groups.#{group}.questions").stringify_keys.keys
@@ -30,6 +30,10 @@ module QuestionsHelper
   end
 
   def questions_to_ask
+    session_questions & all_questions.map(&:to_s)
+  end
+
+  def session_questions
     session[:questions_to_ask]
   end
 
@@ -47,5 +51,9 @@ module QuestionsHelper
 
   def last_question_seen?
     session[FINAL_QUESTION.to_sym].present?
+  end
+
+  def all_questions
+    I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
   end
 end

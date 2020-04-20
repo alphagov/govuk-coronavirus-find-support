@@ -77,4 +77,10 @@ RSpec.describe QuestionsHelper, type: :helper do
       end
     end
   end
+
+  describe "#remove_questions" do
+    it "removes all questions from array" do
+      expect(helper.remove_questions(%w(get_food))).to eq(%w(afford_food))
+    end
+  end
 end

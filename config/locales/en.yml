@@ -269,6 +269,9 @@ en:
                 label: "No"
               not_sure:
                 label: "Not sure"
+            skip_next_question_options:
+              - "Yes"
+              - "Not sure"
             custom_select_error: "Select yes if you’re self-employed or a sole trader"
           have_you_been_made_unemployed:
             title: "Have you been told to stop working?"

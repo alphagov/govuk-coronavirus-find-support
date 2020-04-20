@@ -43,7 +43,7 @@ class CoronavirusForm::DataExportController < ApplicationController
 private
 
   def produce_csv(results)
-    csv_data = CSV.generate do |csv|
+    csv_data = CSV.generate(col_sep: "|") do |csv|
       csv << %w(question answer date count)
       results.each do |question, value|
         value.each do |k|

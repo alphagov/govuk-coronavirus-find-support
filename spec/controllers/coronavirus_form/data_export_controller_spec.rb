@@ -10,49 +10,73 @@ RSpec.describe CoronavirusForm::DataExportController, type: :controller do
     let(:end_date) { "2020-04-15" }
 
     before do
-      FormResponse.create(form_response: { able_to_leave: "Yes", get_food: "Yes" }, created_at: "2020-04-10 10:00:00")
-      FormResponse.create(form_response: { able_to_leave: "Yes", get_food: "No" }, created_at: "2020-04-10 10:00:00")
-      FormResponse.create(form_response: { able_to_leave: "Yes", get_food: "Yes" }, created_at: "2020-04-11 10:00:00")
-      FormResponse.create(form_response: { able_to_leave: "No", get_food: "No" }, created_at: "2020-04-11 10:00:00")
+      FormResponse.create(
+        form_response: {
+         able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
+         get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
+        },
+        created_at: "2020-04-10 10:00:00",
+       )
+      FormResponse.create(
+        form_response: {
+          able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
+          get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
+        },
+        created_at: "2020-04-10 10:00:00",
+      )
+      FormResponse.create(
+        form_response: {
+          able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
+          get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
+        },
+        created_at: "2020-04-11 10:00:00",
+      )
+      FormResponse.create(
+        form_response: {
+          able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_other.label"),
+          get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
+        },
+        created_at: "2020-04-11 10:00:00",
+      )
     end
 
     it "returns a hash containing aggregated form responses" do
       expected_response = {
         "Are you able to leave your home for food, medicine, or health reasons?" => [
           {
-            response: "Yes",
+            response: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
             date: "2020-04-10",
             count: 2,
           },
           {
-            response: "No",
+            response: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_other.label"),
             date: "2020-04-11",
             count: 1,
           },
           {
-            response: "Yes",
+            response: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
             date: "2020-04-11",
             count: 1,
           },
         ],
         "Are you able to get food?" => [
           {
-            response: "No",
+            response: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
             date: "2020-04-10",
             count: 1,
           },
           {
-            response: "Yes",
+            response: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
             date: "2020-04-10",
             count: 1,
           },
           {
-            response: "No",
+            response: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
             date: "2020-04-11",
             count: 1,
           },
           {
-            response: "Yes",
+            response: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
             date: "2020-04-11",
             count: 1,
           },

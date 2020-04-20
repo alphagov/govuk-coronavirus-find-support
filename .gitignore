@@ -37,3 +37,5 @@ public/assets/*.json
 
 # don't ignore these css
 !public/assets/error-pages.85f433bf6332a1245653b92b44d2430a55810be0.min.css
+
+node_modules

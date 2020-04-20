@@ -60,4 +60,13 @@ module QuestionsHelper
   def remove_questions(questions)
     questions_to_ask - questions
   end
+
+  def add_questions(questions, after_question)
+    index = questions_to_ask.index(after_question) + 1
+    questions_to_ask
+      .dup
+      .insert(index, questions)
+      .flatten
+      .uniq
+  end
 end

@@ -30,7 +30,7 @@ module QuestionsHelper
   end
 
   def questions_to_ask
-    session_questions & all_questions.map(&:to_s)
+    session_questions & all_questions
   end
 
   def session_questions
@@ -54,6 +54,6 @@ module QuestionsHelper
   end
 
   def all_questions
-    I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
+    I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten.map(&:to_s)
   end
 end

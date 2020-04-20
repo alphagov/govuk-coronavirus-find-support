@@ -15,7 +15,7 @@ RSpec.describe QuestionsHelper, type: :helper do
       groups = []
       all_questions = I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
 
-      expect(helper.determine_user_questions(groups)).to eq(all_questions)
+      expect(helper.determine_user_questions(groups)).to eq(all_questions.map(&:to_s))
     end
   end
 
@@ -62,6 +62,19 @@ RSpec.describe QuestionsHelper, type: :helper do
       allow(helper).to receive(:all_questions).and_return(%w(get_food afford_food question_3))
 
       expect(helper.questions_to_ask).to eq(%w(get_food afford_food))
+    end
+
+    context "when the session questions_to_ask is equal to all_questions" do
+      let(:all_questions) { %w(feel_safe afford_food) }
+
+      before do
+        allow(helper).to receive(:session_questions).and_return(all_questions)
+        allow(helper).to receive(:all_questions).and_return(all_questions)
+      end
+
+      it "returns all_questions" do
+        expect(helper.questions_to_ask).to eq(all_questions)
+      end
     end
   end
 end

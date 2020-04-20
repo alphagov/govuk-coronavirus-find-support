@@ -8,6 +8,10 @@ RSpec.describe CoronavirusForm::AbleToLeaveController, type: :controller do
       Timecop.freeze(Time.utc(2020, 3, 1, 10, 43, 45))
     end
 
+    after do
+      Timecop.return
+    end
+
     it "saves the form response to the database" do
       session[:questions_to_ask] = %w(get_food)
 

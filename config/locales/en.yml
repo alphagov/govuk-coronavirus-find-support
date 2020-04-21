@@ -509,8 +509,6 @@ en:
         show_options:
           - "Yes"
         items:
-          - text: "Check if you’re eligible for statutory sick pay"
-            href: "https://www.gov.uk/statutory-sick-pay"
           - text: "What to do if you’re employed but cannot work"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
           - text: "Find out about getting statutory sick pay if you’re self-isolating (Acas)"

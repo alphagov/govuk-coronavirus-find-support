@@ -157,4 +157,4 @@ jobs:
       - task: run-smoke-tests
         file: git-master/concourse/tasks/run-smoke-tests.yml
         params:
-          TEST_URL: 'https://find-coronavirus-support.service.gov.uk/urgent-medical-help'
+          TEST_URL: 'https://find-coronavirus-support.service.gov.uk'

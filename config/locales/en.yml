@@ -596,6 +596,8 @@ en:
           - "Yes, I am"
           - "Not sure"
         items:
+          - text: "Where to get urgent help for mental health"
+            href: "https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/"
           - text: "Get information on coronavirus and your wellbeing (Mind)"
             href: "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8"
           - text: "Looking after your mental health during coronavirus"
@@ -610,8 +612,3 @@ en:
             href: "https://phw.nhs.wales/topics/latest-information-on-novel-coronavirus-covid-19/staying-well-at-home/how-are-you-feeling/"
           - text: "Additional information about coronavirus and your mental wellbeing from the Scottish Association for Mental Health"
             href: "https://www.samh.org.uk/about-mental-health/self-help-and-wellbeing/coronavirus-and-your-mental-wellbeing"
-          - text: 'If you need urgent help now, call the Samaritans on <a href="tel:116 123" class="govuk-link">116 123</a>'
-          - text: "If you need urgent help text ‘Shout’ to 85258"
-          - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
-          - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
-          - text: "If it’s an emergency, call 999"

@@ -12,22 +12,24 @@
     list-style: none;
     padding: 0;
     margin: 0;
-
-    a {
-      color: $link__footer;
-      text-decoration: none;
-      font-weight: normal;
-      margin: 0;
-      display: block;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+    line-height: 1.625rem;
 
     li {
       float: left;
       margin: 0 25px 0 0;
+
+      a {
+        color: $link__footer;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: normal;
+        margin: 0;
+        display: block;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
 }
@@ -42,30 +44,12 @@
     margin: 0;
     width: 140px;
     height: 38px;
-    overflow: hidden;
-    padding: 40px 0 0;
+    margin: 40px 0 0;
     display: inline-block;
-    // background: url('/assets/images/footer-logo.svg');
-    background-size: 140px 34px;
-    background-repeat: no-repeat;
-    background-position: 0 0;
 
     &:hover {
       text-decoration: none;
       color: $link__footer_hover;
-    }
-
-    span {
-      display: block;
-      padding: 10px 0;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-
-    span b {
-      font-weight: bold;
     }
   }
 }

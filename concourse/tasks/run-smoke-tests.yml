@@ -1,15 +1,21 @@
 platform: linux
-image_resource:
-  type: docker-image
-  source:
-    repository: ((readonly_private_ecr_repo_url))
-    tag: govuk-coronavirus-find-support-feature-tests
+image: tests-image
+config:
+  inputs:
+    - name: git-master
 params:
   TEST_URL:
-  RAILS_ENV: smoke_test
-inputs:
-  - name: git-master
 run:
-  path: bundle
   dir: git-master
-  args: ['exec', 'rspec', 'spec/features']
+  path: bash
+  args:
+    - -c
+    - |
+      set -eu
+      service postgresql start
+      su - postgres -c "psql -c \"create role root with createdb login password 'password';\""
+      export DATABASE_URL="postgres://root:password@localhost:5432/coronavirus_find_support_form_development"
+      bundle install
+      bundle exec rails db:setup
+      bundle exec rails db:migrate
+      TEST_URL="$TEST_URL" bundle exec rspec spec/features

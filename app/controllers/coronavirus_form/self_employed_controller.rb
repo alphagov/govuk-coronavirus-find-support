@@ -19,8 +19,13 @@ class CoronavirusForm::SelfEmployedController < ApplicationController
       flash.now[:validation] = invalid_fields
       log_validation_error(invalid_fields)
       render controller_path
+    elsif I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.skip_next_question_options").include? @form_responses[:self_employed]
+      update_session_store
+      session[:questions_to_ask] = remove_questions(%w(have_you_been_made_unemployed are_you_off_work_ill))
+      redirect_to polymorphic_url(next_question(controller_name))
     else
       update_session_store
+      session[:questions_to_ask] = add_questions(%w(have_you_been_made_unemployed are_you_off_work_ill), controller_name)
       redirect_to polymorphic_url(next_question(controller_name))
     end
   end

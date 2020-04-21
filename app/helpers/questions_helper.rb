@@ -56,4 +56,17 @@ module QuestionsHelper
   def all_questions
     I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten.map(&:to_s)
   end
+
+  def remove_questions(questions)
+    questions_to_ask - questions
+  end
+
+  def add_questions(questions, after_question)
+    index = questions_to_ask.index(after_question) + 1
+    questions_to_ask
+      .dup
+      .insert(index, questions)
+      .flatten
+      .uniq
+  end
 end

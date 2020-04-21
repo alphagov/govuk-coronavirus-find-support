@@ -77,4 +77,20 @@ RSpec.describe QuestionsHelper, type: :helper do
       end
     end
   end
+
+  describe "#remove_questions" do
+    it "removes all questions from array" do
+      expect(helper.remove_questions(%w(get_food))).to eq(%w(afford_food))
+    end
+  end
+
+  describe "#add_questions" do
+    it "adds all questions from array when question not already in array" do
+      expect(helper.add_questions(%w(question_3 question_4), "get_food")).to eq(%w(get_food question_3 question_4 afford_food))
+    end
+
+    it "does not add question when question already in array" do
+      expect(helper.add_questions(%w(afford_food), "get_food")).to eq(%w(get_food afford_food))
+    end
+  end
 end

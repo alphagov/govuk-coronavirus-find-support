@@ -219,7 +219,7 @@ en:
                 label: "No"
               not_sure:
                 label: "Not sure"
-            custom_select_error: "Select if you feel safe where you live or if you‘re worried about someone else"
+            custom_select_error: "Select if you feel safe where you live or if you’re worried about someone else"
       paying_bills:
         title: "Paying bills"
         questions:
@@ -255,7 +255,7 @@ en:
                 label: "No"
               not_sure:
                 label: "Not sure"
-            custom_select_error: "Select yes if you‘re able to get food"
+            custom_select_error: "Select yes if you’re able to get food"
       being_unemployed:
         title: "Being unemployed or not having any work"
         questions:
@@ -344,7 +344,7 @@ en:
                 label: "No, I’m not"
               not_sure:
                 label: "Not sure"
-            custom_select_error: "Select yes if you‘re worried about your mental health or someone else’s mental health"
+            custom_select_error: "Select yes if you’re worried about your mental health or someone else’s mental health"
       leave_home: # Q: Are you able to leave your home if absolutely neccessary?
         questions:
           able_to_leave:
@@ -360,7 +360,7 @@ en:
                 label: "I cannot go out because I have a disability"
               option_other:
                 label: "I’m unable to leave my home for another reason"
-            custom_select_error: "Select if you‘re able to leave your home or not"
+            custom_select_error: "Select if you’re able to leave your home or not"
     results:
       header:
         context: Coronavirus (COVID-19)
@@ -402,9 +402,9 @@ en:
             href: "https://www.childline.org.uk/"
           - text: "Get advice if you’re a child in Wales"
             href: "https://www.childcomwales.org.uk/coronavirus/"
-          - text: "Contact NSPCC if you‘re concerned about a child"
+          - text: "Contact NSPCC if you’re concerned about a child"
             href: "https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/"
-          - text: "Find helplines if you‘re an older person living in Wales"
+          - text: "Find helplines if you’re an older person living in Wales"
             href: "https://www.olderpeoplewales.com/en/coronavirus.aspx"
           - text: "Find victim support helplines if you live in Wales (in Welsh)"
             href: "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales"
@@ -448,15 +448,15 @@ en:
             href: "https://www.gov.uk/apply-free-school-meals"
           - text: "Apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
             href: "https://www.healthystart.nhs.uk/healthy-start-vouchers/do-i-qualify/"
-          - text: "Find out if you‘re eligible for the Scottish Welfare Fund if you live in Scotland"
+          - text: "Find out if you’re eligible for the Scottish Welfare Fund if you live in Scotland"
             href: "https://www.mygov.scot/scottish-welfare-fund/"
-          - text: "Find out if you can get a grant if you‘re a parent or looking after a child in Scotland"
+          - text: "Find out if you can get a grant if you’re a parent or looking after a child in Scotland"
             href: "https://www.mygov.scot/best-start-grant-best-start-foods/"
-          - text: "Check if you‘re eligible for the Discretionary Assistance Fund if you live in Wales"
+          - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
-          - text: "If you‘re in Northern Ireland call the coronavirus Community Helpline on <a href=\"tel:+448088020020\" class=\"govuk-link\">0808 802 0020</a>, email <a href=\"mailto:covid19@adviceni.net\" class=\"govuk-link\">covid19@adviceni.net</a> or text ‘ACTION’ to 81025"
+          - text: "If you’re in Northern Ireland call the coronavirus Community Helpline on <a href=\"tel:+448088020020\" class=\"govuk-link\">0808 802 0020</a>, email <a href=\"mailto:covid19@adviceni.net\" class=\"govuk-link\">covid19@adviceni.net</a> or text ‘ACTION’ to 81025"
       get_food:
-        title: "If you‘re unable to get food"
+        title: "If you’re unable to get food"
         show_options:
           - "No"
           - "Not sure"
@@ -472,11 +472,11 @@ en:
           - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
           - "Not sure"
         items:
-          - text: "What to do if you‘ve lost your job"
+          - text: "What to do if you’ve lost your job"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job"
           - text: "What to do if you’ve been laid-off"
             href: "https://www.gov.uk/lay-offs-short-timeworking"
-          - text: "Find out about your rights if you‘ve been dismissed"
+          - text: "Find out about your rights if you’ve been dismissed"
             href: "https://www.gov.uk/dismissal"
           - text: "What to do if you’ve been furloughed"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
@@ -492,7 +492,7 @@ en:
             href: "https://workingwales.gov.wales/"
           - text: "Contact Citizens Advice Wales"
             href: "https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/"
-          - text: "Check if you‘re eligible for the Discretionary Assistance Fund if you live in Wales"
+          - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
           - text: "Get help if you’ve been made redundant in Scotland"
             href: "https://www.mygov.scot/help-redundancy/"
@@ -511,7 +511,7 @@ en:
             href: "https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay"
           - text: "Find out about the help you can get if you’re self-employed or work in the gig economy (Money Advice Service)"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
-          - text: "Check if you‘re eligible for the Discretionary Assistance Fund if you live in Wales"
+          - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
       self_employed:
         title: "If you’re self employed or a sole trader"
@@ -519,7 +519,7 @@ en:
           - "Yes"
           - "Not sure"
         items:
-          - text: "What to do if you‘re self-employed and getting less or no work"
+          - text: "What to do if you’re self-employed and getting less or no work"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
           - text: "What you can do if you’re self employed or a sole trader (Money Advice Service)"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed"
@@ -559,7 +559,7 @@ en:
             href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
           - text: "Get help if you’re homeless in Scotland"
             href: "https://www.mygov.scot/homelessness/"
-          - text: "Get help if you‘re homeless from Shelter Scotland"
+          - text: "Get help if you’re homeless from Shelter Scotland"
             href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"
       have_you_been_evicted:
         title: "If you’ve been evicted or might be soon"

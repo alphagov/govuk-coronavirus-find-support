@@ -1,0 +1,70 @@
+<footer class="footer" id="footer">
+  <div class="footer__components container">
+    <nav id="block-footer">
+      <ul class="menu">
+        <li class="menu__item">
+          <% if locale == :en %>
+            <a href="https://gov.wales/contact-us">Contact us</a>
+          <% end %>
+          <% if locale == :cy %>
+            <a href="https://llyw.cymru/cysylltu-ni">Cysylltu â ni</a>
+          <% end %>
+        </li>
+        <li class="menu__item">
+          <% if locale == :en %>
+            <a href="https://gov.wales/help/accessibility" title="Accessibility">Accessibility</a>
+          <% end %>
+          <% if locale == :cy %>
+            <a href="https://llyw.cymru/help/hygyrchedd" title="Hygyrchedd">Hygyrchedd</a>
+          <% end %>
+        </li>
+        <li class="menu__item">
+          <% if locale == :en %>
+            <a href="https://gov.wales/copyright-statement" title="Copyright statement">Copyright statement</a>
+          <% end %>
+          <% if locale == :cy %>
+            <a href="https://llyw.cymru/datganiad-hawlfraint" title="Datganiad hawlfraint">Datganiad hawlfraint</a>
+          <% end %>
+        </li>
+        <li class="menu__item">
+          <% if locale == :en %>
+            <a href="https://gov.wales/help/cookies">Cookies</a>
+          <% end %>
+          <% if locale == :cy %>
+            <a href="https://llyw.cymru/help/cwcis">Cwcis</a>
+          <% end %>
+        </li>
+        <li class="menu__item">
+          <% if locale == :en %>
+            <a href="https://gov.wales/website-privacy-policy" title="Privacy policy">Privacy</a>
+          <% end %>
+          <% if locale == :cy %>
+            <a href="https://llyw.cymru/help/polisi-preifatrwydd-wefan" title="Polisi preifatrwydd">Preifatrwydd</a>
+          <% end %>
+        </li>
+        <li class="menu__item">
+          <% if locale == :en %>
+            <a href="https://gov.wales/terms-and-conditions" title="Terms and conditions">Terms and conditions</a>
+          <% end %>
+          <% if locale == :cy %>
+            <a href="https://llyw.cymru/telerau-ac-amodau" title="Telerau ac amodau">Telerau ac amodau</a>
+          <% end %>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer_logo container" id="footer_logo">
+    <% if locale == :en %>
+      <a href="https://gov.wales/" class="footer__logo" id="footerlogo">
+        <img src="/assets/footer-logo.svg" alt="Welsh Government">
+        <span class="visually-hidden">Home</span>
+      </a>
+    <% end %>
+    <% if locale == :cy %>
+      <a href="https://llyw.cymru/" class="footer__logo" id="footerlogo">
+        <img src="/assets/footer-logo.svg" alt="Llywodraeth Cymru">
+        <span class="visually-hidden">Hafan</span>
+      </a>
+    <% end %>
+  </div>
+</footer>

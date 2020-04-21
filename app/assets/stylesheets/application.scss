@@ -33,10 +33,12 @@ $app-covid-grey: #272828;
 @import 'components/actions-group';
 
 // Gov Wales Skin
-@import 'govwales/bootstrap-custom';
-@import 'govwales/bootstrap-variables';
+@import 'govwales/bootstrap/bootstrap-custom';
+@import 'govwales/bootstrap/bootstrap-variables';
 @import 'govwales/vars';
-@import 'govwales/header';
+@import 'govwales/global';
+@import 'govwales/layout/header';
+@import 'govwales/layout/footer';
 
 .govuk-footer {
   clear: both;

@@ -2,33 +2,45 @@
 
 require "spec_helper"
 
-RSpec.feature "Fill in the form" do
+RSpec.feature "Fill in the find support form" do
   include FillInTheFormSteps
 
-  scenario "Complete the form when not self employed" do
-    given_a_user_is_struggling_because_of_coronavirus
-    and_does_not_need_urgent_medical_help
-    and_needs_help_with_all_options
-    and_feels_unsafe_where_they_live
-    and_is_finding_it_hard_to_afford_rent_mortgage_bills
-    and_is_finding_it_hard_to_afford_food
-    and_is_unable_to_get_food
-    and_is_not_self_employed_or_a_sole_trader
-    and_has_not_been_told_to_stop_working
-    and_is_off_work_because_ill_or_self_isolating
-    and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
-    and_has_nowhere_to_live
-    and_has_been_evicted
-    and_is_worried_about_mental_health
-    and_is_not_able_to_leave_home_if_absolutely_necessary
-    they_view_the_results_page
-    they_are_provided_with_information_about_feeling_unsafe
-    they_are_provided_with_information_about_paying_bills
-    they_are_provided_with_information_about_getting_food
-    they_are_provided_with_information_about_going_in_to_work
-    they_are_provided_with_information_about_having_somewhere_to_live
-    they_are_provided_with_information_about_mental_health
-    they_are_given_a_link_for_providing_feedback
+  shared_examples "filling in the form" do
+    scenario "Complete the form when not self employed" do
+      given_a_user_is_struggling_because_of_coronavirus
+      and_does_not_need_urgent_medical_help
+      and_needs_help_with_all_options
+      and_feels_unsafe_where_they_live
+      and_is_finding_it_hard_to_afford_rent_mortgage_bills
+      and_is_finding_it_hard_to_afford_food
+      and_is_unable_to_get_food
+      and_is_not_self_employed_or_a_sole_trader
+      and_has_not_been_told_to_stop_working
+      and_is_off_work_because_ill_or_self_isolating
+      and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
+      and_has_nowhere_to_live
+      and_has_been_evicted
+      and_is_worried_about_mental_health
+      and_is_not_able_to_leave_home_if_absolutely_necessary
+      they_view_the_results_page
+      they_are_provided_with_information_about_feeling_unsafe
+      they_are_provided_with_information_about_paying_bills
+      they_are_provided_with_information_about_getting_food
+      they_are_provided_with_information_about_going_in_to_work
+      they_are_provided_with_information_about_having_somewhere_to_live
+      they_are_provided_with_information_about_mental_health
+      they_are_given_a_link_for_providing_feedback
+    end
+  end
+
+  describe "Complete the form when not self employed" do
+    context "without javascript" do
+      it_behaves_like "filling in the form"
+    end
+
+    context "with javascript", js: true do
+      it_behaves_like "filling in the form"
+    end
   end
 
   scenario "Complete the form when not self employed but furloughed" do
@@ -57,24 +69,24 @@ RSpec.feature "Fill in the form" do
   scenario "Ensure we can perform a healthcheck" do
     visit healthcheck_path
 
-    expect(page).to have_content("OK")
+    expect(page.body).to have_content("OK")
   end
 
   scenario "Ensure the privacy notice page is visible" do
     visit privacy_path
 
-    expect(page).to have_content(I18n.t("privacy_page.title"))
+    expect(page.body).to have_content(I18n.t("privacy_page.title"))
   end
 
   scenario "Ensure the accessibility statement page is visible" do
     visit accessibility_statement_path
 
-    expect(page).to have_content(I18n.t("accessibility_statement.title"))
+    expect(page.body).to have_content(I18n.t("accessibility_statement.title"))
   end
 
   scenario "Ensure the session expired page is visible" do
     visit session_expired_path
 
-    expect(page).to have_content(I18n.t("session_expired.title"))
+    expect(page.body).to have_content(I18n.t("session_expired.title"))
   end
 end

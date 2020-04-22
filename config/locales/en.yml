@@ -486,7 +486,7 @@ en:
           - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
           - text: "Find help with benefits if you live in Scotland"
-            href: "https://www.mygov.scot/benefits-support/" 
+            href: "https://www.mygov.scot/benefits-support/"
     going_in_to_work:
       living_with_vulnerable:
         title: "If you’re worried about going in to work"
@@ -567,3 +567,16 @@ en:
           - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
           - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
           - text: "If it’s an emergency, call 999"
+  footer:
+    links: |
+      <li class="menu__item"><a href="https://gov.wales/contact-us">Contact us</a></li>
+      <li class="menu__item"><a href="https://gov.wales/help/accessibility" title="Accessibility">Accessibility</a></li>
+      <li class="menu__item"><a href="https://gov.wales/copyright-statement" title="Copyright statement">Copyright statement</a></li>
+      <li class="menu__item"><a href="https://gov.wales/help/cookies">Cookies</a></li>
+      <li class="menu__item"><a href="https://gov.wales/website-privacy-policy" title="Privacy policy">Privacy</a></li>
+      <li class="menu__item"><a href="https://gov.wales/terms-and-conditions" title="Terms and conditions">Terms and conditions</a></li>
+    logo: |
+      <a href="https://gov.wales/" class="footer__logo" id="footerlogo">
+        <img src="/assets/footer-logo.svg" alt="Welsh Government">
+        <span class="visually-hidden">Home</span>
+      </a>

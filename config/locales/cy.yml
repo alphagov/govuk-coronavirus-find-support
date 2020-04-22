@@ -567,3 +567,16 @@ cy:
           - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
           - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
           - text: "If it’s an emergency, call 999"
+  footer:
+    links: |
+      <li class="menu__item"><a href="https://llyw.cymru/cysylltu-ni">Cysylltu â ni</a></li>
+      <li class="menu__item"><a href="https://llyw.cymru/help/hygyrchedd" title="Hygyrchedd">Hygyrchedd</a></li>
+      <li class="menu__item"><a href="https://llyw.cymru/datganiad-hawlfraint" title="Datganiad hawlfraint">Datganiad hawlfraint</a></li>
+      <li class="menu__item"><a href="https://llyw.cymru/help/cwcis">Cwcis</a></li>
+      <li class="menu__item"><a href="https://llyw.cymru/help/polisi-preifatrwydd-wefan" title="Polisi preifatrwydd">Preifatrwydd</a></li>
+      <li class="menu__item"><a href="https://llyw.cymru/telerau-ac-amodau" title="Telerau ac amodau">Telerau ac amodau</a></li>
+    logo: |
+      <a href="https://llyw.cymru/" class="footer__logo" id="footerlogo">
+        <img src="/assets/footer-logo.svg" alt="Llywodraeth Cymru">
+        <span class="visually-hidden">Hafan</span>
+      </a>

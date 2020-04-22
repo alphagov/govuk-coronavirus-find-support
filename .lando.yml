@@ -1,0 +1,18 @@
+name: coronavirus-find-support
+proxy:
+  appserver:
+    - coronavirus-find-support.lndo.site:5000
+
+services:
+  appserver:
+    type: ruby:2.6.5
+    build_as_root:
+      - gem install execjs
+      - gem install rails
+      - bundle install
+#      - sh /app/lando/rails-db-setup.sh
+  db:
+    type: postgres:10
+#events:
+#  post-start:
+#    - rails server -b 0.0.0.0 -p 5000 &

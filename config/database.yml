@@ -3,10 +3,17 @@ default: &default
   encoding: unicode
   pool: 12
   template: template0
+  database: database
+  host: db
+  username: postgres
+  port: 5432
 
 development:
   <<: *default
-  database: coronavirus_find_support_form_development
+  database: database
+  host: db
+  username: postgres
+  port: 5432
   url: <%= ENV["DATABASE_URL"]%>
 
 test:

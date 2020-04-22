@@ -156,6 +156,7 @@ jobs:
           URL: 'https://govuk-coronavirus-find-support-prod.cloudapps.digital/urgent-medical-help'
           MESSAGE: "Checks that the application deployed to production is not serving HTTP error codes. If this fails, you should investigate immediately."
       - task: run-smoke-tests
+        image: tests-image
         file: git-master/concourse/tasks/run-smoke-tests.yml
         params:
           TEST_URL: 'https://find-coronavirus-support.service.gov.uk'

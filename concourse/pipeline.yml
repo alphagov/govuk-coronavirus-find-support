@@ -153,7 +153,7 @@ jobs:
         timeout: 5m
         params:
           URL: 'https://govuk-coronavirus-find-support-prod.cloudapps.digital/urgent-medical-help'
-          MESSAGE: "Checks that the application deployed to production is not serving HTTP error codes"
+          MESSAGE: "Checks that the application deployed to production is not serving HTTP error codes. If this fails, you should investigate immediately."
       - task: run-smoke-tests
         file: git-master/concourse/tasks/run-smoke-tests.yml
         params:

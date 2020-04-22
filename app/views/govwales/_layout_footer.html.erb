@@ -2,7 +2,9 @@
   <div class="footer__components container">
     <nav id="block-footer">
       <ul class="menu">
-        <%= sanitize(t('footer.links')) %>
+        <% t('govwales_footer.links').each do |link| %>
+           <li><%= link_to link[:text], link[:href] %></li>
+        <% end %>
       </ul>
     </nav>
   </div>

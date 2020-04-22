@@ -1,5 +1,4 @@
 platform: linux
-image: tests-image
 inputs:
   - name: git-master
 params:

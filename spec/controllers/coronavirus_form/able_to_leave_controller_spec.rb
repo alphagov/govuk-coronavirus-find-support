@@ -24,6 +24,16 @@ RSpec.describe CoronavirusForm::AbleToLeaveController, type: :controller do
       expect(FormResponse.first.created_at).to eq(Time.utc(2020, 3, 1, 10, 0, 0))
     end
 
+    it "does not save the form response to the database when the SMOKE_TEST header is present" do
+      session[:questions_to_ask] = %w(get_food)
+      request.env["HTTP_SMOKE_TEST"] = "true"
+      before_count = FormResponse.count
+
+      post :submit, params: { able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label") }
+
+      expect(FormResponse.count).to eq(before_count)
+    end
+
     it "does not save the session id or csrf token to the database" do
       session[:questions_to_ask] = %w(get_food)
 

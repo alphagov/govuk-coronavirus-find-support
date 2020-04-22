@@ -20,4 +20,7 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.include Capybara::DSL, type: :request
   config.include Capybara::RSpecMatchers, type: :request
+  config.before :each, :js do
+    page.driver.add_headers("SMOKE_TEST" => "true")
+  end
 end

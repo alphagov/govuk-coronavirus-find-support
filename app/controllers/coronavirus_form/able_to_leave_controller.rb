@@ -35,11 +35,17 @@ private
 
   def write_responses
     redacted_session = session.to_hash.without("session_id", "_csrf_token")
+    unless smoke_tester?
+      FormResponse.create(
+        form_response: redacted_session,
+        created_at: time_hour_floor,
+      )
+    end
+  end
 
-    FormResponse.create(
-      form_response: redacted_session,
-      created_at: time_hour_floor,
-    )
+  def smoke_tester?
+    smoke_test_header = request.env["HTTP_SMOKE_TEST"]
+    smoke_test_header.present? && smoke_test_header == "true"
   end
 
   def update_session_store

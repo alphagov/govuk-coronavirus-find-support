@@ -9,7 +9,14 @@
       </div>
 
       <div class="header__components__language" id="wg_language">
-        <a href="https://llyw.cymru/" class="language__link" hreflang="cy">Cymraeg</a>
+        <!-- <a href="https://llyw.cymru/" class="language__link" hreflang="cy">Cymraeg</a> -->
+        <% if locale == :en %>
+          <%= link_to 'Cymraeg', urgent_medical_help_url(locale: :cy), class: "language__link", hreflang: "cy"  %>
+        <% end %>
+        <% if locale == :cy %>
+          <%= link_to 'English', urgent_medical_help_url(locale: :en), class: "language__link" %>
+        <% end %>
+            
       </div>
 
     </div>

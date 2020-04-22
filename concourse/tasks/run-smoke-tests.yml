@@ -1,8 +1,7 @@
 platform: linux
 image: tests-image
-config:
-  inputs:
-    - name: git-master
+inputs:
+  - name: git-master
 params:
   TEST_URL:
 run:

@@ -25,8 +25,8 @@ Raven.configure do |config|
   config.dsn = ENV["SENTRY_DSN"]
 end
 
-config.i18n.available_locales = [:en, :cy]
-config.i18n.default_locale = :en
+#config.i18n.available_locales = [:en, :cy]
+#config.i18n.default_locale = :en
 
 module CoronavirusForm
   class Application < Rails::Application

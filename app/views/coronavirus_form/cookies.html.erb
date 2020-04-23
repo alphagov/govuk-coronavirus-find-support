@@ -32,6 +32,21 @@
   </div>
 
   <div class="cookie-settings__form-wrapper">
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Where to find information about controlling cookies"
+    } %>
+    <ul class="govuk-list">
+      <% t('cookies.settings_page.enable').each do |browser| %>
+        <li>
+          <% if browser[:href] %>
+            <%= link_to browser[:text], browser[:href], class: "govuk-link" %>
+          <% else %>
+            <%= sanitize(browser[:text]) %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+    
     <p>
       We use <%= t('cookies.settings_page.cookies').count %> types of cookie.
       You can choose which cookies you're happy for us to use.

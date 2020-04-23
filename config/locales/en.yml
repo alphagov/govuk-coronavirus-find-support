@@ -177,6 +177,19 @@ en:
             - - text: _gid
               - text: This helps us count how many people visit the service by tracking if you’ve visited before
               - text: 3 years
+      enable:
+        - text: "Chrome cookies information"
+          href: "https://support.google.com/chrome/answer/95647?hl=en-GB"
+        - text: "Firefox cookies information"
+          href: "https://support.mozilla.org/en-US/kb/delete-browsing-search-download-history-firefox"
+        - text: "Internet Explorer cookies information"
+          href: "https://support.microsoft.com/en-gb/help/17442/windows-internet-explorer-delete-manage-cookies"
+        - text: "Microsoft Edge cookies information"
+          href: "https://privacy.microsoft.com/en-us/windows-10-microsoft-edge-and-privacy"
+        - text: "Opera cookies information"
+          href: "https://www.opera.com/help/tutorials/security/cookies/"
+        - text: 'Safari cookies information – <a href="https://support.apple.com/en-gb/HT201265" class="govuk-link">mobile devices</a> and <a href="https://support.apple.com/kb/PH21411?locale=en_GB" class="govuk-link">desktops</a>'
+
   coronavirus_form:
     submit_and_next: "Continue"
     errors:

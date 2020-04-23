@@ -1,4 +1,6 @@
 cy:
+  govwales_meta:
+    title: LLYW.CYMRU
   accessibility_statement:
     title: Accessibility statement
     body_text: |

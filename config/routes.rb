@@ -11,12 +11,9 @@ Rails.application.routes.draw do
     get "/cookies", to: "cookies#show"
     get "/accessibility-statement", to: "accessibility_statement#show"
 
-    # Question: Do you need urgent medical help?
-    get "/urgent-medical-help", to: "urgent_medical_help#show"
-    post "/urgent-medical-help", to: "urgent_medical_help#submit"
-
-    # NHS Triage: Get urgent help from the NHS now
-    get "/get-help-from-nhs", to: "get_help_from_nhs#show"
+    # Question: What do you need to find help with?
+    get "/need-help-with", to: "need_help_with#show"
+    post "/need-help-with", to: "need_help_with#submit"
 
     # Question: "Do you feel safe where you live?"
     get "/feel-safe", to: "feel_safe#show"
@@ -65,10 +62,6 @@ Rails.application.routes.draw do
     # Question: Are you able to leave your home if absolutely necessary?
     get "/able-to-leave", to: "able_to_leave#show"
     post "/able-to-leave", to: "able_to_leave#submit"
-
-    # Question: What do you need to find help with?
-    get "/need-help-with", to: "need_help_with#show"
-    post "/need-help-with", to: "need_help_with#submit"
 
     # Results
     get "/results", to: "results#show"

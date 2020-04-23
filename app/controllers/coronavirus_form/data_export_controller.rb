@@ -3,6 +3,13 @@
 require "csv"
 
 class CoronavirusForm::DataExportController < ApplicationController
+  if ENV.key?("DATA_EXPORT_BASIC_AUTH_USERNAME") && ENV.key?("DATA_EXPORT_BASIC_AUTH_PASSWORD")
+    http_basic_authenticate_with(
+      name: ENV.fetch("DATA_EXPORT_BASIC_AUTH_USERNAME"),
+      password: ENV.fetch("DATA_EXPORT_BASIC_AUTH_PASSWORD"),
+    )
+  end
+
   def show
     respond_to do |format|
       format.html

@@ -5,6 +5,28 @@ require "spec_helper"
 RSpec.describe CoronavirusForm::DataExportController, type: :controller do
   subject(:instance) { described_class.new }
 
+  describe "#show" do
+    let(:start_date) { "2020-04-10" }
+    let(:end_date) { "2020-04-15" }
+
+    context "with basic auth enabled" do
+      it "rejects unauthenticated users" do
+        request.headers["HTTP_ACCEPT"] = "text/csv"
+        get :show, params: { start_date: start_date, end_date: end_date }
+        expect(response).to have_http_status(401)
+      end
+
+      it "permits authenticated users" do
+        request.headers["HTTP_ACCEPT"] = "text/csv"
+        username = ENV["DATA_EXPORT_BASIC_AUTH_USERNAME"]
+        password = ENV["DATA_EXPORT_BASIC_AUTH_PASSWORD"]
+        request.headers["HTTP_AUTHORIZATION"] = ActionController::HttpAuthentication::Basic.encode_credentials(username, password)
+        get :show, params: { start_date: start_date, end_date: end_date }
+        expect(response).to have_http_status(200)
+      end
+    end
+  end
+
   describe "#usage_statistics" do
     let(:start_date) { "2020-04-10" }
     let(:end_date) { "2020-04-15" }

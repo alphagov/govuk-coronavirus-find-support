@@ -31,11 +31,9 @@
   <%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
 <% end %>
 
-<% unless current_page?(urgent_medical_help_path) %>
-  <% content_for :escape_link do %>
-    <%= render "components/escape-link", {
-      text: t("leave_this_website.link_text"),
-      href: t("leave_this_website.link_href"),
-    } %>
-  <% end %>
+<% content_for :escape_link do %>
+  <%= render "components/escape-link", {
+    text: t("leave_this_website.link_text"),
+    href: t("leave_this_website.link_href"),
+  } %>
 <% end %>

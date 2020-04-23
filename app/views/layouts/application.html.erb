@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="govuk-template">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title><%= t('coronavirus_form.errors.page_title_prefix') if flash[:validation]&.any? %><%= yield :title %> | <%= t('govwales_meta.title') %></title>
@@ -23,7 +23,7 @@
         <%= yield(:page_header) %>
       <% end %>
     <% end %>
-    <div class="govuk-width-container">
+    <div class="govuk-width-container container">
       <% if yield(:back_link).present? %>
         <%= yield(:back_link) %>
       <% end %>
@@ -39,24 +39,7 @@
         <%= yield(:escape_link) %>
       <% end %>
     </div>
-    <%= render "govuk_publishing_components/components/layout_footer", {
-      meta: {
-        items: [
-          {
-            href: "/privacy",
-            text: t("privacy_page.title")
-          },
-          {
-            href: "/cookies",
-            text: t("cookies.title")
-          },
-          {
-            href: "/accessibility-statement",
-            text: t("accessibility_statement.title")
-          },
-        ]
-      }
-    } %>
+    <%= render "/govwales/layout_footer" %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

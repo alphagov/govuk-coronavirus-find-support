@@ -4,6 +4,24 @@ en:
   govwales_header:
     title: Welsh Government
     href: https://gov.wales/
+  govwales_footer:
+    links:
+      - text: "Contact us"
+        href: "https://gov.wales/contact-us"
+      - text: "Accessibility"
+        href: "https://gov.wales/help/accessibility"
+      - text: "Copyright statement"
+        href: "https://gov.wales/copyright-statement"
+      - text: "Cookies"
+        href: "https://gov.wales/help/cookies"
+      - text: "Privacy"
+        href: "https://gov.wales/website-privacy-policy"
+      - text: "Terms and conditions"
+        href: "https://gov.wales/terms-and-conditions"
+    logo:
+      href: https://gov.wales/
+      alt: Welsh Government
+      text: Home
   accessibility_statement:
     title: Accessibility statement
     body_text: |

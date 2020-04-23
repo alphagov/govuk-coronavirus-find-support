@@ -1,0 +1,22 @@
+html {
+  font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+  background-color: $layout__body_background;
+  overflow-y: scroll;
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}

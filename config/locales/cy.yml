@@ -4,6 +4,24 @@ cy:
   govwales_header:
     title: Llywodraeth Cymru
     href: https://llyw.cymru/
+  govwales_footer:
+    links:
+      - text: "Cysylltu â ni"
+        href: "https://llyw.cymru/cysylltu-ni"
+      - text: "Hygyrchedd"
+        href: "https://llyw.cymru/help/hygyrchedd"
+      - text: "Datganiad hawlfraint"
+        href: "https://llyw.cymru/datganiad-hawlfraint"
+      - text: "Cwcis"
+        href: "https://llyw.cymru/help/cwcis"
+      - text: "Preifatrwydd"
+        href: "https://llyw.cymru/help/polisi-preifatrwydd-wefan"
+      - text: "Telerau ac amodau"
+        href: "https://llyw.cymru/telerau-ac-amodau"
+    logo:
+      href: https://llyw.cymru/
+      alt: Llywodraeth Cymru
+      text: Hafan
   accessibility_statement:
     title: Accessibility statement
     body_text: |

@@ -56,12 +56,6 @@ private
   end
 
   def check_first_question_answered
-    unless first_question_seen?
-      redirect_to urgent_medical_help_url
-    end
-  end
-
-  def check_filter_question_answered
     if questions_to_ask.blank?
       redirect_to need_help_with_url
     end

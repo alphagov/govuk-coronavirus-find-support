@@ -46,7 +46,7 @@ module QuestionsHelper
   end
 
   def first_question_seen?
-    session[:urgent_medical_help].present?
+    session[:need_help_with].present?
   end
 
   def last_question_seen?

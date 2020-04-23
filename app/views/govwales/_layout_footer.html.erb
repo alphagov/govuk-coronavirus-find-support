@@ -9,6 +9,9 @@
     </nav>
   </div>
   <div class="footer_logo container" id="footer_logo">
-    <%= sanitize(t('govwales_footer.logo')) %>
+    <a href="<%= t('govwales_footer.logo.href') %>" class="footer__logo" id="footerlogo">
+      <img src="/assets/footer-logo.svg" alt="<%= t('govwales_footer.logo.alt') %>">
+      <span class="visually-hidden"><%= t('govwales_footer.logo.text') %></span>
+    </a>
   </div>
 </footer>

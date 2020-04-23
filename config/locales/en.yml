@@ -18,11 +18,10 @@ en:
         href: "https://gov.wales/website-privacy-policy"
       - text: "Terms and conditions"
         href: "https://gov.wales/terms-and-conditions"
-    logo: |
-      <a href="https://gov.wales/" class="footer__logo" id="footerlogo">
-        <img src="/assets/footer-logo.svg" alt="Welsh Government">
-        <span class="visually-hidden">Home</span>
-      </a>
+    logo:
+      href: https://gov.wales/
+      alt: Welsh Government
+      text: Home
   accessibility_statement:
     title: Accessibility statement
     body_text: |

@@ -18,11 +18,10 @@ cy:
         href: "https://llyw.cymru/help/polisi-preifatrwydd-wefan"
       - text: "Telerau ac amodau"
         href: "https://llyw.cymru/telerau-ac-amodau"
-    logo: |
-      <a href="https://llyw.cymru/" class="footer__logo" id="footerlogo">
-        <img src="/assets/footer-logo.svg" alt="Llywodraeth Cymru">
-        <span class="visually-hidden">Hafan</span>
-      </a>
+    logo:
+      href: https://llyw.cymru/
+      alt: Llywodraeth Cymru
+      text: Hafan
   accessibility_statement:
     title: Accessibility statement
     body_text: |

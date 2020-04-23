@@ -1,6 +1,9 @@
 cy:
   govwales_meta:
     title: LLYW.CYMRU
+  govwales_header:
+    title: Llywodraeth Cymru
+    href: https://llyw.cymru/
   accessibility_statement:
     title: Accessibility statement
     body_text: |

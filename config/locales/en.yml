@@ -1,4 +1,6 @@
 en:
+  govwales_meta:
+    title: GOV.WALES
   accessibility_statement:
     title: Accessibility statement
     body_text: |
@@ -486,7 +488,7 @@ en:
           - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
           - text: "Find help with benefits if you live in Scotland"
-            href: "https://www.mygov.scot/benefits-support/" 
+            href: "https://www.mygov.scot/benefits-support/"
     going_in_to_work:
       living_with_vulnerable:
         title: "If you’re worried about going in to work"

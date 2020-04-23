@@ -102,6 +102,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ((aws-secret-access-key))
           SECRET_KEY_BASE: ((secret-key-base-staging))
           AWS_ASSETS_BUCKET_NAME: govuk-coronavirus-find-support-assets-staging
+          DATA_EXPORT_BASIC_AUTH_USERNAME: ((data-export-basic-auth-username))
+          DATA_EXPORT_BASIC_AUTH_PASSWORD: ((data-export-basic-auth-password))
           HOSTNAME: govuk-coronavirus-find-support-stg
 
   - name: smoke-test-staging
@@ -141,6 +143,8 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ((aws-secret-access-key-prod))
           SECRET_KEY_BASE: ((secret-key-base-prod))
           AWS_ASSETS_BUCKET_NAME: govuk-coronavirus-find-support-assets-prod
+          DATA_EXPORT_BASIC_AUTH_USERNAME: ((data-export-basic-auth-username))
+          DATA_EXPORT_BASIC_AUTH_PASSWORD: ((data-export-basic-auth-password))
           HOSTNAME: govuk-coronavirus-find-support-prod
 
   - name: smoke-test-prod

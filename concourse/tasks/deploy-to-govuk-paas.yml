@@ -21,6 +21,8 @@ params:
   BASIC_AUTH_PASSWORD:
   AWS_ACCESS_KEY_ID:
   AWS_SECRET_ACCESS_KEY:
+  DATA_EXPORT_BASIC_AUTH_USERNAME:
+  DATA_EXPORT_BASIC_AUTH_PASSWORD:
   GA_VIEW_ID: UA-43115970-1
 run:
   dir: src
@@ -44,6 +46,8 @@ run:
         cf set-env govuk-coronavirus-find-support REQUIRE_BASIC_AUTH "$REQUIRE_BASIC_AUTH"
       fi
       cf set-env govuk-coronavirus-find-support BASIC_AUTH_PASSWORD "$BASIC_AUTH_PASSWORD"
+      cf set-env govuk-coronavirus-find-support DATA_EXPORT_BASIC_AUTH_USERNAME "$DATA_EXPORT_BASIC_AUTH_USERNAME"
+      cf set-env govuk-coronavirus-find-support DATA_EXPORT_BASIC_AUTH_PASSWORD "$DATA_EXPORT_BASIC_AUTH_PASSWORD"
       cf set-env govuk-coronavirus-find-support SENTRY_DSN "$SENTRY_DSN"
       cf set-env govuk-coronavirus-find-support SENTRY_CURRENT_ENV "$CF_SPACE"
       cf set-env govuk-coronavirus-find-support GA_VIEW_ID "$GA_VIEW_ID"

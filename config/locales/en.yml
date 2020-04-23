@@ -1,6 +1,9 @@
 en:
   govwales_meta:
     title: GOV.WALES
+  govwales_header:
+    title: Welsh Government
+    href: https://gov.wales/
   accessibility_statement:
     title: Accessibility statement
     body_text: |

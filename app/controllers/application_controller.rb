@@ -37,7 +37,7 @@ private
   end
 
   def first_question_path
-    "urgent_medical_help".dasherize
+    need_help_with_path
   end
 
   def group; end

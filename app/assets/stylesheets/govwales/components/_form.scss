@@ -89,6 +89,14 @@ main {
       }
     }
 
+    // Form group
+    .govuk-form-group {
+      &--error {
+        padding-left: 0;
+        border-left: none;
+      }
+    }
+
     // Submit button
     .govuk-button {
       background-color: $red;
@@ -108,5 +116,43 @@ main {
         top: 0;
       }
     }
+  }
+
+  .govuk-error-summary,
+  .govuk-error-message {
+    color: $form__text;
+    background: $background__callout_alert !important;
+    border: none;
+    border-left: $borders__call_out_border_width solid $borders__text_border_alert_right !important;
+    background-image: image-url($png_call_out_alert) !important;
+    background-repeat: no-repeat !important;
+    background-position: 15px 22px !important;
+    background-size: $sm__backgroundsize_25 !important;
+
+    a {
+      color: $link;
+
+      &:hover {
+        color: $link__hover;
+      }
+
+      &:focus {
+        background: none;
+        box-shadow: none;
+        outline: 3px solid $states__global_cta_focus;
+      }
+
+      &:visited {
+        color: $link;
+
+        &:hover {
+          color: $link__hover;
+        }
+      }
+    }
+  }
+
+  .govuk-error-message {
+    padding: 20px;
   }
 }

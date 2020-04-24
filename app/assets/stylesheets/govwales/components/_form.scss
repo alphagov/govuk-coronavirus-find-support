@@ -1,0 +1,158 @@
+main {
+  form {
+    background: $form__background;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    @media all and (min-width: $screen-md) {
+      padding: 40px;
+    }
+
+
+    // Form inputs
+    .govuk-radios,
+    .govuk-checkboxes {
+      &__item {
+        min-height: auto;
+        float: left;
+        clear: left;
+        position: relative;
+        background-color: $form__checkbox_label_background;
+        padding: 20px 20px 20px 50px;
+        margin-bottom: 20px;
+        font-weight: normal;
+
+        &:hover {
+          background-color: $form__checkbox_label_background--hover;
+        }
+      }
+
+      &__label {
+        padding: 0 0 0 5px;
+
+        &:before {
+          top: 22px;
+          left: 20px;
+          height: 20px;
+          width: 20px;
+          border: 1px solid $form__input_border;
+          background-color: $form__input_background;
+        }
+      }
+
+      &__input {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        &:focus {
+          ~ label {
+            &:before {
+              border-width: 1px !important;
+            }
+          }
+        }
+      }
+    }
+
+    // Form checkboxes
+    .govuk-checkboxes {
+      &__label {
+        &:after {
+          position: absolute;
+          top: 23px;
+          left: 26px;
+          width: 4px;
+          height: 11px;
+          border: solid $form__checkbox__icon;
+          border-width: 0 4px 4px 0;
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    // Form radio buttons
+    .govuk-radios {
+      &__label {
+        &:after {
+          height: 14px;
+          width: 14px;
+          top: 25px;
+          left: 23px;
+          background-color: $form__radio__icon;
+          border-radius: 50%;
+          border: none;
+        }
+      }
+    }
+
+    // Form group
+    .govuk-form-group {
+      &--error {
+        padding-left: 0;
+        border-left: none;
+      }
+    }
+
+    // Submit button
+    .govuk-button {
+      background-color: $form__globalsearch_btn;
+      color: $white;
+      font-weight: bold;
+      font-size: 20px;
+      font-size: 1.25rem;
+      padding: 15px 20px;
+      margin-bottom: 0;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $form__globalsearch_btn_hover;
+      }
+
+      &:active {
+        top: 0;
+      }
+    }
+  }
+
+  .govuk-error-summary,
+  .govuk-error-message {
+    color: $form__text;
+    background: $background__callout_alert !important;
+    border: none;
+    border-left: $borders__call_out_border_width solid $borders__text_border_alert_right !important;
+    background-image: image-url($png_call_out_alert) !important;
+    background-repeat: no-repeat !important;
+    background-position: 15px 22px !important;
+    background-size: $sm__backgroundsize_25 !important;
+
+    a {
+      color: $link;
+
+      &:hover {
+        color: $link__hover;
+      }
+
+      &:focus {
+        background: none;
+        box-shadow: none;
+        outline: 3px solid $states__global_cta_focus;
+      }
+
+      &:visited {
+        color: $link;
+
+        &:hover {
+          color: $link__hover;
+        }
+      }
+    }
+  }
+
+  .govuk-error-message {
+    padding: 20px;
+  }
+}

@@ -99,7 +99,7 @@ main {
 
     // Submit button
     .govuk-button {
-      background-color: $red;
+      background-color: $form__globalsearch_btn;
       color: $white;
       font-weight: bold;
       font-size: 20px;
@@ -109,7 +109,7 @@ main {
       box-shadow: none;
 
       &:hover {
-        background-color: $brightred;
+        background-color: $form__globalsearch_btn_hover;
       }
 
       &:active {

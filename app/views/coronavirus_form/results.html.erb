@@ -15,7 +15,7 @@
     margin_top: 0,
     margin_bottom: 6,
   } %>
-  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link" %>
+  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link", onclick: "ga('send', 'event', 'StartAgain', 'StartAgainClicked', '/results');" %>
 <% end %>
 
 <% if result_groups(session).empty? %>

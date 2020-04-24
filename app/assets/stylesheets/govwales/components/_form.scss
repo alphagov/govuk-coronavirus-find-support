@@ -13,11 +13,12 @@ main {
     .govuk-radios,
     .govuk-checkboxes {
       &__item {
+        min-height: auto;
         float: left;
         clear: left;
         position: relative;
         background-color: $form__checkbox_label_background;
-        padding: 20px 20px 5px 50px;
+        padding: 20px 20px 20px 50px;
         margin-bottom: 20px;
         font-weight: normal;
 

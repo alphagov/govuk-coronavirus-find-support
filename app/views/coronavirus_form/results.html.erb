@@ -1,10 +1,11 @@
-<% if result_groups(session).empty? %>
-  <% content_for :title do %><%= t('coronavirus_form.results.header.title_no_results') %><% end %>
-<% else %>
-  <% content_for :title do %><%= t('coronavirus_form.results.header.title') %><% end %>
+<% title = results_title(result_groups(session)) %>
+
+<% content_for :title do %>
+  <%= title %>
 <% end %>
+
 <% content_for :meta_tags do %>
-  <meta name="description" content="<%= t('coronavirus_form.results.header.title') %>" />
+  <meta name="description" content="<%= title %>" />
 <% end %>
 
 <% content_for :page_header do %>

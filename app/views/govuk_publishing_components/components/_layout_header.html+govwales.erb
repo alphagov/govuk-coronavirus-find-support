@@ -1,0 +1,25 @@
+<header id="wg_header" class="wg_header">
+  <div class="header" id="header">
+    <div class="header__components container">
+
+      <div class="header__components__brand" id="wg_brand">
+        <%=
+          tag.a href: t('govwales_header.href'), title: t("govwales_header.title"), class: "header__brand", id: "wg_logo" do
+            image_tag("govwales/wg_logo.svg", alt: t('govwales_header.title'))
+          end
+        %>
+      </div>
+
+      <div class="header__components__language" id="wg_language">
+        <%=
+          if locale == :en
+            link_to("Cymraeg", urgent_medical_help_url(locale: :cy), class: "language__link", hreflang: "cy")
+          elsif locale == :cy
+            link_to("English", urgent_medical_help_url(locale: :en), class: "language__link")
+          end
+        %>
+      </div>
+
+    </div>
+  </div>
+</header>

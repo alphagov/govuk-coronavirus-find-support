@@ -4,6 +4,15 @@ html {
   overflow-y: scroll;
 }
 
+html.govuk-template {
+  background-color: initial;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body > .govuk-width-container,
 .container {
   max-width: 960px;
   margin-left: auto;

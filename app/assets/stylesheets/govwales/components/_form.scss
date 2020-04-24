@@ -16,7 +16,7 @@ main {
         clear: left;
         position: relative;
         background-color: $form__checkbox_label_background;
-        padding: 20px 20px 20px 50px;
+        padding: 20px 20px 5px 50px;
         margin-bottom: 20px;
         font-weight: normal;
 
@@ -26,7 +26,7 @@ main {
 
         label {
           &:before {
-            top: 30px;
+            top: 22px;
             left: 20px;
             height: 20px;
             width: 20px;
@@ -37,13 +37,17 @@ main {
           &:after {
             height: 14px;
             width: 14px;
-            top: 33px;
+            top: 25px;
             left: 23px;
             background-color: $form__radio__icon;
             border-radius: 50%;
             border: none;
           }
         }
+      }
+
+      &__label {
+        padding: 0 0 0 5px;
       }
 
       &__input {

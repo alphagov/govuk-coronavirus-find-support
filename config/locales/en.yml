@@ -371,6 +371,7 @@ en:
       header:
         context: Coronavirus (COVID-19)
         title: Information based on your answers
+        title_no_results: Information based on your answers - no specific information
         start_again_text: Start again
       feedback:
         text: Help us improve

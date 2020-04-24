@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8" />
-    <title><%= t('coronavirus_form.errors.page_title_prefix') if flash[:validation]&.any? %><%= yield :title %> | <%= t('govwales_meta.title') %></title>
+    <title><%= t('coronavirus_form.errors.page_title_prefix') if flash[:validation]&.any? %><%= yield :title %> <%= t('layout_head.meta_title', default: "- GOV.UK") %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="robots" content="noindex nofollow">
@@ -13,17 +13,41 @@
     <%= yield :meta_tags %>
   </head>
   <body class="govuk-template__body">
-    <%= render "/govwales/layout_header" %>
     <script>
       document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
     </script>
     <%= render "govuk_publishing_components/components/skip_link" %>
+    <%= render "govuk_publishing_components/components/cookie_banner", {
+      title: "Can we store analytics cookies on your device?",
+      text: "Analytics cookies help us understand how our website is being used.",
+      confirmation_message: sanitize("You’ve accepted all cookies. You can <a class='govuk-link' href='#{cookies_path}'>change your cookie settings</a> at any time."),
+      cookie_preferences_href: cookies_path,
+      services_cookies: {
+        yes: {
+          text: "Yes",
+          data_attributes: {
+            "track-category": "cookieBanner",
+          },
+        },
+        no: {
+          text: "No",
+          data_attributes: {
+            "track-category": "cookieBanner",
+          },
+        },
+        cookie_preferences: {
+          text: "How we use cookies",
+          href: cookies_path,
+        },
+      },
+    } %>
+    <%= render "govuk_publishing_components/components/layout_header", { environment: "public" } %>
     <% if yield(:page_header).present? %>
       <%= render "components/page-header" do %>
         <%= yield(:page_header) %>
       <% end %>
     <% end %>
-    <div class="govuk-width-container container">
+    <div class="govuk-width-container">
       <% if yield(:back_link).present? %>
         <%= yield(:back_link) %>
       <% end %>
@@ -39,7 +63,24 @@
         <%= yield(:escape_link) %>
       <% end %>
     </div>
-    <%= render "/govwales/layout_footer" %>
+    <%= render "govuk_publishing_components/components/layout_footer", {
+      meta: {
+        items: [
+          {
+            href: "/privacy",
+            text: t("privacy_page.title")
+          },
+          {
+            href: "/cookies",
+            text: t("cookies.title")
+          },
+          {
+            href: "/accessibility-statement",
+            text: t("accessibility_statement.title")
+          },
+        ]
+      }
+    } %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

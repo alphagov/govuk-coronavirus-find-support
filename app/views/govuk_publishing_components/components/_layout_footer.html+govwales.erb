@@ -1,0 +1,17 @@
+<footer class="footer" id="footer">
+  <div class="footer__components container">
+    <nav id="block-footer">
+      <ul class="menu">
+        <% t('govwales_footer.links').each do |link| %>
+          <%= tag.li link_to link[:text], link[:href] %>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+  <div class="footer_logo container" id="footer_logo">
+    <%= tag.a href: t("govwales_footer.logo.href"), class: "footer__logo", id: "footerlogo" do %>
+      <%= image_tag "govwales/footer-logo.svg", alt: t("govwales_footer.logo.alt") %>
+      <%= tag.span t("govwales_footer.logo.text"), class: "visually-hidden" %>
+    <% end %>
+  </div>
+</footer>

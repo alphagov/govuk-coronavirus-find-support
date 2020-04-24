@@ -7,6 +7,7 @@ Rails.application.configure do
   config.hosts = [
     "localhost",
     "coronavirus-find-support.lndo.site",
+    "canfod-cymorth-coronafeirws.lndo.site",
   ]
 
   # In the development environment your application's code is reloaded on

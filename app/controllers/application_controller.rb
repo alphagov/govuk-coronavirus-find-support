@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
     )
   end
 
+  before_action -> { request.variant = :govwales }
   before_action :set_locale
 
   def set_locale

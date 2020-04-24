@@ -11,6 +11,10 @@ Rails.application.routes.draw do
     get "/cookies", to: "cookies#show"
     get "/accessibility-statement", to: "accessibility_statement#show"
 
+    # Redirect for deleted question and page (301 is default)
+    get "/urgent-medical-help", to: redirect("/need-help-with")
+    get "/get-help-from-nhs", to: redirect("/need-help-with")
+
     # Question: What do you need to find help with?
     get "/need-help-with", to: "need_help_with#show"
     post "/need-help-with", to: "need_help_with#submit"

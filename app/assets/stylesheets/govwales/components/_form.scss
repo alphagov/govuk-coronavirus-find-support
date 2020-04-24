@@ -88,5 +88,25 @@ main {
         }
       }
     }
+
+    // Submit button
+    .govuk-button {
+      background-color: $red;
+      color: $white;
+      font-weight: bold;
+      font-size: 20px;
+      font-size: 1.25rem;
+      padding: 15px 20px;
+      margin-bottom: 0;
+      box-shadow: none;
+
+      &:hover {
+        background-color: $brightred;
+      }
+
+      &:active {
+        top: 0;
+      }
+    }
   }
 }

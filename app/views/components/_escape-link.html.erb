@@ -1,5 +1,8 @@
 <%
   data_attributes ||= {}
-  data_attributes[:module] = 'app-escape-link'
+  data_attributes["module"] = "app-escape-link"
+  data_attributes["track-category"] = "cat"
+  data_attributes["track-action"] = "action"
+  data_attributes["track-label"] = "label"
 %>
 <%= link_to text, href, class: "app-c-escape-link govuk-link", rel: "nofollow", data: data_attributes %>

@@ -3,7 +3,9 @@
 //= require govuk_publishing_components/components/cookie-banner
 //= require govuk_publishing_components/lib/cookie-functions
 //= require analytics
+//= require analytics-trackClick
 //= require cookies
 window.CookieSettings.start()
-window.GOVUK.analyticsInit()
+window.GOVUK.analytics.start()
+window.GOVUK.analytics.trackClicks()
 window.GOVUKFrontend.initAll()

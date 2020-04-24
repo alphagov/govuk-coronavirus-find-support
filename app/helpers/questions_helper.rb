@@ -45,10 +45,6 @@ module QuestionsHelper
     questions_to_ask.last
   end
 
-  def first_question_seen?
-    session[:need_help_with].present?
-  end
-
   def last_question_seen?
     session[FINAL_QUESTION.to_sym].present?
   end

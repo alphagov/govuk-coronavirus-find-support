@@ -42,9 +42,6 @@ jobs:
         bundle exec rake db:create
         bundle exec rake db:migrate
 
-    - name: Run Rubocop linter
-      run: bundle exec rubocop
-
     - name: Run Tests
       env:
         PGHOST: localhost

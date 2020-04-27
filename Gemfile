@@ -8,7 +8,7 @@ gem "asset_sync"
 gem "bootsnap", "~> 1"
 gem "fog-aws"
 gem "govuk_app_config", "~> 2.1.1"
-gem "govuk_publishing_components", "~> 21.41.2"
+gem "govuk_publishing_components", "~> 21.42.0"
 gem "lograge"
 gem "pg", "~> 1"
 gem "puma", "~> 4.3"
@@ -28,8 +28,10 @@ group :test do
   gem "capybara", "~> 3.32.1", require: false
   gem "mini_racer", "~> 0.2"
   gem "scss-lint", "~> 0.7.0", require: false
+  gem "selenium-webdriver", "~> 3.142"
   gem "simplecov", "~> 0.16"
   gem "timecop"
+  gem "webdrivers", "~> 4.3"
 end
 
 group :development, :test do

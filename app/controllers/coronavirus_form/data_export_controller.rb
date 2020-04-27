@@ -3,6 +3,13 @@
 require "csv"
 
 class CoronavirusForm::DataExportController < ApplicationController
+  if ENV.key?("DATA_EXPORT_BASIC_AUTH_USERNAME") && ENV.key?("DATA_EXPORT_BASIC_AUTH_PASSWORD")
+    http_basic_authenticate_with(
+      name: ENV.fetch("DATA_EXPORT_BASIC_AUTH_USERNAME"),
+      password: ENV.fetch("DATA_EXPORT_BASIC_AUTH_PASSWORD"),
+    )
+  end
+
   def show
     respond_to do |format|
       format.html
@@ -43,7 +50,7 @@ class CoronavirusForm::DataExportController < ApplicationController
 private
 
   def produce_csv(results)
-    csv_data = CSV.generate do |csv|
+    csv_data = CSV.generate(col_sep: "|") do |csv|
       csv << %w(question answer date count)
       results.each do |question, value|
         value.each do |k|

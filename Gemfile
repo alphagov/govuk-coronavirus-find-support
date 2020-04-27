@@ -4,9 +4,9 @@ ruby File.read(".ruby-version").strip
 
 source "https://rubygems.org"
 
-gem "asset_sync"
+# gem "asset_sync" # Disable asset_sync for GOV.WALES
 gem "bootsnap", "~> 1"
-gem "fog-aws"
+# gem "fog-aws"  # Disable fog-aws for GOV.WALES
 gem "govuk_app_config", "~> 2.1.1"
 gem "govuk_publishing_components", "~> 21.42.0"
 gem "lograge"

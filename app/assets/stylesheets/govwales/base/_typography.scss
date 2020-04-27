@@ -1,0 +1,116 @@
+// =======================================================================
+// BASE - CSS TYPOGRAPHIC VARIABLES
+// This file handles the base typography variables.
+// =======================================================================
+
+// Fontkit
+$rockwell-bold:"Rockwell W01 Bold", Arial, Helvetica, sans-serif;
+$rockwell-bolditalic:"RockwellW01-BoldItalic", Arial, Helvetica, sans-serif;
+
+// Font stacks
+$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
+$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+
+$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+
+// Variables for the font stacks we want to use on this site.
+$base-font-family: $arial; // The font family set on the html element.
+$font-body:        $arial;
+$font-monospace:   $courier;
+
+// The base font and line height size
+$base-font-size:   16px; // The base font size
+$base-line-height: 22px; // The base line size
+$round-to-nearest-half-line: true;
+
+// Base H1 - H6 Responsive font-sizes
+$h1-font-size: 34px;
+$h2-font-size: 28px;
+$h3-font-size: 24px;
+$h4-font-size: 20px;
+$h5-font-size: 18px;
+$h6-font-size: 14px;
+
+// Base H1 - H6 Responsive line-height
+$h1-line-size: 38px;
+$h2-line-size: 32px;
+$h3-line-size: 28px;
+$h4-line-size: 24px;
+$h5-line-size: 22px;
+$h6-line-size: 18px;
+
+// Base H1 - H6 Desktop font-sizes
+$h1-d-font-size: 48px;
+$h2-d-font-size: 36px;
+$h3-d-font-size: 28px;
+$h4-d-font-size: 24px;
+$h5-d-font-size: 18px;
+$h6-d-font-size: 14px;
+
+// Base H1 - H6 Desktop line-height
+$h1-d-line-size: 52px;
+$h2-d-line-size: 40px;
+$h3-d-line-size: 32px;
+$h4-d-line-size: 28px;
+$h5-d-line-size: 22px;
+$h6-d-line-size: 18px;
+
+// P, ol, ul Responsive font-sizes
+$p-font-size: 18px;
+$p-line-size: 26px;
+
+// P, ol, ul Desktop font-sizes
+$p-d-font-size: 18px;
+$p-d-line-size: 26px;
+
+// Form label Responsive font-sizes
+$label-font-size: 18px;
+$label-line-size: 24px;
+
+// P, ol, ul Desktop font-sizes
+$label-d-font-size: 20px;
+$label-d-line-size: 26px;
+
+// Hard kerning variables
+$wide_spacing:0.08em; // Wide letter spacing (Uppercase headings)
+$tight_spacing:-0.05em; // Tight letter spacing (H1 - H6 normal headings)
+$normal_spacing: normal;
+
+@function calculateRem($size) {
+  $remSize: $size / $base-font-size;
+  @return $remSize * 1rem;
+}
+
+@function calculateLineRem($size) {
+  $remSize: $size / $base-font-size;
+  @return $remSize * 1rem;
+}
+
+@function kerning($size) {
+  $kern-percentage: 960px;
+  $letter-spacing: $size / $kern-percentage;
+  @return -($letter-spacing * 1rem);
+}
+
+@mixin letterspacingSize($size) {
+  letter-spacing: kerning($size);
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin marginleadSize($mlsize, $size) {
+  margin-top: marginlead($mlsize, $size);
+}
+
+@mixin lineHeight($size) {
+  line-height: $size;
+  line-height: calculateLineRem($size);
+}

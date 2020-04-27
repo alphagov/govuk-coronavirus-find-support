@@ -1,0 +1,133 @@
+// =======================================================================
+// BASE - CSS TYPOGRAPHIC STYLES
+// This file handles the base typographic styles.
+// =======================================================================
+
+
+// Set the font size variables on the html
+html {
+  font-family: $base-font-family;
+  // font-size: 100% * ($base-font-size / 16px);
+  // -ms-text-size-adjust: 100%;
+  // -webkit-text-size-adjust: 100%;
+  // // Establish a vertical rhythm unit using $base-line-height.
+  // line-height: 1.375em;
+}
+
+#main-content {
+  h1, .h1 {
+    font-family: $base-font-family;
+    @include fontSize($h1-font-size);
+    @include letterspacingSize($h1-font-size);
+    @include lineHeight($h1-line-size);
+
+    // Desktop font size
+    @media screen and (min-width: $screen-md) {
+      @include fontSize($h1-d-font-size);
+      @include letterspacingSize($h1-d-line-size);
+      @include lineHeight($h1-d-line-size);
+    }
+  }
+
+  h2, .h2 {
+    font-family: $base-font-family;
+    @include fontSize($h2-font-size);
+    @include letterspacingSize($h2-font-size);
+    @include lineHeight($h2-line-size);
+
+    // Desktop font size
+    @media screen and (min-width: $screen-md) {
+      @include fontSize($h2-d-font-size);
+      @include letterspacingSize($h2-d-font-size);
+      @include lineHeight($h2-d-line-size);
+    }
+  }
+
+  h3, .h3 {
+    font-family: $base-font-family;
+    @include fontSize($h3-font-size);
+    @include letterspacingSize($h3-font-size);
+    @include lineHeight($h3-line-size);
+
+    // Desktop font size
+    @media screen and (min-width: $screen-md) {
+      @include fontSize($h3-d-font-size);
+      @include letterspacingSize($h3-d-font-size);
+      @include lineHeight($h3-d-line-size);
+    }
+  }
+
+  h4, .h4 {
+    font-family: $base-font-family;
+    @include fontSize($h4-font-size);
+    @include letterspacingSize($h4-font-size);
+    @include lineHeight($h4-line-size);
+
+    // Desktop font size
+    @media screen and (min-width: $screen-md) {
+      @include fontSize($h4-d-font-size);
+      @include letterspacingSize($h4-d-font-size);
+      @include lineHeight($h4-d-line-size);
+    }
+  }
+
+  h5, .h5 {
+    font-family: $base-font-family;
+    @include fontSize($h5-font-size);
+    @include letterspacingSize($h5-font-size);
+    @include lineHeight($h5-line-size);
+
+    // Desktop font size
+    @media screen and (min-width: $screen-md) {
+      @include fontSize($h5-d-font-size);
+      @include letterspacingSize($h5-d-font-size);
+      @include lineHeight($h5-d-line-size);
+    }
+  }
+
+  h6, .h6 {
+    font-family: $base-font-family;
+    @include fontSize($h6-font-size);
+    @include letterspacingSize($h6-font-size);
+    @include lineHeight($h6-line-size);
+
+    // Desktop font size
+    @media screen and (min-width: $screen-md) {
+      @include fontSize($h6-d-font-size);
+      @include letterspacingSize($h6-d-font-size);
+      @include lineHeight($h6-d-line-size);
+    }
+  }
+
+  a {
+    font-family: $base-font-family;
+    background-color: inherit;
+    color: $base__link;
+    font-weight: bold;
+    text-decoration: none;
+
+    // Override default browser link colours
+    &:visited,
+    &:active {
+      color: $base__link;
+    }
+
+    // Change link colour on hover and focus states
+    &:hover,
+    &:focus {
+      color: $base__link_hover;
+    }
+  }
+
+  p, ul, ol {
+    font-family: $base-font-family;
+    @include fontSize($p-font-size);
+    @include lineHeight($p-line-size);
+
+    // Desktop font size
+    @media screen and (min-width: $screen-md) {
+      @include fontSize($p-d-font-size);
+      @include lineHeight($p-d-line-size);
+    }
+  }
+}

@@ -4,27 +4,27 @@
 // =======================================================================
 
 // Fontkit
-$rockwell-bold:"Rockwell W01 Bold", Arial, Helvetica, sans-serif;
-$rockwell-bolditalic:"RockwellW01-BoldItalic", Arial, Helvetica, sans-serif;
+$rockwell-bold: "Rockwell W01 Bold", Arial, Helvetica, sans-serif;
+$rockwell-bolditalic: "RockwellW01-BoldItalic", Arial, Helvetica, sans-serif;
 
 // Font stacks
 $times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-$times:           Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-$georgia:         Georgia, "Times New Roman", "DejaVu Serif", serif;
+$times: Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
+$georgia: Georgia, "Times New Roman", "DejaVu Serif", serif;
 
-$verdana:         Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$tahoma:          Tahoma, Verdana, "DejaVu Sans", sans-serif;
-$helvetica:       Helvetica, Arial, "Nimbus Sans L", sans-serif;
-$arial:           Arial, Helvetica, "Nimbus Sans L", sans-serif;
-$courier:         "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$verdana: Verdana, Tahoma, "DejaVu Sans", sans-serif;
+$tahoma: Tahoma, Verdana, "DejaVu Sans", sans-serif;
+$helvetica: Helvetica, Arial, "Nimbus Sans L", sans-serif;
+$arial: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
 
 // Variables for the font stacks we want to use on this site.
 $base-font-family: $arial; // The font family set on the html element.
-$font-body:        $arial;
-$font-monospace:   $courier;
+$font-body: $arial;
+$font-monospace: $courier;
 
 // The base font and line height size
-$base-font-size:   16px; // The base font size
+$base-font-size: 16px; // The base font size
 $base-line-height: 22px; // The base line size
 $round-to-nearest-half-line: true;
 
@@ -77,8 +77,8 @@ $label-d-font-size: 20px;
 $label-d-line-size: 26px;
 
 // Hard kerning variables
-$wide_spacing:0.08em; // Wide letter spacing (Uppercase headings)
-$tight_spacing:-0.05em; // Tight letter spacing (H1 - H6 normal headings)
+$wide_spacing: 0.08em; // Wide letter spacing (Uppercase headings)
+$tight_spacing: -0.05em; // Tight letter spacing (H1 - H6 normal headings)
 $normal_spacing: normal;
 
 @function calculateRem($size) {

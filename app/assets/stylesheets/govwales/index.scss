@@ -1,7 +1,16 @@
+// Global variables
 @import 'bootstrap/_bootstrap-variables';
-
 @import 'vars';
-@import 'global';
+
+// Base
+@import 'base/typography';
+@import 'base/typography-styles';
+@import 'base/global';
+
+// Layout
 @import 'layout/header';
 @import 'layout/footer';
+
+// Components
+@import 'components/breadcrumbs';
 @import 'components/form';

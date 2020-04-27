@@ -1,0 +1,33 @@
+.govuk-back-link[href] {
+  font-family: $base-font-family;
+  background-color: inherit;
+  color: $base__link;
+  font-weight: bold;
+  text-decoration: none;
+  padding-left: 15px;
+  background-image: url('/assets/govwales/back-chevron.svg');
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  &:before {
+    content: none;
+  }
+
+  // Override default browser link colours
+  &:visited,
+  &:active {
+    color: $base__link;
+  }
+
+  // Change link colour on hover and focus states
+  &:hover,
+  &:focus {
+    color: $base__link_hover;
+  }
+
+  &:focus {
+    border: none;
+    box-shadow: none;
+    outline: 3px solid $states__focus;
+  }
+}

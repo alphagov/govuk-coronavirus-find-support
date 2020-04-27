@@ -13,22 +13,24 @@ main {
     .govuk-radios,
     .govuk-checkboxes {
       &__item {
+        position: relative;
         min-height: auto;
         float: left;
         clear: left;
+        padding: 0;
+      }
+
+      &__label {
         position: relative;
+        z-index: 2;
         background-color: $form__checkbox_label_background;
         padding: 20px 20px 20px 50px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         font-weight: normal;
 
         &:hover {
           background-color: $form__checkbox_label_background--hover;
         }
-      }
-
-      &__label {
-        padding: 0 0 0 5px;
 
         &:before {
           top: 22px;
@@ -41,10 +43,6 @@ main {
       }
 
       &__input {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
 
         &:focus {
           ~ label {

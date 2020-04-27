@@ -3,10 +3,10 @@
   "repository": "https://github.com/alphagov/govuk-coronavirus-find-support",
   "env": {
     "GOVUK_APP_DOMAIN": {
-      "value": "www.gov.uk"
+      "value": "gov.wales"
     },
     "GOVUK_WEBSITE_ROOT": {
-      "value": "https://www.gov.uk"
+      "value": "https://gov.wales"
     },
     "BASIC_AUTH_USERNAME": {
       "required": true
@@ -22,5 +22,13 @@
       "url": "https://github.com/heroku/heroku-buildpack-ruby"
     }
   ],
-  "addons": []
+  "addons": [
+    "timber-logging",
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ]
 }

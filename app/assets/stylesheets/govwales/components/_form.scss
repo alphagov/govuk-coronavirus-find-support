@@ -13,6 +13,7 @@ main {
     .govuk-radios,
     .govuk-checkboxes {
       &__item {
+        font-family: $base-font-family;
         min-height: auto;
         float: left;
         clear: left;
@@ -99,6 +100,7 @@ main {
 
     // Submit button
     .govuk-button {
+      font-family: $base-font-family;
       background-color: $form__globalsearch_btn;
       color: $white;
       font-weight: bold;

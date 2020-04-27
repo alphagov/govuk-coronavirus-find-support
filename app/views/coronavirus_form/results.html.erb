@@ -1,6 +1,11 @@
-<% content_for :title do %><%= t('coronavirus_form.results.header.title') %><% end %>
+<% title = results_title(result_groups(session)) %>
+
+<% content_for :title do %>
+  <%= title %>
+<% end %>
+
 <% content_for :meta_tags do %>
-  <meta name="description" content="<%= t('coronavirus_form.results.header.title') %>" />
+  <meta name="description" content="<%= title %>" />
 <% end %>
 
 <% content_for :page_header do %>
@@ -11,7 +16,7 @@
     margin_top: 0,
     margin_bottom: 6,
   } %>
-  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link" %>
+  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link", onclick: "ga('send', 'event', 'StartAgain', 'StartAgainClicked', '/results');" %>
 <% end %>
 
 <% if result_groups(session).empty? %>

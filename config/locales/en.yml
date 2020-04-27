@@ -129,6 +129,9 @@ en:
       <p class="govuk-body">Your session has ended because you have not done anything for 4 hours. You'll have to start again.</p>
 
       <p class="govuk-body">We do this for your security. We've deleted all the details you entered to protect your data.</p>
+
+      <h2 class="govuk-heading-m">If you didn’t expect to see this page</h2>
+      <p class="govuk-body">You may be seeing this page because you’ve turned off cookies in your browser. You’ll need to <a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external" target="_blank">turn cookies on</a> before you can use this service.</p>
   leave_this_website:
     link_text: "Leave this site"
     link_href: "/clear-session?ext_r=true"
@@ -201,6 +204,7 @@ en:
               - text: This helps us count how many people visit the service by tracking if you’ve visited before
               - text: 3 years
   coronavirus_form:
+    submit_and_next: "Continue"
     errors:
       page_title_prefix: 'Error: '
       title: "There is a problem:"
@@ -210,41 +214,38 @@ en:
       filter_questions:
         questions:
           need_help_with:
-            title: "What do you need to find help with because of coronavirus?"
+            title: "What do you need help with because of coronavirus?"
             hint_text: "Select all that apply"
             options:
               - "I’m not sure"
             custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
-      help: # NHS question and 'What do you need help with'.
-        # No title needed for this group.
-        questions:
-          urgent_medical_help:
-            title: "Do you need urgent medical help?"
-            description: "You can check if you have coronavirus (COVID-19) symptoms and get medical advice"
-            options:
-              - "Yes"
-              - "No"
-            custom_select_error: "Select yes if you need urgent medical help"
       feeling_unsafe:
         title: "Feeling unsafe"
         questions:
           feel_safe:
             title: "Do you feel safe where you live?"
             options:
-              - "Yes"
-              - "Yes, but I’m concerned about the safety of someone else"
-              - "No"
-              - "Not sure"
-            custom_select_error: "Select if you feel safe where you live or if you‘re worried about someone else"
+              option_yes:
+                label: "Yes"
+              option_yes_someone_else:
+                label: "Yes, but I’m concerned about the safety of someone else"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
+            custom_select_error: "Select if you feel safe where you live or if you’re worried about someone else"
       paying_bills:
         title: "Paying bills"
         questions:
           afford_rent_mortgage_bills:
             title: "Are you finding it hard to afford rent, your mortgage or bills?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you’re finding it hard to afford your rent, your mortgage or bills"
       getting_food:
         title: "Getting food"
@@ -252,53 +253,76 @@ en:
           afford_food:
             title: "Are you finding it hard to afford food?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you’re finding it hard to afford food"
           get_food:
             title: "Are you able to get food?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
-            custom_select_error: "Select yes if you‘re able to get food"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
+            custom_select_error: "Select yes if you’re able to get food"
       being_unemployed:
         title: "Being unemployed or not having any work"
         questions:
+          self_employed:
+            title: "Are you self-employed or a sole trader?"
+            title_caption: "Being unemployed or not having any work"
+            options:
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
+            skip_next_question_options:
+              - "Yes"
+            custom_select_error: "Select yes if you’re self-employed or a sole trader"
           have_you_been_made_unemployed:
             title: "Have you been told to stop working?"
             title_caption: "Being unemployed or not having any work"
             options:
+              option_yes:
+                label: "Yes, I’ve been made unemployed, or might be soon"
+              option_might_be:
+                label: "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
+            skip_next_question_options:
               - "Yes, I’ve been made unemployed, or might be soon"
               - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
-              - "No"
-              - "Not sure"
             custom_select_error: "Select if you’ve been made unemployed, or put on temporary leave (furloughed)"
           are_you_off_work_ill:
             title: "Are you off work because you’re ill or self-isolating?"
             title_caption: "Going in to work"
             options:
-              - "Yes"
-              - "No"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
             custom_select_error: "Select yes if you’re off work because you’re ill or self-isolating"
-          self_employed:
-            title: "Are you self-employed or a sole trader?"
-            title_caption: "Being unemployed or not having any work"
-            options:
-              - "Yes"
-              - "No"
-              - "Not sure"
-            custom_select_error: "Select yes if you’re self-employed or a sole trader"
       going_in_to_work:
         title: "Going in to work"
         questions:
           living_with_vulnerable:
             title: "Are you worried about going in to work?"
             options:
-              - "Yes"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select yes if you’re worried about going in to work"
       somewhere_to_live:
         title: "Having somewhere to live"
@@ -306,18 +330,26 @@ en:
           have_somewhere_to_live:
             title: "Do you have somewhere to live?"
             options:
-              - "Yes"
-              - "I do now but I might lose it"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_may_lose:
+                label: "I do now but I might lose it"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select if you have somewhere to live"
           have_you_been_evicted:
             title: "Have you been evicted?"
             options:
-              - "Yes"
-              - "I might be evicted soon"
-              - "No"
-              - "Not sure"
+              option_yes:
+                label: "Yes"
+              option_soon:
+                label: "I might be evicted soon"
+              option_no:
+                label: "No"
+              not_sure:
+                label: "Not sure"
             custom_select_error: "Select if you have been evicted or might be soon"
       mental_health:
         title: "Mental health and wellbeing"
@@ -325,25 +357,34 @@ en:
           mental_health_worries:
             title: "Are you worried about either your mental health or someone else’s mental health?"
             options:
-              - "Yes, I am"
-              - "No, I’m not"
-              - "Not sure"
-            custom_select_error: "Select yes if you‘re worried about your mental health or someone else’s mental health"
+              option_yes:
+                label: "Yes, I am"
+              option_no:
+                label: "No, I’m not"
+              not_sure:
+                label: "Not sure"
+            custom_select_error: "Select yes if you’re worried about your mental health or someone else’s mental health"
       leave_home: # Q: Are you able to leave your home if absolutely neccessary?
         questions:
           able_to_leave:
             title: "Are you able to leave your home for food, medicine, or health reasons?"
             options:
-              - "Yes"
-              - "I should not leave home because I have coronavirus symptoms, or someone in my household does"
-              - "I should not leave home because I think I’m at high risk of severe illness from coronavirus"
-              - "I cannot go out because I have a disability"
-              - "I’m unable to leave my home for another reason"
-            custom_select_error: "Select if you‘re able to leave your home or not"
+              option_yes:
+                label: "Yes"
+              option_has_symptoms:
+                label: "I should not leave home because I have coronavirus symptoms, or someone in my household does"
+              option_high_risk:
+                label: "I should not leave home because I think I’m at high risk of severe illness from coronavirus"
+              option_disability:
+                label: "I cannot go out because I have a disability"
+              option_other:
+                label: "I’m unable to leave my home for another reason"
+            custom_select_error: "Select if you’re able to leave your home or not"
     results:
       header:
         context: Coronavirus (COVID-19)
         title: Information based on your answers
+        title_no_results: Information based on your answers - no specific information
         start_again_text: Start again
       feedback:
         text: Help us improve
@@ -381,9 +422,9 @@ en:
             href: "https://www.childline.org.uk/"
           - text: "Get advice if you’re a child in Wales"
             href: "https://www.childcomwales.org.uk/coronavirus/"
-          - text: "Contact NSPCC if you‘re concerned about a child"
+          - text: "Contact NSPCC if you’re concerned about a child"
             href: "https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/"
-          - text: "Find helplines if you‘re an older person living in Wales"
+          - text: "Find helplines if you’re an older person living in Wales"
             href: "https://www.olderpeoplewales.com/en/coronavirus.aspx"
           - text: "Find victim support helplines if you live in Wales (in Welsh)"
             href: "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales"
@@ -427,15 +468,15 @@ en:
             href: "https://www.gov.uk/apply-free-school-meals"
           - text: "Apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
             href: "https://www.healthystart.nhs.uk/healthy-start-vouchers/do-i-qualify/"
-          - text: "Find out if you‘re eligible for the Scottish Welfare Fund if you live in Scotland"
+          - text: "Find out if you’re eligible for the Scottish Welfare Fund if you live in Scotland"
             href: "https://www.mygov.scot/scottish-welfare-fund/"
-          - text: "Find out if you can get a grant if you‘re a parent or looking after a child in Scotland"
+          - text: "Find out if you can get a grant if you’re a parent or looking after a child in Scotland"
             href: "https://www.mygov.scot/best-start-grant-best-start-foods/"
-          - text: "Check if you‘re eligible for the Discretionary Assistance Fund if you live in Wales"
+          - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
-          - text: "If you‘re in Northern Ireland call the coronavirus Community Helpline on <a href=\"tel:+448088020020\" class=\"govuk-link\">0808 802 0020</a>, email <a href=\"mailto:covid19@adviceni.net\" class=\"govuk-link\">covid19@adviceni.net</a> or text ‘ACTION’ to 81025"
+          - text: "If you’re in Northern Ireland call the coronavirus Community Helpline on <a href=\"tel:+448088020020\" class=\"govuk-link\">0808 802 0020</a>, email <a href=\"mailto:covid19@adviceni.net\" class=\"govuk-link\">covid19@adviceni.net</a> or text ‘ACTION’ to 81025"
       get_food:
-        title: "If you‘re unable to get food"
+        title: "If you’re unable to get food"
         show_options:
           - "No"
           - "Not sure"
@@ -451,11 +492,11 @@ en:
           - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
           - "Not sure"
         items:
-          - text: "What to do if you‘ve lost your job"
+          - text: "What to do if you’ve lost your job"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job"
           - text: "What to do if you’ve been laid-off"
             href: "https://www.gov.uk/lay-offs-short-timeworking"
-          - text: "Find out about your rights if you‘ve been dismissed"
+          - text: "Find out about your rights if you’ve been dismissed"
             href: "https://www.gov.uk/dismissal"
           - text: "What to do if you’ve been furloughed"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
@@ -471,7 +512,7 @@ en:
             href: "https://workingwales.gov.wales/"
           - text: "Contact Citizens Advice Wales"
             href: "https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/"
-          - text: "Check if you‘re eligible for the Discretionary Assistance Fund if you live in Wales"
+          - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
           - text: "Get help if you’ve been made redundant in Scotland"
             href: "https://www.mygov.scot/help-redundancy/"
@@ -482,15 +523,13 @@ en:
         show_options:
           - "Yes"
         items:
-          - text: "Check if you’re eligible for statutory sick pay"
-            href: "https://www.gov.uk/statutory-sick-pay"
           - text: "What to do if you’re employed but cannot work"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
           - text: "Find out about getting statutory sick pay if you’re self-isolating (Acas)"
             href: "https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay"
           - text: "Find out about the help you can get if you’re self-employed or work in the gig economy (Money Advice Service)"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
-          - text: "Check if you‘re eligible for the Discretionary Assistance Fund if you live in Wales"
+          - text: "Check if you’re eligible for the Discretionary Assistance Fund if you live in Wales"
             href: "https://gov.wales/discretionary-assistance-fund-daf"
       self_employed:
         title: "If you’re self employed or a sole trader"
@@ -498,10 +537,10 @@ en:
           - "Yes"
           - "Not sure"
         items:
-          - text: "What to do if you‘re self-employed and getting less or no work"
+          - text: "What to do if you’re self-employed and getting less or no work"
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
           - text: "What you can do if you’re self employed or a sole trader (Money Advice Service)"
-            href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
+            href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed"
           - text: "Get information on applying for Universal Credit (Citizens Advice)"
             href: "https://www.citizensadvice.org.uk/benefits/universal-credit/"
           - text: "Get advice on benefits if you live in Northern Ireland (Advice NI)"
@@ -538,7 +577,7 @@ en:
             href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
           - text: "Get help if you’re homeless in Scotland"
             href: "https://www.mygov.scot/homelessness/"
-          - text: "Get help if you‘re homeless from Shelter Scotland"
+          - text: "Get help if you’re homeless from Shelter Scotland"
             href: "https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness"
       have_you_been_evicted:
         title: "If you’ve been evicted or might be soon"
@@ -571,6 +610,8 @@ en:
           - "Yes, I am"
           - "Not sure"
         items:
+          - text: "Where to get urgent help for mental health"
+            href: "https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/"
           - text: "Get information on coronavirus and your wellbeing (Mind)"
             href: "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8"
           - text: "Looking after your mental health during coronavirus"
@@ -585,8 +626,3 @@ en:
             href: "https://phw.nhs.wales/topics/latest-information-on-novel-coronavirus-covid-19/staying-well-at-home/how-are-you-feeling/"
           - text: "Additional information about coronavirus and your mental wellbeing from the Scottish Association for Mental Health"
             href: "https://www.samh.org.uk/about-mental-health/self-help-and-wellbeing/coronavirus-and-your-mental-wellbeing"
-          - text: 'If you need urgent help now, call the Samaritans on <a href="tel:116 123" class="govuk-link">116 123</a>'
-          - text: "If you need urgent help text ‘Shout’ to 85258"
-          - text: 'If you need urgent help and you’re in Northern Ireland call Lifeline on <a href="tel:+448088088000" class="govuk-link">0808 808 8000</a>'
-          - text: 'If you need urgent help and you’re in Wales call <a href="tel:+44800132737" class="govuk-link">0800 132 737</a> or text ‘help’ to 81066'
-          - text: "If it’s an emergency, call 999"

@@ -53,7 +53,7 @@ private
   end
 
   def first_question_path
-    "urgent_medical_help".dasherize
+    need_help_with_path
   end
 
   def group; end
@@ -68,18 +68,12 @@ private
 
   def session_expired
     reset_session
-    redirect_to session_expired_path
+    redirect_to session_expired_url
   end
 
   def check_first_question_answered
-    unless first_question_seen?
-      redirect_to controller: "urgent_medical_help", action: "show"
-    end
-  end
-
-  def check_filter_question_answered
     if questions_to_ask.blank?
-      redirect_to controller: "need_help_with", action: "show"
+      redirect_to need_help_with_url
     end
   end
 

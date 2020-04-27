@@ -25,9 +25,9 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should return a group data structure with a heading and filtered questions" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
-        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
-        "are_you_off_work_ill": "Yes",
-        "self_employed": "Yes",
+        "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
+        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
+        "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
       })
       expect(result_groups(session)).to eq(
         being_unemployed: {
@@ -44,10 +44,10 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should filter out empty groups" do
       session.merge!({
         "selected_groups": %i[being_unemployed getting_food],
-        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
-        "are_you_off_work_ill": "Yes",
-        "self_employed": "Yes",
-        "afford_food": "No",
+        "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
+        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
+        "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
+        "afford_food": I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.options.option_no.label"),
       })
       expect(result_groups(session)).to eq(
         being_unemployed: {
@@ -66,9 +66,9 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should return all group questions if all the session responses meet criteria" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
-        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
-        "are_you_off_work_ill": "Yes",
-        "self_employed": "Yes",
+        "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
+        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
+        "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
       })
       expect(filter_questions_by_session(:being_unemployed, session)).to eq([
         I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
@@ -80,9 +80,9 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should return filtered group questions if the session responses do not meet criteria" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
-        "have_you_been_made_unemployed": "Yes, I’ve been made unemployed, or might be soon",
-        "are_you_off_work_ill": "No",
-        "self_employed": "Yes",
+        "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
+        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_no.label"),
+        "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
       })
       expect(filter_questions_by_session(:being_unemployed, session)).to eq([
         I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),

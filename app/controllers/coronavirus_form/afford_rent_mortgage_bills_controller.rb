@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AffordRentMortgageBillsController < ApplicationController
-  before_action :check_filter_question_answered
+  before_action :check_first_question_answered
   before_action :check_current_question_selected
 
   def submit
@@ -21,7 +21,7 @@ class CoronavirusForm::AffordRentMortgageBillsController < ApplicationController
       render controller_path
     else
       update_session_store
-      redirect_to controller: next_question(controller_name), action: "show"
+      redirect_to polymorphic_url(next_question(controller_name))
     end
   end
 

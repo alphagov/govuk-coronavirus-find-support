@@ -1,19 +1,19 @@
 RSpec.describe "clear-session" do
-  let(:selected_no) { I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.options").last }
+  let(:selected_feeling_unsafe) { [I18n.t("coronavirus_form.groups.feeling_unsafe.title")] }
 
   describe "GET /clear-session" do
     context "without a redirect parameter" do
       context "with session data" do
         it "clears the session id" do
-          post urgent_medical_help_path, params: { urgent_medical_help: selected_no }
+          post need_help_with_path, params: { need_help_with: selected_feeling_unsafe }
           initial_session_id = session["session_id"]
           get clear_session_path
           expect(session["session_id"]).to_not eq(initial_session_id)
         end
 
         it "clears responses held in the session" do
-          post urgent_medical_help_path, params: { urgent_medical_help: selected_no }
-          expect(session[:urgent_medical_help]).to eq(selected_no)
+          post need_help_with_path, params: { need_help_with: selected_feeling_unsafe }
+          expect(session[:need_help_with]).to eq(selected_feeling_unsafe)
           get clear_session_path
           expect(session[:have_you_been_made_unemployed]).to be_nil
         end
@@ -27,15 +27,15 @@ RSpec.describe "clear-session" do
 
     context "with an external redirect parameter" do
       it "clears the session id" do
-        post urgent_medical_help_path, params: { urgent_medical_help: selected_no }
+        post need_help_with_path, params: { need_help_with: selected_feeling_unsafe }
         initial_session_id = session["session_id"]
         get clear_session_path, params: { ext_r: true }
         expect(session["session_id"]).to_not eq(initial_session_id)
       end
 
       it "clears responses held in the session" do
-        post urgent_medical_help_path, params: { urgent_medical_help: selected_no }
-        expect(session[:urgent_medical_help]).to eq(selected_no)
+        post need_help_with_path, params: { need_help_with: selected_feeling_unsafe }
+        expect(session[:need_help_with]).to eq(selected_feeling_unsafe)
         get clear_session_path, params: { ext_r: true }
         expect(session[:have_you_been_made_unemployed]).to be_nil
       end

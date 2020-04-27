@@ -30,7 +30,7 @@ module QuestionsHelper
   end
 
   def questions_to_ask
-    session_questions & all_questions.map(&:to_s)
+    session_questions & all_questions
   end
 
   def session_questions
@@ -45,15 +45,24 @@ module QuestionsHelper
     questions_to_ask.last
   end
 
-  def first_question_seen?
-    session[:urgent_medical_help].present?
-  end
-
   def last_question_seen?
     session[FINAL_QUESTION.to_sym].present?
   end
 
   def all_questions
-    I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten
+    I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten.map(&:to_s)
+  end
+
+  def remove_questions(questions)
+    questions_to_ask - questions
+  end
+
+  def add_questions(questions, after_question)
+    index = questions_to_ask.index(after_question) + 1
+    questions_to_ask
+      .dup
+      .insert(index, questions)
+      .flatten
+      .uniq
   end
 end

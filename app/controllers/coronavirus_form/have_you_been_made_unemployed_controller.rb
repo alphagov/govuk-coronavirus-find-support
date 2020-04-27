@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::HaveYouBeenMadeUnemployedController < ApplicationController
-  before_action :check_filter_question_answered
+  before_action :check_first_question_answered
   before_action :check_current_question_selected
 
   def submit

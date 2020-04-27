@@ -36,4 +36,12 @@ module ResultsHelper
   def selected_groups
     session["selected_groups"]
   end
+
+  def results_title(result_groups_session)
+    if result_groups_session.empty?
+      t("coronavirus_form.results.header.title_no_results")
+    else
+      t("coronavirus_form.results.header.title")
+    end
+  end
 end

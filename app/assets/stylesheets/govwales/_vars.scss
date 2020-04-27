@@ -73,9 +73,11 @@ $disabled_text:#949494;
 // =============================================================================
 
 // Layout
-$layout__footer_background: $lightgrey_light;
 $layout__body_background: $lightgrey_light;
 $layout__body: $black;
+$layout__footer_background: $lightgrey_light;
+$layout__footer_background_backtotop: $lightgrey_semi;
+
 
 // Content
 $content__background: $white;
@@ -129,6 +131,7 @@ $borders__cta_notice: $blue;
 $borders__contents_nav: $lightgrey_semi;
 $borders__box_light_blue: $whiteblue;
 $borders__box_blue: $blue;
+$borders__footer_menu: $lightgrey_mid;
 
 // Nav
 $nav__link: $charcoal;

@@ -4,7 +4,11 @@ cy:
   govwales_header:
     title: Llywodraeth Cymru
     href: https://llyw.cymru/
-  govwales_footer:
+  govwales_footer_primary:
+    links:
+      - text: "Coronafeirws (COVID-19)"
+        href: "https://llyw.cymru/coronafeirws"
+  govwales_footer_secondary:
     links:
       - text: "Cysylltu â ni"
         href: "https://llyw.cymru/cysylltu-ni"

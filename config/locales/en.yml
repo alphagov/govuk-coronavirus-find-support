@@ -4,7 +4,11 @@ en:
   govwales_header:
     title: Welsh Government
     href: https://gov.wales/
-  govwales_footer:
+  govwales_footer_primary:
+    links:
+      - text: "Coronavirus (COVID-19)"
+        href: "https://gov.wales/coronavirus"
+  govwales_footer_secondary:
     links:
       - text: "Contact us"
         href: "https://gov.wales/contact-us"

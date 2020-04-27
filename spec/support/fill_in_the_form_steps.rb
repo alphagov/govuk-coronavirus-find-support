@@ -2,15 +2,7 @@
 
 module FillInTheFormSteps
   def given_a_user_is_struggling_because_of_coronavirus
-    visit urgent_medical_help_path
-  end
-
-  def and_does_not_need_urgent_medical_help
-    expect(page.body).to have_content(I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.title"))
-
-    choose I18n.t("coronavirus_form.groups.help.questions.urgent_medical_help.options.option_no.label")
-
-    click_on I18n.t("coronavirus_form.submit_and_next")
+    visit need_help_with_path
   end
 
   def and_needs_help_with_all_options

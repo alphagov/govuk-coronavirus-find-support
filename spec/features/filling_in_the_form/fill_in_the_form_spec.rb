@@ -8,7 +8,6 @@ RSpec.feature "Fill in the find support form" do
   shared_examples "filling in the form" do
     scenario "Complete the form when not self employed" do
       given_a_user_is_struggling_because_of_coronavirus
-      and_does_not_need_urgent_medical_help
       and_needs_help_with_all_options
       and_feels_unsafe_where_they_live
       and_is_finding_it_hard_to_afford_rent_mortgage_bills
@@ -45,7 +44,6 @@ RSpec.feature "Fill in the find support form" do
 
   scenario "Complete the form when not self employed but furloughed" do
     given_a_user_is_struggling_because_of_coronavirus
-    and_does_not_need_urgent_medical_help
     and_needs_help_with_being_unemployed
     and_is_not_self_employed_or_a_sole_trader
     and_has_been_told_to_stop_working
@@ -57,7 +55,6 @@ RSpec.feature "Fill in the find support form" do
 
   scenario "Complete the form when self employed" do
     given_a_user_is_struggling_because_of_coronavirus
-    and_does_not_need_urgent_medical_help
     and_needs_help_with_being_unemployed
     and_is_self_employed_or_a_sole_trader
     and_is_not_able_to_leave_home_if_absolutely_necessary

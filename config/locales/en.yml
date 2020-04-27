@@ -219,18 +219,6 @@ en:
             options:
               - "I’m not sure"
             custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
-      help: # NHS question and 'What do you need help with'.
-        # No title needed for this group.
-        questions:
-          urgent_medical_help:
-            title: "Do you need urgent medical help?"
-            description: "You can check if you have coronavirus (COVID-19) symptoms and get medical advice"
-            options:
-              option_yes:
-                label: "Yes"
-              option_no:
-                label: "No"
-            custom_select_error: "Select yes if you need urgent medical help"
       feeling_unsafe:
         title: "Feeling unsafe"
         questions:

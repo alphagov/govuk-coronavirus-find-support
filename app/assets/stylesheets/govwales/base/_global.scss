@@ -28,3 +28,8 @@ body > .govuk-width-container,
   height: 1px;
   word-wrap: normal;
 }
+
+// Hide the "Help us improve" block for the MVP version of the app
+.app-c-callout {
+  display: none;
+}

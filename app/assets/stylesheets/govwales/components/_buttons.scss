@@ -7,10 +7,7 @@
   background-color: $btn__exit;
   width: 100%;
   left: 0;
-
-  @media screen and (min-width: 641px) and (max-width: 767px) {
-    padding: 20px 30px;
-  }
+  padding: 20px;
 
   @media screen and (min-width: $screen-md) {
     width: auto;

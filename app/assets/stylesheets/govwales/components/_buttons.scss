@@ -1,13 +1,13 @@
 .app-c-escape-link {
   font-family: $base-font-family;
   text-decoration: none;
+  padding: 20px;
   background-image: url('/assets/govwales/exit.svg');
   background-position: center right 20px;
   background-repeat: no-repeat;
   background-color: $btn__exit;
   width: 100%;
   left: 0;
-  padding: 20px;
 
   @media screen and (min-width: $screen-md) {
     width: auto;

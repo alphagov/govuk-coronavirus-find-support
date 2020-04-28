@@ -14,7 +14,7 @@
     padding: 0 0 18px;
 
     li {
-      float: left;
+      display: inline-block;
       margin: 0 25px 0 0;
 
       a {
@@ -38,7 +38,6 @@
 
     &--primary {
       border-bottom: 2px solid $borders__footer_menu;
-      padding-bottom: 40px;
 
       li {
         a {

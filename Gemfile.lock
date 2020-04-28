@@ -61,11 +61,6 @@ GEM
     apparition (0.5.0)
       capybara (~> 3.13, < 4)
       websocket-driver (>= 0.6.5)
-    asset_sync (2.11.0)
-      activemodel (>= 4.1.0)
-      fog-core
-      mime-types (>= 2.99)
-      unf
     ast (2.4.0)
     awesome_print (1.8.0)
     bootsnap (1.4.6)
@@ -90,29 +85,11 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.9.0)
-    excon (0.73.0)
     execjs (2.7.0)
     faraday (1.0.1)
       multipart-post (>= 1.2, < 3)
     ffi (1.12.2)
-    fog-aws (3.6.3)
-      fog-core (~> 2.1)
-      fog-json (~> 1.1)
-      fog-xml (~> 0.1)
-      ipaddress (~> 0.8)
-    fog-core (2.2.0)
-      builder
-      excon (~> 0.71)
-      formatador (~> 0.2)
-      mime-types
-    fog-json (1.2.0)
-      fog-core
-      multi_json (~> 1.10)
-    fog-xml (0.1.3)
-      fog-core
-      nokogiri (>= 1.5.11, < 2.0.0)
     foreman (0.87.1)
-    formatador (0.2.5)
     gds-api-adapters (63.6.0)
       addressable
       link_header
@@ -143,7 +120,6 @@ GEM
       domain_name (~> 0.5)
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
-    ipaddress (0.8.3)
     jaro_winkler (1.5.4)
     kgio (2.11.3)
     kramdown (2.2.1)
@@ -181,7 +157,6 @@ GEM
       libv8 (> 7.3)
     minitest (5.14.0)
     msgpack (1.3.3)
-    multi_json (1.14.1)
     multipart-post (2.1.1)
     netrc (0.11.0)
     nio4r (2.5.2)
@@ -365,12 +340,10 @@ PLATFORMS
 
 DEPENDENCIES
   apparition (~> 0.5.0)
-  asset_sync
   awesome_print (~> 1.8)
   bootsnap (~> 1)
   byebug (~> 11)
   capybara (~> 3.32.1)
-  fog-aws
   foreman (~> 0.87.1)
   govuk_app_config (~> 2.1.1)
   govuk_publishing_components (~> 21.42.0)

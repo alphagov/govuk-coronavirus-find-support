@@ -9,8 +9,13 @@ Rails.application.configure do
     "govuk-coronavirus-find-support-stg.cloudapps.digital",
     "find-coronavirus-support.service.gov.uk",
     "coronavirus-find-support.herokuapp.com",
+    "govwales-covid-support-staging.herokuapp.com",
+    "govwales-covid-support-prod.herokuapp.com",
+    /govwales\-cov\-.*\.herokuapp\.com/, # Heroku Pipeline Review Apps
     "find-coronavirus-support.service.gov.wales",
-    "canfod-cymorth-coronafeirws.gwasanaeth.gov.wales",
+    "canfod-cymorth-coronafeirws.gwasanaeth.llyw.cymru",
+    "find-coronavirus-support-staging.service.gov.wales",
+    "canfod-cymorth-coronafeirws-staging.gwasanaeth.llyw.cymru",
   ]
 
   # Code is not reloaded between requests.

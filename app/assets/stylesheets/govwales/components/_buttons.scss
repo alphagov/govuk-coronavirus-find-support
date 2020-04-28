@@ -8,6 +8,7 @@
   background-color: $btn__exit;
   width: 100%;
   left: 0;
+  z-index: 999;
 
   @media screen and (min-width: $screen-md) {
     width: auto;

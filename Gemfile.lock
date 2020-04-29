@@ -62,6 +62,8 @@ GEM
       capybara (~> 3.13, < 4)
       websocket-driver (>= 0.6.5)
     ast (2.4.0)
+    autoprefixer-rails (9.7.6)
+      execjs
     awesome_print (1.8.0)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
@@ -340,6 +342,7 @@ PLATFORMS
 
 DEPENDENCIES
   apparition (~> 0.5.0)
+  autoprefixer-rails
   awesome_print (~> 1.8)
   bootsnap (~> 1)
   byebug (~> 11)

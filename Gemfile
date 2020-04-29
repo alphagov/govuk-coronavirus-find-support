@@ -19,6 +19,8 @@ gem "sass-rails", "< 6"
 gem "sentry-raven", "~> 3.0"
 gem "uglifier", "~> 4.2"
 
+gem "autoprefixer-rails" # GOV.WALES specific gem
+
 group :development do
   gem "listen", "~> 3"
 end

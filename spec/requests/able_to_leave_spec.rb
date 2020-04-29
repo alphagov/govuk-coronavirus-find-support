@@ -4,7 +4,7 @@ RSpec.describe "able-to-leave" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(able_to_leave feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[able_to_leave feel_safe])
   end
 
   describe "GET /able-to-leave" do

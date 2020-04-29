@@ -4,7 +4,7 @@ RSpec.describe "mental-health-worries" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(mental_health_worries feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[mental_health_worries feel_safe])
   end
 
   describe "GET /mental-health-worries" do
@@ -46,7 +46,7 @@ RSpec.describe "mental-health-worries" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do

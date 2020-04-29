@@ -4,7 +4,7 @@ RSpec.describe "feel-safe" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(feel_safe get_food))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[feel_safe get_food])
   end
 
   describe "GET /feel-safe" do
@@ -46,7 +46,7 @@ RSpec.describe "feel-safe" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do

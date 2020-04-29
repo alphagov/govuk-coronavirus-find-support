@@ -4,7 +4,7 @@ RSpec.describe "have-you-been-evicted" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_you_been_evicted.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(have_you_been_evicted feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[have_you_been_evicted feel_safe])
   end
 
   describe "GET /have-you-been-evicted" do
@@ -46,7 +46,7 @@ RSpec.describe "have-you-been-evicted" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do

@@ -33,6 +33,8 @@ en:
   govwales_buttons:
     start_again_text: Start again
     start_again_url: "/"
+  govwales_links:
+    start_now_url: https://gov.wales/coronavirus
   accessibility_statement:
     title: Accessibility statement
     body_text: |

@@ -33,6 +33,8 @@ cy:
   govwales_buttons:
     start_again_text: Start again CY
     start_again_url: "/"
+  govwales_links:
+    start_now_url: https://llyw.cymru/coronafeirws
   accessibility_statement:
     title: Accessibility statement
     body_text: |
@@ -230,18 +232,6 @@ cy:
             options:
               - "I’m not sure"
             custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
-      help: # NHS question and 'What do you need help with'.
-        # No title needed for this group.
-        questions:
-          urgent_medical_help:
-            title: "CY Do you need urgent medical help?"
-            description: "CY You can check if you have coronavirus (COVID-19) symptoms and get medical advice"
-            options:
-              option_yes:
-                label: "CY Yes"
-              option_no:
-                label: "CY No"
-            custom_select_error: "Select yes if you need urgent medical help"
       feeling_unsafe:
         title: "Feeling unsafe"
         questions:
@@ -407,6 +397,7 @@ cy:
       header:
         context: Coronavirus (COVID-19)
         title: Information based on your answers
+        title_no_results: Information based on your answers - no specific information
         start_again_text: Start again
       feedback:
         text: Help us improve

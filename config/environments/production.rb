@@ -4,18 +4,24 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in
   # config/application.rb.
 
+  config.en_host = ENV["EN_HOST_NAME"] || raise("Environment variable EN_HOST_NAME must be set")
+  config.cy_host = ENV["CY_HOST_NAME"] || raise("Environment variable CY_HOST_NAME must be set")
+
   config.hosts = [
-    "govuk-coronavirus-find-support-prod.cloudapps.digital",
-    "govuk-coronavirus-find-support-stg.cloudapps.digital",
-    "find-coronavirus-support.service.gov.uk",
+    # Original Prototype (TODO: Remove this when the prototype is decommissioned)
     "coronavirus-find-support.herokuapp.com",
+
+    # Direct Heroku Staging domain
     "govwales-covid-support-staging.herokuapp.com",
+
+    # Direct Heroku Production domain
     "govwales-covid-support-prod.herokuapp.com",
-    /govwales\-cov\-.*\.herokuapp\.com/, # Heroku Pipeline Review Apps
-    "find-coronavirus-support.service.gov.wales",
-    "canfod-cymorth-coronafeirws.gwasanaeth.llyw.cymru",
-    "find-coronavirus-support-staging.service.gov.wales",
-    "canfod-cymorth-coronafeirws-staging.gwasanaeth.llyw.cymru",
+
+    # Heroku Pipeline Review Apps
+    /govwales\-cov\-.*\.herokuapp\.com/,
+
+    config.en_host,
+    config.cy_host,
   ]
 
   # Code is not reloaded between requests.

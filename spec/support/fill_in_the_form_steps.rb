@@ -142,7 +142,7 @@ module FillInTheFormSteps
 
   def they_view_the_results_page
     expect(page.body).to have_content(I18n.t("coronavirus_form.results.header.title"))
-    expect(current_path).to eq "/en/results"
+    expect(current_path).to eq "/results"
   end
 
   def they_are_provided_with_information_about_feeling_unsafe

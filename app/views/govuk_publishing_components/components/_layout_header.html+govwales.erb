@@ -12,10 +12,10 @@
 
       <div class="header__components__language" id="wg_language">
         <%=
-          if locale == :en
-            link_to("Cymraeg", urgent_medical_help_url(locale: :cy), class: "language__link", hreflang: "cy")
-          elsif locale == :cy
-            link_to("English", urgent_medical_help_url(locale: :en), class: "language__link")
+          if locale == :cy
+            link_to("English", need_help_with_url(host: Rails.configuration.en_host, locale: nil), class: "language__link")
+          else
+            link_to("Cymraeg", need_help_with_url(host: Rails.configuration.cy_host, locale: nil), class: "language__link", hreflang: "cy")
           end
         %>
       </div>

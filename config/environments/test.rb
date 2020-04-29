@@ -9,6 +9,9 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in
   # config/application.rb.
 
+  config.en_host = "en.example.com"
+  config.cy_host = "cy.example.com"
+
   config.analytics_tracking_id = "12345"
 
   config.cache_classes = true

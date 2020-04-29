@@ -1,3 +1,41 @@
+#main-content {
+  .govuk-button {
+    text-decoration: none;
+    color: $white;
+    background-color: $btn;
+    padding: 15px 20px;
+    @include fontSize(18px);
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $btn__hover;
+    }
+
+    &:focus {
+      color: $white;
+      box-shadow: none;
+      outline: 3px solid $states__focus;
+    }
+
+    &:active {
+      top: 0;
+    }
+
+    &:visited {
+      background-color: $btn;
+      color: $white;
+
+      &:hover {
+        background-color: $btn__hover;
+      }
+    }
+  }
+}
+
+// Leave this site button
 .app-c-escape-link {
   font-family: $base-font-family;
   text-decoration: none;

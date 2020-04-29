@@ -26,7 +26,9 @@ body > .govuk-width-container,
   word-wrap: normal;
 }
 
-// Hide the "Help us improve" block for the MVP version of the app
+// States
+// Hide for the MVP version of the app
+.govwales-removed,
 .app-c-callout {
   display: none;
 }

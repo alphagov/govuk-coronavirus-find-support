@@ -1,3 +1,12 @@
+<%# GOVWALES: :back_link addition. Lines 1-8 %>
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    text: t("govwales_breadcrumbs.start_again_text"),
+    href: t("govwales_breadcrumbs.start_again_url"),
+    start: true,
+  } %>
+<% end %>
+
 <% content_for :title do %><%= t('session_expired.title') %><% end %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= t('session_expired.title') %>" />
@@ -10,8 +19,9 @@
 
 <%= sanitize(t('session_expired.body_text')) %>
 
+<%# GOVWALES: Back button replacement. Lines 22-27 %>
 <%= render "govuk_publishing_components/components/button", {
-  text: "Start now",
-  start: true,
-  href: "/"
+  text: t("govwales_buttons.start_again_text"),
+  href: t("govwales_buttons.start_again_url"),
+  start: true
 } %>

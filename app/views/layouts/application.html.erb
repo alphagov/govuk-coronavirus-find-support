@@ -42,14 +42,15 @@
       },
     } %>
     <%= render "govuk_publishing_components/components/layout_header", { environment: "public" } %>
-    <% if yield(:page_header).present? %>
-      <%= render "components/page-header" do %>
-        <%= yield(:page_header) %>
-      <% end %>
-    <% end %>
-    <div class="govuk-width-container">
+    <%# GOVWALES: Container 'govuk-width-container' reposition and additional class, yield:(:back_link) reposition. Lines 46-49 %>
+    <div class="govuk-width-container govwales-width-container">
       <% if yield(:back_link).present? %>
         <%= yield(:back_link) %>
+      <% end %>
+      <% if yield(:page_header).present? %>
+        <%= render "components/page-header" do %>
+          <%= yield(:page_header) %>
+        <% end %>
       <% end %>
       <main class="govuk-main-wrapper<%= " govuk-main-wrapper--l" if yield(:back_link).blank?%>" id="main-content" role="main">
         <div class="govuk-grid-row">

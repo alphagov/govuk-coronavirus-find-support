@@ -1,5 +1,14 @@
 <% title = results_title(result_groups(session)) %>
 
+<%# GOVWALES: :back_link addition. Lines 3-10 %>
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    text: t("govwales_breadcrumbs.start_again_text"),
+    href: t("govwales_breadcrumbs.start_again_url"),
+    start: true,
+  } %>
+<% end %>
+
 <% content_for :title do %>
   <%= title %>
 <% end %>
@@ -16,7 +25,8 @@
     margin_top: 0,
     margin_bottom: 6,
   } %>
-  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link", onclick: "ga('send', 'event', 'StartAgain', 'StartAgainClicked', '/results');" %>
+  <%# GOVWALES: '.govwales-removed' addition. Lines 28-29 %>
+  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link govwales-removed", onclick: "ga('send', 'event', 'StartAgain', 'StartAgainClicked', '/results');" %>
 <% end %>
 
 <% if result_groups(session).empty? %>
@@ -29,6 +39,13 @@
     } %>
   <% end %>
 <% end %>
+
+<%# GOVWALES: Back button addition. Lines 42-47 %>
+<%= render "govuk_publishing_components/components/button", {
+  text: t("govwales_buttons.start_again_text"),
+  href: t("govwales_buttons.start_again_url"),
+  start: true
+} %>
 
 <%= render "components/callout", {
   title: "Help us improve"

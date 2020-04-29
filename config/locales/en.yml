@@ -26,6 +26,13 @@ en:
       href: https://gov.wales/
       alt: Welsh Government
       text: Home
+  govwales_breadcrumbs:
+    start_again_text: Start again
+    start_again_url: "/"
+    back_text: Back
+  govwales_buttons:
+    start_again_text: Start again
+    start_again_url: "/"
   accessibility_statement:
     title: Accessibility statement
     body_text: |

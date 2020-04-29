@@ -15,6 +15,7 @@ html {
     @include fontSize($h1-font-size);
     @include letterspacingSize($h1-font-size);
     @include lineHeight($h1-line-size);
+    margin-bottom: 25px;
 
     // Desktop font size
     @media screen and (min-width: $screen-md) {
@@ -29,6 +30,7 @@ html {
     @include fontSize($h2-font-size);
     @include letterspacingSize($h2-font-size);
     @include lineHeight($h2-line-size);
+    margin-bottom: 25px;
 
     // Desktop font size
     @media screen and (min-width: $screen-md) {
@@ -111,6 +113,11 @@ html {
     &:hover,
     &:focus {
       color: $base__link_hover;
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: 3px solid $states__focus;
     }
   }
 

@@ -26,6 +26,13 @@ cy:
       href: https://llyw.cymru/
       alt: Llywodraeth Cymru
       text: Hafan
+  govwales_breadcrumbs:
+    start_again_text: Start again CY
+    start_again_url: "/"
+    back_text: Nôl
+  govwales_buttons:
+    start_again_text: Start again CY
+    start_again_url: "/"
   accessibility_statement:
     title: Accessibility statement
     body_text: |

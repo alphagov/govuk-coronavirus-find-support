@@ -1,0 +1,44 @@
+.app-c-page-header {
+  padding-bottom: 0;
+  background: none;
+  border-top: none;
+
+  h1 {
+    border-bottom: 2px $borders__divider solid;
+    padding-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+  .gem-c-title {
+    margin-bottom: 0 !important;
+
+    &--inverse {
+      color: $title__page_header;
+    }
+
+    &__text {
+      font-family: $base-font-family;
+    }
+  }
+
+  .govuk {
+    &-width-container {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+  &-grid-column-two-thirds {
+      width: auto;
+      float: none;
+    }
+
+  &-caption-xl {
+      color: $sub_headings__type;
+      font-size: 0.875rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+}

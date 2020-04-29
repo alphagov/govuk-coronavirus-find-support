@@ -12,7 +12,7 @@ RSpec.describe CoronavirusForm::DataExportController, type: :controller do
     context "with basic auth enabled" do
       it "rejects unauthenticated users" do
         request.headers["HTTP_ACCEPT"] = "text/csv"
-        get :show, params: { start_date: start_date, end_date: end_date }
+        get :show, params: { start_date: start_date, end_date: end_date, locale: "en" }
         expect(response).to have_http_status(401)
       end
 
@@ -21,7 +21,7 @@ RSpec.describe CoronavirusForm::DataExportController, type: :controller do
         username = ENV["DATA_EXPORT_BASIC_AUTH_USERNAME"]
         password = ENV["DATA_EXPORT_BASIC_AUTH_PASSWORD"]
         request.headers["HTTP_AUTHORIZATION"] = ActionController::HttpAuthentication::Basic.encode_credentials(username, password)
-        get :show, params: { start_date: start_date, end_date: end_date }
+        get :show, params: { start_date: start_date, end_date: end_date, locale: "en" }
         expect(response).to have_http_status(200)
       end
     end

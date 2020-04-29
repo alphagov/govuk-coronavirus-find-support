@@ -7,7 +7,7 @@ RSpec.describe CoronavirusForm::AccessibilityStatementController, type: :control
 
   describe "GET show" do
     it "renders the page" do
-      get :show
+      get :show, params: { locale: "en" }
       expect(response).to render_template(current_template)
     end
   end

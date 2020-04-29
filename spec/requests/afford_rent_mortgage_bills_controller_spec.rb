@@ -4,7 +4,7 @@ RSpec.describe "afford-rent-mortgage-bills" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.paying_bills.questions.afford_rent_mortgage_bills.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(afford_rent_mortgage_bills feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[afford_rent_mortgage_bills feel_safe])
   end
 
   describe "GET /afford-rent-mortgage-bills" do
@@ -46,7 +46,7 @@ RSpec.describe "afford-rent-mortgage-bills" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do

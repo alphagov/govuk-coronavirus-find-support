@@ -1,12 +1,12 @@
 RSpec.describe QuestionsHelper, type: :helper do
   before do
-    allow(helper).to receive(:session_questions).and_return(%w(get_food afford_food))
+    allow(helper).to receive(:session_questions).and_return(%w[get_food afford_food])
   end
 
   describe "#determine_user_questions" do
     it "returns questions in correct order" do
-      groups = %i(paying_bills getting_food)
-      expected_questions = %w(afford_rent_mortgage_bills afford_food get_food)
+      groups = %i[paying_bills getting_food]
+      expected_questions = %w[afford_rent_mortgage_bills afford_food get_food]
 
       expect(helper.determine_user_questions(groups)).to eq(expected_questions)
     end
@@ -49,23 +49,23 @@ RSpec.describe QuestionsHelper, type: :helper do
 
   describe "#questions_to_ask" do
     it "returns questions to ask the user" do
-      expect(helper.questions_to_ask).to eq(%w(get_food afford_food))
+      expect(helper.questions_to_ask).to eq(%w[get_food afford_food])
     end
 
     it "does not include a question that has been removed since the user made their selection" do
-      allow(helper).to receive(:all_questions).and_return(%w(get_food))
+      allow(helper).to receive(:all_questions).and_return(%w[get_food])
 
-      expect(helper.questions_to_ask).to eq(%w(get_food))
+      expect(helper.questions_to_ask).to eq(%w[get_food])
     end
 
     it "does not include a question that has been added since the user made their selection" do
-      allow(helper).to receive(:all_questions).and_return(%w(get_food afford_food question_3))
+      allow(helper).to receive(:all_questions).and_return(%w[get_food afford_food question_3])
 
-      expect(helper.questions_to_ask).to eq(%w(get_food afford_food))
+      expect(helper.questions_to_ask).to eq(%w[get_food afford_food])
     end
 
     context "when the session questions_to_ask is equal to all_questions" do
-      let(:all_questions) { %w(feel_safe afford_food) }
+      let(:all_questions) { %w[feel_safe afford_food] }
 
       before do
         allow(helper).to receive(:session_questions).and_return(all_questions)
@@ -80,17 +80,17 @@ RSpec.describe QuestionsHelper, type: :helper do
 
   describe "#remove_questions" do
     it "removes all questions from array" do
-      expect(helper.remove_questions(%w(get_food))).to eq(%w(afford_food))
+      expect(helper.remove_questions(%w[get_food])).to eq(%w[afford_food])
     end
   end
 
   describe "#add_questions" do
     it "adds all questions from array when question not already in array" do
-      expect(helper.add_questions(%w(question_3 question_4), "get_food")).to eq(%w(get_food question_3 question_4 afford_food))
+      expect(helper.add_questions(%w[question_3 question_4], "get_food")).to eq(%w[get_food question_3 question_4 afford_food])
     end
 
     it "does not add question when question already in array" do
-      expect(helper.add_questions(%w(afford_food), "get_food")).to eq(%w(get_food afford_food))
+      expect(helper.add_questions(%w[afford_food], "get_food")).to eq(%w[get_food afford_food])
     end
   end
 end

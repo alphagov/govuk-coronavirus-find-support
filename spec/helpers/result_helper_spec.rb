@@ -31,7 +31,7 @@ RSpec.describe ResultsHelper, type: :helper do
       })
       expect(result_groups(session)).to eq(
         being_unemployed: {
-          heading:  I18n.t("coronavirus_form.groups.being_unemployed.title"),
+          heading: I18n.t("coronavirus_form.groups.being_unemployed.title"),
           questions: [
             I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
             I18n.t("results_link.being_unemployed.are_you_off_work_ill"),
@@ -51,7 +51,7 @@ RSpec.describe ResultsHelper, type: :helper do
       })
       expect(result_groups(session)).to eq(
         being_unemployed: {
-          heading:  I18n.t("coronavirus_form.groups.being_unemployed.title"),
+          heading: I18n.t("coronavirus_form.groups.being_unemployed.title"),
           questions: [
             I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
             I18n.t("results_link.being_unemployed.are_you_off_work_ill"),

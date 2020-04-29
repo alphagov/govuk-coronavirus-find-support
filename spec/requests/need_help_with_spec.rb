@@ -1,6 +1,6 @@
 RSpec.describe "need-help-with" do
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(get_food feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[get_food feel_safe])
   end
 
   describe "GET /need-help-with" do
@@ -48,7 +48,7 @@ RSpec.describe "need-help-with" do
 
     context "doesn't know what help they need" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(feel_safe get_food))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[feel_safe get_food])
       end
       let(:selected) { ["I’m not sure"] }
 

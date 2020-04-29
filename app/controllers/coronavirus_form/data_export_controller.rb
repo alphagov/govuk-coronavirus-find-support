@@ -15,7 +15,7 @@ class CoronavirusForm::DataExportController < ApplicationController
       format.html
       format.csv do
         render csv: produce_csv(usage_statistics(params[:start_date], params[:end_date])),
-          filename: "data-export"
+               filename: "data-export"
       end
     end
   end
@@ -51,7 +51,7 @@ private
 
   def produce_csv(results)
     csv_data = CSV.generate(col_sep: "|") do |csv|
-      csv << %w(question answer date count)
+      csv << %w[question answer date count]
       results.each do |question, value|
         value.each do |k|
           csv << [

@@ -4,7 +4,7 @@ RSpec.describe "get-food" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(get_food feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[get_food feel_safe])
   end
 
   describe "GET /get-food" do
@@ -46,7 +46,7 @@ RSpec.describe "get-food" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do

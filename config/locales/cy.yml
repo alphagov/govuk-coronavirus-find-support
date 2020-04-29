@@ -27,11 +27,11 @@ cy:
       alt: Llywodraeth Cymru
       text: Hafan
   govwales_breadcrumbs:
-    start_again_text: Start again CY
+    start_again_text: Decrhau eto
     start_again_url: "/"
-    back_text: Nôl
+    back_text: Yn ôl
   govwales_buttons:
-    start_again_text: Start again CY
+    start_again_text: Decrhau eto
     start_again_url: "/"
   accessibility_statement:
     title: Accessibility statement

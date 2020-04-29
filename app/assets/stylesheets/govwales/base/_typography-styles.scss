@@ -132,4 +132,17 @@ html {
       @include lineHeight($p-d-line-size);
     }
   }
+
+  .page__intro {
+    @include fontSize(24px);
+    @include lineHeight(28px);
+    font-weight: bold;
+    color: $text__intro_primary;
+    margin-bottom: 20px;
+
+    @media all and (min-width: $screen-xs) {
+      @include fontSize(28px);
+      @include lineHeight(34px);
+    }
+  }
 }

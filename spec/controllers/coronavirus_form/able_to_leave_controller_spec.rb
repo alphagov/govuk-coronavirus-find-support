@@ -15,7 +15,7 @@ RSpec.describe CoronavirusForm::AbleToLeaveController, type: :controller do
     it "saves the form response to the database" do
       session[:questions_to_ask] = %w(get_food)
 
-      post :submit, params: { able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label") }
+      post :submit, params: { able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"), locale: "en" }
 
       expect(FormResponse.first.form_response).to eq(
         "questions_to_ask" => %w(get_food),
@@ -29,7 +29,7 @@ RSpec.describe CoronavirusForm::AbleToLeaveController, type: :controller do
       request.env["HTTP_SMOKE_TEST"] = "true"
       before_count = FormResponse.count
 
-      post :submit, params: { able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label") }
+      post :submit, params: { able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"), locale: "en" }
 
       expect(FormResponse.count).to eq(before_count)
     end
@@ -37,7 +37,7 @@ RSpec.describe CoronavirusForm::AbleToLeaveController, type: :controller do
     it "does not save the session id or csrf token to the database" do
       session[:questions_to_ask] = %w(get_food)
 
-      post :submit, params: { able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label") }
+      post :submit, params: { able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"), locale: "en" }
 
       expect(FormResponse.first.form_response["session_id"]).to be_nil
       expect(FormResponse.first.form_response["_csrf_token"]).to be_nil

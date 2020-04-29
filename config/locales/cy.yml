@@ -35,6 +35,30 @@ cy:
     start_again_url: "/"
   govwales_links:
     start_now_url: https://llyw.cymru/coronafeirws
+  routes:
+    privacy: privacy-CY
+    cookies: cookies-CY
+    accessibility-statement: accessibility-statement-CY
+    urgent-medical-help: urgent-medical-help-CY
+    get-help-from-nhs: get-help-from-nhs-CY
+    need-help-with: need-help-with-CY
+    feel-safe: feel-safe-CY
+    afford-rent-mortgage-bills: afford-rent-mortgage-bills-CY
+    afford-food: afford-food-CY
+    get-food: get-food-CY
+    have-you-been-made-unemployed: have-you-been-made-unemployed-CY
+    are-you-off-work-ill: are-you-off-work-ill-CY
+    self-employed: self-employed-CY
+    living-with-vulnerable: living-with-vulnerable-CY
+    have-somewhere-to-live: have-somewhere-to-live-CY
+    have-you-been-evicted: have-you-been-evicted-CY
+    mental-health-worries: mental-health-worries-CY
+    able-to-leave: able-to-leave-CY
+    mental-health-worries: mental-health-worries-CY
+    results: results-CY
+    clear-session: clear-session-CY
+    session-expired: session-expired-CY
+    data-export: data-export-CY
   accessibility_statement:
     title: Accessibility statement
     body_text: |

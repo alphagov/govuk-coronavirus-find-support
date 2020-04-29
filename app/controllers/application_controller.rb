@@ -22,19 +22,7 @@ class ApplicationController < ActionController::Base
   end
 
   before_action -> { request.variant = :govwales }
-  before_action :set_locale
-
-  def set_locale
-    I18n.locale = extract_locale
-  end
-
-  def extract_locale
-    if request.host == Rails.configuration.cy_host
-      :cy
-    else
-      I18n.default_locale
-    end
-  end
+  around_action :set_locale_from_url
 
 private
 

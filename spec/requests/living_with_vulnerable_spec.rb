@@ -4,7 +4,7 @@ RSpec.describe "living-with-vulnerable" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(living_with_vulnerable feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[living_with_vulnerable feel_safe])
   end
 
   describe "GET /living-with-vulnerable" do
@@ -46,7 +46,7 @@ RSpec.describe "living-with-vulnerable" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do

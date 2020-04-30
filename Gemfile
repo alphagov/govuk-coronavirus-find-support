@@ -19,7 +19,8 @@ gem "sass-rails", "< 6"
 gem "sentry-raven", "~> 3.0"
 gem "uglifier", "~> 4.2"
 
-gem "autoprefixer-rails" # GOV.WALES specific gem
+gem "autoprefixer-rails", "~> 9.7" # GOV.WALES specific gem
+gem "route_translator", "~> 8.0" # GOV.WALES specific gem
 
 group :development do
   gem "listen", "~> 3"

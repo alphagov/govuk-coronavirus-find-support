@@ -1,12 +1,13 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
-    # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-    get "/healthcheck", to: proc { [200, {}, %w[OK]] }
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/healthcheck", to: proc { [200, {}, %w[OK]] }
 
-    get "/", to: redirect("/need-help-with")
+  # GOV.WALES specific Controller (I18n aware)
+  get "/", to: "start_now#index"
 
+  localized do
     scope module: "coronavirus_form" do
       get "/privacy", to: "privacy#show"
       get "/cookies", to: "cookies#show"
@@ -70,14 +71,13 @@ Rails.application.routes.draw do
 
       # Results
       get "/results", to: "results#show"
-
       get "/clear-session", to: "session#delete"
 
       get "/session-expired", to: "session_expired#show"
 
       get "/data-export", to: "data_export#show"
     end
-
-    mount GovukPublishingComponents::Engine, at: "/component-guide"
   end
+
+  mount GovukPublishingComponents::Engine, at: "/component-guide"
 end

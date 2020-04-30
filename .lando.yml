@@ -2,7 +2,9 @@ name: coronavirus-find-support
 proxy:
   appserver:
     - coronavirus-find-support.lndo.site:5000
-
+    - canfod-cymorth-coronafeirws.lndo.site:5000
+env_file:
+  - lando/.env
 services:
   appserver:
     type: ruby:2.6.5

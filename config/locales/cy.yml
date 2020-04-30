@@ -28,11 +28,36 @@ cy:
       text: Hafan
   govwales_breadcrumbs:
     start_again_text: Decrhau eto
-    start_again_url: "/"
+    start_again_url: "/angen-help-gyda"
     back_text: Yn ôl
   govwales_buttons:
     start_again_text: Decrhau eto
-    start_again_url: "/"
+    start_again_url: "/angen-help-gyda"
+  govwales_links:
+    start_now_url: https://llyw.cymru/coronafeirws
+  routes:
+    privacy: preifatrwydd
+    cookies: cwcis
+    accessibility-statement: datganiad-hygyrchedd
+    urgent-medical-help: help-meddygol-brys
+    get-help-from-nhs: help-wrth-gig
+    need-help-with: angen-help-gyda
+    feel-safe: teimlon-ddiogel
+    afford-rent-mortgage-bills: fforddio-rhent-morgais-biliau
+    afford-food: fforddio-bwyd
+    get-food: cael-bwyd
+    have-you-been-made-unemployed: wedi-eich-gwneud-yn-ddi-waith
+    are-you-off-work-ill: ffwrdd-or-gwaith-yn-sal
+    self-employed: hunangyflogedig
+    living-with-vulnerable: byw-gyda-rhywun-agored-i-niwed
+    have-somewhere-to-live: rhywle-i-fyw
+    have-you-been-evicted: wedi-taflu-allan-och-cartref
+    mental-health-worries: poeni-iechyd-meddwl
+    able-to-leave: gallu-gadael
+    results: canlyniadau
+    clear-session: clirio-sesiwn
+    session-expired: sesiwn-wedi-dod-i-ben
+    data-export: allforio-data
   accessibility_statement:
     title: Accessibility statement
     body_text: |
@@ -230,18 +255,6 @@ cy:
             options:
               - "I’m not sure"
             custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
-      help: # NHS question and 'What do you need help with'.
-        # No title needed for this group.
-        questions:
-          urgent_medical_help:
-            title: "CY Do you need urgent medical help?"
-            description: "CY You can check if you have coronavirus (COVID-19) symptoms and get medical advice"
-            options:
-              option_yes:
-                label: "CY Yes"
-              option_no:
-                label: "CY No"
-            custom_select_error: "Select yes if you need urgent medical help"
       feeling_unsafe:
         title: "Feeling unsafe"
         questions:
@@ -407,6 +420,7 @@ cy:
       header:
         context: Coronavirus (COVID-19)
         title: Information based on your answers
+        title_no_results: Information based on your answers - no specific information
         start_again_text: Start again
       feedback:
         text: Help us improve
@@ -428,9 +442,9 @@ cy:
           - "Not sure"
         items:
           - text: "If you’re in immediate danger call 999 and ask for the Police."
-          - text: "If you’re in danger and unable to talk on the phone, call 999, and then press 55."
+          - text: "If you’re in danger and unable to talk on the phone, call 999, then press 55 when prompted."
           - text: 'Call the National Domestic Abuse Helpline on <a href="tel:0808 2000 247" class="govuk-link">0808 2000 247</a>'
-          - text: 'If you’re a child call Childline on <a href="tel:0800 1111" class="govuk-link">0800 1111</a>'
+          - text: 'If you’re a child or young person call Childline on <a href="tel:0800 1111" class="govuk-link">0800 1111</a>'
           - text: 'Find helplines <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-and-domestic-abuse/coronavirus-covid-19-support-for-victims-of-domestic-abuse" class="govuk-link">if you’re a victim of domestic abuse or feel at risk of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services" class="govuk-link">victim or witness of a crime</a> (these pages have no quick escape)'
           - text: "Get safety advice for survivors (Women’s Aid)"
             href: "https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/"

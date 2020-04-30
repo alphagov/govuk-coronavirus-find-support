@@ -232,6 +232,10 @@ GEM
       netrc (~> 0.8)
     rexml (3.2.4)
     rouge (3.18.0)
+    route_translator (8.0.0)
+      actionpack (>= 5.0.0.1, < 6.1)
+      activesupport (>= 5.0.0.1, < 6.1)
+      addressable (~> 2.7)
     rspec-core (3.9.1)
       rspec-support (~> 3.9.1)
     rspec-expectations (3.9.1)
@@ -257,7 +261,7 @@ GEM
       rexml
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-govuk (3.5.0)
+    rubocop-govuk (3.7.0)
       rubocop (= 0.82.0)
       rubocop-rails (~> 2)
       rubocop-rake (~> 0.5.1)
@@ -342,7 +346,7 @@ PLATFORMS
 
 DEPENDENCIES
   apparition (~> 0.5.0)
-  autoprefixer-rails
+  autoprefixer-rails (~> 9.7)
   awesome_print (~> 1.8)
   bootsnap (~> 1)
   byebug (~> 11)
@@ -360,6 +364,7 @@ DEPENDENCIES
   rack_session_access (~> 0.2)
   rails (~> 6.0.2)
   rails-controller-testing (~> 1.0)
+  route_translator (~> 8.0)
   rspec-rails (~> 4.0.0)
   rubocop-govuk
   sass-rails (< 6)

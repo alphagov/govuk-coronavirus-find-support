@@ -4,7 +4,7 @@ RSpec.describe "self-employed" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(self_employed have_you_been_made_unemployed feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[self_employed have_you_been_made_unemployed feel_safe])
   end
 
   describe "GET /self-employed" do
@@ -46,7 +46,7 @@ RSpec.describe "self-employed" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do
@@ -73,14 +73,14 @@ RSpec.describe "self-employed" do
     it "redirects to the next question for no response" do
       post self_employed_path, params: { self_employed: negative_response }
 
-      expect(session[:questions_to_ask]).to eq(%w(self_employed have_you_been_made_unemployed are_you_off_work_ill feel_safe))
+      expect(session[:questions_to_ask]).to eq(%w[self_employed have_you_been_made_unemployed are_you_off_work_ill feel_safe])
       expect(response).to redirect_to(have_you_been_made_unemployed_path)
     end
 
     it "removes irrelevant question for yes response" do
       post self_employed_path, params: { self_employed: positive_response }
 
-      expect(session[:questions_to_ask]).to eq(%w(self_employed feel_safe))
+      expect(session[:questions_to_ask]).to eq(%w[self_employed feel_safe])
     end
 
     it "shows an error when no radio button selected" do

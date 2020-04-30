@@ -22,16 +22,19 @@ var enhancedEcommerceTracking = function (d) {
       return
     }
 
-    lists.forEach(function (list) {
+    for (var idx = 0; idx < lists.length; idx++) {
+      var list = lists[idx];
       var listName = list.getAttribute('data-track-ec-list')
       var positions = list.querySelectorAll('li')
 
-      positions.forEach(function (listItem, i) {
+      for (var i = 0; i < positions.length; i++) {
+        var listItem = positions[i]
         var links = listItem.querySelectorAll('a')
         var positionNumber = i + 1 // Position number needs to start from 1.
 
         if (links.length >= 1) {
-          links.forEach(function (link) {
+          for (var j = 0; j < links.length; j++) {
+            var link = links[j]
             var href = link.href
 
             // Save the position to the item in the DOM
@@ -61,10 +64,10 @@ var enhancedEcommerceTracking = function (d) {
                 list: list
               })
             })
-          })
+          }
         }
-      })
-    })
+      }
+    }
   }
 }
 

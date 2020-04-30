@@ -4,8 +4,8 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in
   # config/application.rb.
 
-  config.en_host = ENV["EN_HOST_NAME"] || "coronavirus-find-support.lndo.site"
-  config.cy_host = ENV["CY_HOST_NAME"] || "canfod-cymorth-coronafeirws.lndo.site"
+  config.en_host = "coronavirus-find-support.lndo.site"
+  config.cy_host = "canfod-cymorth-coronafeirws.lndo.site"
 
   config.hosts = [
     "localhost",

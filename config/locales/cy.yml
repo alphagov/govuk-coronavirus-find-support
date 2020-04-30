@@ -36,29 +36,28 @@ cy:
   govwales_links:
     start_now_url: https://llyw.cymru/coronafeirws
   routes:
-    privacy: privacy-CY
-    cookies: cookies-CY
-    accessibility-statement: accessibility-statement-CY
-    urgent-medical-help: urgent-medical-help-CY
-    get-help-from-nhs: get-help-from-nhs-CY
-    need-help-with: need-help-with-CY
-    feel-safe: feel-safe-CY
-    afford-rent-mortgage-bills: afford-rent-mortgage-bills-CY
-    afford-food: afford-food-CY
-    get-food: get-food-CY
-    have-you-been-made-unemployed: have-you-been-made-unemployed-CY
-    are-you-off-work-ill: are-you-off-work-ill-CY
-    self-employed: self-employed-CY
-    living-with-vulnerable: living-with-vulnerable-CY
-    have-somewhere-to-live: have-somewhere-to-live-CY
-    have-you-been-evicted: have-you-been-evicted-CY
-    mental-health-worries: mental-health-worries-CY
-    able-to-leave: able-to-leave-CY
-    mental-health-worries: mental-health-worries-CY
-    results: results-CY
-    clear-session: clear-session-CY
-    session-expired: session-expired-CY
-    data-export: data-export-CY
+    privacy: preifatrwydd
+    cookies: cwcis
+    accessibility-statement: datganiad-hygyrchedd
+    urgent-medical-help: help-meddygol-brys
+    get-help-from-nhs: help-wrth-gig
+    need-help-with: angen-help-gyda
+    feel-safe: teimlon-ddiogel
+    afford-rent-mortgage-bills: fforddio-rhent-morgais-biliau
+    afford-food: fforddio-bwyd
+    get-food: cael-bwyd
+    have-you-been-made-unemployed: wedi-eich-gwneud-yn-ddi-waith
+    are-you-off-work-ill: ffwrdd-or-gwaith-yn-sal
+    self-employed: hunangyflogedig
+    living-with-vulnerable: byw-gyda-rhywun-agored-i-niwed
+    have-somewhere-to-live: rhywle-i-fyw
+    have-you-been-evicted: wedi-taflu-allan-och-cartref
+    mental-health-worries: poeni-iechyd-meddwl
+    able-to-leave: gallu-gadael
+    results: canlyniadau
+    clear-session: clirio-sesiwn
+    session-expired: sesiwn-wedi-dod-i-ben
+    data-export: allforio-data
   accessibility_statement:
     title: Accessibility statement
     body_text: |

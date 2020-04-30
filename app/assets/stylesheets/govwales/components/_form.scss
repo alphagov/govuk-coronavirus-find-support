@@ -8,6 +8,25 @@
       padding: 40px;
     }
 
+    // Form title
+    .gem-c-title__text {
+      padding: 0;
+      border: none;
+    }
+
+    .govuk-hint {
+      font-family: $base-font-family;
+    }
+
+    .govuk-caption-xl {
+      font-family: $base-font-family;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      @include fontSize(14px);
+      color: $darkgrey;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
 
     // Form inputs
     .govuk-radios,
@@ -22,6 +41,7 @@
       }
 
       &__label {
+        font-family: $base-font-family;
         position: relative;
         z-index: 2;
         background-color: $form__checkbox_label_background;
@@ -120,14 +140,15 @@
 
   .govuk-error-summary,
   .govuk-error-message {
+    font-family: $base-font-family;
     color: $form__text;
-    background: $background__callout_alert !important;
+    background: $background__callout_alert;
     border: none;
-    border-left: $borders__call_out_border_width solid $borders__text_border_alert_right !important;
-    background-image: image-url($png_call_out_alert) !important;
-    background-repeat: no-repeat !important;
-    background-position: 15px 22px !important;
-    background-size: $sm__backgroundsize_25 !important;
+    border-left: $borders__call_out_border_width solid $borders__text_border_alert_right;
+    background-image: image-url($png_call_out_alert);
+    background-repeat: no-repeat;
+    background-position: 15px 22px;
+    background-size: $sm__backgroundsize_25;
 
     a {
       color: $link;
@@ -154,5 +175,6 @@
 
   .govuk-error-message {
     padding: 20px;
+    border-left: 3px solid $borders__text_border_alert_right;
   }
 }

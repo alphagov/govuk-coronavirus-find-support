@@ -145,4 +145,12 @@ html {
       @include lineHeight(34px);
     }
   }
+
+  .page-header__title,
+  .gem-c-title__text {
+    border-bottom: 2px $lightgrey_semi solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 0;
+  }
 }

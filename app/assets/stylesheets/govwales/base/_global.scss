@@ -32,3 +32,8 @@ body > .govuk-width-container,
 .app-c-callout {
   display: none;
 }
+
+// Override two thirds column to make it 100% width
+.govuk-grid-column-two-thirds-from-desktop {
+  width: 100%;
+}

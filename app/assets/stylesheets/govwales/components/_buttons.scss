@@ -1,14 +1,26 @@
 #main-content {
   .govuk-button {
+    width: auto;
     text-decoration: none;
     color: $white;
     background-color: $btn;
-    padding: 15px 20px;
+    padding: 20px 20px 20px 50px;
     @include fontSize(18px);
     font-weight: bold;
     display: inline-block;
     border: none;
     box-shadow: none;
+
+    &--start {
+      background-image: image-url('govwales/arrow_left_white.svg');
+      background-position: left center;
+      background-repeat: no-repeat;
+
+      // Hide govuk's right chervron
+      svg {
+        display: none;
+      }
+    }
 
     &:hover {
       background-color: $btn__hover;

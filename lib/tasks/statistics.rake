@@ -31,13 +31,13 @@ namespace :statistics do
 
     questions.each_key do |question|
       question_text = questions.dig(question, :title)
-      response_count = responses.
-        group("form_response -> '#{question}'").
-        count.
-        reject { |k, _| k.nil? }.
-        sort.
-        map { |k, v| " - #{k}: #{v}" }.
-        join("\n")
+      response_count = responses
+        .group("form_response -> '#{question}'")
+        .count
+        .reject { |k, _| k.nil? }
+        .sort
+        .map { |k, v| " - #{k}: #{v}" }
+        .join("\n")
       puts "#{question_text}\n#{response_count}\n\n"
     end
   end

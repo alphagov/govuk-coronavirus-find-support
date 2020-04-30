@@ -4,7 +4,7 @@ RSpec.describe "still-working" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(are_you_off_work_ill feel_safe))
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[are_you_off_work_ill feel_safe])
   end
 
   describe "GET /still-working" do
@@ -46,7 +46,7 @@ RSpec.describe "still-working" do
 
     context "without this question in the sesion data" do
       before do
-        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w(foo))
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[foo])
       end
 
       it "redirects to session expired" do

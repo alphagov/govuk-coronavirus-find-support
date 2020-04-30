@@ -27,6 +27,10 @@
         &:hover {
           color: $link__header_logo_hover;
         }
+
+        &:focus {
+          outline: 3px solid $states__focus;
+        }
       }
     }
 
@@ -49,6 +53,7 @@
 
         &:focus {
           color: #fff;
+          outline: 3px solid $states__focus;
         }
       }
     }

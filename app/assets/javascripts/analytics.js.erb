@@ -30,9 +30,12 @@ var analyticsInit = function () {
       m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
 
+
     ga('create', trackingId, 'auto')
     ga('set', 'allowAdFeatures', false)
     ga('set', 'anonymizeIp', true)
+
+    ga('require', 'ec')
 
     window.GOVUK.enhancedEcommerceTracking(document)
 

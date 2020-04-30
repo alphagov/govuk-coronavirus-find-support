@@ -28,11 +28,11 @@ cy:
       text: Hafan
   govwales_breadcrumbs:
     start_again_text: Start again CY
-    start_again_url: "/"
+    start_again_url: "/angen-help-gyda"
     back_text: Nôl
   govwales_buttons:
     start_again_text: Start again CY
-    start_again_url: "/"
+    start_again_url: "/angen-help-gyda"
   govwales_links:
     start_now_url: https://llyw.cymru/coronafeirws
   routes:

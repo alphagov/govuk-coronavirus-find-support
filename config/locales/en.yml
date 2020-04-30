@@ -28,11 +28,11 @@ en:
       text: Home
   govwales_breadcrumbs:
     start_again_text: Start again
-    start_again_url: "/"
+    start_again_url: "/need-help-with"
     back_text: Back
   govwales_buttons:
     start_again_text: Start again
-    start_again_url: "/"
+    start_again_url: "/need-help-with"
   govwales_links:
     start_now_url: https://gov.wales/coronavirus
   accessibility_statement:

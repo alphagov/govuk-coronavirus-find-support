@@ -188,6 +188,21 @@ en:
       radio_field: "Select %{field}"
       checkbox_field: "Select at least one %{field}"
     groups:
+      location:
+        questions:
+          nation:
+            title: "Where do you live?"
+            title_caption: "We will show you information which is relevant to where you live."
+            options:
+              option_england:
+                label: "England"
+              option_scotland:
+                label: "Scotland"
+              option_wales:
+                label: "Wales"
+              optopn_northern_ireland:
+                label: "Northern Ireland"
+            custom_select_error: "Select where you live"
       filter_questions:
         questions:
           need_help_with:

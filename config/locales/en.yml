@@ -150,7 +150,7 @@ en:
             - - text: cookie_preferences
               - text: Let us know what your cookie preferences are.
               - text: 1 year
-            - - text: _sessions_id
+            - - text: _session_id
               - text: Remembers which question you’re up to and how you answered previous questions.
               - text: 4 hours
         - header: Measuring website usage with Google Analytics (analytics cookies)

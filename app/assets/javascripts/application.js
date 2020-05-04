@@ -3,6 +3,7 @@
 //= require govuk_publishing_components/components/cookie-banner
 //= require govuk_publishing_components/lib/cookie-functions
 //= require analytics
+//= require analytics-enhancedEcommerce
 //= require cookies
 window.CookieSettings.start()
 window.GOVUK.analyticsInit()

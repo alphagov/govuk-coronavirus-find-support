@@ -78,4 +78,5 @@ Rails.application.routes.draw do
   end
 
   mount GovukPublishingComponents::Engine, at: "/component-guide"
+  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 end

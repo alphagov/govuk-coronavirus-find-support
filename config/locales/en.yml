@@ -463,7 +463,7 @@ en:
           - text: 'If there’s no one to help you get food, prescriptions, or other essentials, find out if you can get help from a volunteer through the <a href="https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating" class="govuk-link"> NHS Volunteer Responders programme.</a>'
           - text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/find-local-council" class="govuk-link"> contact your local council</a> to find out what services are available in your area.'
           - text: "Get more information on accessing food and other essential supplies."
-          - href: "https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies"
+            href: "https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies"
     being_unemployed:
       have_you_been_made_unemployed:
         title: "If you’ve been made unemployed, or put on temporary leave (furloughed)"

@@ -461,7 +461,7 @@ en:
           - text: "You might be able to phone or email your local shops to get a food delivery, or get food online."
           - text: 'If you can, ask friends, family or neighbours to help you get food. <a href="https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies" class="govuk-link">Find out how you can pay for your shopping safely.</a>'
           - text: 'If there’s no one to help you get food, prescriptions, or other essentials, find out if you can get help from a volunteer through the <a href="https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating" class="govuk-link"> NHS Volunteer Responders programme.</a>'
-          - text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/find-local-council" class="govuk-link"> contact your local council</a> to find out what services are available in your area.'
+          - text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/find-local-council" class="govuk-link">contact your local council</a> to find out what services are available in your area.'
           - text: "Get more information on accessing food and other essential supplies."
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies"
     being_unemployed:

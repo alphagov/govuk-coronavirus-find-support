@@ -8,7 +8,7 @@ module FillInTheFormSteps
   def and_needs_help_with_all_options
     expect(page.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
 
-    check I18n.t("coronavirus_form.groups.feeling_unsafe.title")
+    check I18n.t("coronavirus_form.groups.feeling_unsafe.need_help_with_label")
     check I18n.t("coronavirus_form.groups.paying_bills.title")
     check I18n.t("coronavirus_form.groups.getting_food.title")
     check I18n.t("coronavirus_form.groups.being_unemployed.title")

@@ -20,7 +20,12 @@ describe('Enhanced ecommerce', function () {
     var li2 = document.createElement('li')
 
     var ul = document.createElement('ul')
-    ul.setAttribute('data-track-ec-list', 'ecommerce-list-name')
+
+    var subsection = document.createElement('div')
+    subsection.setAttribute('data-ec-list-subsection', 'ecommerce-subsection-name')
+
+    var section = document.createElement('section')
+    section.setAttribute('data-track-ec-list', 'ecommerce-list-name')
 
     var wrapper = document.createElement('div')
 
@@ -30,7 +35,9 @@ describe('Enhanced ecommerce', function () {
     li2.appendChild(a2)
     ul.appendChild(li)
     ul.appendChild(li2)
-    wrapper.appendChild(ul)
+    subsection.appendChild(ul)
+    section.appendChild(subsection)
+    wrapper.appendChild(section)
 
     return wrapper
   }
@@ -107,6 +114,15 @@ describe('Enhanced ecommerce', function () {
         'click',
         {
           list: 'ecommerce-list-name'
+        }
+      )
+
+      expect(ga).toHaveBeenCalledWith(
+        'send', {
+          hitType: 'event',
+          eventCategory: 'UX',
+          eventAction: 'click',
+          eventLabel: 'Results'
         }
       )
     })

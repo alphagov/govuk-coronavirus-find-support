@@ -54,6 +54,9 @@ var enhancedEcommerceTracking = function (d) {
               var position = $a.getAttribute('data-track-ec-position')
               var href = $a.href
               var list = ancestor($a, '[data-track-ec-list]').getAttribute('data-track-ec-list')
+              var subsection = ancestor($a, '[data-ec-list-subsection]').getAttribute('data-ec-list-subsection')
+
+              ga('set', 'dimension1', subsection)
 
               ga('ec:addProduct', {
                 name: href,
@@ -62,6 +65,13 @@ var enhancedEcommerceTracking = function (d) {
 
               ga('ec:setAction', 'click', {
                 list: list
+              })
+
+              ga('send', {
+                hitType: 'event',
+                eventCategory: 'UX',
+                eventAction: 'click',
+                eventLabel: 'Results'
               })
             })
           }

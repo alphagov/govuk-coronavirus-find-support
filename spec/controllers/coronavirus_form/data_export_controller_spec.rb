@@ -34,8 +34,8 @@ RSpec.describe CoronavirusForm::DataExportController, type: :controller do
     before do
       FormResponse.create(
         form_response: {
-         able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
-         get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
+          able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
+          get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
         },
         created_at: "2020-04-10 10:00:00",
       )

@@ -5,13 +5,13 @@ RSpec.describe ResultsHelper, type: :helper do
     it "should return all group keys if selected_groups is empty" do
       session.merge!({ "selected_groups": [] })
       expect(relevant_group_keys).to eq(%i[
-          feeling_unsafe
-          paying_bills
-          getting_food
-          being_unemployed
-          going_in_to_work
-          somewhere_to_live
-          mental_health
+        feeling_unsafe
+        paying_bills
+        getting_food
+        being_unemployed
+        going_in_to_work
+        somewhere_to_live
+        mental_health
       ])
     end
 

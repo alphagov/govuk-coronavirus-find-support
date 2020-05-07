@@ -7,6 +7,7 @@ source "https://rubygems.org"
 gem "asset_sync"
 gem "bootsnap", "~> 1"
 gem "fog-aws"
+gem 'google-api-client', '~> 0.38.0'
 gem "govuk_app_config", "~> 2.1.1"
 gem "govuk_publishing_components", "~> 21.42.0"
 gem "lograge"
@@ -37,6 +38,7 @@ end
 group :development, :test do
   gem "awesome_print", "~> 1.8"
   gem "byebug", "~> 11"
+  gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
   gem "foreman", "~> 0.87.1"
   gem "pry", "~> 0.13.1"
   gem "pry-rails", "~> 0.3.9"

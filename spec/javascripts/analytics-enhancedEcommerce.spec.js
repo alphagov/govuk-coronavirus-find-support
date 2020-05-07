@@ -129,6 +129,12 @@ describe('Enhanced ecommerce', function () {
   })
 
   describe('without consent', function () {
+    beforeAll(function () {
+      if (typeof window.ga === 'undefined') {
+        window.ga = function () { }
+      }
+    })
+
     beforeEach(function () {
       GOVUK.setConsentCookie({
         'essential': true,

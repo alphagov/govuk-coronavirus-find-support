@@ -92,17 +92,17 @@ describe('Enhanced ecommerce', function () {
 
       expect(ga).toHaveBeenCalledWith(
         'ec:addImpression',
-        { name: 'https://example.com/', list: 'ecommerce-list-name', position: 1 }
+        { name: 'https://example.com/', list: 'ecommerce-list-name', position: 1, dimension2: 'ecommerce-subsection-name' }
       )
 
       expect(ga).toHaveBeenCalledWith(
         'ec:addImpression',
-        { name: 'https://example.com/?two', list: 'ecommerce-list-name', position: 2 }
+        { name: 'https://example.com/?two', list: 'ecommerce-list-name', position: 2, dimension2: 'ecommerce-subsection-name' }
       )
 
       expect(ga).toHaveBeenCalledWith(
         'ec:addImpression',
-        { name: 'No link', list: 'ecommerce-list-name', position: 3 }
+        { name: 'No link', list: 'ecommerce-list-name', position: 3, dimension2: 'ecommerce-subsection-name' }
       )
     })
 
@@ -119,8 +119,15 @@ describe('Enhanced ecommerce', function () {
       expect(ga).toHaveBeenCalled()
 
       expect(ga).toHaveBeenCalledWith(
+        'set',
+        'dimension2',
+        'ecommerce-subsection-name'
+      )
+
+      expect(ga).toHaveBeenCalledWith(
         'ec:addProduct',
-        { name: 'https://example.com/', position: '1' }
+        {
+          name: 'https://example.com/', position: '1' }
       )
 
       expect(ga).toHaveBeenCalledWith(

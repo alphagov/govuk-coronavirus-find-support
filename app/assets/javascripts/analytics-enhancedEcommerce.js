@@ -75,6 +75,12 @@ var enhancedEcommerceTracking = function (d) {
               })
             })
           }
+        } else {
+          ga('ec:addImpression', {
+            name: 'No link',
+            list: listName,
+            position: positionNumber
+          })
         }
       }
     }

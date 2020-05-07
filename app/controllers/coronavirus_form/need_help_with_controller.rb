@@ -30,7 +30,7 @@ private
     groups_items = groups_hash.map do |key, title|
       {
         value: title,
-        label: title,
+        label: group_labels[key] || title,
         id: "option_#{key}",
         checked: false,
       }
@@ -62,6 +62,10 @@ private
 
   def groups_hash
     all_groups.map { |key, group| { key => group[:title] } if group[:title] }.compact.reduce(:merge)
+  end
+
+  def group_labels
+    @group_labels ||= all_groups.map { |key, group| { key => group[:need_help_with_label] } if group[:need_help_with_label] }.compact.reduce(:merge)
   end
 
   def update_session_store

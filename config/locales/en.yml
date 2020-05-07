@@ -198,6 +198,7 @@ en:
             custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
       feeling_unsafe:
         title: "Feeling unsafe"
+        need_help_with_label: "Feeling unsafe where you live, or being worried about someone else"
         questions:
           feel_safe:
             title: "Do you feel safe where you live?"

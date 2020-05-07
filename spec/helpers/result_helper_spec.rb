@@ -63,4 +63,19 @@ RSpec.describe ResultsHelper, type: :helper do
       expect(result_groups(session)[:being_unemployed][:questions].map { |q| q[:title] }).not_to include(I18n.t("results_link.being_unemployed.are_you_off_work_ill.title"))
     end
   end
+
+  describe "#filter_results_by_nation" do
+    it "should return filtered results if the session nation matches that attached to the questions" do
+      session.merge!({
+        "nation": "nation 1",
+      })
+      test_hash = {
+        items: [
+          { show_to_nations: "nation 1" },
+          { show_to_nations: "nation 2" },
+        ],
+      }
+      expect(filter_results_by_nation(test_hash.dup)[:items]).to eq([{ show_to_nations: "nation 1" }])
+    end
+  end
 end

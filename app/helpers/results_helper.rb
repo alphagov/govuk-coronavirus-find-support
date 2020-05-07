@@ -23,7 +23,7 @@ module ResultsHelper
 
   def filter_results_by_nation(question_results)
     question_results[:items] = question_results[:items].select do |item|
-      item[:show_to_nations].nil? || item[:show_to_nations].include?(session[:where_live])
+      item[:show_to_nations].nil? || item[:show_to_nations].include?(session[:nation])
     end
     question_results
   end

@@ -7,6 +7,7 @@ describe('Enhanced ecommerce', function () {
   var snippet = function () {
     var text = document.createTextNode('Example text')
     var text2 = document.createTextNode('Example text too')
+    var text3 = document.createTextNode('Example text without a link')
 
     var a = document.createElement('a')
     a.href = 'https://example.com'
@@ -18,6 +19,7 @@ describe('Enhanced ecommerce', function () {
 
     var li = document.createElement('li')
     var li2 = document.createElement('li')
+    var li3 = document.createElement('li')
 
     var ul = document.createElement('ul')
 
@@ -33,8 +35,10 @@ describe('Enhanced ecommerce', function () {
     a2.appendChild(text2)
     li.appendChild(a)
     li2.appendChild(a2)
+    li3.appendChild(text3)
     ul.appendChild(li)
     ul.appendChild(li2)
+    ul.appendChild(li3)
     subsection.appendChild(ul)
     section.appendChild(subsection)
     wrapper.appendChild(section)
@@ -88,7 +92,17 @@ describe('Enhanced ecommerce', function () {
 
       expect(ga).toHaveBeenCalledWith(
         'ec:addImpression',
-        { name: 'https://example.com/', list: 'ecommerce-list-name', position: 1 }
+        { name: 'https://example.com/', list: 'ecommerce-list-name', position: 1, dimension2: 'ecommerce-subsection-name' }
+      )
+
+      expect(ga).toHaveBeenCalledWith(
+        'ec:addImpression',
+        { name: 'https://example.com/?two', list: 'ecommerce-list-name', position: 2, dimension2: 'ecommerce-subsection-name' }
+      )
+
+      expect(ga).toHaveBeenCalledWith(
+        'ec:addImpression',
+        { name: 'No link', list: 'ecommerce-list-name', position: 3, dimension2: 'ecommerce-subsection-name' }
       )
     })
 
@@ -105,8 +119,15 @@ describe('Enhanced ecommerce', function () {
       expect(ga).toHaveBeenCalled()
 
       expect(ga).toHaveBeenCalledWith(
+        'set',
+        'dimension2',
+        'ecommerce-subsection-name'
+      )
+
+      expect(ga).toHaveBeenCalledWith(
         'ec:addProduct',
-        { name: 'https://example.com/', position: '1' }
+        {
+          name: 'https://example.com/', position: '1' }
       )
 
       expect(ga).toHaveBeenCalledWith(

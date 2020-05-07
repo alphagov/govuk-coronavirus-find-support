@@ -31,6 +31,7 @@ var enhancedEcommerceTracking = function (d) {
         var listItem = positions[i]
         var links = listItem.querySelectorAll('a')
         var positionNumber = i + 1 // Position number needs to start from 1.
+        var subsection = ancestor(listItem, '[data-ec-list-subsection]').getAttribute('data-ec-list-subsection')
 
         if (links.length >= 1) {
           for (var j = 0; j < links.length; j++) {
@@ -44,7 +45,8 @@ var enhancedEcommerceTracking = function (d) {
             ga('ec:addImpression', {
               name: href,
               list: listName,
-              position: positionNumber
+              position: positionNumber,
+              dimension2: subsection
             })
 
             // Add a listener so that an event will be fired if the link(s) in
@@ -75,6 +77,13 @@ var enhancedEcommerceTracking = function (d) {
               })
             })
           }
+        } else {
+          ga('ec:addImpression', {
+            name: 'No link',
+            list: listName,
+            position: positionNumber,
+            dimension2: subsection
+          })
         }
       }
     }

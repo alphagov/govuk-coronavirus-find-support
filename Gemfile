@@ -13,7 +13,7 @@ gem "lograge"
 gem "pg", "~> 1"
 gem "puma", "~> 4.3"
 gem "rack_session_access", "~> 0.2"
-gem "rails", "~> 6.0.2"
+gem "rails", "~> 6.0.3"
 
 gem "sass-rails", "< 6"
 gem "sentry-raven", "~> 3.0"

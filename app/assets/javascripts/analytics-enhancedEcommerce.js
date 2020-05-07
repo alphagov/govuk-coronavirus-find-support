@@ -56,7 +56,7 @@ var enhancedEcommerceTracking = function (d) {
               var list = ancestor($a, '[data-track-ec-list]').getAttribute('data-track-ec-list')
               var subsection = ancestor($a, '[data-ec-list-subsection]').getAttribute('data-ec-list-subsection')
 
-              ga('set', 'dimension1', subsection)
+              ga('set', 'dimension2', subsection)
 
               ga('ec:addProduct', {
                 name: href,

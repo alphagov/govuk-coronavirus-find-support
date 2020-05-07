@@ -73,8 +73,6 @@ Rails.application.routes.draw do
     get "/clear-session", to: "session#delete"
 
     get "/session-expired", to: "session_expired#show"
-
-    get "/data-export", to: "data_export#show"
   end
 
   mount GovukPublishingComponents::Engine, at: "/component-guide"

@@ -24,6 +24,3 @@ RSpec.configure do |config|
     page.driver.add_headers("SMOKE_TEST" => "true")
   end
 end
-
-ENV["DATA_EXPORT_BASIC_AUTH_USERNAME"] ||= "testuser"
-ENV["DATA_EXPORT_BASIC_AUTH_PASSWORD"] ||= SecureRandom.hex

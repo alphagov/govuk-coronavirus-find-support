@@ -33,7 +33,26 @@ RSpec.describe "data-export", type: :request do
     )
   end
 
-  describe "GET /able-to-leave" do
+  describe "GET /data-export" do
+    context "with basic auth enabled" do
+      it "rejects unauthenticated users" do
+        get data_export_path, headers: {
+          "HTTP_ACCEPT" => "text/csv",
+        }
+        expect(response).to have_http_status(401)
+      end
+
+      it "permits authenticated users" do
+        username = ENV["DATA_EXPORT_BASIC_AUTH_USERNAME"]
+        password = ENV["DATA_EXPORT_BASIC_AUTH_PASSWORD"]
+        get data_export_path, headers: {
+          "HTTP_ACCEPT" => "text/csv",
+          "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
+        }
+        expect(response).to have_http_status(200)
+      end
+    end
+
     let(:expected_partial) do
       [
         "question|answer|date|count",

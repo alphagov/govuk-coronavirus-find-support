@@ -15,6 +15,9 @@ Rails.application.routes.draw do
     get "/urgent-medical-help", to: redirect("/nation")
     get "/get-help-from-nhs", to: redirect("/nation")
 
+    # Redirect for old route (301 is default)
+    get "/where-live", to: redirect("/nation")
+
     # Question: Where do you live
     get "/nation", to: "nation#show"
     post "/nation", to: "nation#submit"

@@ -2,7 +2,14 @@
 
 module FillInTheFormSteps
   def given_a_user_is_struggling_because_of_coronavirus
-    visit need_help_with_path
+    visit nation_path
+  end
+
+  def and_they_live_in_england
+    expect(page.body).to have_content(I18n.t("coronavirus_form.groups.location.questions.nation.title"))
+
+    choose I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label")
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_needs_help_with_all_options

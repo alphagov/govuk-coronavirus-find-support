@@ -13,11 +13,19 @@ module ResultsHelper
   end
 
   def filter_questions_by_session(group_key, session)
-    I18n.t("results_link.#{group_key}").each_with_object([]) do |question, array|
+    group = I18n.t("results_link.#{group_key}").dup
+    group.each_with_object([]) do |question, array|
       if question[1][:show_options].include?(session[question[0]])
-        array << I18n.t("results_link.#{group_key}.#{question[0]}")
+        array << filter_results_by_nation(I18n.t("results_link.#{group_key}.#{question[0]}").dup)
       end
     end
+  end
+
+  def filter_results_by_nation(question_results)
+    question_results[:items] = question_results[:items].select do |item|
+      item[:show_to_nations].nil? || item[:show_to_nations].include?(session[:nation])
+    end
+    question_results
   end
 
   def relevant_group_keys
@@ -27,7 +35,7 @@ module ResultsHelper
     # :help and :filter_questions which are not really groups
     # empty.
     if selected_groups.blank?
-      return I18n.t("coronavirus_form.groups").keys - %i[filter_questions help leave_home]
+      return I18n.t("coronavirus_form.groups").keys - %i[filter_questions help leave_home location]
     end
 
     selected_groups # Otherwise we can use selected groups

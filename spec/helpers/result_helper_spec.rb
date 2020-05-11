@@ -28,17 +28,14 @@ RSpec.describe ResultsHelper, type: :helper do
         "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
         "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
         "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
+        "nation": I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label"),
       })
-      expect(result_groups(session)).to eq(
-        being_unemployed: {
-          heading: I18n.t("coronavirus_form.groups.being_unemployed.title"),
-          questions: [
-            I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
-            I18n.t("results_link.being_unemployed.are_you_off_work_ill"),
-            I18n.t("results_link.being_unemployed.self_employed"),
-          ],
-        },
-      )
+      result_array = [
+        I18n.t("results_link.being_unemployed.have_you_been_made_unemployed.title"),
+        I18n.t("results_link.being_unemployed.are_you_off_work_ill.title"),
+        I18n.t("results_link.being_unemployed.self_employed.title"),
+      ]
+      expect(result_groups(session)[:being_unemployed][:questions].map { |q| q[:title] }).to eq(result_array)
     end
 
     it "should filter out empty groups" do
@@ -48,46 +45,37 @@ RSpec.describe ResultsHelper, type: :helper do
         "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
         "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
         "afford_food": I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.options.option_no.label"),
+        "nation": I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label"),
       })
-      expect(result_groups(session)).to eq(
-        being_unemployed: {
-          heading: I18n.t("coronavirus_form.groups.being_unemployed.title"),
-          questions: [
-            I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
-            I18n.t("results_link.being_unemployed.are_you_off_work_ill"),
-            I18n.t("results_link.being_unemployed.self_employed"),
-          ],
-        },
-      )
+      expect(result_groups(session).keys).not_to include(:getting_food)
     end
   end
 
   describe "#filter_questions_by_session" do
-    it "should return all group questions if all the session responses meet criteria" do
-      session.merge!({
-        "selected_groups": %i[being_unemployed],
-        "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
-        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
-        "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
-      })
-      expect(filter_questions_by_session(:being_unemployed, session)).to eq([
-        I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
-        I18n.t("results_link.being_unemployed.are_you_off_work_ill"),
-        I18n.t("results_link.being_unemployed.self_employed"),
-      ])
-    end
-
     it "should return filtered group questions if the session responses do not meet criteria" do
       session.merge!({
         "selected_groups": %i[being_unemployed],
         "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
         "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_no.label"),
         "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
+        "nation": I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label"),
       })
-      expect(filter_questions_by_session(:being_unemployed, session)).to eq([
-        I18n.t("results_link.being_unemployed.have_you_been_made_unemployed"),
-        I18n.t("results_link.being_unemployed.self_employed"),
-      ])
+      expect(result_groups(session)[:being_unemployed][:questions].map { |q| q[:title] }).not_to include(I18n.t("results_link.being_unemployed.are_you_off_work_ill.title"))
+    end
+  end
+
+  describe "#filter_results_by_nation" do
+    it "should return filtered results if the session nation matches that attached to the questions" do
+      session.merge!({
+        "nation": "nation 1",
+      })
+      test_hash = {
+        items: [
+          { show_to_nations: "nation 1" },
+          { show_to_nations: "nation 2" },
+        ],
+      }
+      expect(filter_results_by_nation(test_hash.dup)[:items]).to eq([{ show_to_nations: "nation 1" }])
     end
   end
 end

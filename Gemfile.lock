@@ -379,6 +379,7 @@ DEPENDENCIES
   capybara (~> 3.32.1)
   fog-aws
   foreman (~> 0.87.1)
+  gds-api-adapters (~> 63)
   govuk_app_config (~> 2.1.1)
   govuk_publishing_components (~> 21.45.0)
   jasmine-core (>= 2.99, < 4)

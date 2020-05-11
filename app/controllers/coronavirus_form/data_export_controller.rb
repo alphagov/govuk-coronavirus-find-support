@@ -23,14 +23,14 @@ class CoronavirusForm::DataExportController < ApplicationController
   def usage_statistics(start_date, end_date)
     questions = I18n.t("coronavirus_form.groups").map { |_, v| v[:questions] }.reduce(:merge)
 
-    start_date = Date.parse(sanitize(start_date)).beginning_of_day
-    end_date = Date.parse(sanitize(end_date)).end_of_day
+    start_date = Date.parse(sanitize(start_date)).beginning_of_day if start_date
+    end_date = Date.parse(sanitize(end_date)).end_of_day if end_date
 
     results = {}
     questions.each_key do |question|
       question_text = questions.dig(question, :title)
       counts = FormResponse
-        .where(created_at: start_date..end_date)
+        .tap { |q| q.where(created_at: start_date..end_date) if start_date && end_date }
         .select(Arel.sql("created_at::date, form_response -> '#{question}', COUNT(*)"))
         .group(Arel.sql("created_at::date, form_response -> '#{question}'"))
         .pluck(Arel.sql("created_at::date, form_response -> '#{question}', COUNT(*)"))

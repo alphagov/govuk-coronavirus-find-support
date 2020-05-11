@@ -29,7 +29,7 @@ module ResultsHelper
   end
 
   def relevant_group_keys
-    # If the user selects only "I’m not sure" from /need-help-with, their selected groups will
+    # If the user selects only "I'm not sure" from /need-help-with, their selected groups will
     # be blank, but they'll be asked all questions. In this case we should assume all groups are
     # potentially relevant. We can get all groups from the Locale file, but will need to exclude
     # :help and :filter_questions which are not really groups

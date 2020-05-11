@@ -167,3 +167,14 @@ jobs:
         file: git-master/concourse/tasks/run-smoke-tests.yml
         params:
           TEST_URL: 'https://find-coronavirus-support.service.gov.uk'
+
+  - name: run-link-checker-periodically
+    plan:
+      - get: git-master
+      - get: every-day
+        trigger: true
+      - task: run-link-checker
+        file: git-master/concourse/tasks/run-link-checker.yml
+        params:
+          CF_SPACE: production
+          SENTRY_DSN: https://((sentry-dsn))

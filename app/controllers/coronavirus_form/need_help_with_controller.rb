@@ -74,7 +74,7 @@ private
     session[:need_help_with] = @form_responses[:need_help_with]
 
     selected_groups = @form_responses[:need_help_with].map do |item|
-      groups_hash.key(item) if groups_hash.has_value?(item)
+      groups_hash.key(item) if groups_hash.value?(item)
     end
 
     session[:selected_groups] = selected_groups.compact

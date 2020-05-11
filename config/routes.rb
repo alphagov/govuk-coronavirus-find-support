@@ -12,8 +12,8 @@ Rails.application.routes.draw do
     get "/accessibility-statement", to: "accessibility_statement#show"
 
     # Redirect for deleted question and page (301 is default)
-    get "/urgent-medical-help", to: redirect("/where-live")
-    get "/get-help-from-nhs", to: redirect("/where-live")
+    get "/urgent-medical-help", to: redirect("/nation")
+    get "/get-help-from-nhs", to: redirect("/nation")
 
     # Question: Where do you live
     get "/nation", to: "nation#show"

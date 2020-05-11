@@ -58,10 +58,7 @@ GOV.UK PaaS. This user has the SpaceDeveloper role, so it can `cf push` the appl
 
 ## Exporting form response data
 
-Aggregated anonymous daily data can be extracted from the application for any
-specified time period using the `/data-export` route.  Output is available in
-CSV format.
+Aggregate data can be exported to a google sheet.
+See here for more info:
 
-For example, to get data for a five day period starting 10th April 2020:
-
-     <path-to-service>/data-export.csv?start_date=2020-04-08&end_date=2020-04-15
+[How can you export data](docs/usage_statistics_exports.md)

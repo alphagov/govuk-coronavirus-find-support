@@ -46,7 +46,7 @@ Rails.application.routes.draw do
     get "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#show"
     post "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#submit"
 
-    # Question: Are you off work because you’re ill or self-isolating?
+    # Question: Are you off work because you're ill or self-isolating?
     get "/are-you-off-work-ill", to: "are_you_off_work_ill#show"
     post "/are-you-off-work-ill", to: "are_you_off_work_ill#submit"
 

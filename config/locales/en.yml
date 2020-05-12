@@ -656,7 +656,7 @@ en:
           - "Not sure"
         items:
           - text: "Find out if you should be going to work"
-            href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
+            href: "https://www.gov.uk/government/publications/staying-alert-and-safe-social-distancing/staying-alert-and-safe-social-distancing"
           - text: "What to do if you’re worried about going to work because of coronavirus (Citizens Advice)"
             href: "https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working/"
             show_to_nations:

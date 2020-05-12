@@ -1,4 +1,12 @@
 task :link_checker, [:date] => [:environment] do |_, args|
+  puts "Running external link checker"
+  external_link_checker
+
+  puts "Running internal link checker"
+  internal_link_checker
+end
+
+def external_link_checker
   links = []
   results_groups = I18n.t("results_link")
   results_groups.each do |_, results_group|
@@ -40,7 +48,7 @@ task :link_checker, [:date] => [:environment] do |_, args|
   end
 end
 
-task :internal_link_checker, [:date] => [:environment] do |_, args|
+def internal_link_checker
   links = []
   results_groups = I18n.t("results_link")
   results_groups.each do |_, results_group|

@@ -178,3 +178,5 @@ jobs:
         params:
           CF_SPACE: production
           SENTRY_DSN: https://((sentry-dsn))
+          LINK_CHECKER_API_BEARER_TOKEN: ((link-checker-api-bearer-token))
+          PUBLISHING_API_BEARER_TOKEN: ((publishing-api-bearer-token))

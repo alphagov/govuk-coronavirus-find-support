@@ -11,6 +11,8 @@ params:
   CF_ORG: govuk_development
   SENTRY_DSN: https://((sentry-dsn))
   CF_SPACE:
+  LINK_CHECKER_API_BEARER_TOKEN: ((link-checker-api-bearer-token))
+  PUBLISHING_API_BEARER_TOKEN: ((publishing-api-bearer-token))
 run:
   dir: src
   path: sh

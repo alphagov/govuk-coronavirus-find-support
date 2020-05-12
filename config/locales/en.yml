@@ -416,6 +416,10 @@ en:
             href: "https://womensaid.scot/"
             show_to_nations:
               - Scotland
+          - text: "Get help from Scotland’s forced marriage and domestic abuse helpline"
+            href: "https://sdafmh.org.uk/"
+            show_to_nations:
+              - Scotland
           - text: "Get help for children (Childline)"
             href: "https://www.childline.org.uk/"
           - text: "Get advice for children (Children’s Commissioner for Wales)"
@@ -496,8 +500,16 @@ en:
             href: "https://www.gov.uk/universal-credit/eligibility"
           - text: "If you have a child, find out if they can get free school meals"
             href: "https://www.gov.uk/apply-free-school-meals"
-          - text: "Apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
+          - text: "Find out if you can apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
             href: "https://www.healthystart.nhs.uk/healthy-start-vouchers/do-i-qualify/"
+            show_to_nations:
+              - England
+              - Wales
+              - Northern Ireland
+          - text: "Find out if you can apply for Best Start Grant and Best Start Foods if you have a child (mygov.scot)"
+            href: "https://www.mygov.scot/best-start-grant-best-start-foods/"
+            show_to_nations:
+              - Scotland  
           - text: "Find out if you’re eligible for the Scottish Welfare Fund (mygov.scot)"
             href: "https://www.mygov.scot/scottish-welfare-fund/"
             show_to_nations:
@@ -648,6 +660,10 @@ en:
             href: "https://www.mygov.scot/benefits-support/"
             show_to_nations:
               - Scotland
+          - text: "Find financial support for your business (Scottish Government)"
+            href: "https://findbusinesssupport.gov.scot/coronavirus-advice"
+            show_to_nations:
+              - Scotland
     going_in_to_work:
       living_with_vulnerable:
         title: "If you’re worried about going in to work"
@@ -746,6 +762,14 @@ en:
               - Wales
           - text: "Find out how to get help if you’re being evicted (mygov.scot)"
             href: "https://www.mygov.scot/private-tenant-eviction/getting-help/"
+            show_to_nations:
+              - Scotland
+          - text: "Find out about your rights if you have a private landlord (mygov.scot)"
+            href: "https://www.mygov.scot/private-rental-rights/"
+            show_to_nations:
+              - Scotland
+          - text: "Find out about your rights if you have a social landlord (mygov.scot)"
+            href: "https://www.mygov.scot/social-rental-rights/"
             show_to_nations:
               - Scotland
     mental_health:

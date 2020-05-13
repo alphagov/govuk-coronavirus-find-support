@@ -535,7 +535,7 @@ en:
           - "No"
           - "Not sure"
         items:
-          - text: "Find out if you can get help if you’re clinically at high risk from coronavirus (Gov.scot)"
+          - text: "Find out if you can get help if you’re clinically at high risk from coronavirus (Gov.scot)."
             href: "https://www.gov.scot/publications/covid-shielding/pages/overview/"
             show_to_nations:
               - Scotland

@@ -46,3 +46,5 @@ group :development, :test do
   gem "rspec-rails", "~> 4.0.0"
   gem "rubocop-govuk"
 end
+
+gem "prometheus-client", "~> 2.0"

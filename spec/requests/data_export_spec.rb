@@ -36,19 +36,21 @@ RSpec.describe "data-export", type: :request do
   describe "GET /data-export" do
     context "with basic auth enabled" do
       it "rejects unauthenticated users" do
-        get data_export_path, headers: {
-          "HTTP_ACCEPT" => "text/csv",
-        }
+        get data_export_path,
+            headers: {
+              "HTTP_ACCEPT" => "text/csv",
+            }
         expect(response).to have_http_status(401)
       end
 
       it "permits authenticated users" do
         username = ENV["DATA_EXPORT_BASIC_AUTH_USERNAME"]
         password = ENV["DATA_EXPORT_BASIC_AUTH_PASSWORD"]
-        get data_export_path, headers: {
-          "HTTP_ACCEPT" => "text/csv",
-          "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
-        }
+        get data_export_path,
+            headers: {
+              "HTTP_ACCEPT" => "text/csv",
+              "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
+            }
         expect(response).to have_http_status(200)
       end
     end
@@ -112,10 +114,11 @@ RSpec.describe "data-export", type: :request do
     it "shows all expected responses in CSV format for all available dates" do
       username = ENV["DATA_EXPORT_BASIC_AUTH_USERNAME"]
       password = ENV["DATA_EXPORT_BASIC_AUTH_PASSWORD"]
-      get data_export_path, headers: {
-        "HTTP_ACCEPT" => "text/csv",
-        "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
-      }
+      get data_export_path,
+          headers: {
+            "HTTP_ACCEPT" => "text/csv",
+            "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
+          }
       expected_all_time.each do |line|
         expect(response.body).to have_content(line)
       end

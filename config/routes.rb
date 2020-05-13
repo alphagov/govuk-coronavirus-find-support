@@ -7,13 +7,15 @@ Rails.application.routes.draw do
   get "/", to: redirect("https://www.gov.uk/find-coronavirus-support")
 
   scope module: "coronavirus_form" do
+    first_question = "/nation"
+
     get "/privacy", to: "privacy#show"
     get "/cookies", to: "cookies#show"
     get "/accessibility-statement", to: "accessibility_statement#show"
 
     # Redirect for deleted question and page (301 is default)
-    get "/urgent-medical-help", to: redirect("/nation")
-    get "/get-help-from-nhs", to: redirect("/nation")
+    get "/urgent-medical-help", to: redirect(first_question)
+    get "/get-help-from-nhs", to: redirect(first_question)
 
     # Redirect for old route (301 is default)
     get "/where-live", to: redirect("/nation")

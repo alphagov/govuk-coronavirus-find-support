@@ -476,7 +476,7 @@ en:
           - text: "Get help from the housing and debt helpline for Northern Ireland (Housing Rights)"
             href: "https://www.housingrights.org.uk/"
             show_to_nations:
-              Northern Ireland
+              - Northern Ireland
           - text: "What to do if you’re finding it hard to pay rent (Welsh Government)"
             href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
             show_to_nations:

@@ -6,5 +6,7 @@
 //= require analytics-enhancedEcommerce
 //= require cookies
 window.CookieSettings.start()
-window.GOVUK.analyticsInit()
 window.GOVUKFrontend.initAll()
+if (window.GOVUK.analyticsInit) {
+  window.GOVUK.analyticsInit()
+}

@@ -476,7 +476,7 @@ en:
           - text: "Get help from the housing and debt helpline for Northern Ireland (Housing Rights)"
             href: "https://www.housingrights.org.uk/"
             show_to_nations:
-              Northern Ireland
+              - Northern Ireland
           - text: "What to do if you’re finding it hard to pay rent (Welsh Government)"
             href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
             show_to_nations:
@@ -498,6 +498,10 @@ en:
         items:
           - text: "Find out if you’re eligible for Universal Credit"
             href: "https://www.gov.uk/universal-credit/eligibility"
+          - text: "Find out if you can get help from a foodbank (Citizens Advice)"
+            href: "https://www.citizensadvice.org.uk/wales/benefits/help-if-on-a-low-income/using-a-food-bank/"
+            show_to_nations: 
+              - Wales
           - text: "If you have a child, find out if they can get free school meals"
             href: "https://www.gov.uk/apply-free-school-meals"
           - text: "Find out if you can apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
@@ -531,9 +535,20 @@ en:
           - "No"
           - "Not sure"
         items:
+          - text: "Find out if you can get help if you’re clinically at high risk from coronavirus (Gov.scot)"
+            href: "https://www.gov.scot/publications/covid-shielding/pages/overview/"
+            show_to_nations:
+              - Scotland
           - text: "You might be able to phone or email your local shops to get a food delivery, or get food online."
           - text: 'If you can, ask friends, family or neighbours to help you get food. <a href="https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies" class="govuk-link">Find out how you can pay for your shopping safely.</a>'
           - text: 'If there’s no one to help you get food, prescriptions, or other essentials, find out if you can get help from a volunteer through the <a href="https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating" class="govuk-link"> NHS Volunteer Responders programme.</a>'
+            show_to_nations: 
+              - England
+              - Wales
+              - Northern Ireland
+          - text: 'If there’s no one to help you get food, prescriptions, or other essentials, <a href="https://www.gov.scot/publications/coronavirus-covid-19-help-for-vulnerable-people/" class="govuk-link"> call the coronavirus helpline for Scotland </a> or find out if you can get help from a volunteer through the <a href="https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating" class="govuk-link"> NHS Volunteer Responders programme.</a>'
+            show_to_nations: 
+              - Scotland
           - text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/find-local-council" class="govuk-link">contact your local council</a> to find out what services are available in your area.'
           - text: "Get more information on accessing food and other essential supplies."
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies"

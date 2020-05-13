@@ -7,8 +7,10 @@ module FieldValidationHelper
       next if session[field].present?
 
       invalid_fields << { field: field.to_s,
-                          text: t("coronavirus_form.groups.#{group}.questions.#{page}.#{field}.custom_error",
-                                  default: t("coronavirus_form.errors.missing_mandatory_text_field", field: t("coronavirus_form.#{page}.#{field}.label")).humanize) }
+                          text: t(
+                            "coronavirus_form.groups.#{group}.questions.#{page}.#{field}.custom_error",
+                            default: t("coronavirus_form.errors.missing_mandatory_text_field", field: t("coronavirus_form.#{page}.#{field}.label")).humanize,
+                          ) }
     end
     invalid_fields
   end

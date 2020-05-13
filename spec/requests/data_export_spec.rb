@@ -124,10 +124,12 @@ RSpec.describe "data-export", type: :request do
     it "shows all expected responses in CSV format for a given date range" do
       username = ENV["DATA_EXPORT_BASIC_AUTH_USERNAME"]
       password = ENV["DATA_EXPORT_BASIC_AUTH_PASSWORD"]
-      get data_export_path, params: { start_date: start_date, end_date: end_date }, headers: {
-        "HTTP_ACCEPT" => "text/csv",
-        "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
-      }
+      get data_export_path,
+          params: { start_date: start_date, end_date: end_date },
+          headers: {
+            "HTTP_ACCEPT" => "text/csv",
+            "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
+          }
 
       expected_partial.each do |line|
         expect(response.body).to have_content(line)

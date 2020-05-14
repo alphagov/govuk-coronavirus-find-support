@@ -502,6 +502,10 @@ en:
             href: "https://www.citizensadvice.org.uk/wales/benefits/help-if-on-a-low-income/using-a-food-bank/"
             show_to_nations: 
               - Wales
+          - text: "Find out if you can get help from a foodbank (Citizens Advice)"
+            href: "https://www.citizensadvice.org.uk/benefits/help-if-on-a-low-income/using-a-food-bank/"
+            show_to_nations: 
+              - England
           - text: "Find out about the financial support and benefits you might be able to get (NI direct)"
             href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits"
             show_to_nations: 

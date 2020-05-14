@@ -506,6 +506,8 @@ en:
             href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits"
             show_to_nations: 
               - Northern Ireland 
+          - text: "If you need food urgently and have no other support, find out if you can get help from your council"
+            href: "https://www.gov.uk/coronavirus-local-help"
           - text: "If you have a child, find out if they can get free school meals"
             href: "https://www.gov.uk/apply-free-school-meals"
           - text: "Find out if you can apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
@@ -553,7 +555,7 @@ en:
           - text: 'If there’s no one to help you get food, prescriptions, or other essentials, <a href="https://www.gov.scot/publications/coronavirus-covid-19-help-for-vulnerable-people/" class="govuk-link"> call the coronavirus helpline for Scotland </a> or find out if you can get help from a volunteer through the <a href="https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating" class="govuk-link"> NHS Volunteer Responders programme.</a>'
             show_to_nations: 
               - Scotland
-          - text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/find-local-council" class="govuk-link">contact your local council</a> to find out what services are available in your area.'
+          - text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/coronavirus-local-help" class="govuk-link">contact your local council</a> to find out what services are available in your area.'
           - text: "Get more information on accessing food and other essential supplies."
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies"
     being_unemployed:

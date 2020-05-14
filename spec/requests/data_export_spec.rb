@@ -5,6 +5,18 @@ RSpec.describe "data-export", type: :request do
   before do
     FormResponse.create(
       form_response: {
+        need_help_with: [I18n.t("coronavirus_form.groups.getting_food.title")],
+      },
+      created_at: "2020-04-10 10:00:00",
+    )
+    FormResponse.create(
+      form_response: {
+        need_help_with: [I18n.t("coronavirus_form.groups.getting_food.title")],
+      },
+      created_at: "2020-04-12 10:00:00",
+    )
+    FormResponse.create(
+      form_response: {
         able_to_leave: I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label"),
         get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
       },
@@ -62,6 +74,10 @@ RSpec.describe "data-export", type: :request do
           "#{I18n.t('coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label')}|" \
           "2020-04-12|" \
           "1",
+        "#{I18n.t('coronavirus_form.groups.filter_questions.questions.need_help_with.title')}|" \
+          "#{I18n.t('coronavirus_form.groups.getting_food.title')}|" \
+          "2020-04-12|" \
+          "1",
         "#{I18n.t('coronavirus_form.groups.leave_home.questions.able_to_leave.title')}|" \
           "#{I18n.t('coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_other.label')}|" \
           "2020-04-12|" \
@@ -74,12 +90,21 @@ RSpec.describe "data-export", type: :request do
           "#{I18n.t('coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label')}|" \
           "2020-04-12|" \
           "1",
+        "Need help with: #{I18n.t('coronavirus_form.groups.getting_food.title')}|getting_food|2020-04-12 10:00:00 UTC|1",
       ]
     end
 
     let(:expected_all_time) do
       [
         "question|answer|date|count",
+        "#{I18n.t('coronavirus_form.groups.filter_questions.questions.need_help_with.title')}|" \
+          "#{I18n.t('coronavirus_form.groups.getting_food.title')}|" \
+          "2020-04-10|" \
+          "1",
+        "#{I18n.t('coronavirus_form.groups.filter_questions.questions.need_help_with.title')}|" \
+          "#{I18n.t('coronavirus_form.groups.getting_food.title')}|" \
+          "2020-04-12|" \
+          "1",
         "#{I18n.t('coronavirus_form.groups.leave_home.questions.able_to_leave.title')}|" \
           "#{I18n.t('coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_yes.label')}|" \
           "2020-04-10|" \
@@ -108,6 +133,7 @@ RSpec.describe "data-export", type: :request do
           "#{I18n.t('coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label')}|" \
           "2020-04-12|" \
           "1",
+        "Need help with: #{I18n.t('coronavirus_form.groups.getting_food.title')}|getting_food|2020-04-10 10:00:00 UTC|2",
       ]
     end
 
@@ -119,6 +145,7 @@ RSpec.describe "data-export", type: :request do
             "HTTP_ACCEPT" => "text/csv",
             "HTTP_AUTHORIZATION" => ActionController::HttpAuthentication::Basic.encode_credentials(username, password),
           }
+
       expected_all_time.each do |line|
         expect(response.body).to have_content(line)
       end

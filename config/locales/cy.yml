@@ -30,6 +30,13 @@ cy:
     start_again_text: Decrhau eto
     start_again_url: "/angen-help-gyda"
     back_text: Yn ôl
+  govwales_beta_status:
+    status: "BETA"
+    type: "This is a new service CY. "
+    feedback:
+      text: "Rhowch adborth"
+      href: "mailto:digital@gov.wales?subject=Feedback%20on%20&body=Page%20URL%3A%20URL-here%0APage%20Title%3A"
+      help: "i'n helpu i'w wella."
   govwales_buttons:
     start_again_text: Decrhau eto
     start_again_url: "/angen-help-gyda"

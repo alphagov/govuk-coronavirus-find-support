@@ -12,6 +12,16 @@
     .gem-c-title__text {
       padding: 0;
       border: none;
+      @include fontSize($h2-font-size);
+      @include letterspacingSize($h2-font-size);
+      @include lineHeight($h2-line-size);
+
+      // Desktop font size
+      @media screen and (min-width: $screen-md) {
+        @include fontSize($h2-d-font-size);
+        @include letterspacingSize($h2-d-font-size);
+        @include lineHeight($h2-d-line-size);
+      }
     }
 
     .govuk-hint {
@@ -20,12 +30,11 @@
 
     .govuk-caption-xl {
       font-family: $base-font-family;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      @include fontSize(14px);
-      color: $darkgrey;
+      @include letterspacingSize(20px);
+      @include fontSize(20px);
+      color: $form__section_title;
       font-weight: bold;
-      margin-bottom: 0;
+      margin-bottom: 10px;
     }
 
     // Form inputs

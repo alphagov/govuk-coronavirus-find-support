@@ -1,0 +1,24 @@
+<%
+  average_title_length ||= false
+  context ||= false
+  context_locale ||= false
+
+  local_assigns[:margin_top] ||= 0
+  local_assigns[:margin_bottom] ||= 6
+
+  shared_helper = GovukPublishingComponents::Presenters::SharedHelper.new(local_assigns)
+
+  classes = %w(gem-c-title)
+  classes << (shared_helper.get_margin_top)
+  classes << (shared_helper.get_margin_bottom)
+%>
+<%= content_tag(:div, class: classes) do %>
+  <% if context %>
+    <span class="govuk-caption-xl gem-c-title__context" <%= "lang=#{context_locale}" if context_locale.present? %>>
+      <%= context %>
+    </span>
+  <% end %>
+  <div class="gem-c-title__text <% if average_title_length %>gem-c-title__text--<%= average_title_length %><% end %>">
+    <%= title %>
+  </div>
+<% end %>

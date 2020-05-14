@@ -1,3 +1,11 @@
+<%# GOVWALES: 'govwales-service-title' addition. Lines 1-8 %>
+<% content_for :page_header do %>
+  <%= render "govuk_publishing_components/components/service-title", {
+    context: t("coronavirus_form.service_title.context"),
+    title: t("coronavirus_form.service_title.title"),
+  } %>
+<% end %>
+
 <% content_for :title do %><%= t("coronavirus_form.groups.#{group}.questions.#{controller_name}.title") %><% end %>
 <% content_for :meta_tags do %>
   <meta name="description" content="<%= t("coronavirus_form.groups.#{group}.questions.#{controller_name}.title") %>" />

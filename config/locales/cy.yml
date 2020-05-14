@@ -240,6 +240,9 @@ cy:
               - text: This helps us count how many people visit the service by tracking if you’ve visited before
               - text: 3 years
   coronavirus_form:
+    service_title:
+      context: "Finder CY"
+      title: "Find help if you're affected by coronavirus CY"
     submit_and_next: "Continue"
     errors:
       page_title_prefix: 'Error: '
@@ -418,8 +421,8 @@ cy:
             custom_select_error: "Select if you’re able to leave your home or not"
     results:
       header:
-        context: Coronavirus (COVID-19)
-        title: Information based on your answers
+        context: Results CY
+        title: Information based on your answers CY
         title_no_results: Information based on your answers - no specific information
         start_again_text: Start again
       feedback:

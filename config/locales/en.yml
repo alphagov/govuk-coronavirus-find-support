@@ -502,6 +502,10 @@ en:
             href: "https://www.citizensadvice.org.uk/wales/benefits/help-if-on-a-low-income/using-a-food-bank/"
             show_to_nations: 
               - Wales
+          - text: "Find out about the financial support and benefits you might be able to get (NI direct)"
+            href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits"
+            show_to_nations: 
+              - Northern Ireland 
           - text: "If you have a child, find out if they can get free school meals"
             href: "https://www.gov.uk/apply-free-school-meals"
           - text: "Find out if you can apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
@@ -580,7 +584,11 @@ en:
             href: "https://www.citizensadvice.org.uk/wales/work/coronavirus-if-your-employer-has-told-you-not-to-work/"
             show_to_nations:
               - Wales
-          - text: "Find out about the financial support you might be able to get (Acas)"
+          - text: "Find out about the financial support and benefits you might be able to get (NI direct)"
+            href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits"
+            show_to_nations: 
+              - Northern Ireland 
+          - text: "Find out about your rights if you’ve been furloughed (Acas)"
             href: "https://www.acas.org.uk/coronavirus/if-the-employer-needs-to-close-the-workplace"
           - text: "Get information on applying for Universal Credit (Citizens Advice)"
             href: "https://www.citizensadvice.org.uk/benefits/universal-credit/"
@@ -647,6 +655,10 @@ en:
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
           - text: "What you can do if you’re self employed or a sole trader (Money Advice Service)"
             href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed"
+          - text: "Find out about the financial support and benefits you might be able to get (NI direct)"
+            href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits"
+            show_to_nations: 
+              - Northern Ireland 
           - text: "Get information on applying for Universal Credit (Citizens Advice)"
             href: "https://www.citizensadvice.org.uk/benefits/universal-credit/"
             show_to_nations:
@@ -659,6 +671,10 @@ en:
             href: "https://www.citizensadvice.org.uk/wales/benefits/universal-credit/"
             show_to_nations:
               - Wales
+          - text: "Get help with your business rates and find out about coronavirus loans (nibusinessinfo)"
+            href: "https://www.nibusinessinfo.co.uk/content/coronavirus-support-and-advice-self-employed"
+            show_to_nations:
+              - Northern Ireland
           - text: Get help from Citizens Advice
             href: "https://www.citizensadvice.org.uk/about-us/northern-ireland/"
             show_to_nations:
@@ -748,6 +764,8 @@ en:
         items:
           - text: "Find information about your rights as a tenant"
             href: "https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities"
+            show_to_nations:
+              - England
           - text: "Get coronavirus housing advice (Shelter)"
             href: "https://england.shelter.org.uk/housing_advice/coronavirus"
             show_to_nations:

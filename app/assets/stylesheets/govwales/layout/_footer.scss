@@ -1,10 +1,26 @@
 .footer {
-  background: $layout__footer_background;
   margin-top: 30px;
-  padding-bottom: 10px;
+
+  &__page_feedback {
+    margin-bottom: 30px;
+
+    a {
+      font-weight: normal;
+      text-decoration: underline;
+      color: $link__page_feedback;
+
+      &:hover {
+        color: $link__page_feedback_hover;
+      }
+    }
+  }
 
   &__components {
-    margin-top: 60px;
+    background: $layout__footer_background;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    padding-right: 0;
+    padding-left: 0;
   }
 
   &__menu {
@@ -55,7 +71,6 @@
 
   &__logo {
     margin-top: 60px;
-    margin-bottom: 40px;
 
     a {
       color: $link__footer;

@@ -33,14 +33,15 @@ en:
   govwales_beta_status:
     status: "BETA"
     type: "This is a new service. "
-    feedback:
-      text: "Give feedback"
-      name: "Coronavirus service feedback"
-      email: "digital@gov.wales"
-      subject: "Feedback on: "
-      body: "Page URL: "
-      body_feedback: "Your feedback: "
-      help: "to help improve it."
+  govwales_feedback:
+    text: "Give feedback"
+    footer_text: "Report anything wrong with this page"
+    name: "Coronavirus service feedback"
+    email: "digital@gov.wales"
+    subject: "Feedback on: "
+    body: "Page URL: "
+    body_feedback: "Your feedback: "
+    help: "to help improve it."
   govwales_buttons:
     start_again_text: Start again
     start_again_url: "/need-help-with"

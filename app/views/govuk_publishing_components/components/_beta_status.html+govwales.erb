@@ -5,7 +5,7 @@
       <%= t("govwales_beta_status.type") %>
     </p>
     <p class="beta-bar__description">
-      <%= mail_to t("govwales_beta_status.feedback.email"), t("govwales_beta_status.feedback.text"), subject: t("govwales_beta_status.feedback.subject") + t("coronavirus_form.service_title.title"), body: t("govwales_beta_status.feedback.body") + request.url + "\n" + t("govwales_beta_status.feedback.body_feedback") %>
+      <%= mail_to t("govwales_feedback.email"), t("govwales_feedback.text"), subject: t("govwales_feedback.subject") + t("coronavirus_form.service_title.title"), body: t("govwales_feedback.body") + request.url + "\n" + t("govwales_feedback.body_feedback") %>
       <%= t("govwales_beta_status.feedback.help") %>
     </p>
   </div>

@@ -1,23 +1,29 @@
 <footer class="footer" id="footer">
-  <div class="footer__backtotop"></div>
-  <div class="footer__components container">
-    <nav>
-      <ul class="footer__menu footer__menu--primary">
-        <% t('govwales_footer_primary.links').each do |link| %>
-          <%= tag.li link_to link[:text], link[:href] %>
-        <% end %>
-      </ul>
-      <ul class="footer__menu footer__menu--secondary">
-        <% t('govwales_footer_secondary.links').each do |link| %>
-          <%= tag.li link_to link[:text], link[:href] %>
-        <% end %>
-      </ul>
-    </nav>
+  <div class="footer__page_feedback container">  
+  <%= mail_to t("govwales_feedback.email"), t("govwales_feedback.footer_text"), subject: t("govwales_feedback.subject") + t("coronavirus_form.service_title.title"), body: t("govwales_feedback.body") + request.url + "\n" + t("govwales_feedback.body_feedback") %>
   </div>
-  <div class="footer__logo container" id="footer_logo">
-    <%= tag.a href: t("govwales_footer_secondary.logo.href"), class: "footer__logo", id: "footerlogo" do %>
-      <%= image_tag "govwales/footer-logo.svg", alt: t("govwales_footer_secondary.logo.alt") %>
-      <%= tag.span t("govwales_footer_secondary.logo.text"), class: "visually-hidden" %>
-    <% end %>
+  <div class="footer__backtotop">
+  </div>
+  <div class="footer__components">
+    <div class="container">
+      <nav>
+        <ul class="footer__menu footer__menu--primary">
+          <% t('govwales_footer_primary.links').each do |link| %>
+            <%= tag.li link_to link[:text], link[:href] %>
+          <% end %>
+        </ul>
+        <ul class="footer__menu footer__menu--secondary">
+          <% t('govwales_footer_secondary.links').each do |link| %>
+            <%= tag.li link_to link[:text], link[:href] %>
+          <% end %>
+        </ul>
+      </nav>
+      <div class="footer__logo">
+        <%= tag.a href: t("govwales_footer_secondary.logo.href"), class: "footer__logo", id: "footerlogo" do %>
+          <%= image_tag "govwales/footer-logo.svg", alt: t("govwales_footer_secondary.logo.alt") %>
+          <%= tag.span t("govwales_footer_secondary.logo.text"), class: "visually-hidden" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </footer>

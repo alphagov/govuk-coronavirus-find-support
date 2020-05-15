@@ -16,14 +16,14 @@ module ResultsHelper
     group = I18n.t("results_link.#{group_key}").dup
     group.each_with_object([]) do |question, array|
       if question[1][:show_options].include?(session[question[0]])
-        array << filter_results_by_nation(I18n.t("results_link.#{group_key}.#{question[0]}").dup)
+        array << filter_results_by_multiple_questions(I18n.t("results_link.#{group_key}.#{question[0]}").dup)
       end
     end
   end
 
-  def filter_results_by_nation(question_results)
+  def filter_results_by_multiple_questions(question_results)
     question_results[:items] = question_results[:items].select do |item|
-      item[:show_to_nations].nil? || item[:show_to_nations].include?(session[:nation])
+      show_to_nations_check(item) && show_to_vulnerable_check(item)
     end
     question_results
   end
@@ -51,5 +51,16 @@ module ResultsHelper
     else
       t("coronavirus_form.results.header.title")
     end
+  end
+
+private
+
+  def show_to_nations_check(item)
+    item[:show_to_nations].nil? || item[:show_to_nations].include?(session[:nation])
+  end
+
+  def show_to_vulnerable_check(item)
+    item[:show_to_vulnerable_person].nil? ||
+      I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_high_risk.label") == session[:able_to_leave]
   end
 end

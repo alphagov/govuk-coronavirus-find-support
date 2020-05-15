@@ -34,14 +34,14 @@ cy:
     status: "BETA"
     type: "This is a new service CY. "
   govwales_feedback:
-      text: "Rhowch adborth"
-      footer_text: "Adrodd am unrhyw beth sy'n bod gyda'r dudalen hon"
-      name: "Coronavirus service feedback CY"
-      email: "digital@gov.wales"
-      subject: "Adborth ynglyn â: "
-      body: "URL y dudalen: "
-      body_feedback: "Eich adborth: "
-      help: "i'n helpu i'w wella."
+    text: "Rhowch adborth"
+    footer_text: "Adrodd am unrhyw beth sy'n bod gyda'r dudalen hon"
+    name: "Coronavirus service feedback CY"
+    email: "digital@gov.wales"
+    subject: "Adborth ynglyn â: "
+    body: "URL y dudalen: "
+    body_feedback: "Eich adborth: "
+    help: "i'n helpu i'w wella."
   govwales_buttons:
     start_again_text: Decrhau eto
     start_again_url: "/angen-help-gyda"

@@ -35,7 +35,11 @@ en:
     type: "This is a new service. "
     feedback:
       text: "Give feedback"
-      href: "mailto:digital@gov.wales?subject=Feedback%20on%20&body=Page%20URL%3A%20URL-here%0APage%20Title%3A"
+      name: "Coronavirus service feedback"
+      email: "digital@gov.wales"
+      subject: "Feedback on: "
+      body: "Page URL: "
+      body_feedback: "Your feedback: "
       help: "to help improve it."
   govwales_buttons:
     start_again_text: Start again

@@ -35,7 +35,11 @@ cy:
     type: "This is a new service CY. "
     feedback:
       text: "Rhowch adborth"
-      href: "mailto:digital@gov.wales?subject=Feedback%20on%20&body=Page%20URL%3A%20URL-here%0APage%20Title%3A"
+      name: "Coronavirus service feedback CY"
+      email: "digital@gov.wales"
+      subject: "Adborth ynglyn â: "
+      body: "URL y dudalen: "
+      body_feedback: "Eich adborth: "
       help: "i'n helpu i'w wella."
   govwales_buttons:
     start_again_text: Decrhau eto

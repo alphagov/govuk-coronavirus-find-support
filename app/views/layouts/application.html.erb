@@ -58,7 +58,9 @@
       },
     } %>
     <%= render "govuk_publishing_components/components/layout_header", { environment: "public" } %>
-    <%# GOVWALES: Container 'govuk-width-container' reposition and additional class, yield:(:back_link) reposition. Lines 46-49 %>
+    <%# GOVWALES: Service BETA status addition. Lines 61-49 %>
+    <%= render "govuk_publishing_components/components/beta_status", {} %>
+    <%# GOVWALES: Container 'govuk-width-container' reposition and additional class, yield:(:back_link) reposition. Lines 64-67 %>
     <div class="govuk-width-container govwales-width-container">
       <% if yield(:back_link).present? %>
         <%= yield(:back_link) %>

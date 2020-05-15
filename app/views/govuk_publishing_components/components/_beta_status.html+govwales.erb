@@ -1,0 +1,14 @@
+<div class="beta-bar">
+  <div class="container">
+    <div class="beta-bar__label"><%= t("govwales_beta_status.status") %></div>
+    <p class="beta-bar__type">
+      <%= t("govwales_beta_status.type") %>
+    </p>
+    <p class="beta-bar__description">
+      <%= tag.a href: t("govwales_beta_status.feedback.href") do %>
+        <%= t("govwales_beta_status.feedback.text") %>
+      <% end %>
+      <%= t("govwales_beta_status.feedback.help") %>
+    </p>
+  </div>
+</div>

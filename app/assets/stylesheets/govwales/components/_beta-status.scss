@@ -1,0 +1,66 @@
+// Beta bar variables
+$beta-bar__background: $yellow;
+$beta-bar__label__background: $blue;
+$beta-bar__label__color: $white;
+$beta-bar__link__outline: $red;
+
+.beta-bar {
+  padding: 10px 0;
+  background-color: $beta-bar__background;
+  margin-bottom: 20px;
+
+  &__label {
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    background-color: $beta-bar__label__background;
+    color: $beta-bar__label__color;
+    text-transform: uppercase;
+    @include fontSize(12px);
+    @include lineHeight(16px);
+    margin-right: 10px;
+    display: inline-block;
+
+    @media screen and (min-width: $screen-sm) {
+      margin-bottom: 0;
+    }
+  }
+
+  p {
+    position: relative;
+    top: 2px;
+    margin: 0;
+    @include fontSize(16px);
+    @include lineHeight(20px);
+  }
+
+  &__type {
+    display: inline-block;
+  }
+
+  &__description {
+    @media screen and (min-width: $screen-sm) {
+        display: inline-block;
+    }
+
+    a {
+      background-color: $beta-bar__background;
+      color: $base__link;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:visited,
+      &:active {
+        color: $base__link;
+      }
+
+      &:hover,
+      &:focus {
+        color: $base__link_hover;
+      }
+
+      &:focus {
+        outline: 3px solid $beta-bar__link__outline;
+      }
+    }
+  }
+}

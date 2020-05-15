@@ -9,6 +9,7 @@ class ContentExporter
         group[1].each do |subgroup|
           subgroup[1].fetch(:items).each do |result|
             row << {
+              id: result.fetch(:id),
               group_title: groups[group[0]].fetch(:title),
               subgroup_title: subgroup[1].fetch(:title),
               text: result.fetch(:text),

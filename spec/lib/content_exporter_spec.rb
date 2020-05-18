@@ -5,18 +5,15 @@ locale_results_link_fixture = {
       items: [
         {
           id: "0001",
-          support_and_advice: false,
           text: "This is a row that only has text, it will appear like a paragraph",
         },
         {
           id: "0002",
-          support_and_advice: false,
           text: "This is a row and has text and an href, it will appear as an anchor tag",
           href: "http://test.stubbed.gov.uk",
         },
         {
           id: "0003",
-          support_and_advice: false,
           text: "This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria",
           href: "http://test.stubbed.llyw.cymru",
           show_to_nations: %w[Wales],
@@ -25,7 +22,6 @@ locale_results_link_fixture = {
       support_and_advice_items: [
         {
           id: "0004",
-          support_and_advice: false,
           text: "This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria",
           href: "http://test.stubbed.gb.gov.uk",
           show_to_nations: %w[Wales Scotland England],

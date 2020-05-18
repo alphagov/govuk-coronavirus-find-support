@@ -66,6 +66,30 @@ RSpec.feature "Fill in the find support form" do
     they_are_given_a_link_for_providing_feedback
   end
 
+  scenario "Complete the form when in England, cannot get food and is high risk vulnerable" do
+    given_a_user_is_struggling_because_of_coronavirus
+    and_they_live_in_england
+    and_needs_help_with_getting_food
+    and_is_not_finding_it_hard_to_afford_food
+    and_is_unable_to_get_food
+    and_is_not_able_to_leave_home_as_they_are_vulnerable
+    they_view_the_results_page
+    they_are_provided_with_information_about_getting_support_when_vulnerable
+    they_are_given_a_link_for_providing_feedback
+  end
+
+  scenario "Complete the form when in England, cannot get food and is not high risk vulnerable" do
+    given_a_user_is_struggling_because_of_coronavirus
+    and_they_live_in_england
+    and_needs_help_with_getting_food
+    and_is_not_finding_it_hard_to_afford_food
+    and_is_unable_to_get_food
+    and_is_not_able_to_leave_home_if_absolutely_necessary
+    they_view_the_results_page
+    they_are_not_provided_with_information_about_getting_support_when_vulnerable
+    they_are_given_a_link_for_providing_feedback
+  end
+
   scenario "Ensure we can perform a healthcheck" do
     visit healthcheck_path
 

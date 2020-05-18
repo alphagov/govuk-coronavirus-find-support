@@ -22,8 +22,8 @@ module ResultsHelper
   end
 
   def filter_results_by_multiple_questions(question_results)
-    question_results[:items] = question_results[:items].select do |item|
-      show_to_nations_check(item) && show_to_vulnerable_check(item)
+    %i[items support_and_advice_items].each do |item_type|
+      question_results[item_type] = filter_item_type_results_by_multiple_questions(item_type, question_results)
     end
     question_results
   end
@@ -54,6 +54,13 @@ module ResultsHelper
   end
 
 private
+
+  def filter_item_type_results_by_multiple_questions(item_type, question_results)
+    question_results[item_type] ||= []
+    question_results[item_type].select do |item|
+      show_to_nations_check(item) && show_to_vulnerable_check(item)
+    end
+  end
 
   def show_to_nations_check(item)
     item[:show_to_nations].nil? || item[:show_to_nations].include?(session[:nation])

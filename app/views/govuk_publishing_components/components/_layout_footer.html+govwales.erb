@@ -7,11 +7,6 @@
   <div class="footer__components">
     <div class="container">
       <nav>
-        <ul class="footer__menu footer__menu--primary">
-          <% t('govwales_footer_primary.links').each do |link| %>
-            <%= tag.li link_to link[:text], link[:href] %>
-          <% end %>
-        </ul>
         <ul class="footer__menu footer__menu--secondary">
           <% t('govwales_footer_secondary.links').each do |link| %>
             <%= tag.li link_to link[:text], link[:href] %>

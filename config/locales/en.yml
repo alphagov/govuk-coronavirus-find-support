@@ -10,18 +10,14 @@ en:
         href: "https://gov.wales/coronavirus"
   govwales_footer_secondary:
     links:
-      - text: "Contact us"
-        href: "https://gov.wales/contact-us"
       - text: "Accessibility"
         href: "https://gov.wales/help/accessibility"
-      - text: "Copyright statement"
-        href: "https://gov.wales/copyright-statement"
       - text: "Cookies"
         href: "https://gov.wales/help/cookies"
       - text: "Privacy"
         href: "https://gov.wales/website-privacy-policy"
-      - text: "Terms and conditions"
-        href: "https://gov.wales/terms-and-conditions"
+      - text: "Copyright statement"
+        href: "https://gov.wales/copyright-statement"
     logo:
       href: https://gov.wales/
       alt: Welsh Government

@@ -5,21 +5,27 @@ locale_results_link_fixture = {
       items: [
         {
           id: "0001",
+          support_and_advice: false,
           text: "This is a row that only has text, it will appaer like a paragraph",
         },
         {
           id: "0002",
+          support_and_advice: false,
           text: "This is a row has text and an href, it will appaer as an anchor tag",
           href: "http://test.stubbed.gov.uk",
         },
         {
           id: "0003",
+          support_and_advice: false,
           text: "This is a row has text, an href and group criteira, it will appear as an anchor tag if the user's answers match the criteria",
           href: "http://test.stubbed.llyw.cymru",
           show_to_nations: %w[Wales],
         },
+      ],
+      support_and_advice_items: [
         {
           id: "0004",
+          support_and_advice: false,
           text: "This is a row has text, an href and multiple group criteira, it will appear as an anchor tag if the user's answers match the more complex criteria",
           href: "http://test.stubbed.gb.gov.uk",
           show_to_nations: %w[Wales Scotland England],
@@ -54,36 +60,42 @@ RSpec.describe "ContentExporter" do
         href: "",
         show_to_nations: "",
         subgroup_title: "I am the title for Group one subgroup one",
+        support_and_advice: false,
         text: "This is a row that only has text, it will appaer like a paragraph" },
       { id: "0002",
         group_title: "I am the title for Group one",
         href: "http://test.stubbed.gov.uk",
         show_to_nations: "",
         subgroup_title: "I am the title for Group one subgroup one",
+        support_and_advice: false,
         text: "This is a row has text and an href, it will appaer as an anchor tag" },
       { id: "0003",
         group_title: "I am the title for Group one",
         href: "http://test.stubbed.llyw.cymru",
         show_to_nations: "Wales",
         subgroup_title: "I am the title for Group one subgroup one",
+        support_and_advice: false,
         text: "This is a row has text, an href and group criteira, it will appear as an anchor tag if the user's answers match the criteria" },
       { id: "0004",
         group_title: "I am the title for Group one",
         href: "http://test.stubbed.gb.gov.uk",
         show_to_nations: "Wales OR Scotland OR England",
         subgroup_title: "I am the title for Group one subgroup one",
+        support_and_advice: true,
         text: "This is a row has text, an href and multiple group criteira, it will appear as an anchor tag if the user's answers match the more complex criteria" },
       { id: "0005",
         group_title: "I am the title for Group one",
         href: "",
         show_to_nations: "",
         subgroup_title: "I am the title for Group one subgroup two",
+        support_and_advice: false,
         text: "This is a row that only has text, it will appaer like a paragraph" },
       { id: "0006",
         group_title: "I am the title for Group two",
         href: "",
         show_to_nations: "",
         subgroup_title: "I am the title for Group two subgroup one",
+        support_and_advice: false,
         text: "This is a row that only has text, it will appaer like a paragraph" },
     ]
 
@@ -128,6 +140,14 @@ RSpec.describe "ContentExporter" do
       expect(results_rows[0][:text]).to eq("This is a row that only has text, it will appaer like a paragraph")
     end
 
+    it "returns a boolean support_and_advice true when the link is under support_and_advice" do
+      expect(results_rows[3][:support_and_advice]).to be(true)
+    end
+
+    it "returns a boolean support_and_advice false when the link is under items" do
+      expect(results_rows[0][:support_and_advice]).to be(false)
+    end
+
     it "returns raises an error when a link does not have a id value" do
       broken_result_fixture = { group_one: { subgroup_one: { title: "Title", items: [{ text: "bloop" }] } } }
       allow(I18n).to receive(:t).with("results_link") { broken_result_fixture }
@@ -154,13 +174,13 @@ RSpec.describe "ContentExporter" do
   end
 
   describe "#generate_results_link_csv" do
-    csv_fixture = "id,group_title,subgroup_title,text,href,show_to_nations\n" \
-      "0001,I am the title for Group one,I am the title for Group one subgroup one,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n" \
-      "0002,I am the title for Group one,I am the title for Group one subgroup one,\"This is a row has text and an href, it will appaer as an anchor tag\",http://test.stubbed.gov.uk,\"\"\n" \
-      "0003,I am the title for Group one,I am the title for Group one subgroup one,\"This is a row has text, an href and group criteira, it will appear as an anchor tag if the user's answers match the criteria\",http://test.stubbed.llyw.cymru,Wales\n" \
-      "0004,I am the title for Group one,I am the title for Group one subgroup one,\"This is a row has text, an href and multiple group criteira, it will appear as an anchor tag if the user's answers match the more complex criteria\",http://test.stubbed.gb.gov.uk,Wales OR Scotland OR England\n" \
-      "0005,I am the title for Group one,I am the title for Group one subgroup two,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n" \
-      "0006,I am the title for Group two,I am the title for Group two subgroup one,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n"
+    csv_fixture = "id,group_title,subgroup_title,support_and_advice,text,href,show_to_nations\n" \
+      "0001,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n" \
+      "0002,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row has text and an href, it will appaer as an anchor tag\",http://test.stubbed.gov.uk,\"\"\n" \
+      "0003,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row has text, an href and group criteira, it will appear as an anchor tag if the user's answers match the criteria\",http://test.stubbed.llyw.cymru,Wales\n" \
+      "0004,I am the title for Group one,I am the title for Group one subgroup one,true,\"This is a row has text, an href and multiple group criteira, it will appear as an anchor tag if the user's answers match the more complex criteria\",http://test.stubbed.gb.gov.uk,Wales OR Scotland OR England\n" \
+      "0005,I am the title for Group one,I am the title for Group one subgroup two,false,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n" \
+      "0006,I am the title for Group two,I am the title for Group two subgroup one,false,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n"
     let(:csv) { ContentExporter.generate_results_link_csv }
 
     before do
@@ -169,7 +189,7 @@ RSpec.describe "ContentExporter" do
     end
 
     it "outputs a csv with correct headers" do
-      expect(csv.split("\n").first).to eql("id,group_title,subgroup_title,text,href,show_to_nations")
+      expect(csv.split("\n").first).to eql("id,group_title,subgroup_title,support_and_advice,text,href,show_to_nations")
     end
 
     it "outputs a well formatted csv" do

@@ -1,0 +1,60 @@
+<% title = results_title(result_groups(session)) %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    text: t("govwales_breadcrumbs.start_again_text"),
+    href: t("govwales_breadcrumbs.start_again_url"),
+    start: true,
+  } %>
+<% end %>
+
+<% content_for :title do %>
+  <%= title %>
+<% end %>
+
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= title %>" />
+<% end %>
+
+<% content_for :page_header do %>
+  <%= render "govuk_publishing_components/components/title", {
+    context: t("coronavirus_form.results.header.context"),
+    title: t("coronavirus_form.results.header.title"),
+    inverse: true,
+    margin_top: 0,
+    margin_bottom: 6,
+  } %>
+  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link govwales-removed", onclick: "ga('send', 'event', 'StartAgain', 'StartAgainClicked', '/results');" %>
+<% end %>
+
+<div class="govuk-width-container">
+  <% if result_groups(session).empty? %>
+    <%= sanitize(t("coronavirus_form.results.no_results")) %>
+  <% else %>
+    <% result_groups(session).each do |group| %>
+      <%= render "components/actions-group", {
+        title: group[1][:heading],
+        subsections: group[1][:questions]
+      } %>
+    <% end %>
+  <% end %>
+
+  <%= render "govuk_publishing_components/components/button", {
+    text: t("govwales_buttons.start_again_text"),
+    href: t("govwales_buttons.start_again_url"),
+    start: true
+  } %>
+
+  <%= render "components/callout", {
+    title: t('coronavirus_form.results.feedback.text')
+  } do %>
+    <%= link_to t("coronavirus_form.results.feedback.link_text"), t("coronavirus_form.results.feedback.link_href"), class: "govuk-link" %>
+  <% end %>
+</div>
+
+<% content_for :escape_link do %>
+  <%= render "components/escape-link", {
+    text: t("leave_this_website.link_text"),
+    href: t("leave_this_website.link_href"),
+  } %>
+<% end %>

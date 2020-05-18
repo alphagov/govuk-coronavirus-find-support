@@ -1,11 +1,11 @@
 #main-content {
   form {
     background: $form__background;
-    padding: 20px;
+    padding: 20px 0;
     margin-bottom: 20px;
 
     @media all and (min-width: $screen-md) {
-      padding: 40px;
+      padding: 40px 0;
     }
 
     // Form title

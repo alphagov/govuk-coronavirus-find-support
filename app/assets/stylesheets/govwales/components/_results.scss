@@ -1,0 +1,8 @@
+.app-c-actions-group {
+  .govuk-grid-column-one-third {
+    @media (min-width: $screen-sm) {
+      width: 66.6666%;
+      float: none;
+    }
+  }
+}

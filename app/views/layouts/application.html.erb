@@ -2,7 +2,7 @@
 <html lang="en" class="govuk-template">
   <head>
     <meta charset="utf-8" />
-    <%# GOVWALES: title adjustment. Lines 5-6 %>
+    <%# GOVWALES: title adjustment. Line 6 %>
     <title><%= t('coronavirus_form.errors.page_title_prefix') if flash[:validation]&.any? %><%= yield :title %> <%= t('layout_head.meta_title', default: "- GOV.WALES") %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <%# GOVWALES: meta additions. Lines 7-22 %>
@@ -58,9 +58,9 @@
       },
     } %>
     <%= render "govuk_publishing_components/components/layout_header", { environment: "public" } %>
-    <%# GOVWALES: Service BETA status addition. Lines 61-49 %>
+    <%# GOVWALES: Service BETA status addition. Line 62 %>
     <%= render "govuk_publishing_components/components/beta_status", {} %>
-    <%# GOVWALES: Container 'govuk-width-container' reposition and additional class, yield:(:back_link) reposition. Lines 64-67 %>
+    <%# GOVWALES: Container 'govuk-width-container' reposition and additional class, yield:(:back_link) reposition. Lines 64-73 %>
     <div class="govuk-width-container govwales-width-container">
       <% if yield(:back_link).present? %>
         <%= yield(:back_link) %>
@@ -70,6 +70,9 @@
           <%= yield(:page_header) %>
         <% end %>
       <% end %>
+    </div>
+    <%# GOVWALES: Container 'govwales-container' added. Lines 75 & 87 %>
+    <div class="govwales-container">
       <main class="govuk-main-wrapper<%= " govuk-main-wrapper--l" if yield(:back_link).blank?%>" id="main-content" role="main">
         <div class="govuk-grid-row">
           <div class="<%= current_page?(results_path) ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds-from-desktop" %>">

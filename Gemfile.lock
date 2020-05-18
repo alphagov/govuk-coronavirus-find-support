@@ -375,6 +375,7 @@ DEPENDENCIES
   lograge
   mini_racer (~> 0.2)
   pg (~> 1)
+  phantomjs (~> 2.1)
   pry (~> 0.13.1)
   pry-rails (~> 0.3.9)
   puma (~> 4.3)

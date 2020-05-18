@@ -41,6 +41,9 @@ cy:
   govwales_buttons:
     start_again_text: Decrhau eto
     start_again_url: "/angen-help-gyda"
+    back_to_top:
+      text: "Nôl i dop y dudalen"
+      href: "#wg_header"
   govwales_links:
     start_now_url: https://llyw.cymru/coronafeirws
   routes:

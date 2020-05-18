@@ -1,3 +1,9 @@
+// Variables
+$image_btn_left: 'govwales/arrow_left_white.svg';
+$image_exit: 'govwales/exit.svg';
+$image_anchor: 'govwales/anchor-up.svg';
+
+// Theming
 #main-content {
   .govuk-button {
     width: auto;
@@ -12,7 +18,7 @@
     box-shadow: none;
 
     &--start {
-      background-image: image-url('govwales/arrow_left_white.svg');
+      background-image: image-url($image_btn_left);
       background-position: left center;
       background-repeat: no-repeat;
 
@@ -52,7 +58,7 @@
   font-family: $base-font-family;
   text-decoration: none;
   padding: 20px;
-  background-image: image-url('govwales/exit.svg');
+  background-image: image-url($image_exit);
   background-position: center right 20px;
   background-repeat: no-repeat;
   background-color: $btn__exit;
@@ -86,6 +92,28 @@
 
     &:focus {
       background-color: $btn__exit_hover;
+    }
+  }
+}
+
+// Back to top button
+.footer__backtotop {
+  a {
+    background-image: image-url($image_anchor);
+    background-size: 18px 13px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    border: 1px solid $btn__sharebar_border;
+    color: $btn__sharebar;
+    display: inline-block;
+    @include fontSize(16px);
+    font-weight: bold;
+    padding: 12px;
+    padding-left: 36px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $background__sharebar_hover;
     }
   }
 }

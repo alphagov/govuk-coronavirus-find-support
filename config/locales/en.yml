@@ -41,6 +41,9 @@ en:
   govwales_buttons:
     start_again_text: Start again
     start_again_url: "/need-help-with"
+    back_to_top:
+      text: "Back to top"
+      href: "#wg_header"
   govwales_links:
     start_now_url: https://gov.wales/coronavirus
   accessibility_statement:

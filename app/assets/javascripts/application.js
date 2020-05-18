@@ -4,6 +4,8 @@
 //= require govuk_publishing_components/lib/cookie-functions
 //= require analytics
 //= require cookies
+//= require govwales/global
 window.CookieSettings.start()
 window.GOVUK.analyticsInit()
 window.GOVUKFrontend.initAll()
+window.GovWales.Init()

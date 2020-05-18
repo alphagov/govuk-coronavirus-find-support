@@ -3,6 +3,9 @@
   <%= mail_to t("govwales_feedback.email"), t("govwales_feedback.footer_text"), subject: t("govwales_feedback.subject") + t("coronavirus_form.service_title.title"), body: t("govwales_feedback.body") + request.url + "\n" + t("govwales_feedback.body_feedback") %>
   </div>
   <div class="footer__backtotop">
+    <div class="container">
+      <%= link_to t('govwales_buttons.back_to_top.text'), t('govwales_buttons.back_to_top.href') %>
+    </div>
   </div>
   <div class="footer__components">
     <div class="container">

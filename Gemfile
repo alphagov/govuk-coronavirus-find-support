@@ -27,7 +27,6 @@ group :test do
   gem "apparition", "~> 0.5.0", require: false
   gem "capybara", "~> 3.32.2", require: false
   gem "mini_racer", "~> 0.2"
-  gem "phantomjs", "~> 2.1"
   gem "selenium-webdriver", "~> 3.142"
   gem "simplecov", "~> 0.16"
   gem "timecop"
@@ -38,8 +37,9 @@ group :development, :test do
   gem "awesome_print", "~> 1.8"
   gem "byebug", "~> 11"
   gem "foreman", "~> 0.87.1"
-  gem "jasmine-core", ">= 2.99", "< 4"
-  gem "jasmine-rails", "~> 0.15.0"
+  gem "govuk_test", "~> 1.0"
+  gem "jasmine"
+  gem "jasmine_selenium_runner", require: false
   gem "pry", "~> 0.13.1"
   gem "pry-rails", "~> 0.3.9"
   gem "rails-controller-testing", "~> 1.0"

@@ -13,7 +13,7 @@ cy:
       - text: "Hygyrchedd"
         href: "https://llyw.cymru/help/hygyrchedd"
       - text: "Cwcis"
-        href: "https://llyw.cymru/help/cwcis"
+        href: "/cwcis"
       - text: "Preifatrwydd"
         href: "https://llyw.cymru/help/polisi-preifatrwydd-wefan"
       - text: "Datganiad hawlfraint"
@@ -46,6 +46,14 @@ cy:
       href: "#wg_header"
   govwales_links:
     start_now_url: https://llyw.cymru/coronafeirws
+  govwales_cookie_banner:
+    title: "Cwcis"
+    text: "We've saved some files called cookies on your device. These cookies are essential for the find help if you're affected by coronavirus service to work. CY"
+    hide:  "Cuddio"
+    link:
+      pretext: "Find out CY"
+      text: "how we use cookies CY"
+      href: "/cwcis"
   routes:
     privacy: preifatrwydd
     cookies: cwcis
@@ -187,8 +195,8 @@ cy:
     title: Get urgent help from the NHS now
     link_text: Go to NHS 111 online
     link_href: "https://111.nhs.uk/"
-  cookies:
-    title: Cookies
+  govwales_cookies:
+    title: Cwcis
     banner:
       title: "Can we store analytics cookies on your device?"
       text: "Analytics cookies help us understand how our website is being used."
@@ -197,19 +205,10 @@ cy:
       saved: "Your cookie settings were saved."
       back: "Go back to the page you were looking at"
       no_javascript_explainer_html:
-        <p class="govuk-body">We use Javascript to set most of our cookies. Unfortunately Javascript is not running on your browser, so you cannot change your settings. You can try:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>reloading the page</li>
-          <li>turning on Javascript in your browser</li>
-        </ul>
+        <p>Rydym yn defnyddio Javascript i osod mwyafrif ein cwcis. Yn anffodus, nid yw Javascript yn rhedeg ar eich porwr, felly ni allwch newid eich gosodiadau gan ddefnyddio'r dudalen hon. I reoli eich gosodiadau cwci gan ddefnyddio'r dudalen hon, trowch Javascript ymlaen yn eich porwr.</p>
       intro_html: |
-        <p class="govuk-body">This service puts small files (known as 'cookies') onto your computer.</p>
-        <p class="govuk-body">Cookies are used to:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>keep which question you’re up to and how you’ve answered previous questions</li>
-          <li>measure how you use the website so it can be updated and improved based on your needs.</li>
-        </ul>
-        <p class="govuk-body"><a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external">Find out how to manage cookies</a></p>
+        <p>Ffeiliau sy'n cael eu cadw ar eich ffôn, tabled neu gyfrifiadur pan fyddwch yn ymweld á gwefan yw cwcis.</p>
+        <p>Rydym yn defnyddio cwcis i storio gwybodaeth ynghylch sut yr ydych yn defnyddio gwefan LLYW.CYMRU, megis y tudalennau yr ydych yn ymweld á nhw. Nid yw'r cwcis hyn yn cael eu defnyddio i'ch adnabod chi'n bersonol.</p>
       cookies:
         - header: Essential cookies
           text_html: These cookies are required for this service to operate. We do not need to ask permission to use them.

@@ -296,6 +296,9 @@ $admin__node_preview: $lightgrey_semi;
 $admin__toolbar_tray: $darkgrey;
 $admin__toolbar_tray_background: #f5f5f2;
 
+// Cookie usage
+$cookie__background: $lightgrey_offwhite;
+
 // Print
 $print__text: #000;
 $print__links: $link;
@@ -407,8 +410,10 @@ $svg_call_out_information:"icons/icon_information.svg";
 $svg_call_out_alert:"icons/icon_alert.svg";
 $svg_call_out_advisory:"icons/icon-advisory.svg";
 
-// Exit icon
+// Exit-Close icon
 $svg_exit: "icons/exit.svg";
+$svg_icon__close: "govwales/icon_close.svg";
+$svg_icon__close__hover: "govwales/icon_close__hover.svg";
 
 // Cookie banner close button
 $svg_banner_close: "ui-elements/cookies_banner_close.svg";

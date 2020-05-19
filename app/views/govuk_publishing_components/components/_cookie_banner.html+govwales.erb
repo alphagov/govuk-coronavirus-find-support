@@ -1,5 +1,19 @@
-<%# Disable Cookie Banner for Gov-Wales variant %>
-<% id ||= 'global-cookie-message' %>
-
-<div id="<%= id %>" data-module="cookie-banner" style="display: none">
+<div id="global-cookie-message" class="gem-c-cookie-banner govuk-clearfix" data-module="cookie-banner" role="region" aria-label="cookie banner" data-nosnippet>
+  <div class="gem-c-cookie-banner__wrapper govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="gem-c-cookie-banner__message">
+          <h2 class="govuk-heading-m visually-hidden"><%= t('govwales_cookie_banner.title') %></h2>
+          <p class="govuk-body">
+            <%= t('govwales_cookie_banner.text') %>
+            <%= t('govwales_cookie_banner.link.pretext') %>
+            <%= link_to t('govwales_cookie_banner.link.text'), t('govwales_cookie_banner.link.href') %>.
+          </p>
+        </div>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <button class="gem-c-cookie-banner__hide-button" data-hide-cookie-banner="true" data-module="track-click" data-track-category="cookieBanner" data-track-action="Hide cookie banner"><%= t('govwales_cookie_banner.hide') %></button>
+      </div>
+    </div>
+  </div>
 </div>

@@ -13,7 +13,7 @@ en:
       - text: "Accessibility"
         href: "https://gov.wales/help/accessibility"
       - text: "Cookies"
-        href: "https://gov.wales/help/cookies"
+        href: "/cookies"
       - text: "Privacy"
         href: "https://gov.wales/website-privacy-policy"
       - text: "Copyright statement"
@@ -46,6 +46,14 @@ en:
       href: "#wg_header"
   govwales_links:
     start_now_url: https://gov.wales/coronavirus
+  govwales_cookie_banner:
+    title: "Cookie usage"
+    text: "We've saved some files called cookies on your device. These cookies are essential for the find help if you're affected by coronavirus service to work."
+    hide:  "Hide"
+    link:
+      pretext: "Find out "
+      text: "how we use cookies"
+      href: "/cookies"
   accessibility_statement:
     title: Accessibility statement
     body_text: |
@@ -164,7 +172,7 @@ en:
     title: Get urgent help from the NHS now
     link_text: Go to NHS 111 online
     link_href: "https://111.nhs.uk/"
-  cookies:
+  govwales_cookies:
     title: Cookies
     banner:
       title: "Can we store analytics cookies on your device?"
@@ -174,19 +182,10 @@ en:
       saved: "Your cookie settings were saved."
       back: "Go back to the page you were looking at"
       no_javascript_explainer_html:
-        <p class="govuk-body">We use Javascript to set most of our cookies. Unfortunately Javascript is not running on your browser, so you cannot change your settings. You can try:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>reloading the page</li>
-          <li>turning on Javascript in your browser</li>
-        </ul>
+        <p>We use Javascript to set most of our cookies. Unfortunately Javascript is not running on your browser, so you cannot change your settings using this page. To control your cookie settings using this page try turning on Javascript in your browser.</p>
       intro_html: |
-        <p class="govuk-body">This service puts small files (known as 'cookies') onto your computer.</p>
-        <p class="govuk-body">Cookies are used to:</p>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>keep which question you’re up to and how you’ve answered previous questions</li>
-          <li>measure how you use the website so it can be updated and improved based on your needs.</li>
-        </ul>
-        <p class="govuk-body"><a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external">Find out how to manage cookies</a></p>
+        <p>Cookies are files saved on your phone, tablet or computer when you visit a website.</p>
+        <p>We use cookies to store information about how you use the GOV.WALES website, such as the pages you visit. These cookies are not used to identify you personally.</p>
       cookies:
         - header: Essential cookies
           text_html: These cookies are required for this service to operate. We do not need to ask permission to use them.

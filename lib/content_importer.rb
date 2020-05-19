@@ -29,4 +29,21 @@ module_function
     end
     output.deep_stringify_keys
   end
+
+  def overwrite_locale_links(input_locale_path, locale_hash, output_locale_path = input_locale_path)
+    existing_locale_file = YAML.load_file(input_locale_path)
+    existing_locale_file["en"]["results_link"].keys.each do |group_key|
+      existing_locale_file["en"]["results_link"][group_key].keys.each do |subgroup_key|
+        subgroup = existing_locale_file["en"]["results_link"][group_key][subgroup_key]
+        subgroup["items"] = [] # Clear out old items in case we removed some on the sheet
+        subgroup["support_and_advice"] = [] unless subgroup["support_and_advice"].nil? # ditto s&a links
+        merged_locale = subgroup.merge(locale_hash[group_key][subgroup_key])
+        existing_locale_file["en"]["results_link"][group_key][subgroup_key] = merged_locale
+      end
+    end
+
+    File.open(output_locale_path, "w") do |file|
+      file.write(existing_locale_file.to_yaml)
+    end
+  end
 end

@@ -1,3 +1,5 @@
+require "tempfile"
+
 locale_data_fixture = {
   "group_one" => {
     "subgroup_one" => {
@@ -101,6 +103,45 @@ RSpec.describe "ContentImporter" do
       output_item = output_locale["group_one"]["subgroup_one"]["support_and_advice"].first
       expect(output_item.keys).to match_array(%w[id text href show_to_nations])
       expect(output_item["show_to_nations"]).to match_array(%w[Wales Scotland England])
+    end
+  end
+
+  describe "#overwrite_locale_links" do
+    let(:test_input_file) { "spec/fixtures/en.test.yml" }
+    let(:temp_test_output_file) { Tempfile.new("en.temp_test.yml") }
+    let(:test_csv_path) { Rails.root.join("spec/fixtures/result_links_test.csv").to_s }
+
+    after(:each) do
+      temp_test_output_file.delete
+    end
+
+    it "writes out to a YAML file" do
+      lines_written = ContentImporter.overwrite_locale_links(
+        test_input_file,
+        locale_data_fixture,
+        temp_test_output_file,
+      )
+      expect(lines_written).to be > 1 # check we write more than 1 line, amount varies as we add to locale
+    end
+
+    it "changes the YAML file that is already there" do
+      expect(YAML.load_file(temp_test_output_file)).to eql(false)
+      ContentImporter.overwrite_locale_links(
+        test_input_file,
+        locale_data_fixture,
+        temp_test_output_file,
+      )
+      expect(YAML.load_file(temp_test_output_file)).not_to eql(YAML.load_file(test_input_file))
+    end
+
+    it "other parts of the locale file remain unchanged" do
+      expect(YAML.load_file(temp_test_output_file)).to eql(false)
+      ContentImporter.overwrite_locale_links(
+        test_input_file,
+        locale_data_fixture,
+        temp_test_output_file,
+      )
+      expect(YAML.load_file(temp_test_output_file)["en"]["other_stuff"]["key"]).to eql("This never changes")
     end
   end
 end

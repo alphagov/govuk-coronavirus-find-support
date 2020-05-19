@@ -62,3 +62,7 @@ Aggregate data can be exported to a google sheet.
 See here for more info:
 
 [How can you export data](docs/usage_statistics_exports.md)
+
+## Licence
+
+[MIT License](LICENCE)

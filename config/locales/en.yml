@@ -531,11 +531,19 @@ en:
             href: "https://www.citizensadvice.org.uk/wales/benefits/help-if-on-a-low-income/using-a-food-bank/"
             show_to_nations: 
               - Wales
+          - id: "0111"
+            text: "Find out if you can get help from a foodbank (Citizens Advice)"
+            href: "https://www.citizensadvice.org.uk/benefits/help-if-on-a-low-income/using-a-food-bank/"
+            show_to_nations: 
+              - England
           - id: "0030"
             text: "Find out about the financial support and benefits you might be able to get (NI direct)"
             href: "https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits"
             show_to_nations: 
               - Northern Ireland 
+          - id: "0113"
+            text: "If you need food urgently and have no other support, find out if you can get help from your council"
+            href: "https://www.gov.uk/coronavirus-local-help"
           - id: "0031"
             text: "If you have a child, find out if they can get free school meals"
             href: "https://www.gov.uk/apply-free-school-meals"
@@ -576,6 +584,12 @@ en:
           - "No"
           - "Not sure"
         items:
+          - id: "0112"
+            text: "Find out if you can get support as a clinically extremely vulnerable person."
+            href: "https://www.gov.uk/coronavirus-extremely-vulnerable/"
+            show_to_nations:
+              - England
+            show_to_vulnerable_person: true
           - id: "0038"
             text: "Find out if you can get help if you’re clinically at high risk from coronavirus (Gov.scot)."
             href: "https://www.gov.scot/publications/covid-shielding/pages/overview/"
@@ -596,7 +610,7 @@ en:
             show_to_nations: 
               - Scotland
           - id: "0043"
-            text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/find-local-council" class="govuk-link">contact your local council</a> to find out what services are available in your area.'
+            text: 'If you need urgent help and have no other support, <a href="https://www.gov.uk/coronavirus-local-help" class="govuk-link">contact your local council</a> to find out what services are available in your area.'
           - id: "0044"
             text: "Get more information on accessing food and other essential supplies."
             href: "https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies"

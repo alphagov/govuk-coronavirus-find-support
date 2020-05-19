@@ -30,7 +30,6 @@ group :test do
   gem "selenium-webdriver", "~> 3.142"
   gem "simplecov", "~> 0.16"
   gem "timecop"
-  gem "webdrivers", "~> 4.3"
 end
 
 group :development, :test do
@@ -46,4 +45,5 @@ group :development, :test do
   gem "rspec-rails", "~> 4.0.1"
   gem "rubocop-govuk"
   gem "scss_lint-govuk"
+  gem "webdrivers", "~> 4.3"
 end

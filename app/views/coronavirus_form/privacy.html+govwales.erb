@@ -1,0 +1,14 @@
+<% content_for :title do %><%= t('privacy_page.title') %><% end %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: @previous_page } %>
+<% end %>
+
+<div class="govuk-width-container">
+  <%= render "govuk_publishing_components/components/title", {
+    title:t("privacy_page.title"),
+    margin_top: 0
+  } %>
+
+  <%= sanitize(t('privacy_page.body_text')) %>
+</div>

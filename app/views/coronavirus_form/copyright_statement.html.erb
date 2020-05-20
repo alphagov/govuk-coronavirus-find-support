@@ -1,0 +1,17 @@
+<% content_for :meta_tags do %>
+  <meta name="description" content="<%= t("copyright_statement.title") %>" />
+<% end %>
+
+<% content_for :back_link do %>
+  <%= render "govuk_publishing_components/components/back_link", { href: @previous_page } %>
+<% end %>
+
+<main class="cookies-content">
+  <div class="container">
+    <%= render "govuk_publishing_components/components/title", {
+      title: t("copyright_statement.title"),
+      margin_top: 0,
+    } %>
+    <%= sanitize(t('copyright_statement.body_text')) %>
+  </div>
+</main>

@@ -11,13 +11,13 @@ cy:
   govwales_footer_secondary:
     links:
       - text: "Hygyrchedd"
-        href: "https://llyw.cymru/help/hygyrchedd"
+        href: "/datganiad-hygyrchedd"
       - text: "Cwcis"
         href: "/cwcis"
       - text: "Preifatrwydd"
-        href: "https://llyw.cymru/help/polisi-preifatrwydd-wefan"
+        href: "/preifatrwydd"
       - text: "Datganiad hawlfraint"
-        href: "https://llyw.cymru/datganiad-hawlfraint"
+        href: "/datganiad-hawlfraint"
     logo:
       href: https://llyw.cymru/
       alt: Llywodraeth Cymru
@@ -61,6 +61,7 @@ cy:
     privacy: preifatrwydd
     cookies: cwcis
     accessibility-statement: datganiad-hygyrchedd
+    copyright-statement: datganiad-hawlfraint
     urgent-medical-help: help-meddygol-brys
     get-help-from-nhs: help-wrth-gig
     need-help-with: angen-help-gyda
@@ -81,106 +82,45 @@ cy:
     session-expired: sesiwn-wedi-dod-i-ben
     data-export: allforio-data
   accessibility_statement:
-    title: Accessibility statement
+    title: Hygyrchedd
     body_text: |
-      <p class="govuk-body">This accessibility statement applies to the service on GOV.UK to find what coronavirus support is available.</p>
-      <p class="govuk-body">This website is run by the Government Digital Service. It is designed to be used by as many people as possible. The text should be clear and simple to understand. You should be able to:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>zoom in up to 300% without problems</li>
-        <li>navigate most of the website using just a keyboard</li>
-        <li>navigate most of the website using speech recognition software</li>
-        <li>use most of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)</li>
-      </ul>
-      <h2 class="govuk-heading-m">Reporting accessibility problems with this website</h2>
-      <p class="govuk-body">We’re always looking to improve the accessibility of this website. If you find any problems not listed on this page or think we’re not meeting accessibility requirements, <a class="govuk-link" href="https://www.gov.uk/contact/govuk">contact us</a>.</p>
-      <h2 class="govuk-heading-m">Enforcement procedure</h2>
-      <p class="govuk-body">The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’). If you’re not happy with how we respond to your complaint, contact the <a class="govuk-link" href="https://www.equalityadvisoryservice.com/" rel="external">Equality Advisory and Support Service (EASS)</a>.</p>
-      <h2 class="govuk-heading-m">Technical information about this website’s accessibility</h2>
-      <p class="govuk-body">The Government Digital Service is committed to making its websites accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.</p>
-      <p class="govuk-body">This website is fully compliant with the Web Content Accessibility Guidelines version 2.1 AA standard.</p>
-      <h2 class="govuk-heading-m">How we tested this website</h2>
-      <p class="govuk-body">This website was last tested on 10 April 2020. The test was carried out by the Government Digital Service, based on the <a class="govuk-link" href="https://design-system.service.gov.uk/accessibility/">accessibility statement for the GOV.UK Design System</a>.</p>
-      <p class="govuk-body">This statement was prepared on 10 April 2020. It was last updated on 10 April 2020.</p>
+      <p>Mae cynllun y safle'n cymryd i ystyriaeth defnyddwyr sy'n ddall neu sydd â nam ar eu golwg, ac mae'n addas ar gyfer meddalwedd darllen sgrin poblogaidd. Os ydych yn cael trafferth defnyddio llygoden, gallwch lywio'r wefan drwy ddefnyddio bysellfwrdd yn unig.</p>
+      <p>Mae hygyrchedd gwefan Llywodraeth Cymru yn seiliedig ar Ganllawiau ar Hygyrchedd Cynnwys y We 1.0 Consortiwm y We Fyd-Eang (W3C). Mae Llywodraeth y Cynulliad yn gweithio gydag awduron cynnwys y we, datblygwyr a sefydliadau pobl anabl i fodloni'r safon AA lle bynnag y bo modd.</p>
+  copyright_statement:
+    title: Datganiad hawlfraint
+    body_text: |
+      <p>Gallwch ddefnyddio ac ailddefnyddio'r wybodaeth sy'n ymddangos ar y wefan hon (ac eithrio logos) yn rhad ac am ddim mewn unrhyw fformat neu gyfrwng, o dan delerau’r Drwydded Llywodraeth Agored.</p>
+      <p><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Mae'r Drwydded Llywodraeth Agored i'w gweld ar wefan Archifau Gwladol</a> (dolen allanol - Saesneg yn unig), neu gallwch ysgrifennu i’r cyfeiriad hwn: Information Policy Team, The National Archives, Kew, London TW9 4DU, neu e-bostio <a href="mailto:psi@nationalarchives.gsi.gov.uk">psi@nationalarchives.gsi.gov.uk</a>.</p>
+      <p>Rhaid ichi atgynhyrchu ein deunydd yn gywir a pheidio â'i ddefnyddio mewn cyd-destun camarweiniol. Os bydd unrhyw un o'r eitemau ar y safle hwn sydd dan hawlfraint y Goron yn cael ei hailgyhoeddi neu ei chopïo ar gyfer pobl eraill, rhaid nodi ffynhonnell y deunydd a chydnabod y statws o ran hawlfraint (er enghraifft, Y Swyddfa Eiddo Deallusol © Hawlfraint y Goron 2015).  Rydym yn eich annog hefyd i greu hyperddolenni at y wefan hon.</p>
+      <p>Nid yw'r hawl i atgynhyrchu deunydd hawlfraint y Goron yn cynnwys deunydd ar y safle hwn y nodwyd bod gan drydydd parti hawlfraint arno. Byddai angen cael caniatâd deiliaid yr hawlfraint honno i atgynhyrchu deunydd o'r fath.</p>
+      <h2>Ein logo</h2>
+      <p>Mae cyfyngiadau ar ddefnyddio ein logo ac ni chaiff unigolion na sefydliadau eraill ei ddefnyddio heb ganiatâd ffurfiol gennym ni.</p>
+      <p>I ofyn am ganiatâd i ddefnyddio ein logo, anfonwch e-bost i <a href="mailto:brandingqueries@llyw.cymru">brandingqueries@llyw.cymru</a>.</p>
   privacy_page:
-    title: Privacy
+    title: Hysbysiad preifatrwydd gwefan
     body_text: |
-      <p class="govuk-body">Last updated: 9 April 2020</p>
-      <p class="govuk-body">This service is run by the Cabinet Office, working with:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Acas</li>
-        <li>Advice NI</li>
-        <li>Department of Business, Energy & Industrial Strategy</li>
-        <li>Childline</li>
-        <li>Children’s Commissioner for Wales</li>
-        <li>Citizens Advice</li>
-        <li>Citizens Advice Wales</li>
-        <li>Coram Voice</li>
-        <li>Department for Digital, Culture, Media & Sport</li>
-        <li>Department for Environment, Food & Rural Affairs</li>
-        <li>Department for Education</li>
-        <li>Department of Health & Social Care</li>
-        <li>Department for Work & Pensions</li>
-        <li>Housing Advice NI</li>
-        <li>Housing Rights</li>
-        <li>Ministry of Housing, Communities & Local Government</li>
-        <li>MIND</li>
-        <li>Money Advice Service</li>
-        <li>Nexus NI</li>
-        <li>NHS</li>
-        <li>NHS Wales</li>
-        <li>NHSX</li>
-        <li>Northern Ireland Executive</li>
-        <li>NSPCC</li>
-        <li>Older People Wales</li>
-        <li>British Red Cross</li>
-        <li>Scottish Association for Mental Health</li>
-        <li>Scottish Government</li>
-        <li>Shelter (England, Scotland, Wales, Cymru)</li>
-        <li>Victim Support Wales</li>
-        <li>Welsh Government</li>
-        <li>Women’s Aid (England & Scotland)</li>
+      <h2>Y Rheoliad Cyffredinol ar Ddiogelu Data (GDPR)</h2>
+      <p>O dan GDPR, mae gennych hawliau fel unigolyn y gallwch eu harfer mewn perthynas â’r wybodaeth sydd gennym amdanoch.</p>
+      <h2>Eich rhyngweithiad â’r wefan hon</h2>
+      <h3>Dolenni i wefannau a gwasanaethau eraill Llywodraeth Cymru</h3>
+      <p>Os ydych yn dilyn dolen i wasanaeth a gynhelir gan llyw,cymru neu wefan a ddarperir gan adran arall yn y Llywodraeth, asiantaeth neu awdurdod lleol, bydd y sefydliad hwnnw:</p>
+      <ul>
+      <li>yn gyfrifol am brosesu unrhyw data a rannwch gydag ef</li>
+      <li>yn cyhoeddi a rheoli ei hysbysiad preifatrwydd ei hun ynghyd â manylion ynghylch sut i gysylltu ag ef</li>
       </ul>
-      <p class="govuk-body">We’ll use the information you provide through this service to help make sure that people who are affected by COVID-19 (coronavirus) and the wider effects of the crisis get the support they need.</p>
-      <p class="govuk-body">This privacy notice covers:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the online service, where you can enter the information that we need to understand your needs to source the support to you</li>
-      </ul>
-
-      <h2 class="govuk-heading-m">Lawful basis for processing your personal information</h2>
-      <p class="govuk-body">Although we are not collecting any personal data from you, we are asking you to provide information about your personal circumstances. As we are collecting this information at individual level, we apply controls to ensure this information is anonymous and cannot identify you.</p>
-      <p class="govuk-body">We are processing this information on the basis that we’re carrying out a task in the public interest and to protect the vital interests of people more vulnerable to coronavirus.</p>
-
-      <h2 class="govuk-heading-m">What we do with your information</h2>
-      <p class="govuk-body">When you submit information through the online service, we will record data about the session (the journey that you take) and what answers have been selected for each session ID. This information will be stored in line with our processing and storage policy outlined below.</p>
-      <p class="govuk-body">However, this is anonymous and there is no personally identifiable information that is shared with us or other organisations, nor any way to identify which user selected which answers.</p>
-      <p class="govuk-body">We ask for information about you and those who are supporting you through the online service. We may ask for more information as part of your subsequent interactions with the service.</p>
-      <p class="govuk-body">We may share information on the usage of our service with organisations that we have worked on this service with (as listed above) in order to make sure that we and they have accurate data on who is vulnerable to coronavirus and to make sure we get help to the people who need it.</p>
-
-      <h2 class="govuk-heading-m">How long we keep your information</h2>
-      <p class="govuk-body">We will only keep your personal information for as long as we need it:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>to make sure that you get the support you need if you are a person with a medical condition which makes you vulnerable</li>
-        <li>to make sure this service is meeting overall demand from vulnerable people</li>
-        <li>to help with the overall government response to coronavirus</li>
-      </ul>
-
-      <h2 class="govuk-heading-m">Where your data is processed and stored</h2>
-      <p class="govuk-body">Your information may be transferred outside the UK while being processed by the Cabinet Office. If this happens, we’ll make sure you’re given the same level of technical and legal data protection as you are within the UK.</p>
-
-      <h2 class="govuk-heading-m">How we protect your information</h2>
-      <p class="govuk-body">We’re committed to doing all that we can to keep your information secure. We have set up systems and processes to prevent unauthorised access to or disclosure of the data we collect about you – for example, we protect your data using varying levels of encryption. All third parties that process personal data as part of this online service are required to keep that data secure. Our data processor is Amazon Web Services, who provide cloud hosting services.</li>
-
-      <h2 class="govuk-heading-m">Your rights</h2>
-      <p class="govuk-body">In certain circumstances you have the right to ask for your information to be deleted by contacting the data controller. As the information you are providing is not defined as personal data, these rights are not applicable. If you want to make any of these requests, contact us using the details below.</p>
-
-      <h2 class="govuk-heading-m">Questions and complaints</h2>
-      <p class="govuk-body">The contact details for the data controller is: Cabinet Office (Government Digital Service), The White Chapel Building, 10 Whitechapel High Street, London, E1 8QS, or <a href="mailto:gds-privacy-office@digital.cabinet-office.gov.uk" class="govuk-link">gds-privacy-office@digital.cabinet-office.gov.uk</a>.</p>
-      <p class="govuk-body">The contact details for the data controller’s Data Protection Officer are: Stephen Jones, Data Protection Officer, Cabinet Office, 70 Whitehall, London, SW1A 2AS, or <a href="mailto:dpo@cabinetoffice.gov.uk" class="govuk-link">dpo@cabinetoffice.gov.uk</a>.</p>
-      <p class="govuk-body">The Data Protection Officer provides independent advice and monitoring of Cabinet Office’s use of personal information.</p>
-      <p class="govuk-body">If you consider that your personal information has been misused or mishandled, you can make a complaint to the Information Commissioner, who is an independent regulator. The Information Commissioner can be contacted at:  Information Commissioner’s Office, Wycliffe House, Water Lane, Wilmslow, Cheshire, SK9 5AF, or 0303 123 1113, or <a href="mailto:casework@ico.org.uk" class="govuk-link">casework@ico.org.uk</a>. Any complaint to the Information Commissioner won’t affect your right to seek redress through the courts.</p>
-
-      <h2 class="govuk-heading-m">Changes to this notice</h2>
-      <p class="govuk-body">We may change this privacy notice. When we make changes to this notice, the ‘last updated’ date at the top of this page will also change. Any changes to this privacy notice will apply to you and your information immediately. If these changes affect how your personal information is processed, the Cabinet Office will take reasonable steps to make sure you know.</p>
+      <h3>Cwcis</h3>
+      <p>Details <a href="/cwcis">about cookies on this service</a>. CY</p>
+      <h2>Newidiadau i’r hysbysiad preifatrwydd hwn</h2>
+      <p>Wrth adolygu’r dudalen hon, rydych yn sicrhau eich bod o hyd yn ymwybodol o ba wybodaeth a gasglwn, sut ydym yn ei defnyddio ac o dan ba amgylchiadau, os oes unrhyw rai, y byddwn yn ei rhannu gydag eraill.</p>
+      <p>Diweddarwyd yr hysbysiad preifatrwydd hwn ddiwethaf ar 20 Mai 2020.</p>
+      <h2>Gwybodaeth bellach</h2>
+      <p>Mae modd cysylltu â Swyddog Diogelu Data Llywodraeth Cymru drwy:</p>
+      <p>Y Swyddog Diogelu Data<br>
+      Llywodraeth Cymru<br>
+      Parc Cathays<br>
+      Caerdydd<br>
+      CF10 3NQ.<br>
+      E-bost: <a href="mailto:swyddogdiogeludata@llyw.cymru">swyddogdiogeludata@llyw.cymru</a></p>
   session_expired:
     title: Your session has ended due to inactivity
     body_text: |

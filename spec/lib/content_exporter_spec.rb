@@ -53,10 +53,10 @@ RSpec.describe "ContentExporter" do
     results_row_fixture = [
       {
         id: "0001",
-        group_title: "I am the title for Group one",
+        status: "Live",
+        group_and_subgroup: "I am the title for Group one | I am the title for Group one subgroup one",
         href: "",
         show_to_nations: "",
-        subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: false,
         text: "This is a row that only has text, it will appear like a paragraph",
         group_key: "group_one",
@@ -64,10 +64,10 @@ RSpec.describe "ContentExporter" do
       },
       {
         id: "0002",
-        group_title: "I am the title for Group one",
+        status: "Live",
+        group_and_subgroup: "I am the title for Group one | I am the title for Group one subgroup one",
         href: "http://test.stubbed.gov.uk",
         show_to_nations: "",
-        subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: false,
         text: "This is a row and has text and an href, it will appear as an anchor tag",
         group_key: "group_one",
@@ -75,10 +75,10 @@ RSpec.describe "ContentExporter" do
       },
       {
         id: "0003",
-        group_title: "I am the title for Group one",
+        status: "Live",
+        group_and_subgroup: "I am the title for Group one | I am the title for Group one subgroup one",
         href: "http://test.stubbed.llyw.cymru",
         show_to_nations: "Wales",
-        subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: false,
         text: "This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria",
         group_key: "group_one",
@@ -86,10 +86,10 @@ RSpec.describe "ContentExporter" do
       },
       {
         id: "0004",
-        group_title: "I am the title for Group one",
+        status: "Live",
+        group_and_subgroup: "I am the title for Group one | I am the title for Group one subgroup one | Support and Advice",
         href: "http://test.stubbed.gb.gov.uk",
         show_to_nations: "Wales OR Scotland OR England",
-        subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: true,
         text: "This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria",
         group_key: "group_one",
@@ -97,10 +97,10 @@ RSpec.describe "ContentExporter" do
       },
       {
         id: "0005",
-        group_title: "I am the title for Group one",
+        status: "Live",
+        group_and_subgroup: "I am the title for Group one | I am the title for Group one subgroup two",
         href: "",
         show_to_nations: "",
-        subgroup_title: "I am the title for Group one subgroup two",
         support_and_advice: false,
         text: "This is a row that only has text, it will appear like a paragraph",
         group_key: "group_one",
@@ -108,10 +108,10 @@ RSpec.describe "ContentExporter" do
       },
       {
         id: "0006",
-        group_title: "I am the title for Group two",
+        status: "Live",
+        group_and_subgroup: "I am the title for Group two | I am the title for Group two subgroup one",
         href: "",
         show_to_nations: "",
-        subgroup_title: "I am the title for Group two subgroup one",
         support_and_advice: false,
         text: "This is a row that only has text, it will appear like a paragraph",
         group_key: "group_two",
@@ -148,12 +148,12 @@ RSpec.describe "ContentExporter" do
       expect(results_rows[0][:href]).to eq("")
     end
 
-    it "returns a heading string when a link has a group_title value" do
-      expect(results_rows[0][:group_title]).to eq("I am the title for Group one")
+    it "returns a concatianted heading string if there is a group and subgroup title" do
+      expect(results_rows[0][:group_and_subgroup]).to eq("I am the title for Group one | I am the title for Group one subgroup one")
     end
 
-    it "returns a heading string when a link has a subgroup_title value" do
-      expect(results_rows[0][:subgroup_title]).to eq("I am the title for Group one subgroup one")
+    it "returns a concatinated heading string with Support and Advice on the end if it's a support and advice link" do
+      expect(results_rows[3][:group_and_subgroup]).to eq("I am the title for Group one | I am the title for Group one subgroup one | Support and Advice")
     end
 
     it "returns a text string when a link has a text value" do
@@ -194,13 +194,14 @@ RSpec.describe "ContentExporter" do
   end
 
   describe "#generate_results_link_csv" do
-    csv_fixture = "id,group_title,subgroup_title,support_and_advice,text,href,show_to_nations,group_key,subgroup_key\n"\
-      "0001,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\",group_one,subgroup_one\n"\
-      "0002,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row and has text and an href, it will appear as an anchor tag\",http://test.stubbed.gov.uk,\"\",group_one,subgroup_one\n"\
-      "0003,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria\",http://test.stubbed.llyw.cymru,Wales,group_one,subgroup_one\n"\
-      "0004,I am the title for Group one,I am the title for Group one subgroup one,true,\"This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria\",http://test.stubbed.gb.gov.uk,Wales OR Scotland OR England,group_one,subgroup_one\n"\
-      "0005,I am the title for Group one,I am the title for Group one subgroup two,false,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\",group_one,subgroup_two\n"\
-      "0006,I am the title for Group two,I am the title for Group two subgroup one,false,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\",group_two,subgroup_one\n"
+    csv_fixture = "id,status,group_and_subgroup,text,href,show_to_nations,group_key,subgroup_key,support_and_advice\n"\
+    "0001,Live,I am the title for Group one | I am the title for Group one subgroup one,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\",group_one,subgroup_one,false\n"\
+    "0002,Live,I am the title for Group one | I am the title for Group one subgroup one,\"This is a row and has text and an href, it will appear as an anchor tag\",http://test.stubbed.gov.uk,\"\",group_one,subgroup_one,false\n"\
+    "0003,Live,I am the title for Group one | I am the title for Group one subgroup one,\"This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria\",http://test.stubbed.llyw.cymru,Wales,group_one,subgroup_one,false\n"\
+    "0004,Live,I am the title for Group one | I am the title for Group one subgroup one | Support and Advice,\"This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria\",http://test.stubbed.gb.gov.uk,Wales OR Scotland OR England,group_one,subgroup_one,true\n"\
+    "0005,Live,I am the title for Group one | I am the title for Group one subgroup two,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\",group_one,subgroup_two,false\n"\
+    "0006,Live,I am the title for Group two | I am the title for Group two subgroup one,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\",group_two,subgroup_one,false\n"
+
     let(:csv) { ContentExporter.generate_results_link_csv }
 
     before do
@@ -209,7 +210,7 @@ RSpec.describe "ContentExporter" do
     end
 
     it "outputs a csv with correct headers" do
-      expect(csv.split("\n").first).to eql("id,group_title,subgroup_title,support_and_advice,text,href,show_to_nations,group_key,subgroup_key")
+      expect(csv.split("\n").first).to eql("id,status,group_and_subgroup,text,href,show_to_nations,group_key,subgroup_key,support_and_advice")
     end
 
     it "outputs a well formatted csv" do

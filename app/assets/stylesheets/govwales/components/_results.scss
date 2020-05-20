@@ -1,8 +1,22 @@
-.app-c-actions-group {
-  .govuk-grid-column-one-third {
-    @media (min-width: $screen-sm) {
-      width: 66.6666%;
-      float: none;
+.app-c-actions {
+  &-group {
+    border: none;
+    padding-top: 0;
+
+    .govuk-grid-column-one-third {
+      @media (min-width: $screen-sm) {
+        width: 66.6666%;
+        float: none;
+      }
     }
+  }
+
+  &-start-again {
+    border-top: 2px $borders__divider solid;
+    padding-top: 40px;
+  }
+
+  &-no-results {
+    padding-bottom: 25px;
   }
 }

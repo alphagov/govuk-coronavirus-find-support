@@ -44,6 +44,9 @@ en:
     back_to_top:
       text: "Back to top"
       href: "#wg_header"
+  govwales_navigation:
+    content:
+      title: "Contents"
   govwales_links:
     start_now_url: https://gov.wales/coronavirus
   govwales_cookie_banner:

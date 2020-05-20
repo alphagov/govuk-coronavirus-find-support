@@ -29,21 +29,42 @@
 
 <div class="govuk-width-container">
   <% if result_groups(session).empty? %>
-    <%= sanitize(t("coronavirus_form.results.no_results")) %>
+    <div class="app-c-actions-no-results">
+      <%= sanitize(t("coronavirus_form.results.no_results")) %>
+    </div>
   <% else %>
-    <% result_groups(session).each do |group| %>
+    <% if result_groups(session).count > 1 %>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div class="navigation__contents">
+            <h2><%= t("govwales_navigation.content.title") %></h2>
+            <nav>
+              <ul>
+                <% result_groups(session).each_with_index do |group, index| %>
+                  <li><%= link_to group[1][:heading], "#section_#{index}" %><li>
+                <% end %>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    <% end %>
+    <% result_groups(session).each_with_index do |group, index| %>
       <%= render "components/actions-group", {
         title: group[1][:heading],
-        subsections: group[1][:questions]
+        subsections: group[1][:questions],
+        section: index,
       } %>
     <% end %>
   <% end %>
 
-  <%= render "govuk_publishing_components/components/button", {
-    text: t("govwales_buttons.start_again_text"),
-    href: t("govwales_buttons.start_again_url"),
-    start: true
-  } %>
+  <div class="app-c-actions-start-again">
+    <%= render "govuk_publishing_components/components/button", {
+      text: t("govwales_buttons.start_again_text"),
+      href: t("govwales_buttons.start_again_url"),
+      start: true
+    } %>
+  </div>
 
   <%= render "components/callout", {
     title: t('coronavirus_form.results.feedback.text')

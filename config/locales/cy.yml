@@ -44,6 +44,9 @@ cy:
     back_to_top:
       text: "Nôl i dop y dudalen"
       href: "#wg_header"
+  govwales_navigation:
+    content:
+      title: "Cynnwys"
   govwales_links:
     start_now_url: https://llyw.cymru/coronafeirws
   govwales_cookie_banner:

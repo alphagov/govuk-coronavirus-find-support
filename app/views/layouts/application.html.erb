@@ -72,19 +72,17 @@
       <% end %>
     </div>
     <%# GOVWALES: Container 'govwales-container' added. Lines 75 & 87 %>
-    <div class="govwales-container">
-      <main class="govuk-main-wrapper<%= " govuk-main-wrapper--l" if yield(:back_link).blank?%>" id="main-content" role="main">
-        <div class="govuk-grid-row">
-          <div class="<%= current_page?(results_path) ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds-from-desktop" %>">
-            <%= render "error_summary" %>
-            <%= yield %>
-          </div>
+    <main class="govuk-main-wrapper<%= " govuk-main-wrapper--l" if yield(:back_link).blank?%>" id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="<%= current_page?(results_path) ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds-from-desktop" %>">
+          <%= render "error_summary" %>
+          <%= yield %>
         </div>
-      </main>
-      <% if yield(:escape_link).present? %>
-        <%= yield(:escape_link) %>
-      <% end %>
-    </div>
+      </div>
+    </main>
+    <% if yield(:escape_link).present? %>
+      <%= yield(:escape_link) %>
+    <% end %>
     <%= render "govuk_publishing_components/components/layout_footer", {
       meta: {
         items: [

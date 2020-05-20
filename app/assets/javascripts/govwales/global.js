@@ -1,10 +1,10 @@
 function GovWales() { }
 
 // Scroll back to contents animation
-GovWales.scrollTop = function (scrollTo) {
+GovWales.scrollTop = function (scrollTo, offSet) {
   var pagePos = $(scrollTo).offset();
-  var posHeight = pagePos.top;
-  $('body,html').animate({scrollTop: posHeight}, 400);
+  var posHeight = pagePos.top - offSet;
+  $('body,html').animate({scrollTop: posHeight}, 1000);
   $(scrollTo).focus();
 }
 
@@ -14,7 +14,7 @@ GovWales.backToTop = function () {
   var backToTopTrigger = $('.footer__backtotop a');
   backToTopTrigger.click(function (e) {
     var backToTopTarget = $(this).attr('href');
-    GovWales.scrollTop(backToTopTarget);
+    GovWales.scrollTop(backToTopTarget, 0);
     e.preventDefault();
   });
 
@@ -31,7 +31,18 @@ GovWales.backToTop = function () {
   backToTopContainer.backToTopAutoHide();
 }
 
+// Contents anchor links
+GovWales.contentsAnchor = function () {
+  var anchorLink = $('.navigation__contents a');
+  anchorLink.click(function (e) {
+    var anchorTarget = $(this).attr('href');
+    GovWales.scrollTop(anchorTarget, 30);
+    e.preventDefault();
+  });
+}
+
 // Init
 GovWales.Init = function (scrollTo) {
   GovWales.backToTop();
+  GovWales.contentsAnchor();
 }

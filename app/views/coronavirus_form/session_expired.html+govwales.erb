@@ -6,20 +6,22 @@
   } %>
 <% end %>
 
-<% content_for :title do %><%= t('session_expired.title') %><% end %>
-<% content_for :meta_tags do %>
-  <meta name="description" content="<%= t('session_expired.title') %>" />
-<% end %>
+<div class="container">
+  <% content_for :title do %><%= t('session_expired.title') %><% end %>
+  <% content_for :meta_tags do %>
+    <meta name="description" content="<%= t('session_expired.title') %>" />
+  <% end %>
 
-<%= render "govuk_publishing_components/components/title", {
-  title:t("session_expired.title"),
-  margin_top: 0
-} %>
+  <%= render "govuk_publishing_components/components/title", {
+    title:t("session_expired.title"),
+    margin_top: 0
+  } %>
 
-<%= sanitize(t('session_expired.body_text')) %>
+  <%= sanitize(t('session_expired.body_text')) %>
 
-<%= render "govuk_publishing_components/components/button", {
-  text: t("govwales_buttons.start_again_text"),
-  href: t("govwales_buttons.start_again_url"),
-  start: true
-} %>
+  <%= render "govuk_publishing_components/components/button", {
+    text: t("govwales_buttons.start_again_text"),
+    href: t("govwales_buttons.start_again_url"),
+    start: true
+  } %>
+</div>

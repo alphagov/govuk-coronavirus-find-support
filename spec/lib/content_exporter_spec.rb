@@ -6,18 +6,18 @@ locale_results_link_fixture = {
         {
           id: "0001",
           support_and_advice: false,
-          text: "This is a row that only has text, it will appaer like a paragraph",
+          text: "This is a row that only has text, it will appear like a paragraph",
         },
         {
           id: "0002",
           support_and_advice: false,
-          text: "This is a row has text and an href, it will appaer as an anchor tag",
+          text: "This is a row and has text and an href, it will appear as an anchor tag",
           href: "http://test.stubbed.gov.uk",
         },
         {
           id: "0003",
           support_and_advice: false,
-          text: "This is a row has text, an href and group criteira, it will appear as an anchor tag if the user's answers match the criteria",
+          text: "This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria",
           href: "http://test.stubbed.llyw.cymru",
           show_to_nations: %w[Wales],
         },
@@ -26,7 +26,7 @@ locale_results_link_fixture = {
         {
           id: "0004",
           support_and_advice: false,
-          text: "This is a row has text, an href and multiple group criteira, it will appear as an anchor tag if the user's answers match the more complex criteria",
+          text: "This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria",
           href: "http://test.stubbed.gb.gov.uk",
           show_to_nations: %w[Wales Scotland England],
         },
@@ -34,13 +34,13 @@ locale_results_link_fixture = {
     },
     subgroup_two: {
       title: "I am the title for Group one subgroup two",
-      items: [{ id: "0005", text: "This is a row that only has text, it will appaer like a paragraph" }],
+      items: [{ id: "0005", text: "This is a row that only has text, it will appear like a paragraph" }],
     },
   },
   group_two: {
     subgroup_one: {
       title: "I am the title for Group two subgroup one",
-      items: [{ id: "0006", text: "This is a row that only has text, it will appaer like a paragraph" }],
+      items: [{ id: "0006", text: "This is a row that only has text, it will appear like a paragraph" }],
     },
   },
 }
@@ -61,42 +61,42 @@ RSpec.describe "ContentExporter" do
         show_to_nations: "",
         subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: false,
-        text: "This is a row that only has text, it will appaer like a paragraph" },
+        text: "This is a row that only has text, it will appear like a paragraph" },
       { id: "0002",
         group_title: "I am the title for Group one",
         href: "http://test.stubbed.gov.uk",
         show_to_nations: "",
         subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: false,
-        text: "This is a row has text and an href, it will appaer as an anchor tag" },
+        text: "This is a row and has text and an href, it will appear as an anchor tag" },
       { id: "0003",
         group_title: "I am the title for Group one",
         href: "http://test.stubbed.llyw.cymru",
         show_to_nations: "Wales",
         subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: false,
-        text: "This is a row has text, an href and group criteira, it will appear as an anchor tag if the user's answers match the criteria" },
+        text: "This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria" },
       { id: "0004",
         group_title: "I am the title for Group one",
         href: "http://test.stubbed.gb.gov.uk",
         show_to_nations: "Wales OR Scotland OR England",
         subgroup_title: "I am the title for Group one subgroup one",
         support_and_advice: true,
-        text: "This is a row has text, an href and multiple group criteira, it will appear as an anchor tag if the user's answers match the more complex criteria" },
+        text: "This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria" },
       { id: "0005",
         group_title: "I am the title for Group one",
         href: "",
         show_to_nations: "",
         subgroup_title: "I am the title for Group one subgroup two",
         support_and_advice: false,
-        text: "This is a row that only has text, it will appaer like a paragraph" },
+        text: "This is a row that only has text, it will appear like a paragraph" },
       { id: "0006",
         group_title: "I am the title for Group two",
         href: "",
         show_to_nations: "",
         subgroup_title: "I am the title for Group two subgroup one",
         support_and_advice: false,
-        text: "This is a row that only has text, it will appaer like a paragraph" },
+        text: "This is a row that only has text, it will appear like a paragraph" },
     ]
 
     before do
@@ -112,11 +112,11 @@ RSpec.describe "ContentExporter" do
       expect(results_rows[0][:show_to_nations]).to eq("")
     end
 
-    it "returns a single string when a link has a single :show_to_nations criteira" do
+    it "returns a single string when a link has a single :show_to_nations criteria" do
       expect(results_rows[2][:show_to_nations]).to eq("Wales")
     end
 
-    it "returns a singe string with joined with OR when a link has multiple :show_to_nations criteira" do
+    it "returns a single string with joined with OR when a link has multiple :show_to_nations criteria" do
       expect(results_rows[3][:show_to_nations]).to eq("Wales OR Scotland OR England")
     end
 
@@ -137,7 +137,7 @@ RSpec.describe "ContentExporter" do
     end
 
     it "returns a text string when a link has a text value" do
-      expect(results_rows[0][:text]).to eq("This is a row that only has text, it will appaer like a paragraph")
+      expect(results_rows[0][:text]).to eq("This is a row that only has text, it will appear like a paragraph")
     end
 
     it "returns a boolean support_and_advice true when the link is under support_and_advice" do
@@ -175,12 +175,12 @@ RSpec.describe "ContentExporter" do
 
   describe "#generate_results_link_csv" do
     csv_fixture = "id,group_title,subgroup_title,support_and_advice,text,href,show_to_nations\n" \
-      "0001,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n" \
-      "0002,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row has text and an href, it will appaer as an anchor tag\",http://test.stubbed.gov.uk,\"\"\n" \
-      "0003,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row has text, an href and group criteira, it will appear as an anchor tag if the user's answers match the criteria\",http://test.stubbed.llyw.cymru,Wales\n" \
-      "0004,I am the title for Group one,I am the title for Group one subgroup one,true,\"This is a row has text, an href and multiple group criteira, it will appear as an anchor tag if the user's answers match the more complex criteria\",http://test.stubbed.gb.gov.uk,Wales OR Scotland OR England\n" \
-      "0005,I am the title for Group one,I am the title for Group one subgroup two,false,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n" \
-      "0006,I am the title for Group two,I am the title for Group two subgroup one,false,\"This is a row that only has text, it will appaer like a paragraph\",\"\",\"\"\n"
+      "0001,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\"\n" \
+      "0002,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row and has text and an href, it will appear as an anchor tag\",http://test.stubbed.gov.uk,\"\"\n" \
+      "0003,I am the title for Group one,I am the title for Group one subgroup one,false,\"This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria\",http://test.stubbed.llyw.cymru,Wales\n" \
+      "0004,I am the title for Group one,I am the title for Group one subgroup one,true,\"This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria\",http://test.stubbed.gb.gov.uk,Wales OR Scotland OR England\n" \
+      "0005,I am the title for Group one,I am the title for Group one subgroup two,false,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\"\n" \
+      "0006,I am the title for Group two,I am the title for Group two subgroup one,false,\"This is a row that only has text, it will appear like a paragraph\",\"\",\"\"\n"
     let(:csv) { ContentExporter.generate_results_link_csv }
 
     before do

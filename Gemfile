@@ -47,3 +47,5 @@ group :development, :test do
   gem "scss_lint-govuk"
   gem "webdrivers", "~> 4.3"
 end
+
+gem "prometheus-client", "~> 2.0"

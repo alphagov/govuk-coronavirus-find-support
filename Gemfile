@@ -8,7 +8,7 @@ gem "asset_sync"
 gem "bootsnap", "~> 1"
 gem "fog-aws"
 gem "govuk_app_config", "~> 2.2.0"
-gem "govuk_publishing_components", "~> 21.47.0"
+gem "govuk_publishing_components", "~> 21.48.0"
 gem "lograge"
 gem "pg", "~> 1"
 gem "puma", "~> 4.3"
@@ -47,3 +47,5 @@ group :development, :test do
   gem "scss_lint-govuk"
   gem "webdrivers", "~> 4.3"
 end
+
+gem "prometheus-client", "~> 2.0"

@@ -58,7 +58,13 @@ run:
       cf v3-zdt-push govuk-coronavirus-find-support --wait-for-deploy-complete --no-route
       cf map-route govuk-coronavirus-find-support cloudapps.digital --hostname "$HOSTNAME"
 
-      cf map-route govuk-coronavirus-find-support find-coronavirus-support.service.gov.uk --path metrics
-      cf map-route govuk-coronavirus-find-support cloudapps.digital --hostname govuk-coronavirus-find-support-prod --path metrics
-      cf bind-route-service find-coronavirus-support.service.gov.uk re-ip-whitelist-service --path metrics
-      cf bind-route-service cloudapps.digital re-ip-whitelist-service --hostname govuk-coronavirus-find-support-prod --path metrics
+      if [[ "${CF_SPACE:-}" = "staging" ]]; then
+        cf map-route govuk-coronavirus-find-support cloudapps.digital --hostname govuk-coronavirus-find-support-stg --path metrics
+        cf bind-route-service cloudapps.digital re-ip-whitelist-service --hostname govuk-coronavirus-find-support-stg --path metrics
+      fi
+      if [[ "${CF_SPACE:-}" = "production" ]]; then
+        cf map-route govuk-coronavirus-find-support find-coronavirus-support.service.gov.uk --path metrics
+        cf map-route govuk-coronavirus-find-support cloudapps.digital --hostname govuk-coronavirus-find-support-prod --path metrics
+        cf bind-route-service find-coronavirus-support.service.gov.uk re-ip-whitelist-service --path metrics
+        cf bind-route-service cloudapps.digital re-ip-whitelist-service --hostname govuk-coronavirus-find-support-prod --path metrics
+      fi

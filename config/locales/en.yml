@@ -795,16 +795,34 @@ en:
         - id: '0068'
           text: What to do if you’re self-employed and getting less or no work
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work
-        - id: '0069'
-          text: What you can do if you’re self employed or a sole trader (Money Advice
-            Service)
-          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed
         - id: '0070'
           text: Find out about the financial support and benefits you might be able
             to get (NI direct)
           href: https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits
           show_to_nations:
           - Northern Ireland
+        - id: '0074'
+          text: Get help with your business rates and find out about coronavirus loans
+            (nibusinessinfo)
+          href: https://www.nibusinessinfo.co.uk/content/coronavirus-support-and-advice-self-employed
+          show_to_nations:
+          - Northern Ireland
+        - id: '0077'
+          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
+            Government)
+          href: https://gov.wales/discretionary-assistance-fund-daf
+          show_to_nations:
+          - Wales
+        - id: '0079'
+          text: Find financial support for your business (Scottish Government)
+          href: https://findbusinesssupport.gov.scot/coronavirus-advice
+          show_to_nations:
+          - Scotland
+        support_and_advice:
+        - id: '0069'
+          text: What you can do if you’re self employed or a sole trader (Money Advice
+            Service)
+          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed
         - id: '0071'
           text: Get information on applying for Universal Credit (Citizens Advice)
           href: https://www.citizensadvice.org.uk/benefits/universal-credit/
@@ -821,12 +839,6 @@ en:
           href: https://www.citizensadvice.org.uk/wales/benefits/universal-credit/
           show_to_nations:
           - Wales
-        - id: '0074'
-          text: Get help with your business rates and find out about coronavirus loans
-            (nibusinessinfo)
-          href: https://www.nibusinessinfo.co.uk/content/coronavirus-support-and-advice-self-employed
-          show_to_nations:
-          - Northern Ireland
         - id: '0075'
           text: Get help from Citizens Advice
           href: https://www.citizensadvice.org.uk/about-us/northern-ireland/
@@ -837,20 +849,9 @@ en:
           href: https://www.adviceni.net/
           show_to_nations:
           - Northern Ireland
-        - id: '0077'
-          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
-            Government)
-          href: https://gov.wales/discretionary-assistance-fund-daf
-          show_to_nations:
-          - Wales
         - id: '0078'
           text: Find help with benefits (mygov.scot)
           href: https://www.mygov.scot/benefits-support/
-          show_to_nations:
-          - Scotland
-        - id: '0079'
-          text: Find financial support for your business (Scottish Government)
-          href: https://findbusinesssupport.gov.scot/coronavirus-advice
           show_to_nations:
           - Scotland
     going_in_to_work:

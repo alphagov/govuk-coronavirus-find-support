@@ -27,12 +27,18 @@ $print__text: #000;
 
   // Display none components
   .wg_header,
+  .beta-bar,
   .govuk-back-link,
   .footer__components,
+  .footer__page_feedback,
+  .footer__backtotop,
   .app-c-escape-link,
   .govuk-button--start,
   .app-c-callout,
-  .visually-hidden {
+  .visually-hidden,
+  .app-c-page-header .govuk-caption-xl,
+  .navigation__contents,
+  .govwales-removed {
     display: none !important;
   }
 
@@ -87,5 +93,16 @@ $print__text: #000;
     li {
       margin-bottom: 10px !important;
     }
+  }
+
+  // Service title
+  .app-c-page-header .govuk-caption-xl,
+  .app-c-page-header .gem-c-title__text {
+    font-weight: bold;
+    color: $print__text !important;
+  }
+  .app-c-page-header .gem-c-title__text {
+    margin-top: 40px;
+    font-size: 1.25em;
   }
 }

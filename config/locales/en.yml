@@ -676,15 +676,28 @@ en:
         - id: '0045'
           text: What to do if you’ve lost your job
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job
+        - id: '0048'
+          text: What to do if you’ve been furloughed
+          href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
+        - id: '0052'
+          text: Find out about the financial support and benefits you might be able
+            to get (NI direct)
+          href: https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits
+          show_to_nations:
+          - Northern Ireland
+        - id: '0061'
+          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
+            Government)
+          href: https://gov.wales/discretionary-assistance-fund-daf
+          show_to_nations:
+          - Wales
+        support_and_advice:
         - id: '0046'
           text: What to do if you’ve been laid-off
           href: https://www.gov.uk/lay-offs-short-timeworking
         - id: '0047'
           text: Find out about your rights if you’ve been dismissed
           href: https://www.gov.uk/dismissal
-        - id: '0048'
-          text: What to do if you’ve been furloughed
-          href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
         - id: '0049'
           text: What to do if your employer has told you not to work (Citizens Advice)
           href: https://www.citizensadvice.org.uk/work/coronavirus-if-your-employer-has-told-you-not-to-work/
@@ -701,12 +714,6 @@ en:
           href: https://www.citizensadvice.org.uk/wales/work/coronavirus-if-your-employer-has-told-you-not-to-work/
           show_to_nations:
           - Wales
-        - id: '0052'
-          text: Find out about the financial support and benefits you might be able
-            to get (NI direct)
-          href: https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits
-          show_to_nations:
-          - Northern Ireland
         - id: '0053'
           text: Find out about your rights if you’ve been furloughed (Acas)
           href: https://www.acas.org.uk/coronavirus/if-the-employer-needs-to-close-the-workplace
@@ -744,12 +751,6 @@ en:
         - id: '0060'
           text: Contact Citizens Advice Wales
           href: https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/
-          show_to_nations:
-          - Wales
-        - id: '0061'
-          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
-            Government)
-          href: https://gov.wales/discretionary-assistance-fund-daf
           show_to_nations:
           - Wales
         - id: '0062'

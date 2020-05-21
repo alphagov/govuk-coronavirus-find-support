@@ -88,6 +88,6 @@ Rails.application.routes.draw do
     get "/data-export", to: "data_export#show"
   end
 
-  mount GovukPublishingComponents::Engine, at: "/component-guide"
+  mount GovukPublishingComponents::Engine, at: "/component-guide" if Rails.env.development?
   mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 end

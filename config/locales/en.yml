@@ -431,9 +431,6 @@ en:
             of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services"
             class="govuk-link">victim or witness of a crime</a> (these pages have
             no quick escape)
-        - id: '0006'
-          text: Get safety advice for survivors (Women’s Aid)
-          href: https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/
         - id: '0007'
           text: Get help from Nexus NI
           href: https://nexusni.org/domestic-and-sexual-abuse-24-hour-helpline/
@@ -457,11 +454,6 @@ en:
         - id: '0011'
           text: Get help for children (Childline)
           href: https://www.childline.org.uk/
-        - id: '0012'
-          text: Get advice for children (Children’s Commissioner for Wales)
-          href: https://www.childcomwales.org.uk/coronavirus/
-          show_to_nations:
-          - Wales
         - id: '0013'
           text: Contact NSPCC if you’re concerned about a child
           href: https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/
@@ -474,6 +466,15 @@ en:
         - id: '0015'
           text: Find victim support helplines (this page is in Welsh)
           href: https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales
+          show_to_nations:
+          - Wales
+        support_and_advice:
+        - id: '0006'
+          text: Get safety advice for survivors (Women’s Aid)
+          href: https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/
+        - id: '0012'
+          text: Get advice for children (Children’s Commissioner for Wales)
+          href: https://www.childcomwales.org.uk/coronavirus/
           show_to_nations:
           - Wales
     paying_bills:

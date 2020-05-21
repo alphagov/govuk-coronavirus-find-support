@@ -911,11 +911,6 @@ en:
             class="govuk-link">03448 920 908</a>
           show_to_nations:
           - Northern Ireland
-        - id: '0088'
-          text: Get help from Housing Rights housing and debt helpline
-          href: https://www.housingadviceni.org/homeless/coronavirus
-          show_to_nations:
-          - Northern Ireland
         - id: '0089'
           text: Get coronavirus housing information (Shelter Cymru)
           href: https://sheltercymru.org.uk/get-advice/coronavirus/
@@ -926,6 +921,12 @@ en:
           href: https://www.mygov.scot/homelessness/
           show_to_nations:
           - Scotland
+        support_and_advice:
+        - id: '0088'
+          text: Get help from Housing Rights housing and debt helpline
+          href: https://www.housingadviceni.org/homeless/coronavirus
+          show_to_nations:
+          - Northern Ireland
         - id: '0091'
           text: Get help if you’re homeless from Shelter Scotland
           href: https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness

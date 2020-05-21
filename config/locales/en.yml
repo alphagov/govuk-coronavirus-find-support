@@ -484,9 +484,6 @@ en:
         - 'Yes'
         - Not sure
         items:
-        - id: '0016'
-          text: Your rights if you’re finding it hard to pay rent
-          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
         - id: '0017'
           text: What to do if you cannot pay your rent or mortgage (Shelter)
           href: https://england.shelter.org.uk/housing_advice/coronavirus
@@ -529,6 +526,10 @@ en:
           href: https://www.housingrights.org.uk/
           show_to_nations:
           - Northern Ireland
+        support_and_advice:
+        - id: '0016'
+          text: Your rights if you’re finding it hard to pay rent
+          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
         - id: '0025'
           text: What to do if you’re finding it hard to pay rent (Welsh Government)
           href: https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html

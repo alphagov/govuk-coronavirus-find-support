@@ -937,26 +937,47 @@ en:
         - I might be evicted soon
         - Not sure
         items:
-        - id: '0092'
-          text: Find information about your rights as a tenant
-          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
-          show_to_nations:
-          - England
         - id: '0093'
           text: Get coronavirus housing advice (Shelter)
           href: https://england.shelter.org.uk/housing_advice/coronavirus
           show_to_nations:
           - England
-        - id: '0094'
-          text: Get coronavirus housing advice (Shelter Scotland)
-          href: https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19
-          show_to_nations:
-          - Scotland
         - id: '0095'
           text: Call the Northern Ireland Housing Executive on <a href="tel:+443448920908"
             class="govuk-link">03448 920 908</a>
           show_to_nations:
           - Northern Ireland
+        - id: '0100'
+          text: Find out how to get help if you’re being evicted (mygov.scot)
+          href: https://www.mygov.scot/private-tenant-eviction/getting-help/
+          show_to_nations:
+          - Scotland
+        - id: '0098'
+          text: Get coronavirus housing advice for Wales (Shelter Cymru)
+          href: https://sheltercymru.org.uk/get-advice/coronavirus/
+          show_to_nations:
+          - Wales
+        support_and_advice:
+        - id: '0092'
+          text: Find information about your rights as a tenant
+          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
+          show_to_nations:
+          - England
+        - id: '0099'
+          text: Get information on evictions (Welsh Government)
+          href: https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html
+          show_to_nations:
+          - Wales
+        - id: '0101'
+          text: Find out about your rights if you have a private landlord (mygov.scot)
+          href: https://www.mygov.scot/private-rental-rights/
+          show_to_nations:
+          - Scotland
+        - id: '0102'
+          text: Find out about your rights if you have a social landlord (mygov.scot)
+          href: https://www.mygov.scot/social-rental-rights/
+          show_to_nations:
+          - Scotland
         - id: '0096'
           text: Find advice from the Housing Executive
           href: https://www.nihe.gov.uk/My-Housing-Executive/Advice-for-Housing-Executive-Tenants/Covid-19-(Coronavirus)
@@ -967,29 +988,9 @@ en:
           href: https://www.housingadviceni.org/coronavirus
           show_to_nations:
           - Northern Ireland
-        - id: '0098'
-          text: Get coronavirus housing advice for Wales (Shelter Cymru)
-          href: https://sheltercymru.org.uk/get-advice/coronavirus/
-          show_to_nations:
-          - Wales
-        - id: '0099'
-          text: Get information on evictions (Welsh Government)
-          href: https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html
-          show_to_nations:
-          - Wales
-        - id: '0100'
-          text: Find out how to get help if you’re being evicted (mygov.scot)
-          href: https://www.mygov.scot/private-tenant-eviction/getting-help/
-          show_to_nations:
-          - Scotland
-        - id: '0101'
-          text: Find out about your rights if you have a private landlord (mygov.scot)
-          href: https://www.mygov.scot/private-rental-rights/
-          show_to_nations:
-          - Scotland
-        - id: '0102'
-          text: Find out about your rights if you have a social landlord (mygov.scot)
-          href: https://www.mygov.scot/social-rental-rights/
+        - id: '0094'
+          text: Get coronavirus housing advice (Shelter Scotland)
+          href: https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19
           show_to_nations:
           - Scotland
     mental_health:

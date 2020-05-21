@@ -16,7 +16,23 @@
       title: t("govwales_cookies.title"),
       margin_top: 0,
     } %>
+
     <%= tag.p t('govwales_cookies.settings_page.intro_html') %>
+
+    <% t('govwales_cookies.settings_page.cookies').map do |cookie_item| %>
+      <h3><%= sanitize(cookie_item.dig(:header)) %></h3>
+      <p><%= sanitize(cookie_item.dig(:text_html)) %></p>
+      <%= render "govuk_publishing_components/components/table", {
+        head: [
+          { text: t('govwales_cookies.settings_page.cookies.header_row.cookie') },
+          { text: t('govwales_cookies.settings_page.cookies.header_row.name') },
+          { text: t('govwales_cookies.settings_page.cookies.header_row.purpose') },
+          { text: t('govwales_cookies.settings_page.cookies.header_row.expires') },
+        ],
+        rows: cookie_item.dig(:cookies),
+      } %>
+    <% end %>
+
     <div class="cookie-settings__no-js">
       <%= sanitize(t("govwales_cookies.settings_page.no_javascript_explainer_html")) %>
     </div>

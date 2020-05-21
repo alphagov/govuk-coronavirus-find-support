@@ -57,20 +57,28 @@ $image_anchor: 'govwales/anchor-up.svg';
 .app-c-escape-link {
   font-family: $base-font-family;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px 50px 10px 20px;
   background-image: image-url($image_exit);
   background-position: center right 20px;
   background-repeat: no-repeat;
   background-color: $btn__exit;
-  width: 100%;
+  width: auto;
   left: 0;
+  bottom: 0;
   z-index: 999;
+  position: fixed;
+  text-align: right;
 
   @media screen and (min-width: $screen-md) {
-    width: auto;
+    display: inline-block;
     padding: 20px 50px 20px 20px;
+    right: 20px;
+    left: auto;
   }
 
+  &:visited {
+    background-color: $btn__exit;
+  }
 
   &:hover {
     background-color: $btn__exit_hover;
@@ -81,18 +89,6 @@ $image_anchor: 'govwales/anchor-up.svg';
     color: $white;
     box-shadow: none;
     outline: 3px solid $states__focus;
-  }
-
-  &:visited {
-    background-color: $btn__exit;
-
-    &:hover {
-      background-color: $btn__exit_hover;
-    }
-
-    &:focus {
-      background-color: $btn__exit_hover;
-    }
   }
 }
 
@@ -114,6 +110,10 @@ $image_anchor: 'govwales/anchor-up.svg';
 
     &:hover {
       background-color: $background__sharebar_hover;
+    }
+
+    &:focus {
+      outline: 3px solid $states__focus;
     }
   }
 }

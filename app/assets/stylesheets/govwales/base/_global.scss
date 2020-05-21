@@ -17,6 +17,18 @@ html.govuk-template {
   padding-right: 20px;
 }
 
+.govuk-grid-row {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+.govuk-grid-column-two-thirds,
+.govuk-grid-column-two-thirds-from-desktop,
+.govuk-grid-column-one-third {
+  padding: 0 20px;
+}
+
+
 .visually-hidden {
   position: absolute !important;
   overflow: hidden;
@@ -34,6 +46,11 @@ html.govuk-template {
 }
 
 // Override two thirds column to make it 100% width
-.govuk-grid-column-two-thirds-from-desktop {
+.govuk-grid-column-two-thirds-from-desktop,
+.govuk-grid-column-full {
   width: 100%;
+  float: none;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 60px;
 }

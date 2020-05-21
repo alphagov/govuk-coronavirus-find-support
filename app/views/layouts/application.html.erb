@@ -73,11 +73,9 @@
     </div>
     <%# GOVWALES: Container 'govwales-container' added. Lines 75 & 87 %>
     <main class="govuk-main-wrapper<%= " govuk-main-wrapper--l" if yield(:back_link).blank?%>" id="main-content" role="main">
-      <div class="govuk-grid-row">
-        <div class="<%= current_page?(results_path) ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds-from-desktop" %>">
-          <%= render "error_summary" %>
-          <%= yield %>
-        </div>
+      <div class="<%= current_page?(results_path) ? "govuk-grid-column-full" : "govuk-grid-column-two-thirds-from-desktop" %>">
+        <%= render "error_summary" %>
+        <%= yield %>
       </div>
     </main>
     <% if yield(:escape_link).present? %>

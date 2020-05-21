@@ -12,6 +12,10 @@
       &:hover {
         color: $link__page_feedback_hover;
       }
+
+      &:focus {
+        outline: 3px solid $states__focus;
+      }
     }
   }
 
@@ -72,13 +76,13 @@
 
   &__logo {
     margin-top: 60px;
+    margin-bottom: 20px;
 
     a {
       color: $link__footer;
       display: inline-block;
       font-weight: normal;
       height: 38px;
-      margin: 40px 0 0;
       width: 140px;
 
       &:hover,

@@ -13,9 +13,6 @@ Rails.application.routes.draw do
       get "/cookies", to: "cookies#show"
       get "/accessibility-statement", to: "accessibility_statement#show"
 
-      # GovWales addition
-      get "/copyright-statement", to: "copyright_statement#show"
-
       # Redirect for deleted question and page (301 is default)
       get "/urgent-medical-help", to: redirect("/need-help-with")
       get "/get-help-from-nhs", to: redirect("/need-help-with")

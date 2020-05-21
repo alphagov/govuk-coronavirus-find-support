@@ -17,11 +17,15 @@
     margin_top: 0
   } %>
 
-  <%= sanitize(t('session_expired.body_text')) %>
+  <div class="app-c-actions-no-results">
+    <%= sanitize(t('session_expired.body_text')) %>
+  </div>
 
-  <%= render "govuk_publishing_components/components/button", {
-    text: t("govwales_buttons.start_again_text"),
-    href: t("govwales_buttons.start_again_url"),
-    start: true
-  } %>
+  <div class="app-c-actions-start-again">
+    <%= render "govuk_publishing_components/components/button", {
+      text: t("govwales_buttons.start_again_text"),
+      href: t("govwales_buttons.start_again_url"),
+      start: true
+    } %>
+  </div>
 </div>

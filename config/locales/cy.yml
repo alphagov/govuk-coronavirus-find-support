@@ -1,9 +1,9 @@
 cy:
   layout_head:
-    meta_title: LLYW.CYMRU
+    meta_title: "| LLYW.CYMRU"
   govwales_header:
-    title: Llywodraeth Cymru
-    href: https://llyw.cymru/
+    title: "Llywodraeth Cymru"
+    href: "https://llyw.cymru/"
   govwales_footer_primary:
     links:
       - text: "Coronafeirws (COVID-19)"
@@ -11,21 +11,21 @@ cy:
   govwales_footer_secondary:
     links:
       - text: "Hygyrchedd"
-        href: "/datganiad-hygyrchedd"
+        href: "https://llyw.cymru/help/hygyrchedd"
       - text: "Cwcis"
         href: "/cwcis"
       - text: "Preifatrwydd"
         href: "/preifatrwydd"
       - text: "Datganiad hawlfraint"
-        href: "/datganiad-hawlfraint"
+        href: "https://llyw.cymru/datganiad-hawlfraint"
     logo:
-      href: https://llyw.cymru/
-      alt: Llywodraeth Cymru
-      text: Hafan
+      href: "https://llyw.cymru/"
+      alt: "Llywodraeth Cymru"
+      text: "Hafan"
   govwales_breadcrumbs:
-    start_again_text: Decrhau eto
+    start_again_text: "Decrhau eto"
     start_again_url: "/angen-help-gyda"
-    back_text: Yn ôl
+    back_text: "Yn ôl"
   govwales_beta_status:
     status: "BETA"
     type: "This is a new service CY. "
@@ -39,7 +39,7 @@ cy:
     body_feedback: "Eich adborth: "
     help: "i'n helpu i'w wella."
   govwales_buttons:
-    start_again_text: Decrhau eto
+    start_again_text: "Decrhau eto"
     start_again_url: "/angen-help-gyda"
     back_to_top:
       text: "Nôl i dop y dudalen"
@@ -48,7 +48,7 @@ cy:
     content:
       title: "Cynnwys"
   govwales_links:
-    start_now_url: https://llyw.cymru/coronafeirws
+    start_now_url: "https://llyw.cymru/coronafeirws"
   govwales_cookie_banner:
     title: "Cwcis"
     text: "We've saved some files called cookies on your device. These cookies are essential for the find help if you're affected by coronavirus service to work. CY"
@@ -57,37 +57,13 @@ cy:
       pretext: "Find out CY"
       text: "how we use cookies CY"
       href: "/cwcis"
-  routes:
-    privacy: preifatrwydd
-    cookies: cwcis
-    accessibility-statement: datganiad-hygyrchedd
-    copyright-statement: datganiad-hawlfraint
-    urgent-medical-help: help-meddygol-brys
-    get-help-from-nhs: help-wrth-gig
-    need-help-with: angen-help-gyda
-    feel-safe: teimlon-ddiogel
-    afford-rent-mortgage-bills: fforddio-rhent-morgais-biliau
-    afford-food: fforddio-bwyd
-    get-food: cael-bwyd
-    have-you-been-made-unemployed: wedi-eich-gwneud-yn-ddi-waith
-    are-you-off-work-ill: ffwrdd-or-gwaith-yn-sal
-    self-employed: hunangyflogedig
-    living-with-vulnerable: byw-gyda-rhywun-agored-i-niwed
-    have-somewhere-to-live: rhywle-i-fyw
-    have-you-been-evicted: wedi-taflu-allan-och-cartref
-    mental-health-worries: poeni-iechyd-meddwl
-    able-to-leave: gallu-gadael
-    results: canlyniadau
-    clear-session: clirio-sesiwn
-    session-expired: sesiwn-wedi-dod-i-ben
-    data-export: allforio-data
   accessibility_statement:
     title: Hygyrchedd
     body_text: |
       <p>Mae cynllun y safle'n cymryd i ystyriaeth defnyddwyr sy'n ddall neu sydd â nam ar eu golwg, ac mae'n addas ar gyfer meddalwedd darllen sgrin poblogaidd. Os ydych yn cael trafferth defnyddio llygoden, gallwch lywio'r wefan drwy ddefnyddio bysellfwrdd yn unig.</p>
       <p>Mae hygyrchedd gwefan Llywodraeth Cymru yn seiliedig ar Ganllawiau ar Hygyrchedd Cynnwys y We 1.0 Consortiwm y We Fyd-Eang (W3C). Mae Llywodraeth y Cynulliad yn gweithio gydag awduron cynnwys y we, datblygwyr a sefydliadau pobl anabl i fodloni'r safon AA lle bynnag y bo modd.</p>
   copyright_statement:
-    title: Datganiad hawlfraint
+    title: "Datganiad hawlfraint"
     body_text: |
       <p>Gallwch ddefnyddio ac ailddefnyddio'r wybodaeth sy'n ymddangos ar y wefan hon (ac eithrio logos) yn rhad ac am ddim mewn unrhyw fformat neu gyfrwng, o dan delerau’r Drwydded Llywodraeth Agored.</p>
       <p><a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Mae'r Drwydded Llywodraeth Agored i'w gweld ar wefan Archifau Gwladol</a> (dolen allanol - Saesneg yn unig), neu gallwch ysgrifennu i’r cyfeiriad hwn: Information Policy Team, The National Archives, Kew, London TW9 4DU, neu e-bostio <a href="mailto:psi@nationalarchives.gsi.gov.uk">psi@nationalarchives.gsi.gov.uk</a>.</p>
@@ -97,7 +73,7 @@ cy:
       <p>Mae cyfyngiadau ar ddefnyddio ein logo ac ni chaiff unigolion na sefydliadau eraill ei ddefnyddio heb ganiatâd ffurfiol gennym ni.</p>
       <p>I ofyn am ganiatâd i ddefnyddio ein logo, anfonwch e-bost i <a href="mailto:brandingqueries@llyw.cymru">brandingqueries@llyw.cymru</a>.</p>
   privacy_page:
-    title: Hysbysiad preifatrwydd gwefan
+    title: "Hysbysiad preifatrwydd gwefan"
     body_text: |
       <h2>Y Rheoliad Cyffredinol ar Ddiogelu Data (GDPR)</h2>
       <p>O dan GDPR, mae gennych hawliau fel unigolyn y gallwch eu harfer mewn perthynas â’r wybodaeth sydd gennym amdanoch.</p>
@@ -115,31 +91,24 @@ cy:
       <p>Diweddarwyd yr hysbysiad preifatrwydd hwn ddiwethaf ar 20 Mai 2020.</p>
       <h2>Gwybodaeth bellach</h2>
       <p>Mae modd cysylltu â Swyddog Diogelu Data Llywodraeth Cymru drwy:</p>
-      <p>Y Swyddog Diogelu Data<br>
-      Llywodraeth Cymru<br>
-      Parc Cathays<br>
-      Caerdydd<br>
-      CF10 3NQ.<br>
-      E-bost: <a href="mailto:swyddogdiogeludata@llyw.cymru">swyddogdiogeludata@llyw.cymru</a></p>
+      <p>Y Swyddog Diogelu Data<br>Llywodraeth Cymru<br>Parc Cathays<br>Caerdydd<br>CF10 3NQ.<br>E-bost: <a href="mailto:swyddogdiogeludata@llyw.cymru">swyddogdiogeludata@llyw.cymru</a></p>
   session_expired:
-    title: Your session has ended due to inactivity
+    title: "Your session has ended due to inactivity"
     body_text: |
-      <p class="govuk-body">Your session has ended because you have not done anything for 4 hours. You'll have to start again.</p>
-
-      <p class="govuk-body">We do this for your security. We've deleted all the details you entered to protect your data.</p>
-
-      <h2 class="govuk-heading-m">If you didn’t expect to see this page</h2>
-      <p class="govuk-body">You may be seeing this page because you’ve turned off cookies in your browser. You’ll need to <a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external" target="_blank">turn cookies on</a> before you can use this service.</p>
+      <p>Your session has ended because you have not done anything for 4 hours. You'll have to start again.</p>
+      <p>We do this for your security. We've deleted all the details you entered to protect your data.</p>
+      <h2>If you didn’t expect to see this page</h2>
+      <p>You may be seeing this page because you’ve turned off cookies in your browser. You’ll need to <a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external" target="_blank">turn cookies on</a> before you can use this service.</p>
   leave_this_website:
-    link_text: "Leave this site"
+    link_text: "Gadael y safle"
     link_href: "/clear-session?ext_r=true"
     link_redirect_to: "https://www.bbc.co.uk/"
   get_help_from_nhs:
-    title: Get urgent help from the NHS now
-    link_text: Go to NHS 111 online
+    title: "Get urgent help from the NHS now"
+    link_text: "Go to NHS 111 online"
     link_href: "https://111.nhs.uk/"
   govwales_cookies:
-    title: Cwcis
+    title: "Cwcis"
     banner:
       title: "Can we store analytics cookies on your device?"
       text: "Analytics cookies help us understand how our website is being used."
@@ -147,58 +116,34 @@ cy:
     settings_page:
       saved: "Your cookie settings were saved."
       back: "Go back to the page you were looking at"
-      no_javascript_explainer_html:
+      no_javascript_explainer_html: |
         <p>Rydym yn defnyddio Javascript i osod mwyafrif ein cwcis. Yn anffodus, nid yw Javascript yn rhedeg ar eich porwr, felly ni allwch newid eich gosodiadau gan ddefnyddio'r dudalen hon. I reoli eich gosodiadau cwci gan ddefnyddio'r dudalen hon, trowch Javascript ymlaen yn eich porwr.</p>
       intro_html: |
+        <h2>Use of cookies by Welsh Government in this service</h2>
         <p>Ffeiliau sy'n cael eu cadw ar eich ffôn, tabled neu gyfrifiadur pan fyddwch yn ymweld á gwefan yw cwcis.</p>
-        <p>Rydym yn defnyddio cwcis i storio gwybodaeth ynghylch sut yr ydych yn defnyddio gwefan LLYW.CYMRU, megis y tudalennau yr ydych yn ymweld á nhw. Nid yw'r cwcis hyn yn cael eu defnyddio i'ch adnabod chi'n bersonol.</p>
+        <p>The cookies we use on this service are:</p>
       cookies:
-        - header: Essential cookies
-          text_html: These cookies are required for this service to operate. We do not need to ask permission to use them.
+        - header: "Cwcis sy'n angenrheidiol"
+          text_html: "Cookies that are required for the service to function properly."
+          header_row:
+            column_a: "Cwci"
+            column_b: "Enw"
+            column_c: "Diben"
+            column_d: "Dod i ben"
           cookies:
-            - - text: cookie_preferences_set
-              - text: Lets us know whether you've already set your cookies preferences.
-              - text: 1 year
-            - - text: cookie_preferences
-              - text: Let us know what your cookie preferences are.
-              - text: 1 year
-            - - text: _sessions_id
-              - text: Remembers which question you’re up to and how you answered previous questions.
-              - text: 4 hours
-        - header: Measuring website usage with Google Analytics (analytics cookies)
-          text_html: |
-            <p class="govuk-body">We use Google Analytics software to collect anonymised information about how you use the service. We do this to help make sure the site is meeting the needs of its users and to help us make improvements.
-            Google Analytics stores information about:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>the pages you visit</li>
-              <li>how long you spend on each page</li>
-              <li>how you arrived at the site</li>
-              <li>what you click on while you’re visiting the site</li>
-              <li>the device and browser you’re using</li>
-            </ul>
-            <p class="govuk-body">We don’t collect or store your personal information (for example your name or address) so this information can’t be used to identify who you are.</p>
-            <p class="govuk-body">We don’t allow Google to use or share our analytics data.</p>
-            <p class="govuk-body">Google Analytics sets the following cookies:</p>
-          cookie_options_name: "cookies-usage"
-          cookie_options:
-            - value: "on"
-              text: Use cookies that measure my website use
-            - value: "off"
-              text: Do not use cookies that measure my website use
-          cookies:
-            - - text: _ga
-              - text: This helps us count how many people visit the service by tracking if you’ve visited before
-              - text: 2 years
-            - - text: _gid
-              - text: This helps us count how many people visit the service by tracking if you’ve visited before
-              - text: 3 years
+            - - text: "Service progress"
+              - text: "_session_id"
+              - text: "Remembers which question you’re up to and how you answered previous questions."
+            - - text: "Cookie preferences"
+              - text: "cookies_preferences_set cookies_policy"
+              - text: "Mae’r cwci hwn yn cofnodi a yw defnyddiwr wedi derbyn y defnydd o gwcis ar ein gwefan."
   coronavirus_form:
     service_title:
       context: "Finder CY"
       title: "Find help if you're affected by coronavirus CY"
     submit_and_next: "Continue"
     errors:
-      page_title_prefix: 'Error: '
+      page_title_prefix: "Error: "
       title: "There is a problem:"
       radio_field: "Select %{field}"
       checkbox_field: "Select at least one %{field}"
@@ -374,20 +319,18 @@ cy:
             custom_select_error: "Select if you’re able to leave your home or not"
     results:
       header:
-        context: Results CY
-        title: Information based on your answers CY
-        title_no_results: Information based on your answers - no specific information
-        start_again_text: Start again
+        context: "Results CY"
+        title: "Information based on your answers CY"
+        title_no_results: "Information based on your answers - no specific information"
+        start_again_text: "Start again"
       feedback:
-        text: Help us improve
-        link_text: Give feedback on this service
+        text: "Help us improve"
+        link_text: "Give feedback on this service"
         link_href: "https://www.gov.uk/done/find-coronavirus-support"
       no_results: |
-        <p class="govuk-body">Based on your answers, there’s no specific information for you in this service at the moment. It will be updated regularly.</p>
-
-        <p class="govuk-body"><a href="https://www.gov.uk/coronavirus" class="govuk-link">Find all information on coronavirus, including how to protect yourself and get financial support</a></p>
-
-        <p class="govuk-body"><a href="https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/" class="govuk-link">Find information about what you can do from Citizens Advice</a></p>
+        <p>Based on your answers, there’s no specific information for you in this service at the moment. It will be updated regularly.</p>
+        <p><a href="https://www.gov.uk/coronavirus" class="govuk-link">Find all information on coronavirus, including how to protect yourself and get financial support</a></p>
+        <p><a href="https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/" class="govuk-link">Find information about what you can do from Citizens Advice</a></p>
   results_link:
     feeling_unsafe:
       feel_safe:
@@ -399,8 +342,8 @@ cy:
         items:
           - text: "If you’re in immediate danger call 999 and ask for the Police."
           - text: "If you’re in danger and unable to talk on the phone, call 999, and then press 55."
-          - text: 'Call the Live Fear Free Helpline on <a href="tel:0808 80 10 800" class="govuk-link">0808 80 10 800</a>'
-          - text: 'If you’re a child call Childline on <a href="tel:0800 1111" class="govuk-link">0800 1111</a>'
+          - text: "Call the Live Fear Free Helpline on <a href='tel:0808 80 10 800'>0808 80 10 800</a>"
+          - text: "If you’re a child call Childline on <a href='tel:0800 1111'>0800 1111</a>"
           - text: "Get safety advice for survivors from Women’s Aid"
             href: "https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/"
           - text: "Get help from Live Fear Free"
@@ -583,3 +526,27 @@ cy:
             href: "https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing"
           - text: "Get information on supporting the mental health and wellbeing of children and young people"
             href: "https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak"
+  routes:
+    privacy: "preifatrwydd"
+    cookies: "cwcis"
+    accessibility-statement: "datganiad-hygyrchedd"
+    copyright-statement: "datganiad-hawlfraint"
+    urgent-medical-help: "help-meddygol-brys"
+    get-help-from-nhs: "help-wrth-gig"
+    need-help-with: "angen-help-gyda"
+    feel-safe: "teimlon-ddiogel"
+    afford-rent-mortgage-bills: "fforddio-rhent-morgais-biliau"
+    afford-food: "fforddio-bwyd"
+    get-food: "cael-bwyd"
+    have-you-been-made-unemployed: "wedi-eich-gwneud-yn-ddi-waith"
+    are-you-off-work-ill: "ffwrdd-or-gwaith-yn-sal"
+    self-employed: "hunangyflogedig"
+    living-with-vulnerable: "byw-gyda-rhywun-agored-i-niwed"
+    have-somewhere-to-live: "rhywle-i-fyw"
+    have-you-been-evicted: "wedi-taflu-allan-och-cartref"
+    mental-health-worries: "poeni-iechyd-meddwl"
+    able-to-leave: "gallu-gadael"
+    results: "canlyniadau"
+    clear-session: "clirio-sesiwn"
+    session-expired: "sesiwn-wedi-dod-i-ben"
+    data-export: "allforio-data"

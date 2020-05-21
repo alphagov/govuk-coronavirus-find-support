@@ -1,0 +1,10 @@
+.govuk-table {
+  font-family: $base-font-family;
+  @include fontSize(18px);
+  @include lineHeight(24px);
+
+  &__header,
+  &__cell {
+    border-bottom: 1px solid $borders__divider;
+  }
+}

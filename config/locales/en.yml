@@ -1006,6 +1006,7 @@ en:
         - id: '0103'
           text: Where to get urgent help for mental health
           href: https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/
+        support_and_advice:
         - id: '0104'
           text: Get information on coronavirus and your wellbeing (Mind)
           href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8

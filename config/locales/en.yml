@@ -771,20 +771,21 @@ en:
         - id: '0064'
           text: What to do if you’re employed but cannot work
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
-        - id: '0065'
-          text: Find out about getting statutory sick pay if you’re self-isolating
-            (Acas)
-          href: https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay
-        - id: '0066'
-          text: Find out about the help you can get if you’re self-employed or work
-            in the gig economy (Money Advice Service)
-          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you
         - id: '0067'
           text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
             Government)
           href: https://gov.wales/discretionary-assistance-fund-daf
           show_to_nations:
           - Wales
+        support_and_advice:
+        - id: '0066'
+          text: Find out about the help you can get if you’re self-employed or work
+            in the gig economy (Money Advice Service)
+          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you
+        - id: '0065'
+          text: Find out about getting statutory sick pay if you’re self-isolating
+            (Acas)
+          href: https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay
       self_employed:
         title: If you’re self employed or a sole trader
         show_options:

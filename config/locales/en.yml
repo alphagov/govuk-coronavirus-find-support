@@ -220,7 +220,7 @@ en:
               option_yes:
                 label: "Yes"
               option_yes_someone_else:
-                label: "Yes, but I’m concerned about the safety of someone else"
+                label: "Yes, but I’m worried about the safety of another adult or a child"
               option_no:
                 label: "No"
               not_sure:
@@ -347,7 +347,7 @@ en:
         title: "Mental health and wellbeing"
         questions:
           mental_health_worries:
-            title: "Are you worried about either your mental health or someone else’s mental health?"
+            title: "Are you worried about your mental health, or another adult or child’s mental health?"
             options:
               option_yes:
                 label: "Yes, I am"
@@ -393,7 +393,7 @@ en:
       feel_safe:
         title: "If you do not feel safe where you live or you’re worried about someone else"
         show_options:
-          - "Yes, but I’m concerned about the safety of someone else"
+          - "Yes, but I’m worried about the safety of another adult or a child"
           - "No"
           - "Not sure"
         items:

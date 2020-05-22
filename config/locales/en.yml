@@ -133,7 +133,7 @@ en:
           <li>turning on Javascript in your browser</li>
         </ul>
       intro_html: |
-        <p class="govuk-body">This service puts small files (known as 'cookies') onto your computer.</p>
+        <p class="govuk-body">This service puts small files (known as ‘cookies’) onto your computer.</p>
         <p class="govuk-body">Cookies are used to:</p>
         <ul class="govuk-list govuk-list--bullet">
           <li>keep which question you’re up to and how you’ve answered previous questions</li>

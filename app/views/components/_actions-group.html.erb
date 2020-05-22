@@ -14,7 +14,7 @@
           <% %i[items support_and_advice_items].each do |item_type| %>
             <% if subsection[item_type]&.any? %>
               <% if item_type == :support_and_advice_items %>
-                <h3 class="govuk-heading-s"><%= t("coronavirus_form.results.support_and_advice_text") %></h3>
+                <h4 class="govuk-heading-s"><%= t("coronavirus_form.results.support_and_advice_text") %></h4>
               <% end %>
               <ul class="govuk-list">
               <% subsection[item_type].each do |item| %>

@@ -12,4 +12,13 @@ namespace :content do
   rescue KeyError
     puts "Please provide a file path"
   end
+
+  desc "Imports results link content from a google sheet"
+  task import_locale_links_from_google_sheet: :environment do
+    sheet_id = ENV.fetch("GOOGLE_SHEET_ID")
+    csv_path = "tmp/result_links_sheet_import.csv"
+    ContentImporter::FromSheet.new(sheet_id, csv_path).download
+
+    Rake::Task["content:import_locale_links"].invoke(csv_path)
+  end
 end

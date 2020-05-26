@@ -37,6 +37,7 @@ group :development, :test do
   gem "byebug", "~> 11"
   gem "dotenv-rails"
   gem "foreman", "~> 0.87.1"
+  gem "google-api-client"
   gem "govuk_test", "~> 1.0"
   gem "jasmine"
   gem "jasmine_selenium_runner", require: false

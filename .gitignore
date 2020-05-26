@@ -40,3 +40,7 @@ public/assets/*.json
 
 # ignore dotenv env files
 .env
+
+# ignore google sheets files
+credentials.json
+token.yaml

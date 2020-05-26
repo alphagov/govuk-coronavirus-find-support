@@ -212,7 +212,7 @@ en:
             custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
       feeling_unsafe:
         title: "Feeling unsafe"
-        need_help_with_label: "Feeling unsafe where you live, or being worried about someone else"
+        need_help_with_label: "Feeling unsafe where you live, or what to do if you’re worried about the safety of another adult or child"
         questions:
           feel_safe:
             title: "Do you feel safe where you live?"
@@ -345,6 +345,7 @@ en:
             custom_select_error: "Select if you have been evicted or might be soon"
       mental_health:
         title: "Mental health and wellbeing"
+        need_help_with_label: "Mental health and wellbeing, including information for children"
         questions:
           mental_health_worries:
             title: "Are you worried about your mental health, or another adult or child’s mental health?"

@@ -21,7 +21,7 @@ module FillInTheFormSteps
     check I18n.t("coronavirus_form.groups.being_unemployed.title")
     check I18n.t("coronavirus_form.groups.going_in_to_work.title")
     check I18n.t("coronavirus_form.groups.somewhere_to_live.title")
-    check I18n.t("coronavirus_form.groups.mental_health.title")
+    check I18n.t("coronavirus_form.groups.mental_health.need_help_with_label")
     check I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.options").first
 
     click_on I18n.t("coronavirus_form.submit_and_next")

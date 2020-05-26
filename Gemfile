@@ -35,6 +35,7 @@ end
 group :development, :test do
   gem "awesome_print", "~> 1.8"
   gem "byebug", "~> 11"
+  gem "dotenv-rails"
   gem "foreman", "~> 0.87.1"
   gem "govuk_test", "~> 1.0"
   gem "jasmine"

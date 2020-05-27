@@ -22,7 +22,7 @@ module FixturesHelper
               "text" => "This is a row has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria",
             },
           ],
-          "support_and_advice" => [
+          "support_and_advice_items" => [
             {
               "href" => "http://test.stubbed.gb.gov.uk",
               "id" => "0004",

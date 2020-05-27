@@ -55,11 +55,11 @@ module_function
   def import_results_links(csv_path)
     csv = CSV.read(csv_path, { headers: true })
     output = csv.each_with_object({}) do |csv_row, results_links|
-      support_and_advice = csv_row.fetch("support_and_advice")
+      support_and_advice_items = csv_row.fetch("support_and_advice")
       group_key = csv_row.fetch("group_key").to_sym
       subgroup_key = csv_row.fetch("subgroup_key").to_sym
 
-      link_type = support_and_advice.downcase == "true" ? "support_and_advice" : "items"
+      link_type = support_and_advice_items.downcase == "true" ? "support_and_advice_items" : "items"
       results_links[group_key] = {} if results_links.dig(group_key).nil?
       results_links[group_key][subgroup_key] = {} if results_links.dig(group_key, subgroup_key).nil?
       if results_links.dig(group_key, subgroup_key, link_type).nil?
@@ -89,7 +89,7 @@ module_function
       existing_locale_file["en"]["results_link"][group_key].keys.each do |subgroup_key|
         subgroup = existing_locale_file["en"]["results_link"][group_key][subgroup_key]
         subgroup["items"] = [] # Clear out old items in case we removed some on the sheet
-        subgroup["support_and_advice"] = [] unless subgroup["support_and_advice"].nil? # ditto s&a links
+        subgroup["support_and_advice_items"] = [] unless subgroup["support_and_advice_items"].nil? # ditto s&a links
         merged_locale = subgroup.merge(locale_hash[group_key][subgroup_key])
         existing_locale_file["en"]["results_link"][group_key][subgroup_key] = merged_locale
       end

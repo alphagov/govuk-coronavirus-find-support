@@ -42,12 +42,12 @@ RSpec.describe ContentImporter do
     it "outputs support and advice link as a sibling of items" do
       output_item = output_locale["group_one"]["subgroup_one"]
       expected_item = locale_import_data_fixture["group_one"]["subgroup_one"]
-      expect(output_item.keys).to match_array(%w[items support_and_advice])
-      expect(output_item["support_and_advice"]).to match_array(expected_item["support_and_advice"])
+      expect(output_item.keys).to match_array(%w[items support_and_advice_items])
+      expect(output_item["support_and_advice_items"]).to match_array(expected_item["support_and_advice_items"])
     end
 
     it "outputs multiple OR conditional hyperlink text with id, href, text key, national criteria value pairs" do
-      output_item = output_locale["group_one"]["subgroup_one"]["support_and_advice"].first
+      output_item = output_locale["group_one"]["subgroup_one"]["support_and_advice_items"].first
       expect(output_item.keys).to match_array(%w[id text href show_to_nations])
       expect(output_item["show_to_nations"]).to match_array(%w[Wales Scotland England])
     end

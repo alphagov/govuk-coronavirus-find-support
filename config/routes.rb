@@ -87,6 +87,8 @@ Rails.application.routes.draw do
 
     get "/data-export", to: "data_export#show"
     get "/data-export-results-links", to: "data_export_results_links#show"
+
+    get "/data-export-checkbox", to: "data_export_checkbox#show"
   end
 
   mount GovukPublishingComponents::Engine, at: "/component-guide" if Rails.env.development?

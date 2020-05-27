@@ -35,7 +35,9 @@ end
 group :development, :test do
   gem "awesome_print", "~> 1.8"
   gem "byebug", "~> 11"
+  gem "dotenv-rails"
   gem "foreman", "~> 0.87.1"
+  gem "google-api-client"
   gem "govuk_test", "~> 1.0"
   gem "jasmine"
   gem "jasmine_selenium_runner", require: false
@@ -46,6 +48,7 @@ group :development, :test do
   gem "rubocop-govuk"
   gem "scss_lint-govuk"
   gem "webdrivers", "~> 4.3"
+  gem "webmock", "~> 3.8.3"
 end
 
 gem "prometheus-client", "~> 2.0"

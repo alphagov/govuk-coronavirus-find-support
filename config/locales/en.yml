@@ -431,9 +431,6 @@ en:
             of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services"
             class="govuk-link">victim or witness of a crime</a> (these pages have
             no quick escape)
-        - id: '0006'
-          text: Get safety advice for survivors (Women’s Aid)
-          href: https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/
         - id: '0007'
           text: Get help from Nexus NI
           href: https://nexusni.org/domestic-and-sexual-abuse-24-hour-helpline/
@@ -457,11 +454,6 @@ en:
         - id: '0011'
           text: Get help for children (Childline)
           href: https://www.childline.org.uk/
-        - id: '0012'
-          text: Get advice for children (Children’s Commissioner for Wales)
-          href: https://www.childcomwales.org.uk/coronavirus/
-          show_to_nations:
-          - Wales
         - id: '0013'
           text: Contact NSPCC if you’re concerned about a child
           href: https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/
@@ -476,6 +468,15 @@ en:
           href: https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales
           show_to_nations:
           - Wales
+        support_and_advice:
+        - id: '0006'
+          text: Get safety advice for survivors (Women’s Aid)
+          href: https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/
+        - id: '0012'
+          text: Get advice for children (Children’s Commissioner for Wales)
+          href: https://www.childcomwales.org.uk/coronavirus/
+          show_to_nations:
+          - Wales
     paying_bills:
       afford_rent_mortgage_bills:
         title: If you’re finding it hard to afford rent, your mortgage or bills
@@ -483,9 +484,6 @@ en:
         - 'Yes'
         - Not sure
         items:
-        - id: '0016'
-          text: Your rights if you’re finding it hard to pay rent
-          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
         - id: '0017'
           text: What to do if you cannot pay your rent or mortgage (Shelter)
           href: https://england.shelter.org.uk/housing_advice/coronavirus
@@ -528,6 +526,10 @@ en:
           href: https://www.housingrights.org.uk/
           show_to_nations:
           - Northern Ireland
+        support_and_advice:
+        - id: '0016'
+          text: Your rights if you’re finding it hard to pay rent
+          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
         - id: '0025'
           text: What to do if you’re finding it hard to pay rent (Welsh Government)
           href: https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html
@@ -674,15 +676,28 @@ en:
         - id: '0045'
           text: What to do if you’ve lost your job
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job
+        - id: '0048'
+          text: What to do if you’ve been furloughed
+          href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
+        - id: '0052'
+          text: Find out about the financial support and benefits you might be able
+            to get (NI direct)
+          href: https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits
+          show_to_nations:
+          - Northern Ireland
+        - id: '0061'
+          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
+            Government)
+          href: https://gov.wales/discretionary-assistance-fund-daf
+          show_to_nations:
+          - Wales
+        support_and_advice:
         - id: '0046'
           text: What to do if you’ve been laid-off
           href: https://www.gov.uk/lay-offs-short-timeworking
         - id: '0047'
           text: Find out about your rights if you’ve been dismissed
           href: https://www.gov.uk/dismissal
-        - id: '0048'
-          text: What to do if you’ve been furloughed
-          href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
         - id: '0049'
           text: What to do if your employer has told you not to work (Citizens Advice)
           href: https://www.citizensadvice.org.uk/work/coronavirus-if-your-employer-has-told-you-not-to-work/
@@ -699,12 +714,6 @@ en:
           href: https://www.citizensadvice.org.uk/wales/work/coronavirus-if-your-employer-has-told-you-not-to-work/
           show_to_nations:
           - Wales
-        - id: '0052'
-          text: Find out about the financial support and benefits you might be able
-            to get (NI direct)
-          href: https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits
-          show_to_nations:
-          - Northern Ireland
         - id: '0053'
           text: Find out about your rights if you’ve been furloughed (Acas)
           href: https://www.acas.org.uk/coronavirus/if-the-employer-needs-to-close-the-workplace
@@ -744,12 +753,6 @@ en:
           href: https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/
           show_to_nations:
           - Wales
-        - id: '0061'
-          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
-            Government)
-          href: https://gov.wales/discretionary-assistance-fund-daf
-          show_to_nations:
-          - Wales
         - id: '0062'
           text: Get help if you’ve been made redundant (mygov.scot)
           href: https://www.mygov.scot/help-redundancy/
@@ -768,20 +771,21 @@ en:
         - id: '0064'
           text: What to do if you’re employed but cannot work
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
-        - id: '0065'
-          text: Find out about getting statutory sick pay if you’re self-isolating
-            (Acas)
-          href: https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay
-        - id: '0066'
-          text: Find out about the help you can get if you’re self-employed or work
-            in the gig economy (Money Advice Service)
-          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you
         - id: '0067'
           text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
             Government)
           href: https://gov.wales/discretionary-assistance-fund-daf
           show_to_nations:
           - Wales
+        support_and_advice:
+        - id: '0066'
+          text: Find out about the help you can get if you’re self-employed or work
+            in the gig economy (Money Advice Service)
+          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you
+        - id: '0065'
+          text: Find out about getting statutory sick pay if you’re self-isolating
+            (Acas)
+          href: https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay
       self_employed:
         title: If you’re self employed or a sole trader
         show_options:
@@ -791,16 +795,34 @@ en:
         - id: '0068'
           text: What to do if you’re self-employed and getting less or no work
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work
-        - id: '0069'
-          text: What you can do if you’re self employed or a sole trader (Money Advice
-            Service)
-          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed
         - id: '0070'
           text: Find out about the financial support and benefits you might be able
             to get (NI direct)
           href: https://www.nidirect.gov.uk/articles/coronavirus-covid-19-and-benefits
           show_to_nations:
           - Northern Ireland
+        - id: '0074'
+          text: Get help with your business rates and find out about coronavirus loans
+            (nibusinessinfo)
+          href: https://www.nibusinessinfo.co.uk/content/coronavirus-support-and-advice-self-employed
+          show_to_nations:
+          - Northern Ireland
+        - id: '0077'
+          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
+            Government)
+          href: https://gov.wales/discretionary-assistance-fund-daf
+          show_to_nations:
+          - Wales
+        - id: '0079'
+          text: Find financial support for your business (Scottish Government)
+          href: https://findbusinesssupport.gov.scot/coronavirus-advice
+          show_to_nations:
+          - Scotland
+        support_and_advice:
+        - id: '0069'
+          text: What you can do if you’re self employed or a sole trader (Money Advice
+            Service)
+          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed
         - id: '0071'
           text: Get information on applying for Universal Credit (Citizens Advice)
           href: https://www.citizensadvice.org.uk/benefits/universal-credit/
@@ -817,12 +839,6 @@ en:
           href: https://www.citizensadvice.org.uk/wales/benefits/universal-credit/
           show_to_nations:
           - Wales
-        - id: '0074'
-          text: Get help with your business rates and find out about coronavirus loans
-            (nibusinessinfo)
-          href: https://www.nibusinessinfo.co.uk/content/coronavirus-support-and-advice-self-employed
-          show_to_nations:
-          - Northern Ireland
         - id: '0075'
           text: Get help from Citizens Advice
           href: https://www.citizensadvice.org.uk/about-us/northern-ireland/
@@ -833,20 +849,9 @@ en:
           href: https://www.adviceni.net/
           show_to_nations:
           - Northern Ireland
-        - id: '0077'
-          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
-            Government)
-          href: https://gov.wales/discretionary-assistance-fund-daf
-          show_to_nations:
-          - Wales
         - id: '0078'
           text: Find help with benefits (mygov.scot)
           href: https://www.mygov.scot/benefits-support/
-          show_to_nations:
-          - Scotland
-        - id: '0079'
-          text: Find financial support for your business (Scottish Government)
-          href: https://findbusinesssupport.gov.scot/coronavirus-advice
           show_to_nations:
           - Scotland
     going_in_to_work:
@@ -905,11 +910,6 @@ en:
             class="govuk-link">03448 920 908</a>
           show_to_nations:
           - Northern Ireland
-        - id: '0088'
-          text: Get help from Housing Rights housing and debt helpline
-          href: https://www.housingadviceni.org/homeless/coronavirus
-          show_to_nations:
-          - Northern Ireland
         - id: '0089'
           text: Get coronavirus housing information (Shelter Cymru)
           href: https://sheltercymru.org.uk/get-advice/coronavirus/
@@ -920,6 +920,12 @@ en:
           href: https://www.mygov.scot/homelessness/
           show_to_nations:
           - Scotland
+        support_and_advice:
+        - id: '0088'
+          text: Get help from Housing Rights housing and debt helpline
+          href: https://www.housingadviceni.org/homeless/coronavirus
+          show_to_nations:
+          - Northern Ireland
         - id: '0091'
           text: Get help if you’re homeless from Shelter Scotland
           href: https://scotland.shelter.org.uk/get_advice/advice_topics/homelessness
@@ -932,26 +938,47 @@ en:
         - I might be evicted soon
         - Not sure
         items:
-        - id: '0092'
-          text: Find information about your rights as a tenant
-          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
-          show_to_nations:
-          - England
         - id: '0093'
           text: Get coronavirus housing advice (Shelter)
           href: https://england.shelter.org.uk/housing_advice/coronavirus
           show_to_nations:
           - England
-        - id: '0094'
-          text: Get coronavirus housing advice (Shelter Scotland)
-          href: https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19
-          show_to_nations:
-          - Scotland
         - id: '0095'
           text: Call the Northern Ireland Housing Executive on <a href="tel:+443448920908"
             class="govuk-link">03448 920 908</a>
           show_to_nations:
           - Northern Ireland
+        - id: '0100'
+          text: Find out how to get help if you’re being evicted (mygov.scot)
+          href: https://www.mygov.scot/private-tenant-eviction/getting-help/
+          show_to_nations:
+          - Scotland
+        - id: '0098'
+          text: Get coronavirus housing advice for Wales (Shelter Cymru)
+          href: https://sheltercymru.org.uk/get-advice/coronavirus/
+          show_to_nations:
+          - Wales
+        support_and_advice:
+        - id: '0092'
+          text: Find information about your rights as a tenant
+          href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
+          show_to_nations:
+          - England
+        - id: '0099'
+          text: Get information on evictions (Welsh Government)
+          href: https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html
+          show_to_nations:
+          - Wales
+        - id: '0101'
+          text: Find out about your rights if you have a private landlord (mygov.scot)
+          href: https://www.mygov.scot/private-rental-rights/
+          show_to_nations:
+          - Scotland
+        - id: '0102'
+          text: Find out about your rights if you have a social landlord (mygov.scot)
+          href: https://www.mygov.scot/social-rental-rights/
+          show_to_nations:
+          - Scotland
         - id: '0096'
           text: Find advice from the Housing Executive
           href: https://www.nihe.gov.uk/My-Housing-Executive/Advice-for-Housing-Executive-Tenants/Covid-19-(Coronavirus)
@@ -962,29 +989,9 @@ en:
           href: https://www.housingadviceni.org/coronavirus
           show_to_nations:
           - Northern Ireland
-        - id: '0098'
-          text: Get coronavirus housing advice for Wales (Shelter Cymru)
-          href: https://sheltercymru.org.uk/get-advice/coronavirus/
-          show_to_nations:
-          - Wales
-        - id: '0099'
-          text: Get information on evictions (Welsh Government)
-          href: https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html
-          show_to_nations:
-          - Wales
-        - id: '0100'
-          text: Find out how to get help if you’re being evicted (mygov.scot)
-          href: https://www.mygov.scot/private-tenant-eviction/getting-help/
-          show_to_nations:
-          - Scotland
-        - id: '0101'
-          text: Find out about your rights if you have a private landlord (mygov.scot)
-          href: https://www.mygov.scot/private-rental-rights/
-          show_to_nations:
-          - Scotland
-        - id: '0102'
-          text: Find out about your rights if you have a social landlord (mygov.scot)
-          href: https://www.mygov.scot/social-rental-rights/
+        - id: '0094'
+          text: Get coronavirus housing advice (Shelter Scotland)
+          href: https://scotland.shelter.org.uk/get_advice/scottish_housing_advice_coronavirus_COVID_19
           show_to_nations:
           - Scotland
     mental_health:
@@ -998,6 +1005,7 @@ en:
         - id: '0103'
           text: Where to get urgent help for mental health
           href: https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/
+        support_and_advice:
         - id: '0104'
           text: Get information on coronavirus and your wellbeing (Mind)
           href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8

@@ -469,7 +469,7 @@ en:
           href: https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales
           show_to_nations:
           - Wales
-        support_and_advice:
+        support_and_advice_items:
         - id: '0006'
           text: Get safety advice for survivors (Women’s Aid)
           href: https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/
@@ -527,7 +527,7 @@ en:
           href: https://www.housingrights.org.uk/
           show_to_nations:
           - Northern Ireland
-        support_and_advice:
+        support_and_advice_items:
         - id: '0016'
           text: Your rights if you’re finding it hard to pay rent
           href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
@@ -692,7 +692,7 @@ en:
           href: https://gov.wales/discretionary-assistance-fund-daf
           show_to_nations:
           - Wales
-        support_and_advice:
+        support_and_advice_items:
         - id: '0046'
           text: What to do if you’ve been laid-off
           href: https://www.gov.uk/lay-offs-short-timeworking
@@ -778,7 +778,7 @@ en:
           href: https://gov.wales/discretionary-assistance-fund-daf
           show_to_nations:
           - Wales
-        support_and_advice:
+        support_and_advice_items:
         - id: '0066'
           text: Find out about the help you can get if you’re self-employed or work
             in the gig economy (Money Advice Service)
@@ -819,7 +819,7 @@ en:
           href: https://findbusinesssupport.gov.scot/coronavirus-advice
           show_to_nations:
           - Scotland
-        support_and_advice:
+        support_and_advice_items:
         - id: '0069'
           text: What you can do if you’re self employed or a sole trader (Money Advice
             Service)
@@ -921,7 +921,7 @@ en:
           href: https://www.mygov.scot/homelessness/
           show_to_nations:
           - Scotland
-        support_and_advice:
+        support_and_advice_items:
         - id: '0088'
           text: Get help from Housing Rights housing and debt helpline
           href: https://www.housingadviceni.org/homeless/coronavirus
@@ -959,7 +959,7 @@ en:
           href: https://sheltercymru.org.uk/get-advice/coronavirus/
           show_to_nations:
           - Wales
-        support_and_advice:
+        support_and_advice_items:
         - id: '0092'
           text: Find information about your rights as a tenant
           href: https://www.gov.uk/government/publications/covid-19-and-renting-guidance-for-landlords-tenants-and-local-authorities
@@ -1006,7 +1006,7 @@ en:
         - id: '0103'
           text: Where to get urgent help for mental health
           href: https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/
-        support_and_advice:
+        support_and_advice_items:
         - id: '0104'
           text: Get information on coronavirus and your wellbeing (Mind)
           href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8

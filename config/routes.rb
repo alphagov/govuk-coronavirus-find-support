@@ -86,6 +86,7 @@ Rails.application.routes.draw do
     get "/session-expired", to: "session_expired#show"
 
     get "/data-export", to: "data_export#show"
+    get "/data-export-results-links", to: "data_export_results_links#show"
   end
 
   mount GovukPublishingComponents::Engine, at: "/component-guide" if Rails.env.development?

@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   localized do
     scope module: "coronavirus_form" do
       first_question = "/need-help-with"
+      first_question_cy = "/angen-help-gyda"
 
+      get "/dechrau", to: redirect(first_question_cy)
       get "/start", to: redirect(first_question)
 
       get "/privacy", to: "privacy#show"

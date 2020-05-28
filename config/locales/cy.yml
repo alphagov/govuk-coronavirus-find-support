@@ -1,6 +1,7 @@
 ---
   cy:
     routes:
+      start: "dechrau"
       privacy: "preifatrwydd"
       cookies: "cwcis"
       accessibility-statement: "datganiad-hygyrchedd"

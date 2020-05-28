@@ -43,8 +43,6 @@ module QuestionsHelper
 
   def first_question_seen?
     session[:nation].present?
-    # session[:nation] = :option_wales
-    # true
   end
 
   def last_question

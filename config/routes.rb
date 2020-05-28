@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   localized do
     scope module: "coronavirus_form" do
-      first_question = "/nation"
+      first_question = "/need-help-with"
 
       get "/start", to: redirect(first_question)
 
@@ -88,6 +88,7 @@ Rails.application.routes.draw do
 
       get "/data-export", to: "data_export#show"
       get "/data-export-results-links", to: "data_export_results_links#show"
+    end
   end
 
   mount GovukPublishingComponents::Engine, at: "/component-guide" if Rails.env.development?

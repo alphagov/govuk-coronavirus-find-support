@@ -1,5 +1,63 @@
 ---
   en:
+    layout_head:
+      meta_title: "| GOV.WALES"
+    govwales_header:
+      title: "Welsh Government"
+      href: "https://gov.wales/"
+    govwales_footer_primary:
+      links:
+        - text: "Coronavirus (COVID-19)"
+          href: "https://gov.wales/coronavirus"
+    govwales_footer_secondary:
+      links:
+        - text: "Accessibility"
+          href: "https://gov.wales/help/accessibility"
+        - text: "Cookies"
+          href: "/cookies"
+        - text: "Privacy"
+          href: "/privacy"
+        - text: "Copyright statement"
+          href: "https://gov.wales/copyright-statement"
+      logo:
+        href: "https://gov.wales/"
+        alt: "Welsh Government"
+        text: "Home"
+    govwales_breadcrumbs:
+      start_again_text: "Start again"
+      start_again_url: "/need-help-with"
+      back_text: "Back"
+    govwales_beta_status:
+      status: "BETA"
+      type: "This is a new service. "
+    govwales_feedback:
+      text: "Give feedback"
+      footer_text: "Report anything wrong with this page"
+      name: "Coronavirus service feedback"
+      email: "digital@gov.wales"
+      subject: "Feedback on: "
+      body: "Page URL: "
+      body_feedback: "Your feedback: "
+      help: "to help improve it."
+    govwales_buttons:
+      start_again_text: "Start again"
+      start_again_url: "/need-help-with"
+      back_to_top:
+        text: "Back to top"
+        href: "#wg_header"
+    govwales_navigation:
+      content:
+        title: "Contents"
+    govwales_links:
+      start_now_url: "https://gov.wales/coronavirus"
+    govwales_cookie_banner:
+      title: "Cookie usage"
+      text: "We've saved some files called cookies on your device. These cookies are essential for the find help if you're affected by coronavirus service to work."
+      hide:  "Hide"
+      link:
+        pretext: "Find out "
+        text: "how we use cookies"
+        href: "/cookies"
     accessibility_statement:
       title: Accessibility statement
       body_text: |
@@ -186,6 +244,9 @@
                 if you’ve visited before
             - text: 3 years
     coronavirus_form:
+      service_title:
+        context: "Finder"
+        title: "Find help if you're affected by coronavirus"
       submit_and_next: Continue
       errors:
         page_title_prefix: 'Error: '

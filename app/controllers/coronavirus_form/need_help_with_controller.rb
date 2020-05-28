@@ -82,7 +82,7 @@ private
   end
 
   def previous_path
-    nation_path
+    "/"
   end
 
   def group

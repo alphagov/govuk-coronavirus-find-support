@@ -2,19 +2,26 @@
 
 module FillInTheFormSteps
   def given_a_user_is_struggling_because_of_coronavirus
-    visit need_help_with_path
+    visit nation_path
+  end
+
+  def and_they_live_in_england
+    expect(page.body).to have_content(I18n.t("coronavirus_form.groups.location.questions.nation.title"))
+
+    choose I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label")
+    click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_needs_help_with_all_options
     expect(page.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
 
-    check I18n.t("coronavirus_form.groups.feeling_unsafe.title")
+    check I18n.t("coronavirus_form.groups.feeling_unsafe.need_help_with_label")
     check I18n.t("coronavirus_form.groups.paying_bills.title")
     check I18n.t("coronavirus_form.groups.getting_food.title")
     check I18n.t("coronavirus_form.groups.being_unemployed.title")
     check I18n.t("coronavirus_form.groups.going_in_to_work.title")
     check I18n.t("coronavirus_form.groups.somewhere_to_live.title")
-    check I18n.t("coronavirus_form.groups.mental_health.title")
+    check I18n.t("coronavirus_form.groups.mental_health.need_help_with_label")
     check I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.options").first
 
     click_on I18n.t("coronavirus_form.submit_and_next")
@@ -24,6 +31,14 @@ module FillInTheFormSteps
     expect(page).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
 
     check I18n.t("coronavirus_form.groups.being_unemployed.title")
+
+    click_on I18n.t("coronavirus_form.submit_and_next")
+  end
+
+  def and_needs_help_with_getting_food
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
+
+    check I18n.t("coronavirus_form.groups.getting_food.title")
 
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
@@ -48,6 +63,14 @@ module FillInTheFormSteps
     expect(page.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.title"))
 
     choose I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.options.option_yes.label")
+
+    click_on I18n.t("coronavirus_form.submit_and_next")
+  end
+
+  def and_is_not_finding_it_hard_to_afford_food
+    expect(page.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.title"))
+
+    choose I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.options.option_no.label")
 
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
@@ -140,6 +163,14 @@ module FillInTheFormSteps
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
+  def and_is_not_able_to_leave_home_as_they_are_vulnerable
+    expect(page.body).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
+
+    choose I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_high_risk.label")
+
+    click_on I18n.t("coronavirus_form.submit_and_next")
+  end
+
   def they_view_the_results_page
     expect(page.body).to have_content(I18n.t("coronavirus_form.results.header.title"))
     expect(current_path).to eq "/results"
@@ -156,6 +187,14 @@ module FillInTheFormSteps
   def they_are_provided_with_information_about_getting_food
     expect(page.body).to have_content(I18n.t("results_link.getting_food.afford_food.title"))
     expect(page.body).to have_content(I18n.t("results_link.getting_food.get_food.title"))
+  end
+
+  def they_are_provided_with_information_about_getting_support_when_vulnerable
+    expect(page.body).to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
+  end
+
+  def they_are_not_provided_with_information_about_getting_support_when_vulnerable
+    expect(page.body).not_to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
   end
 
   def they_are_provided_with_information_about_being_self_employed

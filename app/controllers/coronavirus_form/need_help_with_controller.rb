@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::NeedHelpWithController < ApplicationController
+  before_action :check_first_question_answered
+
   def submit
     @form_responses = {
       need_help_with: Array(params[:need_help_with]).map { |item| strip_tags(item).presence }.compact,
@@ -30,7 +32,7 @@ private
     groups_items = groups_hash.map do |key, title|
       {
         value: title,
-        label: title,
+        label: group_labels[key] || title,
         id: "option_#{key}",
         checked: false,
       }
@@ -64,11 +66,15 @@ private
     all_groups.map { |key, group| { key => group[:title] } if group[:title] }.compact.reduce(:merge)
   end
 
+  def group_labels
+    @group_labels ||= all_groups.map { |key, group| { key => group[:need_help_with_label] } if group[:need_help_with_label] }.compact.reduce(:merge)
+  end
+
   def update_session_store
     session[:need_help_with] = @form_responses[:need_help_with]
 
     selected_groups = @form_responses[:need_help_with].map do |item|
-      groups_hash.key(item) if groups_hash.has_value?(item)
+      groups_hash.key(item) if groups_hash.value?(item)
     end
 
     session[:selected_groups] = selected_groups.compact
@@ -76,7 +82,7 @@ private
   end
 
   def previous_path
-    "/"
+    nation_path
   end
 
   def group

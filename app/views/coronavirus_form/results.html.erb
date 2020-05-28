@@ -23,12 +23,14 @@
 <% if result_groups(session).empty? %>
   <%= sanitize(t("coronavirus_form.results.no_results")) %>
 <% else %>
-  <% result_groups(session).each do |group| %>
-    <%= render "components/actions-group", {
-      title: group[1][:heading],
-      subsections: group[1][:questions]
-    } %>
-  <% end %>
+  <div data-track-ec-list="Find coronavirus support">
+    <% result_groups(session).each do |group| %>
+      <%= render "components/actions-group", {
+        title: group[1][:heading],
+        subsections: group[1][:questions]
+      } %>
+    <% end %>
+  </div>
 <% end %>
 
 <%= render "components/callout", {

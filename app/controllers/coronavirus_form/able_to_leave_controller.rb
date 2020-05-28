@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AbleToLeaveController < ApplicationController
-  before_action :check_first_question_answered
+  before_action :check_filter_question_answered
 
   def submit
     @form_responses = {

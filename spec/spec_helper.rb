@@ -4,6 +4,7 @@ require "byebug"
 require "rack_session_access/capybara"
 require "simplecov"
 require "capybara/apparition"
+require "webmock/rspec"
 
 ENV["RAILS_ENV"] ||= "test"
 require File.expand_path("../config/environment", __dir__)
@@ -21,7 +22,11 @@ RSpec.configure do |config|
   config.include Capybara::DSL, type: :request
   config.include Capybara::RSpecMatchers, type: :request
   config.before :each, :js do
+    WebMock.allow_net_connect!
     page.driver.add_headers("SMOKE_TEST" => "true")
+  end
+  config.after :each, :js do
+    WebMock.disable_net_connect!
   end
 end
 

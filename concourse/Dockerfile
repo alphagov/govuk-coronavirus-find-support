@@ -4,7 +4,7 @@
 #
 # This is needed for running the feature tests in a container environment like Concourse.
 #========================================================================================
-FROM ruby:2.6.5-buster
+FROM ruby:2.6.6-buster
 
 # Updates all debian dependencies
 # Adds google chrome to software sources, install chrome, install postgres
@@ -14,7 +14,7 @@ RUN apt-get update --fix-missing && apt-get -y upgrade \
     && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-      google-chrome-unstable \
+      google-chrome-stable \
       postgresql-11 \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /src/*.deb

@@ -1,1 +1,3 @@
 plugin_gems: ["scss_lint-govuk"]
+
+exclude: "app/assets/stylesheets/govwales/**"

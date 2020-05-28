@@ -71,6 +71,7 @@ private
   end
 
   def update_session_store
+    session[:nation] = { nation: "Wales" }
     session[:need_help_with] = @form_responses[:need_help_with]
 
     selected_groups = @form_responses[:need_help_with].map do |item|

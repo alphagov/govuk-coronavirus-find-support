@@ -1,6 +1,6 @@
 <footer class="footer" id="footer">
-  <div class="footer__page_feedback container">  
-  <%= mail_to t("govwales_feedback.email"), t("govwales_feedback.footer_text"), subject: t("govwales_feedback.subject") + t("coronavirus_form.service_title.title"), body: t("govwales_feedback.body") + request.url + "\n" + t("govwales_feedback.body_feedback") %>
+  <div class="footer__page_feedback container">
+  <%= mail_to t("govwales_feedback.email"), t("govwales_feedback.footer_text"), subject: t("govwales_feedback.subject") + t("service_title.title"), body: t("govwales_feedback.body") + request.url + "\n" + t("govwales_feedback.body_feedback") %>
   </div>
   <div class="footer__backtotop">
     <div class="container">

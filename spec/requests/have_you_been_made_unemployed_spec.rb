@@ -16,7 +16,7 @@ RSpec.describe "have-you-been-made-unemployed" do
       it "redirects to filter question" do
         get have_you_been_made_unemployed_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 

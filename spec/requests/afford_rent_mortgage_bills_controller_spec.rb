@@ -16,7 +16,7 @@ RSpec.describe "afford-rent-mortgage-bills" do
       it "redirects to filter question" do
         get afford_rent_mortgage_bills_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 

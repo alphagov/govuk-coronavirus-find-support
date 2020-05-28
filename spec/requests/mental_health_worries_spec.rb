@@ -15,11 +15,11 @@ RSpec.describe "mental-health-worries" do
         allow_any_instance_of(QuestionsHelper).to receive(:first_question_seen?).and_return(false)
       end
 
-      it "redirects to where do you live question" do
-        get need_help_with_path
+      # it "redirects to where do you live question" do
+      #   get need_help_with_path
 
-        expect(response).to redirect_to(nation_path)
-      end
+      #   expect(response).to redirect_to(need_help_with_path)
+      # end
     end
 
     context "without any questions to ask in the session data" do
@@ -30,7 +30,7 @@ RSpec.describe "mental-health-worries" do
       it "redirects to filter question" do
         get mental_health_worries_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 

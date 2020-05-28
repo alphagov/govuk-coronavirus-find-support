@@ -16,7 +16,7 @@ RSpec.describe "able-to-leave" do
       it "redirects to filter question" do
         get able_to_leave_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 

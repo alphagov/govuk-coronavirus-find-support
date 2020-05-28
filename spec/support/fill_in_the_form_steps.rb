@@ -190,11 +190,11 @@ module FillInTheFormSteps
   end
 
   def they_are_provided_with_information_about_getting_support_when_vulnerable
-    expect(page.body).to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
+    expect(page.body).to have_content(I18n.t("results_link.getting_food.get_food.items")[3][:text])
   end
 
   def they_are_not_provided_with_information_about_getting_support_when_vulnerable
-    expect(page.body).not_to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
+    expect(page.body).not_to have_content(I18n.t("results_link.getting_food.get_food.items")[3][:text])
   end
 
   def they_are_provided_with_information_about_being_self_employed

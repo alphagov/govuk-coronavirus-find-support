@@ -511,6 +511,7 @@
             - id: "0023"
               text: "Help for vulnerable people from voluntary organisations"
               href: "https://gov.wales/help-vulnerable-people-voluntary-organisations"
+              show_to_vulnerable_person: true
       being_unemployed:
         have_you_been_made_unemployed:
           title: "If you’ve been made unemployed, or put on temporary leave (furloughed)"

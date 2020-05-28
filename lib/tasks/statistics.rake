@@ -12,7 +12,7 @@ namespace :statistics do
     # - ["Going in to work"]: 1
     # - ["Having somewhere to live"]: 1
     # - ["Paying bills"]: 3
-    # - ["Paying bills", "I’m not sure"]: 1
+    # - ["Paying bills", "I'm not sure"]: 1
     # - ["Paying bills", "Mental health and wellbeing"]: 1
     #
     # Do you need urgent medical help?
@@ -21,7 +21,7 @@ namespace :statistics do
     # Do you feel safe where you live?
     #  - No: 2
     #  - Yes: 1
-    #  - Yes, but I’m concerned about the safety of someone else: 1
+    #  - Yes, but I'm concerned about the safety of someone else: 1
 
     args.with_defaults(date: Date.yesterday.to_s)
 

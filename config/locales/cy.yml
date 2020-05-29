@@ -102,10 +102,10 @@
           - header: "Cwcis sy'n angenrheidiol"
             text_html: "Cookies that are required for the service to function properly."
             header_row:
-              column_a: "Cwci"
-              column_b: "Enw"
-              column_c: "Diben"
-              column_d: "Dod i ben"
+              cookie: "Cwci"
+              name: "Enw"
+              purpose: "Diben"
+              expires: "Dod&nbsp;i&nbsp;ben"
             cookies:
               - - text: "Service progress"
                 - text: "_session_id"

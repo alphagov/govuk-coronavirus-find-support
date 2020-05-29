@@ -2,6 +2,9 @@
 
 # This file is used by Rack-based servers to start the application.
 
-require_relative 'config/environment'
+require_relative "config/environment"
+require_relative "helpers/application_config"
 
-run Rails.application
+rackapp = ApplicationConfig.call
+
+run rackapp

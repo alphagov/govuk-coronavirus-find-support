@@ -9,13 +9,26 @@ Rails.application.routes.draw do
 
   localized do
     scope module: "coronavirus_form" do
+      first_question = "/need-help-with"
+      first_question_cy = "/angen-help-gyda"
+
+      get "/dechrau", to: redirect(first_question_cy)
+      get "/start", to: redirect(first_question)
+
       get "/privacy", to: "privacy#show"
       get "/cookies", to: "cookies#show"
       get "/accessibility-statement", to: "accessibility_statement#show"
 
       # Redirect for deleted question and page (301 is default)
-      get "/urgent-medical-help", to: redirect("/need-help-with")
-      get "/get-help-from-nhs", to: redirect("/need-help-with")
+      get "/urgent-medical-help", to: redirect(first_question)
+      get "/get-help-from-nhs", to: redirect(first_question)
+
+      # Redirect for old route (301 is default)
+      get "/where-live", to: redirect("/nation")
+
+      # Question: Where do you live
+      get "/nation", to: "nation#show"
+      post "/nation", to: "nation#submit"
 
       # Question: What do you need to find help with?
       get "/need-help-with", to: "need_help_with#show"
@@ -41,7 +54,7 @@ Rails.application.routes.draw do
       get "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#show"
       post "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#submit"
 
-      # Question: Are you off work because you’re ill or self-isolating?
+      # Question: Are you off work because you're ill or self-isolating?
       get "/are-you-off-work-ill", to: "are_you_off_work_ill#show"
       post "/are-you-off-work-ill", to: "are_you_off_work_ill#submit"
 
@@ -76,8 +89,10 @@ Rails.application.routes.draw do
       get "/session-expired", to: "session_expired#show"
 
       get "/data-export", to: "data_export#show"
+      get "/data-export-results-links", to: "data_export_results_links#show"
     end
   end
 
-  mount GovukPublishingComponents::Engine, at: "/component-guide"
+  mount GovukPublishingComponents::Engine, at: "/component-guide" if Rails.env.development?
+  mount JasmineRails::Engine => "/specs" if defined?(JasmineRails)
 end

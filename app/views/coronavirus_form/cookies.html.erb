@@ -25,7 +25,7 @@
     margin_top: 0,
   } %>
 
-  <%= tag.p t('cookies.settings_page.intro_html'), class: "govuk-body" %>
+  <%= tag.p t("cookies.settings_page.intro_html"), class: "govuk-body" %>
 
   <div class="cookie-settings__no-js">
     <%= sanitize(t("cookies.settings_page.no_javascript_explainer_html")) %>
@@ -33,12 +33,12 @@
 
   <div class="cookie-settings__form-wrapper">
     <p>
-      We use <%= t('cookies.settings_page.cookies').count %> types of cookie.
-      You can choose which cookies you're happy for us to use.
+      We use <%= t("cookies.settings_page.cookies").count %> types of cookie.
+      You can choose which cookies you’re happy for us to use.
     </p>
 
     <form data-module="cookie-settings">
-      <% t('cookies.settings_page.cookies').map do |cookie_item| %>
+      <% t("cookies.settings_page.cookies").map do |cookie_item| %>
         <% cookies_usage_hint = capture do %>
           <p class="govuk-body"><%= sanitize(cookie_item.dig(:text_html)) %></p>
           <%= render "govuk_publishing_components/components/table", {

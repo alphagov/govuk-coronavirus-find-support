@@ -1,0 +1,181 @@
+/* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_back-link.scss */
+.gem-c-back-link {
+  display: none;
+}
+
+/* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_button.scss */
+.gem-c-button {
+  font-family: "GDS Transport", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.25;
+  display: inline-block;
+  padding: 5px;
+  border: solid 1px #0b0c0c;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+/*! Copyright (c) 2011 by Margaret Calvert & Henrik Kubel. All rights reserved. The font has been customised for exclusive use on gov.uk. This cut is not commercially available. */
+@font-face {
+  font-family: "GDS Transport";
+  src: url(/assets/light-94a07e06a1-v2-eedfb3c2f7945caebd0b15522b59d6c7f01be17fecd6102fd76452ad4042f7b0.woff2) format("woff2"), url(/assets/light-f591b13f7d-v2-091aa3008e57dfeea899e33243c1d4ea95bab658f1cc2191679193bcbfac0b7b.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "GDS Transport";
+  src: url(/assets/bold-b542beb274-v2-06eba01b1af0f4014b484c711771fef1db30becbf0edf481498da1e4958d3d47.woff2) format("woff2"), url(/assets/bold-affa96571d-v2-5a2a925237869837d1afdd0a70ffded0717296d2d25885865d19c0da7f3ece5d.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+@media print {
+  /* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_button.scss */
+  .gem-c-button {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  /* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_button.scss */
+  .gem-c-button {
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.4285714286;
+  }
+}
+@media print {
+  /* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_button.scss */
+  .gem-c-button {
+    font-size: 12pt;
+    line-height: 1.2;
+  }
+}
+
+/* line 10, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_button.scss */
+.govuk-button__start-icon {
+  display: none;
+}
+
+/* line 2, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_layout-footer.scss */
+.gem-c-layout-footer .govuk-footer__inline-list,
+.gem-c-layout-footer .govuk-footer__section {
+  display: none;
+}
+
+/* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_layout-header.scss */
+.gem-c-header__menu-button {
+  display: none;
+}
+
+/* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_skip-link.scss */
+.gem-c-skip-link {
+  display: none;
+}
+
+/* line 1, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_title.scss */
+.gem-c-title__context {
+  margin: 0;
+}
+
+/* line 5, /Users/rick/.asdf/installs/ruby/2.6.6/lib/ruby/gems/2.6.0/gems/govuk_publishing_components-21.53.0/app/assets/stylesheets/govuk_publishing_components/components/print/_title.scss */
+.gem-c-title__text {
+  margin-top: 0;
+}
+
+@media print {
+  /* line 11, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  body,
+  #page,
+  #main,
+  #content {
+    font-family: Arial, Helvetica, "Nimbus Sans L", sans-serif !important;
+    color: #000 !important;
+    background: #fff !important;
+    background-color: #fff !important;
+    background-image: none !important;
+  }
+
+  /* line 23, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  a:link,
+  a:visited {
+    text-decoration: underline !important;
+  }
+
+  /* line 29, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  .wg_header,
+  .beta-bar,
+  .govuk-back-link,
+  .footer__components,
+  .footer__page_feedback,
+  .footer__backtotop,
+  .app-c-escape-link,
+  .govuk-button--start,
+  .app-c-callout,
+  .visually-hidden,
+  .app-c-page-header .govuk-caption-xl,
+  .navigation__contents,
+  .govwales-removed {
+    display: none !important;
+  }
+
+  /* line 47, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  .footer .visually-hidden {
+    display: none !important;
+  }
+
+  /* line 53, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  .govuk-grid-column-two-thirds-from-desktop {
+    float: none !important;
+    clear: both !important;
+  }
+
+  /* line 59, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  .footer__logo,
+  #main-content .govuk-button,
+  .govuk-main-wrapper,
+  #main-content form {
+    margin-top: 40px !important;
+  }
+
+  /* line 68, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  #main-content form .govuk-fieldset {
+    border: none !important;
+    padding: 0 !important;
+  }
+  /* line 73, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  #main-content form ul {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+  }
+  /* line 78, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  #main-content form input {
+    float: left !important;
+    margin-right: 15px !important;
+  }
+  /* line 84, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  #main-content form .govuk-radios__item, #main-content form .govuk-checkboxes__item {
+    margin-bottom: 15px !important;
+  }
+
+  /* line 93, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  .govuk-list li {
+    margin-bottom: 10px !important;
+  }
+
+  /* line 99, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  .app-c-page-header .govuk-caption-xl,
+  .app-c-page-header .gem-c-title__text {
+    font-weight: bold;
+    color: #000 !important;
+  }
+
+  /* line 104, /Users/rick/Dev/welsh_gov/govwales__govuk-coronavirus-find-support/app/assets/stylesheets/govwales/_print.scss */
+  .app-c-page-header .gem-c-title__text {
+    margin-top: 40px;
+    font-size: 1.25em;
+  }
+}

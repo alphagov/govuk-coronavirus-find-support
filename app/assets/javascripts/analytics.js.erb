@@ -1,6 +1,12 @@
 // Start cookie banner (display settings controlled internally by cookies)
 var element = document.querySelector('[data-module="cookie-banner"]')
-new GOVUK.Modules.CookieBanner().start($(element))
+
+try {
+  if (element) new GOVUK.Modules.CookieBanner().start($(element))
+}
+catch(error) {
+  console.error(error)
+}
 
 var analyticsInit = function () {
   <% if Rails.application.config.analytics_tracking_id.present? %>
@@ -24,9 +30,16 @@ var analyticsInit = function () {
       m.parentNode.insertBefore(a, m)
     })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga')
 
+
     ga('create', trackingId, 'auto')
     ga('set', 'allowAdFeatures', false)
     ga('set', 'anonymizeIp', true)
+    ga('set', 'transport', 'beacon')
+
+    ga('require', 'ec')
+
+    window.GOVUK.enhancedEcommerceTracking(document)
+
     ga('send', 'pageview')
   }
   <% end %>

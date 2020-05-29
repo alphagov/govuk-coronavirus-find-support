@@ -1,0 +1,12 @@
+en:
+  other_stuff:
+    key: "This never changes"
+  results_link:
+    group_one:
+      subgroup_one:
+        title: "I am the title for Group one - Subgroup One"
+        show_options: ["Yes"]
+        items:
+          - id: "0001"
+            text: "If you’re in immediate danger call 999 and ask for the Police."
+        

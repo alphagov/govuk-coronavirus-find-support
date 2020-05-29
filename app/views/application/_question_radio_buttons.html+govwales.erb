@@ -1,7 +1,7 @@
 <% content_for :page_header do %>
   <%= render "govuk_publishing_components/components/service-title", {
-    context: t("coronavirus_form.service_title.context"),
-    title: t("coronavirus_form.service_title.title"),
+    context: t("service_title.context"),
+    title: t("service_title.title"),
   } %>
 <% end %>
 
@@ -28,13 +28,13 @@
       name: question,
       error_message: error_items(question),
       items: t("coronavirus_form.groups.#{group}.questions.#{question}.options").map do |option_key, item|
-          {
-            value: item[:label],
-            text: item[:label],
-            id: option_key,
-            checked: false,
-          }
-        end
+        {
+          value: item[:label],
+          text: item[:label],
+          id: option_key,
+          checked: false,
+        }
+      end
     } %>
     <%= render "govuk_publishing_components/components/button", text: "Continue", margin_bottom: true %>
   <div>

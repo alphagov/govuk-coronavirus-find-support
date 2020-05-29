@@ -54,11 +54,11 @@
       back_text: "Yn ôl"
     govwales_beta_status:
       status: "BETA"
-      type: "This is a new service CY. "
+      type: "Gwasanaeth newydd yw hwn. "
     govwales_feedback:
       text: "Rhowch adborth"
       footer_text: "Adrodd am unrhyw beth sy'n bod gyda'r dudalen hon"
-      name: "Coronavirus service feedback CY"
+      name: "Adborth ar y gwasanaeth coronafeirws"
       email: "digital@gov.wales"
       subject: "Adborth ynglyn â: "
       body: "URL y dudalen: "
@@ -74,24 +74,24 @@
       content:
         title: "Cynnwys"
     govwales_links:
-      start_now_url: "https://llyw.cymru/coronafeirws"
+      start_now_url: "https://llyw.cymru/dod-o-hyd-i-help-os-ydych-yn-cael-pethaun-anodd-oherwydd-y-coronafeirws"
     govwales_cookie_banner:
       title: "Cwcis"
-      text: "We've saved some files called cookies on your device. These cookies are essential for the find help if you're affected by coronavirus service to work. CY"
-      hide:  "Cuddio"
+      text: "Rydym wedi cadw ffeiliau o’r enw cwcis ar eich dyfais. Mae’r rhain yn hanfodol er mwyn i’r gwasanaeth ‘cymorth os yw’r coronafeirws wedi effeithio arnoch’ weithio."
+      hide: "Cuddio"
       link:
-        pretext: "Find out CY"
-        text: "how we use cookies CY"
+        pretext: 
+        text: "Sut rydym yn defnyddio cwcis"
         href: "/cwcis"
     govwales_cookies:
       title: "Cwcis"
       banner:
-        title: "Can we store analytics cookies on your device?"
-        text: "Analytics cookies help us understand how our website is being used."
-        confirmation_message: "You’ve accepted all cookies. You can <a class='govuk-link' href='/cookies'>change your cookie settings</a> at any time."
+        title: "Not applicable"
+        text: "Not applicable"
+        confirmation_message: "Not applicable"
       settings_page:
-        saved: "Your cookie settings were saved."
-        back: "Go back to the page you were looking at"
+        saved: "Not applicable"
+        back: "Not applicable"
         no_javascript_explainer_html: |
           <p>Rydym yn defnyddio Javascript i osod mwyafrif ein cwcis. Yn anffodus, nid yw Javascript yn rhedeg ar eich porwr, felly ni allwch newid eich gosodiadau gan ddefnyddio'r dudalen hon. I reoli eich gosodiadau cwci gan ddefnyddio'r dudalen hon, trowch Javascript ymlaen yn eich porwr.</p>
         intro_html: |
@@ -126,8 +126,8 @@
         <p>Mae cyfyngiadau ar ddefnyddio ein logo ac ni chaiff unigolion na sefydliadau eraill ei ddefnyddio heb ganiatâd ffurfiol gennym ni.</p>
         <p>I ofyn am ganiatâd i ddefnyddio ein logo, anfonwch e-bost i <a href="mailto:brandingqueries@llyw.cymru">brandingqueries@llyw.cymru</a>.</p>
     service_title:
-      context: "Finder CY"
-      title: "Find help if you're affected by coronavirus CY"
+      context: "Chwiliwr"
+      title: "Dod o hyd i help os ydych yn cael pethau'n anodd oherwydd y coronafeirws"
     accessibility_statement:
       title: "Hygyrchedd"
       body_text: |
@@ -154,10 +154,10 @@
         <p>Mae modd cysylltu â Swyddog Diogelu Data Llywodraeth Cymru drwy:</p>
         <p>Y Swyddog Diogelu Data<br>Llywodraeth Cymru<br>Parc Cathays<br>Caerdydd<br>CF10 3NQ.<br>E-bost: <a href="mailto:swyddogdiogeludata@llyw.cymru">swyddogdiogeludata@llyw.cymru</a></p>
     session_expired:
-      title: "Your session has ended due to inactivity"
+      title: "Mae eich sesiwn wedi dod i ben oherwydd diffyg defnydd"
       body_text: |
-        <p>Your session has ended because you have not done anything for 4 hours. You'll have to start again.</p>
-        <p>We do this for your security. We've deleted all the details you entered to protect your data.</p>
+        <p>Mae eich sesiwn wedi dod i ben gan nad ydych wedi gwneud dim ers 4 awr. Bydd rhaid ichi ddechrau eto.</p>
+        <p>Rydym yn gwneud hyn i’ch diogelu. Rydym wedi dileu’r holl fanylion a roddoch chi, i ddiogelu eich data.</p>
         <h2>If you didn’t expect to see this page</h2>
         <p>You may be seeing this page because you’ve turned off cookies in your browser. You’ll need to <a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external" target="_blank">turn cookies on</a> before you can use this service.</p>
     leave_this_website:
@@ -165,90 +165,60 @@
       link_href: "/clear-session?ext_r=true"
       link_redirect_to: "https://www.bbc.co.uk/"
     get_help_from_nhs:
-      title: "Get urgent help from the NHS now"
-      link_text: "Go to NHS 111 online"
+      title: "Not applicable"
+      link_text: "Not applicable"
       link_href: "https://111.nhs.uk/"
     cookies:
-      title: "Cookies"
+      title: "Not applicable"
       banner:
-        title: "Can we store analytics cookies on your device?"
-        text: "Analytics cookies help us understand how our website is being used."
-        confirmation_message: "You’ve accepted all cookies. You can <a class='govuk-link'
-          href='/cookies'>change your cookie settings</a> at any time."
+        title: "Not applicable"
+        text: "Not applicable"
+        confirmation_message: "Not applicable"
       settings_page:
-        saved: "Your cookie settings were saved."
-        back: "Go back to the page you were looking at"
-        no_javascript_explainer_html: <p class="govuk-body">We use Javascript to set
-          most of our cookies. Unfortunately Javascript is not running on your browser,
-          so you cannot change your settings. You can try:</p> <ul class="govuk-list
-          govuk-list--bullet"> <li>reloading the page</li> <li>turning on Javascript
-          in your browser</li> </ul>
-        intro_html: |
-          <p class="govuk-body">This service puts small files (known as ‘cookies’) onto your computer.</p>
-          <p class="govuk-body">Cookies are used to:</p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>keep which question you’re up to and how you’ve answered previous questions</li>
-            <li>measure how you use the website so it can be updated and improved based on your needs.</li>
-          </ul>
-          <p class="govuk-body"><a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external">Find out how to manage cookies</a></p>
+        saved: "Not applicable"
+        back: "Not applicable"
+        no_javascript_explainer_html: "Not applicable"
+        intro_html: "Not applicable"
         cookies:
-        - header: "Essential cookies"
-          text_html: "These cookies are required for this service to operate. We do not
-            need to ask permission to use them."
+        - header: "Not applicable"
+          text_html: "Not applicable"
           cookies:
-          - - text: "cookie_preferences_set"
-            - text: "Lets us know whether you’ve already set your cookies preferences."
-            - text: "1 year"
-          - - text: "cookie_preferences"
-            - text: "Let us know what your cookie preferences are."
-            - text: "1 year"
-          - - text: "_session_id"
-            - text: "Remembers which question you’re up to and how you answered previous
-                questions."
-            - text: "4 hours"
-        - header: "Measuring website usage with Google Analytics (analytics cookies)"
-          text_html: |
-            <p class="govuk-body">We use Google Analytics software to collect anonymised information about how you use the service. We do this to help make sure the site is meeting the needs of its users and to help us make improvements.
-            Google Analytics stores information about:</p>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>the pages you visit</li>
-              <li>how long you spend on each page</li>
-              <li>how you arrived at the site</li>
-              <li>what you click on while you’re visiting the site</li>
-              <li>the device and browser you’re using</li>
-            </ul>
-            <p class="govuk-body">We don’t collect or store your personal information (for example your name or address) so this information can’t be used to identify who you are.</p>
-            <p class="govuk-body">We don’t allow Google to use or share our analytics data.</p>
-            <p class="govuk-body">Google Analytics sets the following cookies:</p>
-          cookie_options_name: "cookies-usage"
+          - - text: "Not applicable"
+            - text: "Not applicable"
+            - text: "Not applicable"
+          - - text: "Not applicable"
+            - text: "Not applicable"
+            - text: "Not applicable"
+          - - text: "Not applicable"
+            - text: "Not applicable"
+            - text: "Not applicable"
+        - header: "Not applicable"
+          text_html: "Not applicable"
+          cookie_options_name: "Not applicable"
           cookie_options:
-          - value: "on"
-            text: "Use cookies that measure my website use"
-          - value: "off"
-            text: "Do not use cookies that measure my website use
-          cookies:"
-          - - text: "_ga"
-            - text: "This helps us count how many people visit the service by tracking
-                if you’ve visited before"
-            - text: "2 years"
-          - - text: "_gid"
-            - text: "This helps us count how many people visit the service by tracking
-                if you’ve visited before"
-            - text: "3 years"
+          - value: "Not applicable"
+            text: "Not applicable"
+          - value: "Not applicable"
+            text: "Not applicable"
+          - - text: "Not applicable"
+            - text: "Not applicable"
+            - text: "Not applicable"
+          - - text: "Not applicable"
+            - text: "Not applicable"
+            - text: "Not applicable"
     coronavirus_form:
-      submit_and_next: "Continue"
+      submit_and_next: "Parhau"
       errors:
-        page_title_prefix: "Error: "
-        title: "There is a problem:"
-        radio_field: "Select %{field}"
-        checkbox_field: "Select at least one %{field}"
+        page_title_prefix: "Gwall: "
+        title: "Mae problem:"
+        radio_field: "Dewiswch %{field}"
+        checkbox_field: "Dewiswch o leiaf un %{field}"
       groups:
         location:
           questions:
             nation:
               title: "Where do you live?"
-              title_caption: "We will show you information which is relevant to where
-                you live."
+              title_caption: "We will show you information which is relevant to where you live."
               options:
                 option_england:
                   label: "England"
@@ -262,444 +232,419 @@
           questions:
             need_help_with:
               title: "What do you need help with because of coronavirus?"
-              hint_text: "Select all that apply"
+              hint_text: "Dewiswch bob un sy’n berthnasol"
               options:
-                - "I’m not sure"
+                - "Ddim yn siŵr"
               custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
         feeling_unsafe:
-          title: "Feeling unsafe"
+          title: "Ddim yn teimlo’n ddiogel"
           questions:
             feel_safe:
-              title: "Do you feel safe where you live?"
+              title: "Ydych chi’n teimlo’n ddiogel lle rydych yn byw?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Ydw"
                 option_yes_someone_else:
-                  label: "Yes, but I’m concerned about the safety of someone else"
+                  label: "Ydw ond rwy’n poeni am ddiogelwch rhywun arall"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select if you feel safe where you live or if you’re worried about someone else"
         paying_bills:
-          title: "Paying bills"
+          title: "Talu biliau"
           questions:
             afford_rent_mortgage_bills:
-              title: "Are you finding it hard to afford rent, your mortgage or bills?"
+              title: "Ydych chi’n ei chael yn anodd fforddio’ch rhent, eich morgais neu’ch biliau?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Ydw"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select yes if you’re finding it hard to afford your rent, your mortgage or bills"
         getting_food:
-          title: "Getting food"
+          title: "Cael gafael ar fwyd"
           questions:
             afford_food:
-              title: "Are you finding it hard to afford food?"
+              title: "Ydych chi’n ei chael yn anodd fforddio bwyd?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Ydw"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select yes if you’re finding it hard to afford food"
             get_food:
-              title: "Are you able to get food?"
+              title: "A fyddwch yn gallu cael gafael ar fwyd yn yr wythnos nesaf?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Byddaf, gallaf fynd i’r siop neu gael cymorth gan eraill"
                 option_no:
-                  label: "No"
+                  label: "Na fyddaf"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select yes if you’re able to get food"
         being_unemployed:
-          title: "Being unemployed or not having any work"
+          title: "Bod yn ddi-waith neu heb unrhyw waith"
           questions:
             self_employed:
-              title: "Are you self-employed or a sole trader?"
-              title_caption: "Being unemployed or not having any work"
+              title: "Ydych chi’n hunangyflogedig neu’n unig fasnachwr?"
+              title_caption: "Bod yn ddi-waith neu heb unrhyw waith"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Ydw"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               skip_next_question_options:
-                - "Yes"
+                - "Ydw"
               custom_select_error: "Select yes if you’re self-employed or a sole trader"
             have_you_been_made_unemployed:
-              title: "Have you been told to stop working?"
-              title_caption: "Being unemployed or not having any work"
+              title: "Ydych chi wedi colli’ch swydd neu wedi’ch rhoi ar absenoldeb dros dro (ffyrlo)?"
+              title_caption: "Bod yn ddi-waith neu heb unrhyw waith"
               options:
                 option_yes:
-                  label: "Yes, I’ve been made unemployed, or might be soon"
+                  label: "Ydw"
                 option_might_be:
-                  label: "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
+                  label: "Mae’n bosib y byddaf cyn hir"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               skip_next_question_options:
-                - "Yes, I’ve been made unemployed, or might be soon"
-                - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
+                - "Ydw"
+                - "Mae’n bosib y byddaf cyn hir"
               custom_select_error: "Select if you’ve been made unemployed, or put on temporary leave (furloughed)"
             are_you_off_work_ill:
-              title: "Are you off work because you’re ill or self-isolating?"
-              title_caption: "Going in to work"
+              title: "Ydych chi i ffwrdd o’ch gwaith gan eich bod yn sâl neu’n hunanynysu?"
+              title_caption: "Mynd i’r gwaith"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Ydw"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
               custom_select_error: "Select yes if you’re off work because you’re ill or self-isolating"
         going_in_to_work:
-          title: "Going in to work"
+          title: "Mynd i’r gwaith"
           questions:
             living_with_vulnerable:
-              title: "Are you worried about going in to work?"
+              title: "Ydych chi’n poeni am fynd i’r gwaith?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Ydw"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select yes if you’re worried about going in to work"
         somewhere_to_live:
-          title: "Having somewhere to live"
+          title: "Rhywle i fyw"
           questions:
             have_somewhere_to_live:
-              title: "Do you have somewhere to live?"
+              title: "A oes gennych rywle i fyw?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Oes"
                 option_may_lose:
-                  label: "I do now but I might lose it"
+                  label: "Oes nawr, ond gallwn ei golli"
                 option_no:
-                  label: "No"
+                  label: "Nac oes"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select if you have somewhere to live"
             have_you_been_evicted:
-              title: "Have you been evicted?"
+              title: "Ydych chi wedi’ch troi allan o’ch cartref?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Ydw"
                 option_soon:
-                  label: "I might be evicted soon"
+                  label: "Gallai hynny ddigwydd cyn hir"
                 option_no:
-                  label: "No"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select if you have been evicted or might be soon"
         mental_health:
-          title: "Mental health and wellbeing"
+          title: "Iechyd a lles meddyliol"
           need_help_with_label: "Mental health and wellbeing, including information for children"
           questions:
             mental_health_worries:
-              title: "Are you worried about either your mental health or someone else’s mental health?"
+              title: "Ydych chi’n poeni am eich iechyd meddwl neu iechyd meddwl rhywun arall?"
               options:
                 option_yes:
-                  label: "Yes, I am"
+                  label: "Ydw"
                 option_no:
-                  label: "No, I’m not"
+                  label: "Nac ydw"
                 not_sure:
-                  label: "Not sure"
+                  label: "Ddim yn siŵr"
               custom_select_error: "Select yes if you’re worried about your mental health or someone else’s mental health"
         leave_home:
           questions:
             able_to_leave:
-              title: "Are you able to leave your home for food, medicine, or health reasons?"
+              title: "A allwch adael eich tŷ ar gyfer bwyd, meddyginiaeth neu resymau iechyd?"
               options:
                 option_yes:
-                  label: "Yes"
+                  label: "Gallaf"
                 option_has_symptoms:
-                  label: "I should not leave home because I have coronavirus symptoms, or someone in my household does"
+                  label: "Ni ddylwn adael y tŷ gan fod y coronafeirws arnaf i neu ar rywun arall yn fy nghartref"
                 option_high_risk:
-                  label: "I should not leave home because I think I’m at high risk of severe illness from coronavirus"
+                  label: "Ni ddylwn adael y tŷ gan fy mod yn credu y byddwn mewn perygl o salwch difrifol pe bawn yn dal y coronafeirws"
                 option_disability:
-                  label: "I cannot go out because I have a disability"
+                  label: "Ni allaf fynd allan gan fod gen i anabledd"
                 option_other:
-                  label: "I’m unable to leave my home for another reason"
+                  label: "Ni allaf adael y tŷ am reswm arall"
               custom_select_error: "Select if you’re able to leave your home or not"
       results:
         header:
-          context: "Results CY"
-          title: "Information based on your answers CY"
-          title_no_results: "Information based on your answers - no specific information"
-          start_again_text: "Start again"
+          context: "Canlyniadau"
+          title: "Gwybodaeth yn seiliedig ar eich atebion"
+          title_no_results: "Gwybodaeth yn seiliedig ar eich atebion – dim gwybodaeth benodol"
+          start_again_text: "Dechrau eto"
         support_and_advice_text: "Support and advice"
         feedback:
-          text: "Help us improve"
-          link_text: "Give feedback on this service"
-          link_href: "https://www.gov.uk/done/find-coronavirus-support"
+          text: "Helpwch ni i wella"
+          link_text: "Rhowch adborth ar y gwasanaeth hwn"
+          link_href: "mailto:digital@gov.wales"
         no_results: |
-          <p>Based on your answers, there’s no specific information for you in this service at the moment. It will be updated regularly.</p>
-          <p><a href="https://www.gov.uk/coronavirus" class="govuk-link">Find all information on coronavirus, including how to protect yourself and get financial support</a></p>
-          <p><a href="https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/" class="govuk-link">Find information about what you can do from Citizens Advice</a></p>
+          <p>Yn ôl eich atebion, nid oes gwybodaeth benodol i chi yn y gwasanaeth hwn ar hyn o bryd. Bydd yn cael ei ddiweddaru’n rheolaidd.</p>
+          <p><a href='https://llyw.cymru/coronafeirws'>Dyma’r holl wybodaeth am y coronafeirws, gan gynnwys sut i’ch diogelu’ch hun a chael cymorth ariannol.</a></p>
     results_link:
       feeling_unsafe:
         feel_safe:
-          title: "If you do not feel safe where you live or you’re worried about someone else"
+          title: "Os nad ydych yn teimlo’n ddiogel lle rydych yn byw neu’ch bod yn poeni am rywun arall"
           show_options:
-            - "Yes, but I’m concerned about the safety of someone else"
-            - "No"
-            - "Not sure"
+            - "Ydw ond rwy’n poeni am ddiogelwch rhywun arall"
+            - "Nac ydw"
+            - "Ddim yn siŵr"
           items:
             - id: "0001"
-              text: "If you’re in immediate danger call 999 and ask for the Police."
+              text: "Os ydych mewn perygl uniongyrchol ffoniwch 999 a gofyn am yr Heddlu"
             - id: "0002"
-              text: "If you’re in danger and unable to talk on the phone, call 999, and then press 55."
+              text: "Os ydych mewn perygl ac yn methu â siarad ar y ffôn, ffoniwch 999 ac yna pwyso 55."
             - id: "0003"
-              text: "Call the Live Fear Free Helpline on <a href='tel:0808 80 10 800'>0808 80 10 800</a>"
+              text: "Os ydych yn blentyn, ffoniwch Childline ar <a href='tel:0800 1111'>0800 1111</a>"
             - id: "0004"
-              text: "If you’re a child call Childline on <a href='tel:0800 1111'>0800 1111</a>"
-            - id: "0005"
-            - text: "Get safety advice for survivors from Women’s Aid"
-              href: "https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/"
-            - id: "0006"
-              text: "Get help from Live Fear Free"
-              href: "https://gov.wales/live-fear-free"
-            - id: "0007"
-              text: "Get information if you are a young person"
-              href: "https://www.childcomwales.org.uk/coronavirus/"
-            - id: "0008"
-              text: "Contact NSPCC if you’re concerned about a child"
+              text: "Cysylltwch â’r NSPCC os ydych yn poeni am blentyn"
               href: "https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/"
-            - id: "0009"
-              text: "Get advice if you are an older person"
-              href: "https://www.olderpeoplewales.com/en/coronavirus.aspx"
-            - id: "0010"
-              text: "Find victim support helplines"
-              href: "https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales"
+            - id: "0005"
+              text: "Mae cymorth ynglŷn â thrais yn erbyn menywod, cam-drin domestig a thrais rhywiol ar gael gan Byw Heb Ofn"
+              href: "https://llyw.cymru/byw-heb-ofn"
+            - id: "0006"
+            - text: "Os ydych yn berson ifanc, mae cyngor ar gael gan Gomisiynydd Plant Cymru"
+              href: "https://www.complantcymru.org.uk/coronafeirws/"
+            - id: "0007"
+              text: "Os ydych yn berson hŷn, mae cyngor ar gael gan Gomisiynydd Pobl Hŷn Cymru"
+              href: "https://www.olderpeoplewales.com/cy/coronavirus.aspx"
+            - id: "0008"
+              text: "Os ydych yn dioddef neu’n gweld trosedd, mae llinellau cymorth ar gael (yn GOV.UK)"
+              href: "https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services"
       paying_bills:
         afford_rent_mortgage_bills:
-          title: "If you’re finding it hard to afford rent, your mortgage or bills"
+          title: "Os ydych yn ei chael yn anodd fforddio’ch rhent, eich morgais neu’ch biliau"
           show_options:
-            - "Yes"
-            - "Not sure"
+            - "Ydw"
+            - "Ddim yn siŵr"
           items:
+            - id: "0009"
+              text: "Mae cymorth ar gael os ydych yn cael trafferth talu’ch biliau"
+              href: "https://llyw.cymru/problemau-talu-eich-biliau-yn-ystod-y-pandemig-coronafeirws"
+            - id: "0010"
+              text: "Gallech fod yn gymwys am gymorth drwy’r Gronfa Cymorth Dewisol"
+              href: "https://llyw.cymru/cronfa-cymorth-dewisol-daf"
             - id: "0011"
-              text: "Get information if you're finding it hard to pay rent"
-              href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
-            - id: "0012"
-              text: "Support available if you are a tenant"
-              href: "https://gov.wales/coronavirus-covid-19-support-for-tenants-in-wales"
-            - id: "0013"
-              text: "Find information on the policies in place if you're finding it hard to pay energy bills"
-              href: "https://www.gov.uk/government/news/government-agrees-measures-with-energy-industry-to-support-vulnerable-people-through-covid-19"
-            - id: "0014"
-              text: "Get information if you cannot pay your rent, mortgage or bills from Citizens Advice"
-              href: "https://www.citizensadvice.org.uk/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/"
-            - id: "0015"
-              text: "Get coronavirus housing advice from Shelter Cymru"
+              text: "Mae cyngor ar dai a’r coronafeirws ar gael gan Shelter Cymru"
               href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
+            - id: "0012"
+              text: "Mae cymorth ar gael gan Cyngor ar Bopeth os na allwch dalu’ch biliau"
+              href: "https://www.citizensadvice.org.uk/wales/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/"
       getting_food:
         afford_food:
-          title: "If you’re finding it hard to afford food"
+          title: "Os ydych yn ei chael yn anodd fforddio bwyd"
           show_options:
-            - "Yes"
-            - "Not sure"
+            - "Ydw"
+            - "Ddim yn siŵr"
           items:
-            - id: "0016"
-              text: "Find out if you’re eligible for Universal Credit"
+            - id: "0013"
+              text: "Gallech fod yn gymwys am Gredyd Cynhwysol (yn GOV.UK)"
               href: "https://www.gov.uk/universal-credit/eligibility"
-            - id: "0017"
-              text: "Find out about free school meals during the coronavirus outbreak"
-              href: "https://gov.wales/find-out-about-free-school-meals-during-coronavirus-outbreak"
-            - id: "0018"
-              text: "Apply for Healthy Start vouchers if you’re 10 or more weeks pregnant or have a child under 4"
+            - id: "0014"
+              text: "Gallech fod yn gymwys am gymorth drwy’r Gronfa Cymorth Dewisol"
+              href: "https://llyw.cymru/cronfa-cymorth-dewisol-daf"
+            - id: "0015"
+              text: "Ewch ar wefan Cyngor ar Bopeth i weld a ydych yn gymwys am gymorth banc bwyd"
+              href: "https://www.citizensadvice.org.uk/wales/benefits/help-if-on-a-low-income/using-a-food-bank/"
+            - id: "0016"
+              text: "Os ydych yn feichiog ers 10 wythnos neu fwy neu os oes gennych blentyn o dan 4, gallech fod yn gymwys am dalebau Cychwyn Iach"
               href: "https://www.healthystart.nhs.uk/healthy-start-vouchers/do-i-qualify/"
-            - id: "0019"
-              text: "Check if you’re eligible for the Discretionary Assistance Fund"
-              href: "https://gov.wales/discretionary-assistance-fund-daf"
+            - id: "0017"
+              text: "Mae cymorth ar gael i deuluoedd â phlant sy’n gymwys am brydau ysgol am ddim"
+              href: "https://llyw.cymru/darganfod-mwy-am-brydau-ysgol-am-ddim-yn-eich-awdurdod-lleol-coronafeirws"
+            - id: "0018"
+              text: "Os ydych mewn angen dybryd o ran bwyd ac nid oes gennych gymorth arall, gall cymorth fod ar gael gan eich cyngor"
+              href: "https://llyw.cymru/dod-o-hyd-ich-awdurdod-lleol"
         get_food:
-          title: "If you’re unable to get food"
+          title: "Os na allwch gael gafael ar fwyd"
           show_options:
-            - "No"
-            - "Not sure"
+            - "Na fyddaf"
+            - "Ddim yn siŵr"
           items:
+            - id: "0019"
+              text: "Os yw’n bosibl, gofynnwch i ffrind, perthynas neu rywun arall yn y gymuned nôl bwyd ichi."
             - id: "0020"
-              text: "If you can, ask friends, family or other people in your community to get food for you."
+              text: "Efallai y gallwch ffonio’ch siopau neu’ch bwytai lleol i ofyn iddyn nhw ddanfon bwyd atoch, neu gallwch archebu bwyd ar-lein. <a href='https://llyw.cymru/cael-bwyd-chyflenwadau-hanfodol-yn-ystod-pandemig-y-coronafeirws?_ga=2.254405965.474179600.1590565960-290057162.1589883415'>Dyma wybodaeth am wasanaethau archfarchnadoedd.</a>"
             - id: "0021"
-              text: "You might be able to phone your local shops or restaurants to get a food delivery, or get food online."
+              text: "Os nad oes neb i’ch helpu i gael bwyd, efallai y gallwch gael <a href='https://llyw.cymru/cymorth-i-bobl-agored-i-niwed-gan-awdurdodau-lleol-grwpiau-gwirfoddol'>cymorth gan sefydliad gwirfoddol</a>."
             - id: "0022"
-              text: "Find your local authority to contact them for support"
-              href: "https://gov.wales/find-your-local-authority"
-            - id: "0023"
-              text: "Help for vulnerable people from voluntary organisations"
-              href: "https://gov.wales/help-vulnerable-people-voluntary-organisations"
-              show_to_vulnerable_person: true
+              text: "Os oes angen cymorth ar frys arnoch ac nid oes gennych gymorth arall, <a href='https://llyw.cymru/dod-o-hyd-ich-awdurdod-lleol'>cysylltwch â’ch awdurdod lleol</a>."
+            #- id: "0023"
+            #  text: "Help for vulnerable people from voluntary organisations."
+            #  href: "https://gov.wales/help-vulnerable-people-voluntary-organisations"
+            #  show_to_vulnerable_person: true
       being_unemployed:
         have_you_been_made_unemployed:
-          title: "If you’ve been made unemployed, or put on temporary leave (furloughed)"
+          title: "Os ydych wedi colli’ch swydd, neu wedi’ch rhoi ar absenoldeb dros dro (ffyrlo)"
           show_options:
-            - "Yes, I’ve been made unemployed, or might be soon"
-            - "Yes, I’ve been put on temporary leave (on furlough), or might be soon"
-            - "Not sure"
+            - "Ydw"
+            - "Mae’n bosib y byddaf cyn hir"
+            - "Ddim yn siŵr"
           items:
             - id: "0024"
-              text: "Get help if you've lost your job"
-              href: "https://gov.wales/get-help-if-youve-lost-your-job-react-and-access"
+              text: "Mae Cymru’n Gweithio yn cynnig cymorth i ddod o hyd i swydd"
+              href: "https://cymrungweithio.llyw.cymru/"
             - id: "0025"
-              text: "Help to get in to work"
-              href: "https://gov.wales/coronavirus-help-get-work"
+              text: "Beth i’w wneud os ydych wedi colli’ch swydd (yn GOV.UK)"
+              href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-you-were-employed-and-have-lost-your-job"
             - id: "0026"
-              text: "Find out about online training for furloughed workers"
-              href: "https://workingwales.gov.wales/change-your-story/furlough-support"
+              text: "Beth i’w wneud os yw’ch cyflogwr wedi dweud wrthych i beidio â gweithio dros dro (yn GOV.UK)"
+              href: "https://www.gov.uk/lay-offs-short-timeworking"
             - id: "0027"
-              text: "What to do if you’ve been furloughed"
-              href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
+              text: "Gwybodaeth am eich hawliau os ydych wedi’ch diswyddo (yn GOV.UK)"
+              href: "https://www.gov.uk/dismissal"
             - id: "0028"
-              text: "Find out about the financial support you might be able to get from Acas"
-              href: "https://www.acas.org.uk/coronavirus/if-the-employer-needs-to-close-the-workplace"
+              text: "Beth i’w wneud os yw’ch cyflogwr wedi dweud wrthych i beidio â gweithio (gwefan Cyngor ar Bopeth)"
+              href: "https://www.citizensadvice.org.uk/cymraeg/work/coronafirws-os-ywch-cyflogwr-wedi-dweud-wrthych-am-beidio-a-gweithio/"
             - id: "0029"
-              text: "Get information on applying for Universal Credit from Citizens Advice"
-              href: "https://www.citizensadvice.org.uk/benefits/universal-credit/"
-            - id: "0030"
-              text: "Contact Working Wales if you’ve been made redundant"
-              href: "https://workingwales.gov.wales/"
-            - id: "0031"
-              text: "Contact Citizens Advice Wales"
-              href: "https://www.citizensadvice.org.uk/wales/about-us/contact-us/contact-us/contact-us/"
-            - id: "0032"
-              text: "Check if you’re eligible for the Discretionary Assistance Fund"
-              href: "https://gov.wales/discretionary-assistance-fund-daf"
+              text: "Gwybodaeth am ymgeisio am Gredyd Cynhwysol"
+              href: "https://www.citizensadvice.org.uk/cymraeg/benefits/credyd-cynhwysol/"
         are_you_off_work_ill:
-          title: "If you’re off work because you’re ill or self isolating"
+          title: "Os ydych i ffwrdd o’ch gwaith gan eich bod yn sâl neu’n hunanynysu"
           show_options:
-            - "Yes"
+            - "Ydw"
+            - "Ddim yn siŵr"
           items:
-            - id: "0033"
-              text: "Check if you're eligible for statutory sick pay"
+            - id: "0030"
+              text: "Sut i hunanynysu ac edrych ar ôl eich hun yn y tŷ"
+              href: "https://llyw.cymru/hunanynysu-canllawiau-aros-gartref-i-aelwydydd-coronafeirws-posibl-covid-19"
+            - id: "0031"
+              text: "Gallech fod yn gymwys am gymorth drwy’r Gronfa Cymorth Dewisol"
+              href: "https://llyw.cymru/cronfa-cymorth-dewisol-daf"
+            - id: "0032"
+              text: "Gallech fod yn gymwys am dâl salwch statudol (yn GOV.UK)"
               href: "https://www.gov.uk/statutory-sick-pay"
+            - id: "0033"
+              text: "Gallech fod yn gymwys am y lwfans cyflogaeth a chymorth"
+              href: "https://llyw.cymru/lwfans-cyflogaeth-chymorth"
             - id: "0034"
-              text: "Find out if you can get employment and support allowance"
-              href: "https://gov.wales/employment-and-support-allowance"
-            - id: "0035"
-              text: "What to do if you’re employed but cannot work"
-              href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work"
-            - id: "0036"
-              text: "Find out about getting statutory sick pay if you’re self-isolating from Acas"
-              href: "https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay"
-            - id: "0037"
-              text: "Find out about the help you can get if you’re self-employed or work in the gig economy from Money Advice Service"
-              href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you"
-            - id: "0038"
-              text: "Check if you’re eligible for the Discretionary Assistance Fund"
-              href: "https://gov.wales/discretionary-assistance-fund-daf"
+              text: "Gwybodaeth gan y Gwasanaeth Cynghori Ariannol am gymorth os ydych yn hunangyflogedig neu’n gweithio yn yr economi gìg"
+              href: "https://www.moneyadviceservice.org.uk/cy/articles/coronafeirws-os-ydych-yn-hunangyflogedig"
         self_employed:
-          title: "If you’re self employed or a sole trader"
+          title: "Os ydych yn hunangyflogedig neu’n unig fasnachwr"
           show_options:
             - "Yes"
-            - "Not sure"
+            - "Ddim yn siŵr"
           items:
-            - id: "0039"
-              text: "Find out what to do if you’re self-employed and getting less or no work"
+            - id: "0035"
+              text: "Beth i’w wneud os ydych yn hunangyflogedig ac â llai o waith (yn GOV.UK)"
               href: "https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work"
-            - id: "0040"
-              text: "Find out if you can get help from the self-employment income support scheme"
-              href: "https://gov.wales/coronavirus-self-employment-income-support-scheme"
-            - id: "0041"
-              text: "Get information on what you can do if you’re self-employed or a sole trader from the Money Advice Service"
-              href: "https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed"
-            - id: "0042"
-              text: "Get information on applying for Universal Credit (Citizens Advice)"
-              href: "https://www.citizensadvice.org.uk/benefits/universal-credit/"
-            - id: "0043"
-              text: "Check if you’re eligible for the Discretionary Assistance Fund"
-              href: "https://gov.wales/discretionary-assistance-fund-daf"
+            - id: "0036"
+              text: "Gwybodaeth gan y Gwasanaeth Cynghori Ariannol am gymorth os ydych yn hunangyflogedig neu’n gweithio yn yr economi gìg"
+              href: "https://www.moneyadviceservice.org.uk/cy/articles/coronafeirws-os-ydych-yn-hunangyflogedig"
+            - id: "0037"
+              text: "Gwybodaeth am ymgeisio am Gredyd Cynhwysol (gwefan Cyngor ar Bopeth)"
+              href: "https://www.citizensadvice.org.uk/cymraeg/benefits/credyd-cynhwysol/"
       going_in_to_work:
         living_with_vulnerable:
-          title: "If you’re worried about going in to work"
+          title: "Os ydych yn poeni am fynd i’r gwaith"
           show_options:
-            - "Yes"
-            - "Not sure"
+            - "Ydw"
+            - "Ddim yn siŵr"
           items:
-            - id: "0044"
-              text: "Find out if you should be going to work"
-              href: "https://www.gov.uk/government/publications/full-guidance-on-staying-at-home-and-away-from-others/full-guidance-on-staying-at-home-and-away-from-others"
-            - id: "0045"
-              text: "Find out if you're a key worker"
-              href: "https://gov.wales/coronavirus-key-critical-workers"
-            - id: "0046"
-              text: "Get advice if you’re worried about going to work because of coronavirus from Citizens Advice"
-              href: "https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working/"
+            - id: "0038"
+              text: "Darganfod a ydych yn weithiwr allweddol"
+              href: "https://llyw.cymru/gweithwyr-allweddol-hanfodol-y-coronafeirws"
+            - id: "0039"
+              text: "Cofiwch ddilyn y canllawiau cadw pellter cymdeithasol"
+              href: "https://llyw.cymru/coronafeirws-cadw-pellter-cymdeithasol"
+            - id: "0040"
+              text: "Dyma wybodaeth am gadw pellter corfforol yn y gweithle"
+              href: "https://llyw.cymru/cymryd-pob-cam-rhesymol-i-gynnal-pellter-corfforol-yn-y-gweithle"
       somewhere_to_live:
         have_somewhere_to_live:
-          title: "If you do not have somewhere to live or might become homeless"
+          title: "Os nad oes gennych rywle i fyw neu os gallech golli’ch cartref"
           show_options:
-            - "I do now but I might lose it"
-            - "No"
-            - "Not sure"
+            - "Oes nawr, ond gallwn ei golli"
+            - "Nac oes"
+            - "Ddim yn siŵr"
           items:
-            - id: "0047"
-              text: "Guidance for tenants in the private rented sector: coronavirus (COVID-19)"
-              href: "https://gov.wales/guidance-tenants-private-rented-sector-coronavirus-covid-19"
-            - id: "0048"
-              text: "Support for tenants: coronavirus (COVID-19)"
-              href: "https://gov.wales/coronavirus-covid-19-support-for-tenants-in-wales"
-            - id: "0049"
-              text: "Support if you are homeless or about to become homeless"
-              href: "https://gov.wales/support-if-you-are-homeless-or-about-become-homeless"
-            - id: "0050"
-              text: "Get information if you are legally homeless from Shelter Cymru"
-              href: "https://sheltercymru.org.uk/get-advice/homelessness/sleeping-on-the-streets/"
-            - id: "0051"
-              text: "Get coronavirus housing information from Shelter Cymru"
+            - id: "0041"
+              text: "Cymorth os ydych yn poeni am gael eich troi allan o’ch cartref"
+              href: "https://llyw.cymru/troi-allan-or-cartref-yn-ystod-y-pandemig-coronafeirws"
+            - id: "0042"
+              text: "Cymorth os ydych yn cael trafferth talu’ch morgais"
+              href: "https://llyw.cymru/problemau-talu-eich-morgais-yn-ystod-y-pandemig-coronafeirws"
+            - id: "0043"
+              text: "Cymorth os ydych yn cael trafferth talu’ch rhent"
+              href: "https://llyw.cymru/problemau-talu-eich-rhent-yn-ystod-y-pandemig-coronafeirws"
+            - id: "0044"
+              text: "Cymorth os ydych yn cael trafferth talu’ch biliau"
+              href: "https://llyw.cymru/problemau-talu-eich-biliau-yn-ystod-y-pandemig-coronafeirws"
+            - id: "0045"
+              text: "Cymorth os ydych yn ddigartref neu ar fin dod yn ddigartref"
+              href: "https://llyw.cymru/cymorth-os-ydych-chin-ddigartref-neu-ar-fin-dod-yn-ddigartref"
+            - id: "0046"
+              text: "Mae cyngor ar dai a’r coronafeirws ar gael gan Shelter Cymru"
               href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
         have_you_been_evicted:
-          title: "If you’ve been evicted or might be soon"
+          title: "Os ydych wedi’ch troi allan o’ch cartref neu os gallai hynny ddigwydd cyn hir"
           show_options:
-            - "Yes"
-            - "I might be evicted soon"
-            - "Not sure"
+            - "Ydw"
+            - "Gallai hynny ddigwydd cyn hir"
+            - "Ddim yn siŵr"
           items:
-            - id: "0052"
-              text: "Guidance for tenants in the private rented sector: coronavirus (COVID-19)"
-              href: "https://gov.wales/guidance-tenants-private-rented-sector-coronavirus-covid-19"
-            - id: "0053"
-              text: "Support for tenants: coronavirus (COVID-19)"
-              href: "https://gov.wales/coronavirus-covid-19-support-for-tenants-in-wales"
-            - id: "0054"
-              text: "Support if you are homeless or about to become homeless"
-              href: "https://gov.wales/support-if-you-are-homeless-or-about-become-homeless"
-            - id: "0055"
-              text: "Get information on evictions"
-              href: "https://gov.wales/coronavirus-covid-19-guidance-for-tenants-in-the-private-rented-sector-html"
-            - id: "0056"
-              text: "Get coronavirus housing information from Shelter Cymru"
-              href: "https://sheltercymru.org.uk/get-advice/coronavirus/"
+            - id: "0047"
+              text: "Cymorth os ydych yn poeni am gael eich troi allan o’ch cartref"
+              href: "https://llyw.cymru/troi-allan-or-cartref-yn-ystod-y-pandemig-coronafeirws"
+            - id: "0048"
+              text: "Cymorth os ydych yn ddigartref neu ar fin dod yn ddigartref"
+              href: "https://llyw.cymru/cymorth-os-ydych-chin-ddigartref-neu-ar-fin-dod-yn-ddigartref"
+            - id: "0049"
+              text: "Cymorth gan Shelter Cymru os ydych yn ddigartref o dan y gyfraith"
+              href: "https://sheltercymru.org.uk/get-advice/homelessness/sleeping-on-the-streets/"
       mental_health:
         mental_health_worries:
-          title: "If you’re worried about your mental health or someone else’s mental health"
+          title: "Os ydych yn poeni am eich iechyd meddwl neu iechyd meddwl rhywun arall"
           show_options:
-            - "Yes, I am"
-            - "Not sure"
+            - "Ydw"
+            - "Ddim yn siŵr"
           items:
-            - id: "0057"
-              text: "If you need urgent help now, call the Samaritans on <a href='tel:116 123' class='govuk-link'>116 123</a>"
-            - id: "0058"
-              text: "If you need urgent help text 'Shout' to 85258"
-            - id: "0059"
-              text: "If you need urgent help call 0800 132 737 or text 'help' to 81066 (Mental Health Helpline for Wales)"
-            - id: "0060"
-              text: "If it's an emergency, call 999."
-            - id: "0061"
-              text: "Get information about taking care of your mental health from NHS Wales"
+            - id: "0050"
+              text: "Os yw’n argyfwng, ffoniwch 999"
+            - id: "0051"
+              text: "Mae cymorth ar gael gan y Llinell Iechyd Meddwl ar gyfer Cymru"
+              href: "http://www.callhelpline.org.uk/"
+            - id: "0052"
+              text: "Cyngor ar ofalu am eich iechyd meddwl gan Iechyd Cyhoeddus Cymru"
               href: "https://phw.nhs.wales/topics/latest-information-on-novel-coronavirus-covid-19/staying-well-at-home/how-are-you-feeling/"
-            - id: "0062"
-              text: "Get information on coronavirus and your wellbeing from Mind"
+            - id: "0053"
+              text: "Cyngor i blant a phobl ifanc ar wefan Comisiynydd Plant Cymru"
+              href: "https://www.childcomwales.org.uk/coronavirus/"
+            - id: "0054"
+              text: "Cymorth gan y Samariaid"
+              href: "https://www.samaritans.org/wales/how-we-can-help/contact-samaritan/"
+            - id: "0055"
+              text: "Gwybodaeth gan Mind am y coronafeirws a’ch lles"
               href: "https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8"
-            - id: "0063"
-              text: "Get information on looking after your mental health during coronavirus"
-              href: "https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing"
-            - id: "0064"
-              text: "Get information on supporting the mental health and wellbeing of children and young people"
-              href: "https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak"

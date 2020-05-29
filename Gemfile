@@ -52,3 +52,5 @@ group :development, :test do
 end
 
 gem "prometheus-client", "~> 2.0"
+
+gem "aws-sdk-s3", "~> 1.67"

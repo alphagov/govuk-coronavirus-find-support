@@ -21,6 +21,8 @@ params:
   BASIC_AUTH_PASSWORD:
   AWS_ACCESS_KEY_ID:
   AWS_SECRET_ACCESS_KEY:
+  AWS_ERROR_PAGES_BUCKET_NAME:
+  AWS_REGION: eu-west-2
   DATA_EXPORT_BASIC_AUTH_USERNAME:
   DATA_EXPORT_BASIC_AUTH_PASSWORD:
   GA_VIEW_ID: UA-43115970-1
@@ -54,6 +56,8 @@ run:
       cf set-env govuk-coronavirus-find-support AWS_ACCESS_KEY_ID "$AWS_ACCESS_KEY_ID"
       cf set-env govuk-coronavirus-find-support AWS_SECRET_ACCESS_KEY "$AWS_SECRET_ACCESS_KEY"
       cf set-env govuk-coronavirus-find-support SECRET_KEY_BASE "$SECRET_KEY_BASE"
+      cf set-env govuk-coronavirus-find-support AWS_ERROR_PAGES_BUCKET_NAME "$AWS_ERROR_PAGES_BUCKET_NAME"
+      cf set-env govuk-coronavirus-find-support AWS_REGION "$AWS_REGION"
 
       cf v3-zdt-push govuk-coronavirus-find-support --wait-for-deploy-complete --no-route
       cf map-route govuk-coronavirus-find-support cloudapps.digital --hostname "$HOSTNAME"

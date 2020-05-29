@@ -39,5 +39,8 @@ module CoronavirusForm
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # By default don't upload error pages to S3
+    config.upload_error_pages_to_s3 = ENV["UPLOAD_ERROR_PAGES_TO_S3"] || false
   end
 end

@@ -5,9 +5,9 @@
     <%# GOVWALES: title adjustment. Line 6 %>
     <title><%= t('coronavirus_form.errors.page_title_prefix') if flash[:validation]&.any? %><%= yield :title %> <%= t('layout_head.meta_title', default: "- GOV.WALES") %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <%# GOVWALES: meta additions. Line9 %>
+    <%# GOVWALES: meta additions. Line 9 %>
     <%= render "layouts/header_icons" %>
-
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <meta name="robots" content="noindex nofollow">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>

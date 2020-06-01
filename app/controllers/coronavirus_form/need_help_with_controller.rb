@@ -71,10 +71,7 @@ private
   end
 
   def update_session_store
-    unless session[:nation]
-      session[:nation] = { nation: "Wales" }
-    end
-
+    session[:nation] ||= "Wales"
     session[:need_help_with] = @form_responses[:need_help_with]
 
     selected_groups = @form_responses[:need_help_with].map do |item|

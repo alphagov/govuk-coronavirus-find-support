@@ -47,7 +47,7 @@ group :development, :test do
   gem "rspec-rails", "~> 4.0.1"
   gem "rubocop-govuk"
   gem "scss_lint-govuk"
-  gem "webdrivers", "~> 4.3"
+  gem "webdrivers", "~> 4.4"
   gem "webmock", "~> 3.8.3"
 end
 

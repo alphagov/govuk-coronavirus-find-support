@@ -114,10 +114,6 @@ en:
     link_text: Leave this site
     link_href: "/clear-session?ext_r=true"
     link_redirect_to: https://www.bbc.co.uk/
-  get_help_from_nhs:
-    title: Get urgent help from the NHS now
-    link_text: Go to NHS 111 online
-    link_href: https://111.nhs.uk/
   cookies:
     title: Cookies
     banner:

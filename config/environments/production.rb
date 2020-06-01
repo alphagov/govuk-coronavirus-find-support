@@ -44,6 +44,8 @@ Rails.application.configure do
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
+  config.upload_error_pages_to_s3 = true unless ENV["HEROKU_APP_NAME"]
+
   # Rather than use a CSS compressor, use Sass-Rails to perform compression
   config.sass.style = :compressed
   config.sass.line_comments = false

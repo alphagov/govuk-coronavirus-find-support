@@ -12,13 +12,23 @@
 
       <div class="header__components__language" id="wg_language">
         <%=
-          if locale == :cy
-            en_url = start_url(host: Rails.configuration.en_host, locale: "en").sub("/en/", "/")
-            link_to("English", en_url, class: "language__link")
+          if I18n.locale == :cy
+            link_locale = "en"
+            text = "English"
+            host = Rails.configuration.en_host
           else
-            cy_url = start_url(host: Rails.configuration.cy_host, locale: "cy").sub("/cy/", "/")
-            link_to("Cymraeg", cy_url, class: "language__link", hreflang: "cy")
+            link_locale = "cy"
+            text = "Cymraeg"
+            host = Rails.configuration.cy_host
           end
+
+          if controller_name.in?(%w[accessibility cookies privacy])
+            url = url_for(host: host, locale: link_locale)
+          else
+            url = start_url(host: host, locale: link_locale)
+          end
+
+          link_to(text, url.sub("/#{link_locale}/", "/"), class: "language__link", hreflang: link_locale)
         %>
       </div>
 

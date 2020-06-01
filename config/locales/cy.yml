@@ -95,26 +95,26 @@
         no_javascript_explainer_html: |
           <p>Rydym yn defnyddio Javascript i osod mwyafrif ein cwcis. Yn anffodus, nid yw Javascript yn rhedeg ar eich porwr, felly ni allwch newid eich gosodiadau gan ddefnyddio'r dudalen hon. I reoli eich gosodiadau cwci gan ddefnyddio'r dudalen hon, trowch Javascript ymlaen yn eich porwr.</p>
         intro_html: |
-          <h2>Use of cookies by Welsh Government in this service</h2>
-          <p>Ffeiliau sy'n cael eu cadw ar eich ffôn, tabled neu gyfrifiadur pan fyddwch yn ymweld á gwefan yw cwcis.</p>
-          <p>The cookies we use on this service are:</p>
+          <h2>Sut mae Llywodraeth Cymru yn defnyddio cwcis ar gyfer y gwasanaeth hwn?</h2>
+          <p>Ffeiliau a fydd yn cael eu cadw ar eich ffôn, cyfrifiadur neu gyfrifiadur llechen pan fyddwch yn ymweld â gwefan yw cwcis.</p>
+          <p>Dyma’r cwcis a ddefnyddiwn ar gyfer y gwasanaeth hwn:</p>
         cookies:
-          - header: "Cwcis sy'n angenrheidiol"
-            text_html: "Cookies that are required for the service to function properly."
+          - header: "Cwcis sy’n gwbl angenrheidiol"
+            text_html: "Cwcis sy’n angenrheidiol er mwyn i’r gwasanaeth weithio’n iawn."
             header_row:
               cookie: "Cwci"
               name: "Enw"
               purpose: "Diben"
-              expires: "Dod&nbsp;i&nbsp;ben"
+              expires: "Yn&nbsp;dod&nbsp;i&nbsp;ben"
             cookies:
-              - - text: "Service progress"
+              - - text: "Cynnydd y gwasanaeth"
                 - text: "_session_id"
-                - text: "Remembers which question you’re up to and how you answered previous questions."
-                - text: "4 hours"
-              - - text: "Cookie preferences"
+                - text: "Mae’r cwci hwn yn cofio pa gwestiynau rydych chi wedi’u cyrraedd a’ch atebion i’r cwestiynau blaenorol."
+                - text: "4 awr"
+              - - text: "Dewisiadau cwcis"
                 - text: "cookies_preferences_set cookies_policy"
-                - text: "Mae’r cwci hwn yn cofnodi a yw defnyddiwr wedi derbyn y defnydd o gwcis ar ein gwefan."
-                - text: "1 year"
+                - text: "Mae’r cwci hwn yn cofnodi a ydy’r defnyddiwr wedi derbyn y defnydd o gwcis ar ein gwefan."
+                - text: "1 flwyddyn"
     copyright_statement:
       title: "Datganiad hawlfraint"
       body_text: |
@@ -154,12 +154,12 @@
         <p>Mae modd cysylltu â Swyddog Diogelu Data Llywodraeth Cymru drwy:</p>
         <p>Y Swyddog Diogelu Data<br>Llywodraeth Cymru<br>Parc Cathays<br>Caerdydd<br>CF10 3NQ.<br>E-bost: <a href="mailto:swyddogdiogeludata@llyw.cymru">swyddogdiogeludata@llyw.cymru</a></p>
     session_expired:
-      title: "Mae eich sesiwn wedi dod i ben oherwydd diffyg defnydd"
+      title: "Mae eich sesiwn wedi dod i ben oherwydd ei bod yn anweithredol"
       body_text: |
-        <p>Mae eich sesiwn wedi dod i ben gan nad ydych wedi gwneud dim ers 4 awr. Bydd rhaid ichi ddechrau eto.</p>
-        <p>Rydym yn gwneud hyn i’ch diogelu. Rydym wedi dileu’r holl fanylion a roddoch chi, i ddiogelu eich data.</p>
-        <h2>If you didn’t expect to see this page</h2>
-        <p>You may be seeing this page because you’ve turned off cookies in your browser. You’ll need to <a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external" target="_blank">turn cookies on</a> before you can use this service.</p>
+        <p>Mae eich sesiwn wedi dod i ben oherwydd nad ydych wedi gwneud unrhyw beth ers 4 awr. Bydd rhaid ichi ddechrau eto.</p>
+        <p>Rydym yn gwneud hyn er mwyn eich diogelu chi. Rydym wedi dileu’r holl fanylion a fewngofnodwyd gennych er mwyn diogelu eich data.</p>
+        <h2>Os nad oeddech yn disgwyl gweld y dudalen hon</h2>
+        <p>Efallai eich bod yn gweld y dudalen hon oherwydd eich bod wedi gwrthod cwcis yn eich porwr. Bydd angen ichi dderbyn <a class="govuk-link" href="https://ico.org.uk/your-data-matters/online/cookies/" rel="external" target="_blank">dderbyn cwcis</a> cyn ichi allu defnyddio’r gwasanaeth hwn.</p>
     leave_this_website:
       link_text: "Gadael y safle"
       link_href: "/clear-session?ext_r=true"
@@ -217,25 +217,25 @@
         location:
           questions:
             nation:
-              title: "Where do you live?"
-              title_caption: "We will show you information which is relevant to where you live."
+              title: "Ble rydych yn byw?"
+              title_caption: "Byddwn yn dangos gwybodaeth ichi sy’n berthnasol i ble rydych yn byw."
               options:
                 option_england:
-                  label: "England"
+                  label: "Lloegr"
                 option_scotland:
-                  label: "Scotland"
+                  label: "Yr Alban"
                 option_wales:
-                  label: "Wales"
+                  label: "Cymru"
                 option_northern_ireland:
-                  label: "Northern Ireland"
+                  label: "Gogledd Iwerddon"
         filter_questions:
           questions:
             need_help_with:
-              title: "What do you need help with because of coronavirus?"
+              title: "Gyda beth y mae angen cymorth arnoch oherwydd y coronafeirws?"
               hint_text: "Dewiswch bob un sy’n berthnasol"
               options:
                 - "Ddim yn siŵr"
-              custom_select_error: "Select what you need to find help with, or ‘I’m not sure’"
+              custom_select_error: "Dewiswch beth y mae angen cymorth arnoch gydag ef, neu ‘Ddim yn siŵr’"
         feeling_unsafe:
           title: "Ddim yn teimlo’n ddiogel"
           questions:
@@ -250,7 +250,7 @@
                   label: "Nac ydw"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select if you feel safe where you live or if you’re worried about someone else"
+              custom_select_error: "Dewiswch os ydych yn teimlo’n ddiogel lle rydych yn byw neu os ydych yn poeni am rywun arall"
         paying_bills:
           title: "Talu biliau"
           questions:
@@ -263,7 +263,7 @@
                   label: "Nac ydw"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select yes if you’re finding it hard to afford your rent, your mortgage or bills"
+              custom_select_error: "Dewiswch ‘Ydw’ os ydych yn ei chael yn anodd fforddio’ch rhent, eich morgais neu’ch biliau"
         getting_food:
           title: "Cael gafael ar fwyd"
           questions:
@@ -276,7 +276,7 @@
                   label: "Nac ydw"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select yes if you’re finding it hard to afford food"
+              custom_select_error: "Dewiswch ‘Ydw’ os ydych yn ei chael yn anodd fforddio bwyd"
             get_food:
               title: "A fyddwch yn gallu cael gafael ar fwyd yn yr wythnos nesaf?"
               options:
@@ -286,7 +286,7 @@
                   label: "Na fyddaf"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select yes if you’re able to get food"
+              custom_select_error: "Dewiswch ‘Byddaf’ os byddwch yn gallu cael gafael ar fwyd"
         being_unemployed:
           title: "Bod yn ddi-waith neu heb unrhyw waith"
           questions:
@@ -302,7 +302,7 @@
                   label: "Ddim yn siŵr"
               skip_next_question_options:
                 - "Ydw"
-              custom_select_error: "Select yes if you’re self-employed or a sole trader"
+              custom_select_error: "Dewiswch ‘Ydw’ os ydych yn hunangyflogedig neu’n unig fasnachwr"
             have_you_been_made_unemployed:
               title: "Ydych chi wedi colli’ch swydd neu wedi’ch rhoi ar absenoldeb dros dro (ffyrlo)?"
               title_caption: "Bod yn ddi-waith neu heb unrhyw waith"
@@ -318,7 +318,7 @@
               skip_next_question_options:
                 - "Ydw"
                 - "Mae’n bosib y byddaf cyn hir"
-              custom_select_error: "Select if you’ve been made unemployed, or put on temporary leave (furloughed)"
+              custom_select_error: "Dewiswch ‘Ydw’ os ydych wedi colli’ch swydd neu wedi’ch rhoi ar absenoldeb dros dro (ffyrlo)"
             are_you_off_work_ill:
               title: "Ydych chi i ffwrdd o’ch gwaith gan eich bod yn sâl neu’n hunanynysu?"
               title_caption: "Mynd i’r gwaith"
@@ -327,7 +327,7 @@
                   label: "Ydw"
                 option_no:
                   label: "Nac ydw"
-              custom_select_error: "Select yes if you’re off work because you’re ill or self-isolating"
+              custom_select_error: "Dewiswch ‘Ydw’ os ydych i ffwrdd o’ch gwaith gan eich bod yn sâl neu’n hunanynysu"
         going_in_to_work:
           title: "Mynd i’r gwaith"
           questions:
@@ -340,7 +340,7 @@
                   label: "Nac ydw"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select yes if you’re worried about going in to work"
+              custom_select_error: "Dewiswch ‘Ydw’ os ydych yn poeni am fynd i’r gwaith"
         somewhere_to_live:
           title: "Rhywle i fyw"
           questions:
@@ -355,7 +355,7 @@
                   label: "Nac oes"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select if you have somewhere to live"
+              custom_select_error: "Dewiswch ‘Oes’ os oes gennych rywle i fyw"
             have_you_been_evicted:
               title: "Ydych chi wedi’ch troi allan o’ch cartref?"
               options:
@@ -367,10 +367,10 @@
                   label: "Nac ydw"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select if you have been evicted or might be soon"
+              custom_select_error: "Dewiswch os ydych wedi’ch troi allan o’ch cartref neu os gallai hynny ddigwydd yn fuan"
         mental_health:
           title: "Iechyd a lles meddyliol"
-          need_help_with_label: "Mental health and wellbeing, including information for children"
+          need_help_with_label: "Iechyd a lles meddyliol"
           questions:
             mental_health_worries:
               title: "Ydych chi’n poeni am eich iechyd meddwl neu iechyd meddwl rhywun arall?"
@@ -381,7 +381,7 @@
                   label: "Nac ydw"
                 not_sure:
                   label: "Ddim yn siŵr"
-              custom_select_error: "Select yes if you’re worried about your mental health or someone else’s mental health"
+              custom_select_error: "Dewiswch ‘Ydw’ os ydych yn poeni am eich iechyd meddwl neu iechyd meddwl rhywun arall"
         leave_home:
           questions:
             able_to_leave:
@@ -397,14 +397,14 @@
                   label: "Ni allaf fynd allan gan fod gen i anabledd"
                 option_other:
                   label: "Ni allaf adael y tŷ am reswm arall"
-              custom_select_error: "Select if you’re able to leave your home or not"
+              custom_select_error: "Dewiswch os ydych yn gallu gadael eich tŷ ai peidio"
       results:
         header:
           context: "Canlyniadau"
           title: "Gwybodaeth yn seiliedig ar eich atebion"
           title_no_results: "Gwybodaeth yn seiliedig ar eich atebion – dim gwybodaeth benodol"
           start_again_text: "Dechrau eto"
-        support_and_advice_text: "Support and advice"
+        support_and_advice_text: "Cymorth a chyngor"
         feedback:
           text: "Helpwch ni i wella"
           link_text: "Rhowch adborth ar y gwasanaeth hwn"

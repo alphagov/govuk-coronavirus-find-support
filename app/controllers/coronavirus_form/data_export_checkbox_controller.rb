@@ -29,19 +29,21 @@ class CoronavirusForm::DataExportCheckboxController < ApplicationController
                   .where(created_at: start_date..end_date)
                   .select(Arel.sql("created_at::date, form_response -> 'need_help_with'"))
                   .pluck(Arel.sql("created_at::date, form_response -> 'need_help_with'"))
-                  .flat_map do |created_date, selections|
-                    selections.map do |selection|
-                      [selection, created_date]
+                  .flat_map do |created_date, selected_options|
+                    selected_options.map do |option|
+                      [option, created_date.to_date]
                     end
                   end
 
-    responses.each { |selection, date| counts[[date.to_date, selection]] += 1 }
+    responses.each do |response|
+      counts[response] += 1
+    end
 
     counts.map do |count|
       result = {
         count.first.join(" ").to_s => [{
-          response: count.first.second,
-          date: count.first.first,
+          response: count.first.first,
+          date: count.first.second,
           count: count.second,
         }],
       }

@@ -27,7 +27,7 @@ GOOGLE_SHEET_ID="a-google-sheet-id"
 3. Run this take task:
 
 ```
-bundle exec rake rake content:import_locale_links_from_google_sheet
+bundle exec rake content:import_locale_links_from_google_sheet
 ```
 
 

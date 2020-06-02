@@ -215,7 +215,8 @@ en:
               sure’
       feeling_unsafe:
         title: Feeling unsafe
-        need_help_with_label: Feeling unsafe where you live, or what to do if you’re worried about the safety of another adult or child
+        need_help_with_label: Feeling unsafe where you live, or what to do if you’re
+          worried about the safety of another adult or child
         questions:
           feel_safe:
             title: Do you feel safe where you live?
@@ -223,7 +224,8 @@ en:
               option_yes:
                 label: 'Yes'
               option_yes_someone_else:
-                label: Yes, but I’m worried about the safety of another adult or a child
+                label: Yes, but I’m worried about the safety of another adult or a
+                  child
               option_no:
                 label: 'No'
               not_sure:
@@ -353,10 +355,12 @@ en:
             custom_select_error: Select if you have been evicted or might be soon
       mental_health:
         title: Mental health and wellbeing
-        need_help_with_label: Mental health and wellbeing, including information for children
+        need_help_with_label: Mental health and wellbeing, including information for
+          children
         questions:
           mental_health_worries:
-            title: Are you worried about your mental health, or another adult or child’s mental health?
+            title: Are you worried about your mental health, or another adult or child’s
+              mental health?
             options:
               option_yes:
                 label: Yes, I am
@@ -374,9 +378,11 @@ en:
               option_yes:
                 label: 'Yes'
               option_has_symptoms:
-                label: No, I should not leave home because I have coronavirus symptoms, or someone in my household does
+                label: No, I should not leave home because I have coronavirus symptoms,
+                  or someone in my household does
               option_high_risk:
-                label: No, I should not leave home because I have a medical condition which means I’m extremely vulnerable to coronavirus
+                label: No, I should not leave home because I have a medical condition
+                  which means I’m extremely vulnerable to coronavirus
               option_disability:
                 label: No, I’m unable to go out because I have a disability
               option_other:
@@ -521,6 +527,9 @@ en:
           href: https://www.housingrights.org.uk/
           show_to_nations:
           - Northern Ireland
+        - id: '0111'
+          text: Find out if you can get help in your local area
+          href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
         - id: '0016'
           text: Your rights if you’re finding it hard to pay rent
@@ -686,6 +695,9 @@ en:
           href: https://gov.wales/discretionary-assistance-fund-daf
           show_to_nations:
           - Wales
+        - id: '0112'
+          text: Find out if you can get help in your local area
+          href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
         - id: '0046'
           text: What to do if you’ve been laid-off
@@ -813,6 +825,9 @@ en:
           href: https://findbusinesssupport.gov.scot/coronavirus-advice
           show_to_nations:
           - Scotland
+        - id: '0113'
+          text: Find out if you can get help in your local area
+          href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
         - id: '0069'
           text: What you can do if you’re self employed or a sole trader (Money Advice
@@ -882,6 +897,10 @@ en:
           href: https://www.citizensadvice.org.uk/about-us/northern-ireland/
           show_to_nations:
           - Northern Ireland
+        support_and_advice_items:
+        - id: '0118'
+          text: Returning to work and what you can do if you’re worried (Acas)
+          href: https://www.acas.org.uk/coronavirus/returning-to-the-workplace
     somewhere_to_live:
       have_somewhere_to_live:
         title: If you do not have somewhere to live or might become homeless
@@ -915,6 +934,9 @@ en:
           href: https://www.mygov.scot/homelessness/
           show_to_nations:
           - Scotland
+        - id: '0114'
+          text: Find out if you can get help in your local area
+          href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
         - id: '0088'
           text: Get help from Housing Rights housing and debt helpline
@@ -953,6 +975,9 @@ en:
           href: https://sheltercymru.org.uk/get-advice/coronavirus/
           show_to_nations:
           - Wales
+        - id: '0115'
+          text: Find out if you can get help in your local area
+          href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
         - id: '0092'
           text: Find information about your rights as a tenant
@@ -998,21 +1023,28 @@ en:
         - Not sure
         items:
         - id: '0103'
-          text: Where to get urgent help for mental health
+          text: Where to get urgent help for mental health (NHS)
           href: https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/
-        support_and_advice_items:
-        - id: '0104'
-          text: Get information on coronavirus and your wellbeing (Mind)
-          href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing/#collapse838f8
-        - id: '0105'
-          text: Looking after your mental health during coronavirus
-          href: https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing
         - id: '0106'
-          text: Looking after your mental health (NHS)
+          text: Get advice on looking after your mental health during coronavirus
+            (NHS)
           href: https://www.nhs.uk/oneyou/every-mind-matters
         - id: '0107'
-          text: Supporting the mental health and wellbeing of children and young people
+          text: Things you can do to support the mental health and wellbeing of children
+            and young people (Public Health England)
           href: https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak
+        - id: '0104'
+          text: How to manage specific mental health needs (Mind)
+          href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing
+        - id: '0116'
+          text: Advice and guidance on where you can get help with your mental health
+            if you’re a young person (Young Minds)
+          href: https://youngminds.org.uk/find-help/looking-after-yourself/coronavirus-and-mental-health/
+        support_and_advice_items:
+        - id: '0105'
+          text: Looking after your mental health during coronavirus (Public Health
+            England)
+          href: https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing
         - id: '0108'
           text: Additional information about taking care of your mental health (NI
             direct)
@@ -1031,3 +1063,7 @@ en:
           href: https://www.samh.org.uk/about-mental-health/self-help-and-wellbeing/coronavirus-and-your-mental-wellbeing
           show_to_nations:
           - Scotland
+        - id: '0117'
+          text: Advice on supporting children’s mental health during coronavirus (Young
+            Minds)
+          href: https://youngminds.org.uk/find-help/for-parents/supporting-your-child-during-the-coronavirus-pandemic/

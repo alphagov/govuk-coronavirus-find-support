@@ -137,6 +137,8 @@ RSpec.describe "data-export", type: :request do
       expected_partial.each do |line|
         expect(response.body).to have_content(line)
       end
+
+      expect(response.body).not_to have_content("2020-04-10|")
     end
   end
 end

@@ -10,6 +10,8 @@ Rails.application.configure do
     "find-coronavirus-support.service.gov.uk",
   ]
 
+  config.hosts << "#{ENV['HEROKU_APP_NAME']}.herokuapp.com" if ENV["HEROKU_APP_NAME"]
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 

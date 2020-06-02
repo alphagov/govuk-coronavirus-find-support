@@ -19,14 +19,19 @@ class CoronavirusForm::DataExportCheckboxController < ApplicationController
   end
 
   def usage_statistics(start_date, end_date)
-    service_start_date = Date.parse("2020-03-23").beginning_of_day
-    start_date = start_date ? Date.parse(sanitize(start_date)).beginning_of_day : service_start_date
-    end_date = end_date ? Date.parse(sanitize(end_date)).end_of_day : Time.zone.today.end_of_day
+    start_date = Date.parse(sanitize(start_date)).beginning_of_day if start_date
+    end_date = Date.parse(sanitize(end_date)).end_of_day if end_date
 
     results = {}
     counts = Hash.new(0)
-    responses = FormResponse
-                  .where(created_at: start_date..end_date)
+
+    form_responses = if start_date && end_date
+                       FormResponse.where(created_at: start_date..end_date)
+                     else
+                       FormResponse.all
+                     end
+
+    responses = form_responses
                   .pluck(Arel.sql("created_at::date, form_response -> 'need_help_with'"))
                   .flat_map do |created_date, selected_options|
                     selected_options.map do |option|

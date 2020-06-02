@@ -29,8 +29,13 @@ class CoronavirusForm::DataExportController < ApplicationController
     results = {}
     questions.each_key do |question|
       question_text = questions.dig(question, :title)
-      counts = FormResponse
-        .tap { |q| q.where(created_at: start_date..end_date) if start_date && end_date }
+      responses = if start_date && end_date
+                    FormResponse.where(created_at: start_date..end_date)
+                  else
+                    FormResponse.all
+                  end
+
+      counts = responses
         .select(Arel.sql("created_at::date, form_response -> '#{question}', COUNT(*)"))
         .group(Arel.sql("created_at::date, form_response -> '#{question}'"))
         .pluck(Arel.sql("created_at::date, form_response -> '#{question}', COUNT(*)"))

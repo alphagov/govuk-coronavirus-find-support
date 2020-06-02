@@ -360,8 +360,8 @@
                   label: "Not sure"
               custom_select_error: "Select if you have been evicted or might be soon"
         mental_health:
-          title: "Mental health and wellbeing"
-          need_help_with_label: "Mental health and wellbeing"
+          title: "Mental health and wellbeing, including information for children"
+          need_help_with_label: "Mental health and wellbeing, including information for children"
           questions:
             mental_health_worries:
               title: "Are you worried about either your mental health or someone else’s mental health?"

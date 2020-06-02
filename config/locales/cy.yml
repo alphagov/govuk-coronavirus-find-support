@@ -223,7 +223,7 @@
                 - "Ddim yn siŵr"
               custom_select_error: "Dewiswch beth y mae angen cymorth arnoch gydag ef, neu ‘Ddim yn siŵr’"
         feeling_unsafe:
-          title: "Ddim yn teimlo’n ddiogel"
+          title: "Ddim yn teimlo’n ddiogel lle’r ydych yn byw, neu beth i’w wneud os ydych yn poeni ynghylch diogelwch oedolyn neu blentyn arall"
           questions:
             feel_safe:
               title: "Ydych chi’n teimlo’n ddiogel lle rydych yn byw?"
@@ -355,8 +355,8 @@
                   label: "Ddim yn siŵr"
               custom_select_error: "Dewiswch os ydych wedi’ch troi allan o’ch cartref neu os gallai hynny ddigwydd yn fuan"
         mental_health:
-          title: "Iechyd a lles meddyliol"
-          need_help_with_label: "Iechyd a lles meddyliol"
+          title: "Iechyd a lles meddyliol, gan gynnwys gwybodaeth i blant"
+          need_help_with_label: "Iechyd a lles meddyliol, gan gynnwys gwybodaeth i blant"
           questions:
             mental_health_worries:
               title: "Ydych chi’n poeni am eich iechyd meddwl neu iechyd meddwl rhywun arall?"
@@ -540,7 +540,7 @@
         self_employed:
           title: "Os ydych yn hunangyflogedig neu’n unig fasnachwr"
           show_options:
-            - "Yes"
+            - "Ydw"
             - "Ddim yn siŵr"
           items:
             - id: "0035"

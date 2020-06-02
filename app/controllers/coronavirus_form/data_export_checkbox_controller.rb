@@ -18,52 +18,35 @@ class CoronavirusForm::DataExportCheckboxController < ApplicationController
     end
   end
 
-  def checkbox_options
-    options = I18n.t("coronavirus_form.groups")[:filter_questions][:questions][:need_help_with][:options]
-
-    options.index_by do |_option|
-      :need_help_with
-    end
-  end
-
-  def checkbox_questions
-    questions = I18n.t("coronavirus_form.groups").map { |key, group|
-      { key => group[:title] } if group[:title]
-    }
-      .compact
-      .reduce(:merge)
-
-    questions.merge!(checkbox_options)
-  end
-
   def usage_statistics(start_date, end_date)
-    start_date = Date.parse(sanitize(start_date)).beginning_of_day if start_date
-    end_date = Date.parse(sanitize(end_date)).end_of_day if end_date
+    service_start_date = Date.parse("2020-03-23").beginning_of_day
+    start_date = start_date ? Date.parse(sanitize(start_date)).beginning_of_day : service_start_date
+    end_date = end_date ? Date.parse(sanitize(end_date)).end_of_day : Time.zone.today.end_of_day
 
     results = {}
+    counts = Hash.new(0)
+    responses = FormResponse
+                  .where(created_at: start_date..end_date)
+                  .select(Arel.sql("created_at::date, form_response -> 'need_help_with'"))
+                  .pluck(Arel.sql("created_at::date, form_response -> 'need_help_with'"))
+                  .flat_map do |created_date, selections|
+                    selections.map do |selection|
+                      [selection, created_date]
+                    end
+                  end
 
-    checkbox_questions.each do |_question_key, question_text|
-      checkbox_responses = FormResponse.select do |form_responses|
-        if form_responses[:form_response]["need_help_with"]
-          if start_date && end_date
-            form_responses[:created_at].between?(start_date, end_date) && form_responses[:form_response]["need_help_with"].include?(question_text)
-          else
-            form_responses[:form_response]["need_help_with"].include?(question_text)
-          end
-        end
-      end
+    responses.each { |selection, date| counts[[date.to_date, selection]] += 1 }
 
-      next if checkbox_responses.empty?
+    counts.map do |count|
+      result = {
+        count.first.join(" ").to_s => [{
+          response: count.first.second,
+          date: count.first.first,
+          count: count.second,
+        }],
+      }
 
-      checkbox_responses.each do |response|
-        counts = { "#{response.created_at.to_date} #{question_text}" => [{
-          response: question_text,
-          date: response.created_at.to_date,
-          count: checkbox_responses.select { |responses| responses[:created_at].to_date == response.created_at.to_date && responses[:form_response]["need_help_with"].include?(question_text) }.count,
-        }] }
-
-        results.merge!(counts)
-      end
+      results.merge!(result)
     end
 
     results

@@ -136,23 +136,9 @@
     privacy_page:
       title: "Hysbysiad preifatrwydd gwefan"
       body_text: |
-        <h2>Y Rheoliad Cyffredinol ar Ddiogelu Data (GDPR)</h2>
-        <p>O dan GDPR, mae gennych hawliau fel unigolyn y gallwch eu harfer mewn perthynas â’r wybodaeth sydd gennym amdanoch.</p>
-        <h2>Eich rhyngweithiad â’r wefan hon</h2>
-        <h3>Dolenni i wefannau a gwasanaethau eraill Llywodraeth Cymru</h3>
-        <p>Os ydych yn dilyn dolen i wasanaeth a gynhelir gan llyw,cymru neu wefan a ddarperir gan adran arall yn y Llywodraeth, asiantaeth neu awdurdod lleol, bydd y sefydliad hwnnw:</p>
-        <ul>
-        <li>yn gyfrifol am brosesu unrhyw data a rannwch gydag ef</li>
-        <li>yn cyhoeddi a rheoli ei hysbysiad preifatrwydd ei hun ynghyd â manylion ynghylch sut i gysylltu ag ef</li>
-        </ul>
-        <h3>Cwcis</h3>
-        <p>Details <a href="/cwcis">about cookies on this service</a>. CY</p>
-        <h2>Newidiadau i’r hysbysiad preifatrwydd hwn</h2>
-        <p>Wrth adolygu’r dudalen hon, rydych yn sicrhau eich bod o hyd yn ymwybodol o ba wybodaeth a gasglwn, sut ydym yn ei defnyddio ac o dan ba amgylchiadau, os oes unrhyw rai, y byddwn yn ei rhannu gydag eraill.</p>
-        <p>Diweddarwyd yr hysbysiad preifatrwydd hwn ddiwethaf ar 20 Mai 2020.</p>
-        <h2>Gwybodaeth bellach</h2>
-        <p>Mae modd cysylltu â Swyddog Diogelu Data Llywodraeth Cymru drwy:</p>
-        <p>Y Swyddog Diogelu Data<br>Llywodraeth Cymru<br>Parc Cathays<br>Caerdydd<br>CF10 3NQ.<br>E-bost: <a href="mailto:swyddogdiogeludata@llyw.cymru">swyddogdiogeludata@llyw.cymru</a></p>
+        <h2>Beth rydyn ni’n ei wneud â’r wybodaeth sy’n cael ei darparu</h2>
+        <p>Pan fyddwch yn cyflwyno gwybodaeth drwy'r gwasanaeth ar-lein, byddwn yn cofnodi data am y sesiwn (eich taith) a pha atebion sydd wedi'u dewis ar gyfer pob sesiwn benodol.</p>
+        <p>Fodd bynnag, mae hyn yn ddienw ac nid oes unrhyw wybodaeth yn cael ei rhannu â ni, nac â sefydliadau eraill, a fyddai’n ei gwneud yn bosibl adnabod unigolyn. Nid oes unrhyw ffordd ychwaith o wybod pa ddefnyddiwr sydd wedi dewis pa atebion.</p>
     session_expired:
       title: "Mae eich sesiwn wedi dod i ben oherwydd ei bod yn anweithredol"
       body_text: |

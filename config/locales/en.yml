@@ -111,23 +111,9 @@
     privacy_page:
       title: "Website privacy notice"
       body_text: |
-        <h2>GDPR</h2>
-        <p>Under GDPR, you have <a href="https://gov.wales/welsh-government-privacy-notice#section-8569">rights as an individual</a>. Which you can exercise in relation to the information we hold about you.</p>
-        <h2>Links to other Welsh Government websites and services</h2>
-        <h3>Consultations and online survey tools</h3>
-        <p>If you follow a link to a gov.wales hosted service or website provided by another government department, agency or local authority, that organisation will:</p>
-        <ul>
-        <li>be responsible for processing any data you share with them</li>
-        <li>publish and manage their own privacy notice with details of how to contact them</li>
-        </ul>
-        <h3>Cookies</h3>
-        <p>Details <a href="/cookies">about cookies on this service</a>.</p>
-        <h2>Changes to this privacy notice</h2>
-        <p>Reviewing this page ensures you are always aware of what information we collect. How we use it and under what circumstances, if any, we will share it with other parties.</p>
-        <p>This privacy notice was last updated on 20 May 2020.</p>
-        <h2>Further information</h2>
-        <p>The Welsh Government’s Data Protection Officer can be contacted at:</p>
-        <p>Data Protection Officer<br>Welsh Government<br>Cathays Park<br>Cardiff<br>CF10 3NQ.<br>Email: <a href="mailto:dataprotectionofficer@gov.wales">dataprotectionofficer@gov.wales</a></p>
+        <h2>What we do with the information provided</h2>
+        <p>When you submit information through the online service, we will record data about the session (the journey that you take) and what answers have been selected for each session ID.</p>
+        <p>However, this is anonymous and there is no personally identifiable information that is shared with us or other organisations, nor any way to identify which user selected which answers.</p>
     session_expired:
       title: "Your session has ended due to inactivity"
       body_text: |
@@ -375,7 +361,7 @@
               custom_select_error: "Select if you have been evicted or might be soon"
         mental_health:
           title: "Mental health and wellbeing"
-          need_help_with_label: "Mental health and wellbeing, including information for children"
+          need_help_with_label: "Mental health and wellbeing"
           questions:
             mental_health_worries:
               title: "Are you worried about either your mental health or someone else’s mental health?"

@@ -27,7 +27,6 @@ class CoronavirusForm::DataExportCheckboxController < ApplicationController
     counts = Hash.new(0)
     responses = FormResponse
                   .where(created_at: start_date..end_date)
-                  .select(Arel.sql("created_at::date, form_response -> 'need_help_with'"))
                   .pluck(Arel.sql("created_at::date, form_response -> 'need_help_with'"))
                   .flat_map do |created_date, selected_options|
                     selected_options.map do |option|

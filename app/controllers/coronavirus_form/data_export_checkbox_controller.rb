@@ -40,7 +40,7 @@ class CoronavirusForm::DataExportCheckboxController < ApplicationController
 
     counts.map do |(option_text, created_date), count|
       result = {
-        [option_text, created_date].join(" ").to_s => [{
+        [option_text, created_date].join(" ") => [{
           response: option_text,
           date: created_date,
           count: count,

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   scope module: "coronavirus_form" do
     first_question = "/nation"
 
-    get "/start", to: redirect(first_question)
+    get "/start", to: redirect(path: first_question)
 
     get "/privacy", to: "privacy#show"
     get "/cookies", to: "cookies#show"

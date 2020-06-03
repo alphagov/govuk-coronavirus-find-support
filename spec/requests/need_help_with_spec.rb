@@ -52,7 +52,7 @@ RSpec.describe "need-help-with" do
       before do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[feel_safe get_food])
       end
-      let(:selected) { ["I’m not sure"] }
+      let(:selected) { ["Not sure"] }
 
       it "updates the session with all questions" do
         post need_help_with_path, params: { need_help_with: selected }

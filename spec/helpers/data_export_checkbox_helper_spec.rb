@@ -78,7 +78,7 @@ RSpec.describe DataExportCheckboxHelper, type: :helper do
                    "Paying bills 2020-04-10" => [{ response: "Paying bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }],
                    "Paying bills 2020-04-15" => [{ response: "Paying bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }],
                    "Paying bills 2020-04-20" => [{ response: "Paying bills", date: "Mon, 20 Apr 2020".to_date, count: 1 }],
-                   "I’m not sure 2020-04-10" => [{ response: "I’m not sure", date: "Fri, 10 Apr 2020".to_date, count: 1 }] }
+                   "Not sure 2020-04-10" => [{ response: "Not sure", date: "Fri, 10 Apr 2020".to_date, count: 1 }] }
 
       expect(helper.usage_statistics(nil, nil)).to eq(expected)
     end

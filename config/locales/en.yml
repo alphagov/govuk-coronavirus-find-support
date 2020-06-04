@@ -527,7 +527,7 @@ en:
           href: https://www.housingrights.org.uk/
           show_to_nations:
           - Northern Ireland
-        - id: '0111'
+        - id: '0119'
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
@@ -695,7 +695,7 @@ en:
           href: https://gov.wales/discretionary-assistance-fund-daf
           show_to_nations:
           - Wales
-        - id: '0112'
+        - id: '0120'
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
@@ -825,7 +825,7 @@ en:
           href: https://findbusinesssupport.gov.scot/coronavirus-advice
           show_to_nations:
           - Scotland
-        - id: '0113'
+        - id: '0121'
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:

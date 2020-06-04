@@ -2,7 +2,7 @@
 
 The find support app serves lists of links for Coronavirus Actions
 
-Content editors can make changes to google sheet: [Find Support - Results Content Sheet(https://docs.google.com/spreadsheets/d/11jtiwMovC9736F7ZV9k3gDbOpMMGqnSsiRmlD0JFCpQ/edit#gid=754001789) and then we can import the changes into the app via a rake task.
+Content editors can make changes to [this spreadsheet](https://docs.google.com/spreadsheets/d/11jtiwMovC9736F7ZV9k3gDbOpMMGqnSsiRmlD0JFCpQ/edit#gid=754001789) on Google Drive, and then we can import the changes into the app via a rake task.
 
 The sheet allows for a single source of truth around content updates (which may be frequent), reduces human error on imports (compared to reading through docs and trying to copy paste changes), ensures required information is present, and helps to communicate to content editiors the status of their requested changes.
 
@@ -36,11 +36,11 @@ bundle exec rake content:import_locale_links_from_google_sheet
 Result links are defined in the [en.yml locale file](https://github.com/alphagov/govuk-coronavirus-find-support/blob/master/config/locales/en.yml). To import changes from the spreadsheet, you will need to run the import rake task (see below).  When the file has changed in multiple ways, only commit the changes that were requested.
 
 ```
-bundle exec rake rake content:import_locale_links_from_google_sheet
+bundle exec rake content:import_locale_links_from_google_sheet
 ```
 
 You can also manually import from a provided CSV file
 
 ```
-bundle exec rake rake content:import_locale_links[file_path]
+bundle exec rake content:import_locale_links[file_path]
 ```

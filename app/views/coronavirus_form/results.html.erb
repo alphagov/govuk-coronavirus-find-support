@@ -21,6 +21,7 @@
 
 <% if result_groups(session).empty? %>
   <%= sanitize(t("coronavirus_form.results.no_results")) %>
+  <%= sanitize(t("coronavirus_form.results.no_results_#{session[:nation].downcase.gsub(" ", "_")}")) %>
 <% else %>
   <div data-track-ec-list="Find coronavirus support">
     <% result_groups(session).each do |group| %>

@@ -4,7 +4,15 @@
 <% end %>
 
 <% content_for :back_link do %>
-  <%= render "govuk_publishing_components/components/back_link", { href: @previous_page } %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    href: @previous_page,
+    data_attributes: {
+      "module": "track-link",
+      "track-category": "question_back",
+      "track-action": "back #{controller_name.dasherize}",
+      "track-label": controller_name.dasherize
+    }
+  } %>
 <% end %>
 
 <main class="cookies-content">

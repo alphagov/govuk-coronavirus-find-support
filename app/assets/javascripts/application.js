@@ -9,6 +9,7 @@
 //= require analytics
 //= require analytics-enhancedEcommerce
 //= require analytics-track-form
+//= require analytics-track-link
 //= require cookies
 //= require components/escape-link
 window.CookieSettings.start()

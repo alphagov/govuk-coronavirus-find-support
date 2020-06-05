@@ -4,7 +4,15 @@
 <% end %>
 
 <% content_for :back_link do %>
-  <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    href: previous_path,
+    data_attributes: {
+      "module": "track-link",
+      "track-category": "question_back",
+      "track-action": "back #{question.dasherize}",
+      "track-label": question.dasherize
+    }
+  } %>
 <% end %>
 
 <%= form_tag({},

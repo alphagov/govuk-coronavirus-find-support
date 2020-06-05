@@ -34,7 +34,8 @@ private
   end
 
   def write_responses
-    redacted_session = session.to_hash.without("session_id", "_csrf_token")
+    unwanted_fields = %w[_csrf_token check_answers_seen current_path previous_path session_id]
+    redacted_session = session.to_hash.without(*unwanted_fields)
     unless smoke_tester?
       FormResponse.create(
         form_response: redacted_session,

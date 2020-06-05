@@ -8,9 +8,9 @@
 <% end %>
 
 <%= form_tag({},
-  "data-module": "track-coronavirus-form-find-support-#{question.sub('_','-')}",
-  "data-question-key": question,
-  "id": question,
+  "data-module": "track-form",
+  "data-question-key": question.dasherize,
+  "id": question.dasherize,
   "novalidate": "true"
 ) do %>
   <%= render "govuk_publishing_components/components/radio", {

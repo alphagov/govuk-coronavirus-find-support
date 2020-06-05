@@ -8,6 +8,7 @@
 //= require govuk_publishing_components/components/radio
 //= require analytics
 //= require analytics-enhancedEcommerce
+//= require analytics-track-form
 //= require cookies
 //= require components/escape-link
 window.CookieSettings.start()

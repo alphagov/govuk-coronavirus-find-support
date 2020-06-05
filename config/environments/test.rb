@@ -10,6 +10,7 @@ Rails.application.configure do
   # config/application.rb.
 
   config.analytics_tracking_id = "12345"
+  config.analytics_cross_domain_id = "54321"
 
   config.cache_classes = true
 

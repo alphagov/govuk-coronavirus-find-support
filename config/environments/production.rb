@@ -42,6 +42,7 @@ Rails.application.configure do
   end
 
   config.analytics_tracking_id = ENV["GA_VIEW_ID"]
+  config.analytics_cross_domain_id = ENV["GA_CROSS_DOMAIN_ID"]
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass

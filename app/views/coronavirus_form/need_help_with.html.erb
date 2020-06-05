@@ -36,5 +36,8 @@
   <%= render "components/escape-link", {
     text: t("leave_this_website.link_text"),
     href: t("leave_this_website.link_href"),
+    data_attributes: {
+      "track-label": controller_name.dasherize
+    }
   } %>
 <% end %>

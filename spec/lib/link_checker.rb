@@ -130,4 +130,36 @@ RSpec.describe LinkCheckerMethods do
       expect(other_urls).to match_array(["http://www.example.com", "https://www.abstract.com"])
     end
   end
+
+  describe "find_invalid_govuk_paths" do
+    it "should separate out gov urls, and example urls" do
+      test_paths = ["/test/path", "/another/test/path", "/a/third/test/path", "/fifth", "/sixth", "/seventh"]
+      test_urls = test_paths.map { |path| "http://www.gov.uk#{path}" }
+
+      mock_client = instance_double("GdsApi::PublishingApi")
+      expect(GdsApi::PublishingApi).to receive(:new).with("https://publishing-api.publishing.service.gov.uk", bearer_token: "test_token") {
+        mock_client
+      }
+      expect(mock_client).to receive(:lookup_content_ids).with({ base_paths: test_paths, with_drafts: true }).and_return(
+        {
+          "/fifth": nil,
+          "/sixth": nil,
+          "/seventh": nil,
+        },
+      )
+      expect(mock_client).to receive(:lookup_content_ids).with({ base_paths: test_paths }).and_return(
+        {
+          "/test/path": nil,
+          "/a/third/test/path": nil,
+          "/seventh": nil,
+        },
+      )
+
+      expect(ENV).to receive(:[]).with("PUBLISHING_API_BEARER_TOKEN").and_return("test_token")
+
+      unpublished_paths, withdrawn_paths = LinkCheckerMethods.find_invalid_govuk_paths test_urls
+      expect(unpublished_paths).to match_array(["/fifth", "/sixth", "/seventh"])
+      expect(withdrawn_paths).to match_array(["/another/test/path"])
+    end
+  end
 end

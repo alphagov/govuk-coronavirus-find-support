@@ -35,4 +35,24 @@ module_function
     end
     [gov_urls, other_urls]
   end
+
+  def find_invalid_govuk_paths govuk_urls
+    publishing_api = GdsApi::PublishingApi.new(
+      "https://publishing-api.publishing.service.gov.uk",
+      bearer_token: ENV["PUBLISHING_API_BEARER_TOKEN"],
+    )
+    govuk_paths = govuk_urls.map { |url| URI(url).path }
+
+    unpublished_paths = publishing_api.lookup_content_ids(
+      base_paths: govuk_paths,
+      with_drafts: true,
+    ).to_set.map { |a| a.first.to_s }
+
+    published_paths = publishing_api.lookup_content_ids(
+      base_paths: govuk_paths,
+    ).to_set.map { |a| a.first.to_s }
+
+    withdrawn_paths = govuk_paths - (unpublished_paths + published_paths)
+    [unpublished_paths.to_a, withdrawn_paths.to_a]
+  end
 end

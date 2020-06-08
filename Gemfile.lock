@@ -448,6 +448,7 @@ DEPENDENCIES
   dotenv-rails (~> 2.7.5)
   fog-aws (~> 3.6.6)
   foreman (~> 0.87.1)
+  gds-api-adapters (~> 63.6)
   google-api-client
   govuk_app_config (~> 2.2.0)
   govuk_publishing_components (~> 21.57.1)

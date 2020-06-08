@@ -162,4 +162,74 @@ RSpec.describe LinkCheckerMethods do
       expect(withdrawn_paths).to match_array(["/another/test/path"])
     end
   end
+
+  describe "check_links method" do
+    let(:test_urls) do
+      [
+        "https://www.google.com/test/",
+        "http://www.example.com/another/test/",
+        "http://banana.org/a/third/test/",
+      ]
+    end
+
+    def expect_side_effects
+      expect(GdsApi::LinkCheckerApi).to receive(:new).with(
+        Plek.current.find("link-checker-api"), bearer_token: "test_token"
+      ).and_call_original
+
+      expect(ENV).to receive(:[]).with("LINK_CHECKER_API_BEARER_TOKEN").and_return("test_token").once
+      allow(ENV).to receive(:[]).with(anything)
+    end
+
+    it "if batch is immediately complete it should not call get batch or sleep" do
+      expect_side_effects
+
+      stub_link_checker_api_create_batch(
+        uris: test_urls, checked_within: 5, status: :complete,
+      )
+
+      expect(LinkCheckerMethods).to_not receive(:sleep).with(3)
+      LinkCheckerMethods.check_links test_urls
+    end
+
+    it "should call check_batch if batch is not immediately complete" do
+      expect_side_effects
+
+      stub_link_checker_api_create_batch(
+        uris: test_urls, checked_within: 5, status: :in_progress,
+      )
+      stub_link_checker_api_get_batch(
+        id: 0, status: :completed,
+      )
+      expect(LinkCheckerMethods).to_not receive(:sleep).with(3)
+
+      LinkCheckerMethods.check_links test_urls
+    end
+
+    def build_batch_response(status)
+      { body: link_checker_api_batch_report_hash(id: 0, status: status).to_json,
+        status: 200, headers: { "Content-Type" => "application/json" } }
+    end
+
+    it "if batch is not complete after checking, it should recheck after sleeping" do
+      expect_side_effects
+
+      stub_link_checker_api_create_batch(
+        uris: test_urls, checked_within: 5, status: :in_progress,
+      )
+
+      stub = stub_link_checker_api_get_batch(
+        id: 0, status: :in_progress,
+      )
+
+      expect(LinkCheckerMethods).to receive(:sleep).with(3).exactly(5).times
+
+      4.times do
+        stub.and_return(build_batch_response(:in_progress))
+      end
+      stub.and_return(build_batch_response(:completed))
+
+      LinkCheckerMethods.check_links test_urls
+    end
+  end
 end

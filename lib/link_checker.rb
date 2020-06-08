@@ -55,4 +55,23 @@ module_function
     withdrawn_paths = govuk_paths - (unpublished_paths + published_paths)
     [unpublished_paths.to_a, withdrawn_paths.to_a]
   end
+
+  def check_links urls
+    link_checker = GdsApi::LinkCheckerApi.new(
+      Plek.current.find("link-checker-api"),
+      bearer_token: ENV["LINK_CHECKER_API_BEARER_TOKEN"],
+    )
+
+    link_report = link_checker.create_batch(
+      urls, checked_within: 5
+    )
+
+    while link_report.status == :in_progress
+      link_report = link_checker.get_batch(link_report.id)
+      if link_report.status == :in_progress
+        sleep(3)
+      end
+    end
+    link_report
+  end
 end

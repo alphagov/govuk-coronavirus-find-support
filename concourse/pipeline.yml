@@ -225,3 +225,14 @@ jobs:
               :kaboom:
               Production smoke tests for the Find Support service have failed
               Failed build: http://cd.gds-reliability.engineering/teams/$BUILD_TEAM_NAME/pipelines/$BUILD_PIPELINE_NAME/jobs/$BUILD_JOB_NAME/builds/$BUILD_NAME
+
+  - name: run-link-checker-periodically
+    plan:
+      - get: git-master
+      - get: every-day
+        trigger: true
+      - task: run-link-checker
+        file: git-master/concourse/tasks/run-link-checker.yml
+        params:
+          CF_SPACE: production
+          SENTRY_DSN: https://((sentry-dsn))

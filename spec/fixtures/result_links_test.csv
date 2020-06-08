@@ -5,3 +5,4 @@ id,group_title,subgroup_title,support_and_advice,text,href,show_to_nations,show_
 0004,I am the title for Group one,I am the title for Group one subgroup one,true,"This is a row has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria",http://test.stubbed.gb.gov.uk,Wales OR Scotland OR England,"",group_one,subgroup_one,true
 0005,I am the title for Group one,I am the title for Group one subgroup two,false,"This is a row that only has text, it will appear like a paragraph","","","",group_one,subgroup_two,false
 0006,I am the title for Group two,I am the title for Group two subgroup one,false,"This is a row that only has text, it will appear like a paragraph","","",true,group_two,subgroup_one,false
+,,,,,,,#N/A,#N/A,#N/A,#N/A

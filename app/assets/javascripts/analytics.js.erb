@@ -11,6 +11,7 @@ catch(error) {
 var analyticsInit = function () {
   <% if Rails.application.config.analytics_tracking_id.present? %>
     var trackingId = "<%= Rails.application.config.analytics_tracking_id %>"
+    var crossDomainTrackingId = "<%= Rails.application.config.analytics_cross_domain_id %>"
 
   // Start analytics only if we have user consent
   var consentCookie = window.GOVUK.getConsentCookie()
@@ -41,6 +42,14 @@ var analyticsInit = function () {
     window.GOVUK.enhancedEcommerceTracking(document)
 
     ga('send', 'pageview')
+
+    // Cross Government Domain Google Analytics
+    ga('create', crossDomainTrackingId, 'auto', 'govuk_shared', {'allowLinker': true});
+    ga('govuk_shared.require', 'linker');
+    ga('govuk_shared.set', 'anonymizeIp', true);
+    ga('govuk_shared.set', 'allowAdFeatures', false);
+    ga('govuk_shared.linker:autoLink', ['www.gov.uk']);
+    ga('govuk_shared.send', 'pageview');
   }
   <% end %>
  }

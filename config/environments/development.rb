@@ -60,4 +60,5 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.analytics_tracking_id = "DEV-123456"
+  config.analytics_cross_domain_id = "DEV-54321"
 end

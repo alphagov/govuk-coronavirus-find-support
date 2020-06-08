@@ -8,4 +8,4 @@ require_relative "config/application"
 
 Rails.application.load_tasks
 
-task default: %i[spec spec:javascript lint]
+task default: %i[spec spec:javascript lint brakeman]

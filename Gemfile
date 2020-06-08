@@ -5,16 +5,17 @@ ruby File.read(".ruby-version").strip
 source "https://rubygems.org"
 
 gem "asset_sync"
+gem "aws-sdk-s3", "~> 1.68"
 gem "bootsnap", "~> 1"
 gem "fog-aws"
 gem "govuk_app_config", "~> 2.2.0"
 gem "govuk_publishing_components", "~> 21.55.3"
 gem "lograge"
 gem "pg", "~> 1"
+gem "prometheus-client", "~> 2.0"
 gem "puma", "~> 4.3"
 gem "rack_session_access", "~> 0.2"
 gem "rails", "~> 6.0.3"
-
 gem "sass-rails", "< 6"
 gem "sentry-raven", "~> 3.0"
 gem "uglifier", "~> 4.2"
@@ -35,6 +36,7 @@ end
 
 group :development, :test do
   gem "awesome_print", "~> 1.8"
+  gem "brakeman", "~> 4.8"
   gem "byebug", "~> 11"
   gem "dotenv-rails"
   gem "foreman", "~> 0.87.1"
@@ -51,7 +53,3 @@ group :development, :test do
   gem "webdrivers", "~> 4.4"
   gem "webmock", "~> 3.8.3"
 end
-
-gem "prometheus-client", "~> 2.0"
-
-gem "aws-sdk-s3", "~> 1.68"

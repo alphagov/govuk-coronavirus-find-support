@@ -442,6 +442,7 @@ DEPENDENCIES
   awesome_print (~> 1.8)
   aws-sdk-s3 (~> 1.68)
   bootsnap (~> 1)
+  brakeman (~> 4.8)
   byebug (~> 11)
   capybara (~> 3.32.2)
   dotenv-rails

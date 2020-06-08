@@ -18,4 +18,21 @@ module_function
     end
     urls
   end
+
+  def get_urls_from_locale_files
+    urls = Dir.glob("config/locales/*.yml")
+      .map { |locale_filename| gather_urls YAML.safe_load(File.read(locale_filename)) }
+      .reduce(:+)
+
+    gov_urls = []
+    other_urls = []
+    urls.each do |url|
+      if URI(url).host.ends_with? ".gov.uk"
+        gov_urls << url
+      else
+        other_urls << url
+      end
+    end
+    [gov_urls, other_urls]
+  end
 end

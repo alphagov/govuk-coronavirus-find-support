@@ -50,7 +50,7 @@ You'll then need to specify the `DATABASE_URL` environment variable before the b
 ## Deployment pipeline
 
 Every commit to master is deployed to GOV.UK PaaS by
-[this concourse pipeline](https://cd.gds-reliability.engineering/teams/govuk-tools/pipelines/govuk-corona-find-support),
+[this concourse pipeline](https://cd.gds-reliability.engineering/teams/govuk-tools/pipelines/govuk-corona-find-support-form),
 which is configured in [concourse/pipeline.yml](concourse/pipeline.yml).
 
 The concourse pipeline has credentials for the `govuk-forms-deployer` user in

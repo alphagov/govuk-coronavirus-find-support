@@ -211,8 +211,7 @@ en:
             hint_text: Select all that apply
             options:
             - Not sure
-            custom_select_error: Select what you need to find help with, or ‘Not
-              sure’
+            custom_select_error: Select what you need to find help with, or ‘Not sure’
       feeling_unsafe:
         title: Feeling unsafe
         need_help_with_label: Feeling unsafe where you live, or what to do if you’re
@@ -403,8 +402,8 @@ en:
         <p class="govuk-body">Based on your answers, there’s no specific information for you in this service at the moment. It will be updated regularly.</p>
 
         <p class="govuk-body"><a href="https://www.gov.uk/coronavirus" class="govuk-link">Find all information on coronavirus, including how to protect yourself and get financial support</a></p>
-      no_results_england: |
-        <p class="govuk-body"><a href="https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/" class="govuk-link">Find information about what you can do from Citizens Advice</a></p>
+      no_results_england: <p class="govuk-body"><a href="https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
+        class="govuk-link">Find information about what you can do from Citizens Advice</a></p>
       no_results_northern_ireland: |
         <p class="govuk-body"><a href="https://www.nidirect.gov.uk/campaigns/coronavirus-covid-19" class="govuk-link">Additional information for Northern Ireland</a></p>
 
@@ -885,9 +884,6 @@ en:
         - 'Yes'
         - Not sure
         items:
-        - id: '0080'
-          text: Find out if you should be going to work
-          href: https://www.gov.uk/government/publications/staying-alert-and-safe-social-distancing/staying-alert-and-safe-social-distancing
         - id: '0081'
           text: What to do if you’re worried about going to work because of coronavirus
             (Citizens Advice)
@@ -911,10 +907,10 @@ en:
           href: https://www.citizensadvice.org.uk/about-us/northern-ireland/
           show_to_nations:
           - Northern Ireland
-        support_and_advice_items:
         - id: '0118'
           text: Returning to work and what you can do if you’re worried (Acas)
           href: https://www.acas.org.uk/coronavirus/returning-to-the-workplace
+        support_and_advice_items: []
     somewhere_to_live:
       have_somewhere_to_live:
         title: If you do not have somewhere to live or might become homeless

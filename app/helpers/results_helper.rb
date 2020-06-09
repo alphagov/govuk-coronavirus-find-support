@@ -68,6 +68,6 @@ private
 
   def show_to_vulnerable_check(item)
     item[:show_to_vulnerable_person].nil? ||
-      I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_high_risk.label") == session[:able_to_leave]
+      I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.options.option_high_risk.label") == session[:able_to_leave]
   end
 end

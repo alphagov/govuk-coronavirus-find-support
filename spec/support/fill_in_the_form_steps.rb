@@ -156,17 +156,17 @@ module FillInTheFormSteps
   end
 
   def and_is_not_able_to_leave_home_if_absolutely_necessary
-    expect(page).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.title"))
 
-    choose I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_has_symptoms.label")
+    choose I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.options.option_has_symptoms.label")
 
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
   def and_is_not_able_to_leave_home_as_they_are_vulnerable
-    expect(page).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.title"))
 
-    choose I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_high_risk.label")
+    choose I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.options.option_high_risk.label")
 
     click_on I18n.t("coronavirus_form.submit_and_next")
   end

@@ -1,5 +1,4 @@
 module QuestionsHelper
-  FINAL_QUESTION = "able_to_leave".freeze
   FILTER_QUESTION = "need_help_with".freeze
 
   def determine_user_questions(groups)
@@ -15,14 +14,12 @@ module QuestionsHelper
 
   def next_question(current_question)
     return first_question if current_question == FILTER_QUESTION
-    return FINAL_QUESTION if current_question == last_question
 
     current_question_index = questions_to_ask.index(current_question)
-    questions_to_ask[current_question_index + 1]
+    questions_to_ask[current_question_index + 1] || "results"
   end
 
   def previous_question(current_question)
-    return last_question if current_question == FINAL_QUESTION
     return FILTER_QUESTION if current_question == first_question
 
     current_question_index = questions_to_ask.index(current_question)
@@ -47,10 +44,6 @@ module QuestionsHelper
 
   def last_question
     questions_to_ask.last
-  end
-
-  def last_question_seen?
-    session[FINAL_QUESTION.to_sym].present?
   end
 
   def all_questions

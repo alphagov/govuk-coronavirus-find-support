@@ -268,6 +268,22 @@ en:
               not_sure:
                 label: Not sure
             custom_select_error: Select yes if you’re able to get food
+          able_to_leave:
+            title: Are you able to leave your home for food, medicine, or health reasons?
+            options:
+              option_yes:
+                label: 'Yes'
+              option_has_symptoms:
+                label: No, I should not leave home because I have coronavirus symptoms,
+                  or someone in my household does
+              option_high_risk:
+                label: No, I should not leave home because I have a medical condition
+                  which means I’m extremely vulnerable to coronavirus
+              option_disability:
+                label: No, I’m unable to go out because I have a disability
+              option_other:
+                label: No, I’m unable to leave my home for another reason
+            custom_select_error: Select if you’re able to leave your home or not
       being_unemployed:
         title: Being unemployed or not having any work
         questions:
@@ -369,24 +385,6 @@ en:
                 label: Not sure
             custom_select_error: Select yes if you’re worried about your mental health
               or someone else’s mental health
-      leave_home:
-        questions:
-          able_to_leave:
-            title: Are you able to leave your home for food, medicine, or health reasons?
-            options:
-              option_yes:
-                label: 'Yes'
-              option_has_symptoms:
-                label: No, I should not leave home because I have coronavirus symptoms,
-                  or someone in my household does
-              option_high_risk:
-                label: No, I should not leave home because I have a medical condition
-                  which means I’m extremely vulnerable to coronavirus
-              option_disability:
-                label: No, I’m unable to go out because I have a disability
-              option_other:
-                label: No, I’m unable to leave my home for another reason
-            custom_select_error: Select if you’re able to leave your home or not
     results:
       header:
         context: Coronavirus (COVID-19)

@@ -14,6 +14,7 @@ RSpec.feature "Fill in the find support form" do
       and_is_finding_it_hard_to_afford_rent_mortgage_bills
       and_is_finding_it_hard_to_afford_food
       and_is_unable_to_get_food
+      and_is_not_able_to_leave_home_if_absolutely_necessary
       and_is_not_self_employed_or_a_sole_trader
       and_has_not_been_told_to_stop_working
       and_is_off_work_because_ill_or_self_isolating
@@ -21,7 +22,6 @@ RSpec.feature "Fill in the find support form" do
       and_has_nowhere_to_live
       and_has_been_evicted
       and_is_worried_about_mental_health
-      and_is_not_able_to_leave_home_if_absolutely_necessary
       they_view_the_results_page
       they_are_provided_with_information_about_feeling_unsafe
       they_are_provided_with_information_about_paying_bills
@@ -49,7 +49,6 @@ RSpec.feature "Fill in the find support form" do
     and_needs_help_with_being_unemployed
     and_is_not_self_employed_or_a_sole_trader
     and_has_been_told_to_stop_working
-    and_is_not_able_to_leave_home_if_absolutely_necessary
     they_view_the_results_page
     they_are_provided_with_information_about_being_unemployed
     they_are_given_a_link_for_providing_feedback
@@ -60,7 +59,6 @@ RSpec.feature "Fill in the find support form" do
     and_they_live_in_england
     and_needs_help_with_being_unemployed
     and_is_self_employed_or_a_sole_trader
-    and_is_not_able_to_leave_home_if_absolutely_necessary
     they_view_the_results_page
     they_are_provided_with_information_about_being_self_employed
     they_are_given_a_link_for_providing_feedback

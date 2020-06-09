@@ -22,7 +22,7 @@ The sheet allows for a single source of truth around content updates (which may 
 GOOGLE_SHEET_ID="a-google-sheet-id"
 ```
 
-2. Before you run the rake task for the first time, you will need to enable to Google Drive API by generating a `credentials.json` file from the API and saving it in the root directory of the repo.  Instructions to to this can be found [here](https://developers.google.com/drive/api/v3/quickstart/ruby). It will require you to authorise using a link that appears in the CLI and copy paste a token into the CLI, which will then populate a token.yaml that will appear in the root of the repo. You will not need to do this again when running the rake task in future as long as you have `credentials.json`.
+2. Before you run the rake task for the first time, you will need to enable to Google Drive API by generating a `credentials.json` file from the API and saving it in the root directory of the repo.  Instructions to to this can be found [here](https://developers.google.com/drive/api/v3/quickstart/ruby). When enabling the Drive API as part of the instructions, make sure you select 'Desktop app' from the drop down. It will require you to authorise using a link that appears in the CLI and copy paste a token into the CLI. This will then populate a token.yaml that will appear in the root of the repo. You will not need to do this again when running the rake task in future as long as you have `credentials.json`.
 
 3. Run this take task:
 

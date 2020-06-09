@@ -24,9 +24,9 @@ RSpec.describe "self-employed" do
       it "shows the form" do
         visit self_employed_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
         I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "self-employed" do
       it "shows the form without prefilled response" do
         visit self_employed_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

@@ -38,9 +38,9 @@ RSpec.describe "mental-health-worries" do
       it "shows the form" do
         visit mental_health_worries_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
         I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -53,7 +53,7 @@ RSpec.describe "mental-health-worries" do
       it "shows the form without prefilled response" do
         visit mental_health_worries_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

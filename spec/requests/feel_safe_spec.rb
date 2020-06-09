@@ -24,9 +24,9 @@ RSpec.describe "feel-safe" do
       it "shows the form" do
         visit feel_safe_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.title"))
         I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "feel-safe" do
       it "shows the form without prefilled response" do
         visit feel_safe_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

@@ -27,7 +27,7 @@ RSpec.describe "need-help-with" do
       it "shows the form without prefilled response" do
         visit need_help_with_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
         expect(page.find("input#option_#{selected.first.parameterize.underscore}")).not_to be_checked
       end
     end

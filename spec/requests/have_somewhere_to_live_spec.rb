@@ -24,9 +24,9 @@ RSpec.describe "have-somewhere-to-live" do
       it "shows the form" do
         visit have_somewhere_to_live_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_somewhere_to_live.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_somewhere_to_live.title"))
         I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_somewhere_to_live.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "have-somewhere-to-live" do
       it "shows the form without prefilled response" do
         visit have_somewhere_to_live_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_somewhere_to_live.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_somewhere_to_live.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

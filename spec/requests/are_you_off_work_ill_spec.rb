@@ -24,9 +24,9 @@ RSpec.describe "still-working" do
       it "shows the form" do
         visit are_you_off_work_ill_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
         I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "still-working" do
       it "shows the form without prefilled response" do
         visit are_you_off_work_ill_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

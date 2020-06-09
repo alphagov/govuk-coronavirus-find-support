@@ -18,43 +18,24 @@ class CoronavirusForm::AbleToLeaveController < ApplicationController
       flash.now[:validation] = invalid_fields
       log_validation_error(invalid_fields)
       render controller_path
-    else
+    elsif last_question == controller_name
       update_session_store
       write_responses
       redirect_to results_url
+    else
+      update_session_store
+      redirect_to polymorphic_url(next_question(controller_name))
     end
   end
 
 private
-
-  # We're using this method to reduce the precision of timekeeping so that
-  # responses cannot be correlated with analytics data
-  def time_hour_floor
-    Time.current.beginning_of_hour
-  end
-
-  def write_responses
-    unwanted_fields = %w[_csrf_token check_answers_seen current_path previous_path session_id]
-    redacted_session = session.to_hash.without(*unwanted_fields)
-    unless smoke_tester?
-      FormResponse.create(
-        form_response: redacted_session,
-        created_at: time_hour_floor,
-      )
-    end
-  end
-
-  def smoke_tester?
-    smoke_test_header = request.env["HTTP_SMOKE_TEST"]
-    smoke_test_header.present? && smoke_test_header == "true"
-  end
 
   def update_session_store
     session[:able_to_leave] = @form_responses[:able_to_leave]
   end
 
   def group
-    "leave_home"
+    "getting_food"
   end
 
   def previous_path

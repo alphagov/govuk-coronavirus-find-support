@@ -19,6 +19,10 @@ class CoronavirusForm::HaveYouBeenEvictedController < ApplicationController
       flash.now[:validation] = invalid_fields
       log_validation_error(invalid_fields)
       render controller_path
+    elsif last_question == controller_name
+      update_session_store
+      write_responses
+      redirect_to results_url
     else
       update_session_store
       redirect_to polymorphic_url(next_question(controller_name))

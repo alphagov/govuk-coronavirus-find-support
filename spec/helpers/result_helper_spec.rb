@@ -94,8 +94,8 @@ RSpec.describe ResultsHelper, type: :helper do
       expect(filter_results_by_multiple_questions(test_hash.dup)[:support_and_advice_items]).to eq([{ show_to_nations: "nation 1" }])
     end
 
-    let(:vulnerable_person_label) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_high_risk.label") }
-    let(:not_vulnerable_label) { I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_other.label") }
+    let(:vulnerable_person_label) { I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.options.option_high_risk.label") }
+    let(:not_vulnerable_label) { I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.options.option_other.label") }
 
     it "should return show_to_vulnerable_person items if the session able_to_leave is high_risk" do
       session.merge!({

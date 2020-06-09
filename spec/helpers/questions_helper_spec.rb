@@ -6,7 +6,7 @@ RSpec.describe QuestionsHelper, type: :helper do
   describe "#determine_user_questions" do
     it "returns questions in correct order" do
       groups = %i[paying_bills getting_food]
-      expected_questions = %w[afford_rent_mortgage_bills afford_food get_food]
+      expected_questions = %w[afford_rent_mortgage_bills afford_food get_food able_to_leave]
 
       expect(helper.determine_user_questions(groups)).to eq(expected_questions)
     end
@@ -24,10 +24,6 @@ RSpec.describe QuestionsHelper, type: :helper do
       expect(helper.next_question("get_food")).to eq("afford_food")
     end
 
-    it "returns the final compulsory question for the final item" do
-      expect(helper.next_question("afford_food")).to eq("able_to_leave")
-    end
-
     it "returns the first question for the need help with question" do
       expect(helper.next_question("need_help_with")).to eq("get_food")
     end
@@ -40,10 +36,6 @@ RSpec.describe QuestionsHelper, type: :helper do
 
     it "returns the filter question page key for the first item" do
       expect(helper.previous_question("get_food")).to eq("need_help_with")
-    end
-
-    it "returns the last question for the able to leave question" do
-      expect(helper.previous_question("able_to_leave")).to eq("afford_food")
     end
   end
 

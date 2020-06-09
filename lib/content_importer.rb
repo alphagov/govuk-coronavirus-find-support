@@ -55,6 +55,8 @@ module_function
   def import_results_links(csv_path)
     csv = CSV.read(csv_path, { headers: true })
     output = csv.each_with_object({}) do |csv_row, results_links|
+      next if blank_row?(csv_row)
+
       support_and_advice_items = csv_row.fetch("support_and_advice")
       group_key = csv_row.fetch("group_key").to_sym
       subgroup_key = csv_row.fetch("subgroup_key").to_sym
@@ -98,5 +100,9 @@ module_function
     File.open(output_locale_path, "w") do |file|
       file.write(existing_locale_file.to_yaml)
     end
+  end
+
+  def blank_row?(row)
+    row.fields.all? { |v| [nil, "#N/A"].include?(v) }
   end
 end

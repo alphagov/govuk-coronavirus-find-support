@@ -24,9 +24,9 @@ RSpec.describe "afford-food" do
       it "shows the form" do
         visit afford_food_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.title"))
         I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "afford-food" do
       it "shows the form without prefilled response" do
         visit afford_food_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

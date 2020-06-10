@@ -24,9 +24,9 @@ RSpec.describe "able-to-leave" do
       it "shows the form" do
         visit able_to_leave_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
         I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "able-to-leave" do
       it "shows the form without prefilled response" do
         visit able_to_leave_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

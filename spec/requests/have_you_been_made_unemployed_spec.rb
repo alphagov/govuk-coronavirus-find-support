@@ -24,9 +24,9 @@ RSpec.describe "have-you-been-made-unemployed" do
       it "shows the form" do
         visit have_you_been_made_unemployed_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))
         I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "have-you-been-made-unemployed" do
       it "shows the form without prefilled response" do
         visit have_you_been_made_unemployed_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

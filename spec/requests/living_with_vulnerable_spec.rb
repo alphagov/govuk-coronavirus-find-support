@@ -24,9 +24,9 @@ RSpec.describe "living-with-vulnerable" do
       it "shows the form" do
         visit living_with_vulnerable_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.title"))
         I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.options").each do |_, option|
-          expect(page.body).to have_content(option[:label])
+          expect(page).to have_content(option[:label])
         end
       end
     end
@@ -39,7 +39,7 @@ RSpec.describe "living-with-vulnerable" do
       it "shows the form without prefilled response" do
         visit living_with_vulnerable_path
 
-        expect(page.body).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.title"))
+        expect(page).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.title"))
         expect(page.find("input##{selected_option}")).not_to be_checked
       end
     end

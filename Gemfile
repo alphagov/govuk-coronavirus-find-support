@@ -54,4 +54,4 @@ end
 
 gem "prometheus-client", "~> 2.0"
 
-gem "aws-sdk-s3", "~> 1.67"
+gem "aws-sdk-s3", "~> 1.68"

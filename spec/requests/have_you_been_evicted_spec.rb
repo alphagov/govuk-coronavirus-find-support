@@ -76,5 +76,17 @@ RSpec.describe "have-you-been-evicted" do
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_you_been_evicted.title"))
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.somewhere_to_live.questions.have_you_been_evicted.custom_select_error"))
     end
+
+    context "when this is the last question" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[have_you_been_evicted])
+      end
+
+      it "redirects to the results url" do
+        post have_you_been_evicted_path, params: { have_you_been_evicted: selected_option_text }
+
+        expect(response).to redirect_to(results_path)
+      end
+    end
   end
 end

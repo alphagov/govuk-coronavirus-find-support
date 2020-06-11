@@ -64,5 +64,17 @@ RSpec.describe "able-to-leave" do
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.title"))
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.custom_select_error"))
     end
+
+    context "when this is the last question" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[afford_food able_to_leave])
+      end
+
+      it "redirects to the results url" do
+        post able_to_leave_path, params: { able_to_leave: selected_option_text }
+
+        expect(response).to redirect_to(results_path)
+      end
+    end
   end
 end

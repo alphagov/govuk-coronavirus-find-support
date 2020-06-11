@@ -56,6 +56,7 @@ module_function
     csv = CSV.read(csv_path, { headers: true })
     output = csv.each_with_object({}) do |csv_row, results_links|
       next if blank_row?(csv_row)
+      next if csv_row.fetch("change_status") == "Withdrawn"
 
       support_and_advice_items = csv_row.fetch("support_and_advice")
       group_key = csv_row.fetch("group_key").to_sym

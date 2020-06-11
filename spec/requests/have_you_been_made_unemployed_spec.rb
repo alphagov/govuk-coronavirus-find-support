@@ -88,5 +88,17 @@ RSpec.describe "have-you-been-made-unemployed" do
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.title"))
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.custom_select_error"))
     end
+
+    context "when this is the last question" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[have_you_been_made_unemployed])
+      end
+
+      it "redirects to the results url" do
+        post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: selected_option_text }
+
+        expect(response).to redirect_to(results_path)
+      end
+    end
   end
 end

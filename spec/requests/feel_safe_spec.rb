@@ -76,5 +76,17 @@ RSpec.describe "feel-safe" do
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.title"))
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.feeling_unsafe.questions.feel_safe.custom_select_error"))
     end
+
+    context "when this is the last question" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[feel_safe])
+      end
+
+      it "redirects to the results url" do
+        post feel_safe_path, params: { feel_safe: selected_option_text }
+
+        expect(response).to redirect_to(results_path)
+      end
+    end
   end
 end

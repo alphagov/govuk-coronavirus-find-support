@@ -76,5 +76,17 @@ RSpec.describe "worried-about-work" do
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.worried_about_work.title"))
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.worried_about_work.custom_select_error"))
     end
+
+    context "when this is the last question" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[living_with_vulnerable])
+      end
+
+      it "redirects to the results url" do
+        post living_with_vulnerable_path, params: { living_with_vulnerable: selected_option_text }
+
+        expect(response).to redirect_to(results_path)
+      end
+    end
   end
 end

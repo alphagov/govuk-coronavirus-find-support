@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-class CoronavirusForm::LivingWithVulnerableController < ApplicationController
+class CoronavirusForm::WorriedAboutWorkController < ApplicationController
   before_action :check_filter_question_answered
   before_action :check_current_question_selected
 
   def submit
     @form_responses = {
-      living_with_vulnerable: strip_tags(params[:living_with_vulnerable]).presence,
+      worried_about_work: strip_tags(params[:worried_about_work]).presence,
     }
 
     invalid_fields = validate_radio_field(
       controller_name,
       group,
-      radio: @form_responses[:living_with_vulnerable],
+      radio: @form_responses[:worried_about_work],
     )
 
     if invalid_fields.any?
@@ -28,7 +28,7 @@ class CoronavirusForm::LivingWithVulnerableController < ApplicationController
 private
 
   def update_session_store
-    session[:living_with_vulnerable] = @form_responses[:living_with_vulnerable]
+    session[:worried_about_work] = @form_responses[:worried_about_work]
   end
 
   def group

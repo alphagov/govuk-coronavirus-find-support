@@ -316,7 +316,7 @@ en:
       going_in_to_work:
         title: Going in to work
         questions:
-          living_with_vulnerable:
+          worried_about_work:
             title: Are you worried about going in to work?
             options:
               option_yes:
@@ -879,7 +879,7 @@ en:
           show_to_nations:
           - Scotland
     going_in_to_work:
-      living_with_vulnerable:
+      worried_about_work:
         title: If you’re worried about going in to work
         show_options:
         - 'Yes'

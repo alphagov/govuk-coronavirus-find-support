@@ -1,3 +1,5 @@
+/* global ga:readonly */
+
 function EscapeLink ($module) {
   this.$module = $module
 }
@@ -16,9 +18,22 @@ EscapeLink.prototype.handleClick = function (event) {
 
   var url = event.target.getAttribute('href')
   var rel = event.target.getAttribute('rel')
+  var trackLabel = event.target.getAttribute('data-track-label')
 
+  this.trackLink(trackLabel)
   this.openNewPage(url, rel)
   this.replaceCurrentPage(url)
+}
+
+EscapeLink.prototype.trackLink = function (trackLabel) {
+  if (typeof ga === 'function' && trackLabel) {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'leave_site',
+      eventAction: '',
+      eventLabel: trackLabel
+    })
+  }
 }
 
 EscapeLink.prototype.openNewPage = function (url, rel) {

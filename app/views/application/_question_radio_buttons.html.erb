@@ -4,13 +4,21 @@
 <% end %>
 
 <% content_for :back_link do %>
-  <%= render "govuk_publishing_components/components/back_link", { href: previous_path } %>
+  <%= render "govuk_publishing_components/components/back_link", {
+    href: previous_path,
+    data_attributes: {
+      "module": "track-link",
+      "track-category": "question_back",
+      "track-action": "back #{question.dasherize}",
+      "track-label": question.dasherize
+    }
+  } %>
 <% end %>
 
 <%= form_tag({},
-  "data-module": "track-coronavirus-form-find-support-#{question.sub('_','-')}",
-  "data-question-key": question,
-  "id": question,
+  "data-module": "track-form",
+  "data-question-key": question.dasherize,
+  "id": question.dasherize,
   "novalidate": "true"
 ) do %>
   <%= render "govuk_publishing_components/components/radio", {
@@ -35,5 +43,8 @@
   <%= render "components/escape-link", {
     text: t("leave_this_website.link_text"),
     href: t("leave_this_website.link_href"),
+    data_attributes: {
+      "track-label": question.dasherize
+    }
   } %>
 <% end %>

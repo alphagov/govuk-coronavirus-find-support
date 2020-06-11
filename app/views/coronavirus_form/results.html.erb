@@ -16,7 +16,16 @@
     margin_top: 0,
     margin_bottom: 6,
   } %>
-  <%= link_to t("coronavirus_form.results.header.start_again_text"), clear_session_path, class: "govuk-link", onclick: "ga('send', 'event', 'StartAgain', 'StartAgainClicked', '/results');" %>
+  <%= link_to t("coronavirus_form.results.header.start_again_text"),
+    clear_session_path,
+    class: "govuk-link",
+    data: {
+      module: "track-link",
+      "track-category": "StartAgain",
+      "track-action": "StartAgainClicked",
+      "track-label": "/results"
+    }
+  %>
 <% end %>
 
 <% if result_groups(session).empty? %>
@@ -43,5 +52,8 @@
   <%= render "components/escape-link", {
     text: t("leave_this_website.link_text"),
     href: t("leave_this_website.link_href"),
+    data_attributes: {
+      "track-label": controller_name.dasherize
+    }
   } %>
 <% end %>

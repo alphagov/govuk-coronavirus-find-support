@@ -22,6 +22,9 @@ Rails.application.routes.draw do
     # Redirect for old route (301 is default)
     get "/where-live", to: redirect("/nation")
 
+    # Redirect for old route (301 is default)
+    get "/living-with-vulnerable", to: redirect("worried-about-work")
+
     # Question: Where do you live
     get "/nation", to: "nation#show"
     post "/nation", to: "nation#submit"
@@ -58,9 +61,9 @@ Rails.application.routes.draw do
     get "/self-employed", to: "self_employed#show"
     post "/self-employed", to: "self_employed#submit"
 
-    # Question: Are you worried about going into work because you live with someone vulnerable to coronavirus?
-    get "/living-with-vulnerable", to: "living_with_vulnerable#show"
-    post "/living-with-vulnerable", to: "living_with_vulnerable#submit"
+    # Question: Are you worried about going into work?
+    get "/worried-about-work", to: "worried_about_work#show"
+    post "/worried-about-work", to: "worried_about_work#submit"
 
     # Question: Have you got somewhere to live?
     get "/have-somewhere-to-live", to: "have_somewhere_to_live#show"

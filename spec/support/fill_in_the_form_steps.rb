@@ -124,9 +124,9 @@ module FillInTheFormSteps
   end
 
   def and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
-    expect(page).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.title"))
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.worried_about_work.title"))
 
-    choose I18n.t("coronavirus_form.groups.going_in_to_work.questions.living_with_vulnerable.options.option_yes.label")
+    choose I18n.t("coronavirus_form.groups.going_in_to_work.questions.worried_about_work.options.option_yes.label")
 
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
@@ -210,7 +210,7 @@ module FillInTheFormSteps
   end
 
   def they_are_provided_with_information_about_going_in_to_work
-    expect(page).to have_content(I18n.t("results_link.going_in_to_work.living_with_vulnerable.title"))
+    expect(page).to have_content(I18n.t("results_link.going_in_to_work.worried_about_work.title"))
   end
 
   def they_are_provided_with_information_about_having_somewhere_to_live

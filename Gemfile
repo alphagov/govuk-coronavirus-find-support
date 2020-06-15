@@ -48,7 +48,7 @@ group :development, :test do
   gem "pry-rails", "~> 0.3.9"
   gem "rails-controller-testing", "~> 1.0"
   gem "rspec-rails", "~> 4.0.1"
-  gem "rubocop-govuk", "~> 3.15.0"
+  gem "rubocop-govuk", "~> 3.16.0"
   gem "scss_lint-govuk", "~> 0.2.0"
   gem "webdrivers", "~> 4.4"
   gem "webmock", "~> 3.8.3"

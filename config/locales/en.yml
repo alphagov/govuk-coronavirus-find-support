@@ -235,7 +235,7 @@ en:
         title: Paying bills
         questions:
           afford_rent_mortgage_bills:
-            title: Are you finding it hard to afford rent, your mortgage or bills?
+            title: Are you finding it hard to pay your rent, mortgage or bills?
             options:
               option_yes:
                 label: 'Yes'
@@ -243,8 +243,8 @@ en:
                 label: 'No'
               not_sure:
                 label: Not sure
-            custom_select_error: Select yes if you’re finding it hard to afford your
-              rent, your mortgage or bills
+            custom_select_error: Select yes if you’re finding it hard to pay your
+              rent, mortgage or bills
       getting_food:
         title: Getting food
         questions:
@@ -493,7 +493,7 @@ en:
           - Wales
     paying_bills:
       afford_rent_mortgage_bills:
-        title: If you’re finding it hard to afford rent, your mortgage or bills
+        title: If you’re finding it hard to pay your rent, mortgage or bills
         show_options:
         - 'Yes'
         - Not sure
@@ -514,18 +514,18 @@ en:
           show_to_nations:
           - Wales
         - id: '0020'
-          text: What to do if you cannot pay your bills or mortgage (Citizens Advice)
+          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice)
           href: https://www.citizensadvice.org.uk/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/
           show_to_nations:
           - England
         - id: '0021'
-          text: What to do if you cannot pay your bills or mortgage (Citizens Advice
+          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice
             Scotland)
           href: https://www.citizensadvice.org.uk/scotland/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/
           show_to_nations:
           - Scotland
         - id: '0022'
-          text: What to do if you cannot pay your bills or mortgage (Citizens Advice)
+          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice)
           href: https://www.citizensadvice.org.uk/wales/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/
           show_to_nations:
           - Wales

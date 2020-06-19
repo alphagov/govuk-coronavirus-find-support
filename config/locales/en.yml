@@ -435,16 +435,13 @@ en:
             press 55 when prompted.
         - id: '0003'
           text: Call the National Domestic Abuse Helpline on <a href="tel:0808 2000
-            247" class="govuk-link">0808 2000 247</a>
+            247" class="govuk-link">0808 2000 247</a>, you can get advice in different
+            languages. You can also <a href="thttps://www.nationaldahelpline.org.uk/Chat-to-us-online"
+            class="govuk-link">get help online</a>.
         - id: '0004'
           text: If you’re a child or young person call Childline on <a href="tel:0800
-            1111" class="govuk-link">0800 1111</a>
-        - id: '0005'
-          text: Find helplines <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-and-domestic-abuse/coronavirus-covid-19-support-for-victims-of-domestic-abuse"
-            class="govuk-link">if you’re a victim of domestic abuse or feel at risk
-            of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services"
-            class="govuk-link">victim or witness of a crime</a> (these pages have
-            no quick escape)
+            1111" class="govuk-link">0800 1111</a> or <a href="https://www.childline.org.uk"
+            class="govuk-link">get help online</a> .
         - id: '0007'
           text: Get help from Nexus NI
           href: https://nexusni.org/domestic-and-sexual-abuse-24-hour-helpline/
@@ -465,9 +462,6 @@ en:
           href: https://sdafmh.org.uk/
           show_to_nations:
           - Scotland
-        - id: '0011'
-          text: Get help for children (Childline)
-          href: https://www.childline.org.uk/
         - id: '0013'
           text: Contact NSPCC if you’re concerned about a child
           href: https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/
@@ -482,10 +476,46 @@ en:
           href: https://www.victimsupport.org.uk/help-and-support/get-help/support-near-you/wales
           show_to_nations:
           - Wales
+        - id: '0122'
+          text: Call Galop, the LGBT+ helpline on  <a href="tel:0800 999 5428” class="govuk-link">0800
+            999 5428</a>, or <a href="http://www.galop.org.uk/how-we-can-help/" class=”govuk-link>find
+            out what support they offer</a>.
+        - id: '0123'
+          text: Call Men’s Advice Line on <a href="tel:0808 8010327" class="govuk-link">0808
+            8010327</a> or <a href="https://mensadviceline.org.uk/"class="govuk-link">get
+            help online</a>.
+        - id: '0124'
+          text: Call Southall Black Sisters for help for black and minority women,
+            including if you’ve got No Recourse to Public Funds on <a href="tel:0208
+            571 9595" class="govuk-link">0208 571 9595</a>. You can get advice in
+            different languages. You can also <a href="https://southallblacksisters.org.uk"
+            class="govuk-link">find out what support they offer</a>.
+        - id: '0125'
+          text: Call <a href="https://karmanirvana.org.uk/help/" class="govuk-link">Karma
+            Nirvana</a> for help with honour-based abuse and forced marriage on <a
+            href="tel:0800 5999 247" class="govuk-link">0800 5999 247</a>.
+        - id: '0126'
+          text: Get specialist support for Deaf people from Signhealth.
+          href: https://signhealth.org.uk/with-deaf-people/domestic-abuse/domestic-abuse-service
+        - id: '0127'
+          text: Get help from Rape Crisis.
+          href: https://rapecrisis.org.uk/get-help
+          show_to_nations:
+          - England
+          - Wales
         support_and_advice_items:
         - id: '0006'
-          text: Get safety advice for survivors (Women’s Aid)
-          href: https://www.womensaid.org.uk/covid-19-coronavirus-safety-advice-for-survivors/
+          text: <a href="https://www.womensaid.org.uk/covid-19-coronavirus-safety-and-support-resources/"
+            class="govuk-link">Get safety advice for survivors from Women’s Aid</a>.
+            You can get advice in different languages including British Sign Language.
+        - id: '0128'
+          text: Find specialist helplines for black and and minority women (Imkaan).
+          href: https://www.imkaan.org.uk/get-help
+        - id: '0005'
+          text: Find additional helplines <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-and-domestic-abuse/coronavirus-covid-19-support-for-victims-of-domestic-abuse"
+            class="govuk-link">if you’re a victim of domestic abuse or feel at risk
+            of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services"
+            class="govuk-link">victim or witness of a crime</a>.
         - id: '0012'
           text: Get advice for children (Children’s Commissioner for Wales)
           href: https://www.childcomwales.org.uk/coronavirus/
@@ -519,7 +549,7 @@ en:
           show_to_nations:
           - England
         - id: '0021'
-          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice
+          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice)
             Scotland)
           href: https://www.citizensadvice.org.uk/scotland/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/
           show_to_nations:
@@ -1035,6 +1065,9 @@ en:
         - id: '0103'
           text: Where to get urgent help for mental health (NHS)
           href: https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/
+        - id: '0104'
+          text: How to manage specific mental health needs (Mind)
+          href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing
         - id: '0106'
           text: Get advice on looking after your mental health during coronavirus
             (NHS)
@@ -1043,9 +1076,6 @@ en:
           text: Things you can do to support the mental health and wellbeing of children
             and young people (Public Health England)
           href: https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak
-        - id: '0104'
-          text: How to manage specific mental health needs (Mind)
-          href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing
         - id: '0116'
           text: Advice and guidance on where you can get help with your mental health
             if you’re a young person (Young Minds)

@@ -27,7 +27,6 @@ class CoronavirusForm::SelfEmployedController < ApplicationController
     end
   end
 
-
 private
 
   def update_questions_to_ask

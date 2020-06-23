@@ -1,3 +1,5 @@
+/* global ga:readonly */
+
 var enhancedEcommerceTracking = function (d) {
   var consentCookie = window.GOVUK.getConsentCookie()
 
@@ -15,7 +17,7 @@ var enhancedEcommerceTracking = function (d) {
   }
 
   // Start analytics only if we have user consent
-  if (consentCookie && consentCookie["usage"] === true) {
+  if (consentCookie && consentCookie.usage === true) {
     var lists = d.querySelectorAll('[data-track-ec-list]')
 
     if (lists.length === 0) {
@@ -23,7 +25,7 @@ var enhancedEcommerceTracking = function (d) {
     }
 
     for (var idx = 0; idx < lists.length; idx++) {
-      var list = lists[idx];
+      var list = lists[idx]
       var listName = list.getAttribute('data-track-ec-list')
       var positions = list.querySelectorAll('li')
 

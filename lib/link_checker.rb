@@ -1,9 +1,9 @@
 require "uri"
 
-module LinkCheckerMethods
+module LinkChecker
 module_function
 
-  def gather_urls object
+  def gather_urls(object)
     urls = Set[]
     if object.class == String
       urls.merge(Set.new(URI.extract(object, %w[http https]).to_set))
@@ -36,7 +36,7 @@ module_function
     [gov_urls, other_urls]
   end
 
-  def find_invalid_govuk_paths govuk_urls
+  def find_invalid_govuk_paths(govuk_urls)
     publishing_api = GdsApi::PublishingApi.new(
       "https://publishing-api.publishing.service.gov.uk",
       bearer_token: ENV["PUBLISHING_API_BEARER_TOKEN"],
@@ -56,7 +56,7 @@ module_function
     [unpublished_paths.to_a, withdrawn_paths.to_a]
   end
 
-  def check_links urls
+  def check_links(urls)
     link_checker = GdsApi::LinkCheckerApi.new(
       Plek.current.find("link-checker-api"),
       bearer_token: ENV["LINK_CHECKER_API_BEARER_TOKEN"],

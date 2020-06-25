@@ -1,17 +1,22 @@
 require "./lib/link_checker"
+require "gds_api/test_helpers/link_checker_api"
 
-RSpec.describe LinkCheckerMethods do
+RSpec.describe LinkChecker do
+  include GdsApi::TestHelpers::LinkCheckerApi
+
   describe "gather_urls method" do
     it "should finds http urls in strings" do
-      result = LinkCheckerMethods.gather_urls "I've hidden an url http://www.example.com in this string"
+      result = LinkChecker.gather_urls "I've hidden an url http://www.example.com in this string"
       expect(result).to eq(Set["http://www.example.com"])
     end
+
     it "should find https urls in strings" do
-      result = LinkCheckerMethods.gather_urls "I've hidden an url https://www.example.com in this string"
+      result = LinkChecker.gather_urls "I've hidden an url https://www.example.com in this string"
       expect(result).to eq(Set["https://www.example.com"])
     end
+
     it "should find multiple urls in strings" do
-      result = LinkCheckerMethods.gather_urls "
+      result = LinkChecker.gather_urls "
         I've hidden several urls https://www.example.com in this string
         here is another http://www.banana.com in this string
         one more sneaky one over herehttp://govstuff.gov.uk in this string
@@ -19,11 +24,12 @@ RSpec.describe LinkCheckerMethods do
       expect(result).to eq(Set[
         "https://www.example.com",
         "http://www.banana.com",
-        "http://govstuff.gov.uk"
+        "http://govstuff.gov.uk",
       ])
     end
+
     it "should finds urls in arrays" do
-      result = LinkCheckerMethods.gather_urls [
+      result = LinkChecker.gather_urls [
         "I've hidden several urls https://www.example.com in this string
           here is another http://www.banana.com in this string",
         "the second member also has an url https://extrahelp.co.uk woah",
@@ -36,8 +42,9 @@ RSpec.describe LinkCheckerMethods do
         "http://terror.com",
       ])
     end
+
     it "should finds urls in strings in Hash" do
-      result = LinkCheckerMethods.gather_urls({
+      result = LinkChecker.gather_urls({
         "firstHash" => "I've hidden several urls https://www.example.com in
         this string here is another http://www.banana.com in this string",
         "secondHash" => "the second member also has an url https://extrahelp.co.uk woah",
@@ -50,8 +57,9 @@ RSpec.describe LinkCheckerMethods do
         "http://terror.com",
       ])
     end
+
     it "should search recursively for urls in hashes/arrays" do
-      result = LinkCheckerMethods.gather_urls({
+      result = LinkChecker.gather_urls({
         "firstHash" => [
           "I've hidden several urls https://www.example.com here",
           [
@@ -72,10 +80,13 @@ RSpec.describe LinkCheckerMethods do
         "http://terror.com",
       ])
     end
+
     it "should ignore non string values when searching in hashes/arrays" do
-      result = LinkCheckerMethods.gather_urls({
+      result = LinkChecker.gather_urls({
         "firstHash" => [
-          "I've hidden several urls https://www.example.com here", Set[], 1,
+          "I've hidden several urls https://www.example.com here",
+          Set[],
+          1,
           [
             1.111,
             true,
@@ -84,8 +95,11 @@ RSpec.describe LinkCheckerMethods do
             "Nothing hidden here",
             { "anotherHash" => "this string here is another http://www.banana.com in this string" },
           ],
-          { "secondHash" => "the second member also has an url https://extrahelp.co.uk woah",
-            "thirdHash" => "the second member also has an url http://terror.com", "false" => false }
+          {
+            "secondHash" => "the second member also has an url https://extrahelp.co.uk woah",
+            "thirdHash" => "the second member also has an url http://terror.com",
+            "false" => false,
+          },
         ],
       })
       expect(result).to eq(Set[
@@ -103,11 +117,11 @@ RSpec.describe LinkCheckerMethods do
       allow(Dir).to receive(:glob).with("config/locales/*.yml") { %i[dummy_path1] }
       allow(File).to receive(:read).with(:dummy_path1) { :dummy_file1 }
       allow(YAML).to receive(:safe_load).with(:dummy_file1) { :dummy_yaml1 }
-      allow(LinkCheckerMethods).to receive(:gather_urls).with(:dummy_yaml1) {
+      allow(LinkChecker).to receive(:gather_urls).with(:dummy_yaml1) {
         Set["http://buildings.org", "http://defra.gov.uk", "https://www.abstract.com", "https://banana.gov.uk"]
       }
 
-      govuk_urls, other_urls = LinkCheckerMethods.get_urls_from_locale_files
+      govuk_urls, other_urls = LinkChecker.get_urls_from_locale_files
       expect(govuk_urls).to match_array(["https://banana.gov.uk", "http://defra.gov.uk"])
       expect(other_urls).to match_array(["http://buildings.org", "https://www.abstract.com"])
     end
@@ -118,14 +132,14 @@ RSpec.describe LinkCheckerMethods do
       allow(File).to receive(:read).with(:dummy_path2) { :dummy_file2 }
       allow(YAML).to receive(:safe_load).with(:dummy_file1) { :dummy_yaml1 }
       allow(YAML).to receive(:safe_load).with(:dummy_file2) { :dummy_yaml2 }
-      allow(LinkCheckerMethods).to receive(:gather_urls).with(:dummy_yaml1) {
+      allow(LinkChecker).to receive(:gather_urls).with(:dummy_yaml1) {
         Set["http://houses.gov.uk", "https://www.abstract.com"]
       }
-      allow(LinkCheckerMethods).to receive(:gather_urls).with(:dummy_yaml2) {
+      allow(LinkChecker).to receive(:gather_urls).with(:dummy_yaml2) {
         Set["https://bins.gov.uk", "http://www.example.com"]
       }
 
-      govuk_urls, other_urls = LinkCheckerMethods.get_urls_from_locale_files
+      govuk_urls, other_urls = LinkChecker.get_urls_from_locale_files
       expect(govuk_urls).to match_array(["https://bins.gov.uk", "http://houses.gov.uk"])
       expect(other_urls).to match_array(["http://www.example.com", "https://www.abstract.com"])
     end
@@ -157,7 +171,7 @@ RSpec.describe LinkCheckerMethods do
 
       expect(ENV).to receive(:[]).with("PUBLISHING_API_BEARER_TOKEN").and_return("test_token")
 
-      unpublished_paths, withdrawn_paths = LinkCheckerMethods.find_invalid_govuk_paths test_urls
+      unpublished_paths, withdrawn_paths = LinkChecker.find_invalid_govuk_paths test_urls
       expect(unpublished_paths).to match_array(["/fifth", "/sixth", "/seventh"])
       expect(withdrawn_paths).to match_array(["/another/test/path"])
     end
@@ -188,27 +202,29 @@ RSpec.describe LinkCheckerMethods do
         uris: test_urls, checked_within: 5, status: :complete,
       )
 
-      expect(LinkCheckerMethods).to_not receive(:sleep).with(3)
-      LinkCheckerMethods.check_links test_urls
+      expect(LinkChecker).to_not receive(:sleep).with(3)
+      LinkChecker.check_links test_urls
     end
 
     it "should call check_batch if batch is not immediately complete" do
       expect_side_effects
-
       stub_link_checker_api_create_batch(
         uris: test_urls, checked_within: 5, status: :in_progress,
       )
       stub_link_checker_api_get_batch(
         id: 0, status: :completed,
       )
-      expect(LinkCheckerMethods).to_not receive(:sleep).with(3)
+      expect(LinkChecker).to_not receive(:sleep).with(3)
 
-      LinkCheckerMethods.check_links test_urls
+      LinkChecker.check_links test_urls
     end
 
     def build_batch_response(status)
-      { body: link_checker_api_batch_report_hash(id: 0, status: status).to_json,
-        status: 200, headers: { "Content-Type" => "application/json" } }
+      {
+        body: link_checker_api_batch_report_hash(id: 0, status: status).to_json,
+        status: 200,
+        headers: { "Content-Type" => "application/json" },
+      }
     end
 
     it "if batch is not complete after checking, it should recheck after sleeping" do
@@ -222,14 +238,14 @@ RSpec.describe LinkCheckerMethods do
         id: 0, status: :in_progress,
       )
 
-      expect(LinkCheckerMethods).to receive(:sleep).with(3).exactly(5).times
+      expect(LinkChecker).to receive(:sleep).with(3).exactly(5).times
 
       4.times do
         stub.and_return(build_batch_response(:in_progress))
       end
       stub.and_return(build_batch_response(:completed))
 
-      LinkCheckerMethods.check_links test_urls
+      LinkChecker.check_links test_urls
     end
   end
 end

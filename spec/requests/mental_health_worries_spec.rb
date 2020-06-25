@@ -90,5 +90,17 @@ RSpec.describe "mental-health-worries" do
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.title"))
       expect(response.body).to have_content(I18n.t("coronavirus_form.groups.mental_health.questions.mental_health_worries.custom_select_error"))
     end
+
+    context "when this is the last question" do
+      before do
+        allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[mental_health_worries])
+      end
+
+      it "redirects to the results url" do
+        post mental_health_worries_path, params: { mental_health_worries: selected_option_text }
+
+        expect(response).to redirect_to(results_path)
+      end
+    end
   end
 end

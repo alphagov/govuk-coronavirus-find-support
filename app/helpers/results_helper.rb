@@ -35,7 +35,7 @@ module ResultsHelper
     # :help and :filter_questions which are not really groups
     # empty.
     if selected_groups.blank?
-      return I18n.t("coronavirus_form.groups").keys - %i[filter_questions help leave_home location]
+      return I18n.t("coronavirus_form.groups").keys - %i[filter_questions help location]
     end
 
     selected_groups # Otherwise we can use selected groups
@@ -68,6 +68,6 @@ private
 
   def show_to_vulnerable_check(item)
     item[:show_to_vulnerable_person].nil? ||
-      I18n.t("coronavirus_form.groups.leave_home.questions.able_to_leave.options.option_high_risk.label") == session[:able_to_leave]
+      I18n.t("coronavirus_form.groups.getting_food.questions.able_to_leave.options.option_high_risk.label") == session[:able_to_leave]
   end
 end

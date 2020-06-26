@@ -3,16 +3,16 @@ require "uri"
 module LinkChecker
 module_function
 
-  def gather_urls(object)
+  def gather_urls(yaml_node)
     urls = Set[]
-    if object.class == String
-      urls.merge(Set.new(URI.extract(object, %w[http https]).to_set))
-    elsif object.class == Hash
-      object.each do |_, value|
+    if yaml_node.class == String
+      urls.merge(Set.new(URI.extract(yaml_node, %w[http https]).to_set))
+    elsif yaml_node.class == Hash
+      yaml_node.each do |_, value|
         urls.merge(gather_urls(value))
       end
-    elsif object.class == Array
-      object.each do |value|
+    elsif yaml_node.class == Array
+      yaml_node.each do |value|
         urls.merge(gather_urls(value))
       end
     end

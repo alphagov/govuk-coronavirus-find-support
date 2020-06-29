@@ -764,7 +764,7 @@ en:
           - Wales
         - id: '0053'
           text: Find out about your rights if you’ve been furloughed (Acas)
-          href: https://www.acas.org.uk/coronavirus/if-the-employer-needs-to-close-the-workplace
+          href: https://www.acas.org.uk/coronavirus/furlough-scheme-pay/start-extend-end-furlough
         - id: '0054'
           text: Get information on applying for Universal Credit (Citizens Advice)
           href: https://www.citizensadvice.org.uk/benefits/universal-credit/
@@ -937,7 +937,7 @@ en:
           - Northern Ireland
         - id: '0118'
           text: Returning to work and what you can do if you’re worried (Acas)
-          href: https://www.acas.org.uk/coronavirus/returning-to-the-workplace
+          href: https://www.acas.org.uk/working-safely-coronavirus/returning-to-the-workplace
         support_and_advice_items: []
     somewhere_to_live:
       have_somewhere_to_live:

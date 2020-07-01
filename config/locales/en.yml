@@ -948,12 +948,12 @@ en:
         - Not sure
         items:
         - id: '0085'
-          text: Get help if you’re legally homeless (Shelter)
-          href: https://england.shelter.org.uk/housing_advice/homelessness/rules/legally_homeless
+          text: Get help if you’re homeless, including advice for EU nationals, refugees and asylum seekers, and disabled people (Shelter)
+          href: https://england.shelter.org.uk/housing_advice/homelessness
           show_to_nations:
           - England
         - id: '0086'
-          text: Get help if you’re homeless (Shelter Cymru)
+          text: Get help if you’re homeless, including advice for refugees and asylum seekers and EU nationals (Shelter Cymru)
           href: https://sheltercymru.org.uk/get-advice/homelessness/
           show_to_nations:
           - Wales
@@ -962,11 +962,6 @@ en:
             class="govuk-link">03448 920 908</a>
           show_to_nations:
           - Northern Ireland
-        - id: '0089'
-          text: Get coronavirus housing information (Shelter Cymru)
-          href: https://sheltercymru.org.uk/get-advice/coronavirus/
-          show_to_nations:
-          - Wales
         - id: '0090'
           text: Get help if you’re homeless (mygov.scot)
           href: https://www.mygov.scot/homelessness/
@@ -975,6 +970,12 @@ en:
         - id: '0114'
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help
+        - id: '0200'
+          text: Get specialist advice for LGBT+ people (Stonewall Housing)
+          href: https://stonewallhousing.org/services/advice/
+        - id: '0201'
+          text: Get help if you’re aged 16 to 25 (Centrepoint)
+          href: https://centrepoint.org.uk/youth-homelessness/get-help-now/
         support_and_advice_items:
         - id: '0088'
           text: Get help from Housing Rights housing and debt helpline
@@ -1013,6 +1014,16 @@ en:
           href: https://sheltercymru.org.uk/get-advice/coronavirus/
           show_to_nations:
           - Wales
+        - id: '0205'
+          text: Get advice and find out about your rights if you’re a Gypsy or Traveller and you’re being evicted (Shelter)
+          href: https://england.shelter.org.uk/housing_advice/eviction/gypsies_and_travellers_facing_eviction_from_a_site
+          show_to_nations:
+          - England
+        - id: '0206'
+          text: Get advice and find out about your rights if you’re a Gypsy or Traveller and you’re being evicted (Shelter Scotland)
+          href: https://scotland.shelter.org.uk/get_advice/advice_topics/eviction/eviction_of_gypsiestravellers
+          show_to_nations:
+          - Scotland
         - id: '0115'
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help

@@ -912,20 +912,26 @@ en:
         - 'Yes'
         - Not sure
         items:
+        - id: '0207'
+          text: Check if you should go back in to work
+          href: https://www.gov.uk/coronavirus-employee-risk-assessment
+          show_to_nations:
+          - England
+        support_and_advice_items:
         - id: '0081'
-          text: What to do if you’re worried about going to work because of coronavirus
+          text: What to do if you’ve been told to go back in to work and you’re worried
             (Citizens Advice)
           href: https://www.citizensadvice.org.uk/work/coronavirus-if-youre-worried-about-working/
           show_to_nations:
           - England
         - id: '0082'
-          text: What to do if you’re worried about going to work because of coronavirus
+          text: What to do if you’ve been told to go back in to work and you’re worried
             (Citizens Advice Scotland)
           href: https://www.citizensadvice.org.uk/scotland/work/coronavirus-if-youre-worried-about-working/
           show_to_nations:
           - Scotland
         - id: '0083'
-          text: What to do if you’re worried about going to work because of coronavirus
+          text: What to do if you’ve been told to go back in to work and you’re worried
             (Citizens Advice)
           href: https://www.citizensadvice.org.uk/wales/work/coronavirus-if-youre-worried-about-working/
           show_to_nations:
@@ -935,10 +941,12 @@ en:
           href: https://www.citizensadvice.org.uk/about-us/northern-ireland/
           show_to_nations:
           - Northern Ireland
-        - id: '0118'
-          text: Returning to work and what you can do if you’re worried (Acas)
-          href: https://www.acas.org.uk/working-safely-coronavirus/returning-to-the-workplace
-        support_and_advice_items: []
+        - id: '0208'
+          text: What to do if you’re shielding because you’ve been told by a doctor you’re clinically extremely vulnerable, but you’ve been told to go back to work
+          href: https://www.gov.uk/government/publications/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19/guidance-on-shielding-and-protecting-extremely-vulnerable-persons-from-covid-19#work-and-employment-for-those-who-are-shielding
+        - id: '0209'
+          text: What you can do if you’ve been told to go back to work but you need to look after someone or do child care (Acas)
+          href: https://www.acas.org.uk/coronavirus/using-holiday/time-off-work-to-look-after-someone
     somewhere_to_live:
       have_somewhere_to_live:
         title: If you do not have somewhere to live or might become homeless

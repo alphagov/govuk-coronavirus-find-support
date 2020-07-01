@@ -118,11 +118,11 @@ RSpec.describe LinkChecker do
       allow(File).to receive(:read).with(:dummy_path1) { :dummy_file1 }
       allow(YAML).to receive(:safe_load).with(:dummy_file1) { :dummy_yaml1 }
       allow(LinkChecker).to receive(:gather_urls).with(:dummy_yaml1) {
-        Set["http://buildings.org", "http://defra.gov.uk", "https://www.abstract.com", "https://banana.gov.uk"]
+        Set["http://buildings.org", "http://www.gov.uk/defra", "https://www.abstract.com", "https://www.gov.uk/banana"]
       }
 
       govuk_urls, other_urls = LinkChecker.get_urls_from_locale_files
-      expect(govuk_urls).to match_array(["https://banana.gov.uk", "http://defra.gov.uk"])
+      expect(govuk_urls).to match_array(["https://www.gov.uk/banana", "http://www.gov.uk/defra"])
       expect(other_urls).to match_array(["http://buildings.org", "https://www.abstract.com"])
     end
 
@@ -133,47 +133,45 @@ RSpec.describe LinkChecker do
       allow(YAML).to receive(:safe_load).with(:dummy_file1) { :dummy_yaml1 }
       allow(YAML).to receive(:safe_load).with(:dummy_file2) { :dummy_yaml2 }
       allow(LinkChecker).to receive(:gather_urls).with(:dummy_yaml1) {
-        Set["http://houses.gov.uk", "https://www.abstract.com"]
+        Set["http://www.gov.uk/houses", "https://www.abstract.com"]
       }
       allow(LinkChecker).to receive(:gather_urls).with(:dummy_yaml2) {
-        Set["https://bins.gov.uk", "http://www.example.com"]
+        Set["https://www.gov.uk/bins", "http://www.example.com"]
       }
 
       govuk_urls, other_urls = LinkChecker.get_urls_from_locale_files
-      expect(govuk_urls).to match_array(["https://bins.gov.uk", "http://houses.gov.uk"])
+      expect(govuk_urls).to match_array(["https://www.gov.uk/bins", "http://www.gov.uk/houses"])
       expect(other_urls).to match_array(["http://www.example.com", "https://www.abstract.com"])
     end
   end
 
   describe "find_invalid_govuk_paths" do
     it "should separate out gov urls, and example urls" do
-      test_paths = ["/test/path", "/another/test/path", "/a/third/test/path", "/fifth", "/sixth", "/seventh"]
+      test_paths = ["/test/path/pub", "/another/test/path/broken", "/a/third/test/path/pub", "/fifth/broken", "/sixth/broken", "/seventh/unpub"]
       test_urls = test_paths.map { |path| "http://www.gov.uk#{path}" }
 
       mock_client = instance_double("GdsApi::PublishingApi")
       expect(GdsApi::PublishingApi).to receive(:new).with("https://publishing-api.publishing.service.gov.uk", bearer_token: "test_token") {
         mock_client
       }
-      expect(mock_client).to receive(:lookup_content_ids).with({ base_paths: test_paths, with_drafts: true }).and_return(
-        {
-          "/fifth": nil,
-          "/sixth": nil,
-          "/seventh": nil,
-        },
-      )
       expect(mock_client).to receive(:lookup_content_ids).with({ base_paths: test_paths }).and_return(
         {
-          "/test/path": nil,
-          "/a/third/test/path": nil,
-          "/seventh": nil,
+          "/test/path/pub" => "klm",
+          "/a/third/test/path/pub" => "nop",
+          "/seventh/unpub" => "qrs",
         },
       )
+      published_double = double(parsed_content: { "publication_state" => "published" })
+      unpublished_double = double(parsed_content: { "publication_state" => "unpublished" })
+      expect(mock_client).to receive(:get_live_content).with("klm").and_return(published_double)
+      expect(mock_client).to receive(:get_live_content).with("nop").and_return(published_double)
+      expect(mock_client).to receive(:get_live_content).with("qrs").and_return(unpublished_double)
 
       expect(ENV).to receive(:[]).with("PUBLISHING_API_BEARER_TOKEN").and_return("test_token")
 
-      unpublished_paths, withdrawn_paths = LinkChecker.find_invalid_govuk_paths test_urls
-      expect(unpublished_paths).to match_array(["/fifth", "/sixth", "/seventh"])
-      expect(withdrawn_paths).to match_array(["/another/test/path"])
+      broken_paths, unpublished_paths = LinkChecker.find_invalid_govuk_paths test_urls
+      expect(broken_paths).to match_array(["/another/test/path/broken", "/fifth/broken", "/sixth/broken"])
+      expect(unpublished_paths).to match_array(["/seventh/unpub"])
     end
   end
 

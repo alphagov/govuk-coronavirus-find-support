@@ -27,7 +27,7 @@ module_function
     gov_urls = []
     other_urls = []
     urls.each do |url|
-      if URI(url).host.ends_with? ".gov.uk"
+      if URI(url).host.ends_with? "www.gov.uk"
         gov_urls << url
       else
         other_urls << url
@@ -43,17 +43,15 @@ module_function
     )
     govuk_paths = govuk_urls.map { |url| URI(url).path }
 
-    unpublished_paths = publishing_api.lookup_content_ids(
+    published_content = publishing_api.lookup_content_ids(
       base_paths: govuk_paths,
-      with_drafts: true,
-    ).to_set.map { |a| a.first.to_s }
+    ).to_set
 
-    published_paths = publishing_api.lookup_content_ids(
-      base_paths: govuk_paths,
-    ).to_set.map { |a| a.first.to_s }
+    broken_paths = govuk_paths - published_content.map { |a| a.first.to_s }
 
-    withdrawn_paths = govuk_paths - (unpublished_paths + published_paths)
-    [unpublished_paths.to_a, withdrawn_paths.to_a]
+    unpublished_paths = published_content.map { |content| content.first unless is_published?(content, publishing_api) }.compact
+
+    [broken_paths.to_a, unpublished_paths]
   end
 
   def check_links(urls)
@@ -73,5 +71,9 @@ module_function
       end
     end
     link_report
+  end
+
+  def is_published?(content, publishing_api)
+    publishing_api.get_live_content(content.last).parsed_content["publication_state"] == "published"
   end
 end

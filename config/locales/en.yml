@@ -510,7 +510,7 @@ en:
           text: Find specialist helplines for black and minority women (Imkaan).
           href: https://www.imkaan.org.uk/get-help
         - id: '0005'
-          text: Find additional helplines <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-and-domestic-abuse/coronavirus-covid-19-support-for-victims-of-domestic-abuse"
+          text: Find additional helplines <a href="https://www.gov.uk/guidance/domestic-abuse-how-to-get-help"
             class="govuk-link">if you’re a victim of domestic abuse or feel at risk
             of abuse</a>, or if you are a <a href="https://www.gov.uk/guidance/coronavirus-covid-19-victim-and-witness-services"
             class="govuk-link">victim or witness of a crime</a>.
@@ -766,18 +766,18 @@ en:
           text: Find out about your rights if you’ve been furloughed (Acas)
           href: https://www.acas.org.uk/coronavirus/furlough-scheme-pay/start-extend-end-furlough
         - id: '0054'
-          text: Get information on applying for Universal Credit (Citizens Advice)
+          text: Get advice on applying for Universal Credit (Citizens Advice)
           href: https://www.citizensadvice.org.uk/benefits/universal-credit/
           show_to_nations:
           - England
         - id: '0055'
-          text: Get information on applying for Universal Credit (Citizens Advice
+          text: Get advice on applying for Universal Credit (Citizens Advice
             Scotland)
           href: https://www.citizensadvice.org.uk/scotland/benefits/universal-credit/
           show_to_nations:
           - Scotland
         - id: '0056'
-          text: Get information on applying for Universal Credit (Citizens Advice)
+          text: Get advice on applying for Universal Credit (Citizens Advice)
           href: https://www.citizensadvice.org.uk/wales/benefits/universal-credit/
           show_to_nations:
           - Wales
@@ -875,18 +875,18 @@ en:
             Service)
           href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-if-youre-self-employed
         - id: '0071'
-          text: Get information on applying for Universal Credit (Citizens Advice)
+          text: Get advice on applying for Universal Credit (Citizens Advice)
           href: https://www.citizensadvice.org.uk/benefits/universal-credit/
           show_to_nations:
           - England
         - id: '0072'
-          text: Get information on applying for Universal Credit (Citizens Advice
+          text: Get advice on applying for Universal Credit (Citizens Advice
             Scotland)
           href: https://www.citizensadvice.org.uk/scotland/benefits/universal-credit/
           show_to_nations:
           - Scotland
         - id: '0073'
-          text: Get information on applying for Universal Credit (Citizens Advice)
+          text: Get advice on applying for Universal Credit (Citizens Advice)
           href: https://www.citizensadvice.org.uk/wales/benefits/universal-credit/
           show_to_nations:
           - Wales

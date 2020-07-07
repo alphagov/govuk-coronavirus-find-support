@@ -34,7 +34,7 @@ RSpec.describe "need-help-with" do
   end
 
   describe "POST /need-help-with" do
-    let(:selected) { ["Being unemployed or not having any work"] }
+    let(:selected) { ["Being made redundant or unemployed, or not having any work"] }
 
     it "updates the session store" do
       post need_help_with_path, params: { need_help_with: selected }

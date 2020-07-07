@@ -285,7 +285,7 @@ en:
                 label: No, I’m unable to leave my home for another reason
             custom_select_error: Select if you’re able to leave your home or not
       being_unemployed:
-        title: Being unemployed or not having any work
+        title: Being made redundant or unemployed, or not having any work
         questions:
           self_employed:
             title: Are you self-employed or a sole trader?

@@ -268,7 +268,7 @@ en:
               not_sure:
                 label: Not sure
             custom_select_error: Select yes if you’re able to get food
-          able_to_leave:
+          able_to_go_out:
             title: Are you able to go out for food, medicine, or health reasons?
             options:
               option_yes:

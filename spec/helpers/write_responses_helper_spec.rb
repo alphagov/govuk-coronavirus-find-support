@@ -10,18 +10,18 @@ RSpec.describe WriteResponsesHelper, type: :helper do
   end
 
   describe "#write_responses" do
-    context "if able to leave is the last question" do
+    context "if able to go out is the last question" do
       it "saves the form responses to the database" do
-        session[:able_to_leave] = "Yes"
-        session[:questions_to_ask] = %w[get_food able_to_leave]
+        session[:able_to_go_out] = "Yes"
+        session[:questions_to_ask] = %w[get_food able_to_go_out]
 
-        expect(helper.write_responses.form_response).to eq({ "able_to_leave" => "Yes", "questions_to_ask" => %w[get_food able_to_leave] })
+        expect(helper.write_responses.form_response).to eq({ "able_to_go_out" => "Yes", "questions_to_ask" => %w[get_food able_to_go_out] })
         expect(helper.write_responses.created_at).to eq(Time.utc(2020, 3, 1, 10, 0, 0))
       end
 
       it "does not save the form response to the database when the SMOKE_TEST header is present" do
         allow_any_instance_of(WriteResponsesHelper).to receive(:smoke_tester?).and_return(true)
-        session[:questions_to_ask] = %w[get_food able_to_leave]
+        session[:questions_to_ask] = %w[get_food able_to_go_out]
         before_count = FormResponse.count
         helper.write_responses
 
@@ -29,7 +29,7 @@ RSpec.describe WriteResponsesHelper, type: :helper do
       end
 
       it "does not save the session id or csrf token to the database" do
-        session[:questions_to_ask] = %w[get_food able_to_leave]
+        session[:questions_to_ask] = %w[get_food able_to_go_out]
 
         expect(helper.write_responses.form_response["session_id"]).to be_nil
         expect(helper.write_responses.form_response["_csrf_token"]).to be_nil

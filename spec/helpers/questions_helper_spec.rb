@@ -6,7 +6,7 @@ RSpec.describe QuestionsHelper, type: :helper do
   describe "#determine_user_questions" do
     it "returns questions in correct order" do
       groups = %i[paying_bills getting_food]
-      expected_questions = %w[afford_rent_mortgage_bills afford_food get_food able_to_leave]
+      expected_questions = %w[afford_rent_mortgage_bills afford_food get_food able_to_go_out]
 
       expect(helper.determine_user_questions(groups)).to eq(expected_questions)
     end

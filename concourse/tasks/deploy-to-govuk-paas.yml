@@ -38,7 +38,7 @@ run:
       cf api "$CF_API"
       cf auth
       cf t -o "$CF_ORG" -s "$CF_SPACE"
-      cf v3-create-app govuk-coronavirus-find-support || true
+      cf create-app govuk-coronavirus-find-support || true
       cf v3-apply-manifest -f manifest.yml
       cf set-env govuk-coronavirus-find-support CF_STARTUP_TIMEOUT "$CF_STARTUP_TIMEOUT"
 

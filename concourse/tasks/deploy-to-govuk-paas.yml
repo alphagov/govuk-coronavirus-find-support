@@ -39,7 +39,7 @@ run:
       cf auth
       cf t -o "$CF_ORG" -s "$CF_SPACE"
       cf create-app govuk-coronavirus-find-support || true
-      cf v3-apply-manifest -f manifest.yml
+      cf apply-manifest -f manifest.yml
       cf set-env govuk-coronavirus-find-support CF_STARTUP_TIMEOUT "$CF_STARTUP_TIMEOUT"
 
       cf scale -i "$INSTANCES" govuk-coronavirus-find-support

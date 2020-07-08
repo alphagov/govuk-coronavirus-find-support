@@ -61,5 +61,5 @@ run:
       cf set-env govuk-coronavirus-find-support AWS_ERROR_PAGES_BUCKET_NAME "$AWS_ERROR_PAGES_BUCKET_NAME"
       cf set-env govuk-coronavirus-find-support AWS_REGION "$AWS_REGION"
 
-      cf v3-zdt-push govuk-coronavirus-find-support --wait-for-deploy-complete --no-route
+      cf push govuk-coronavirus-find-support --strategy rolling
       cf map-route govuk-coronavirus-find-support cloudapps.digital --hostname "$HOSTNAME"

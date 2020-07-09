@@ -463,6 +463,9 @@ en:
         - id: '0013'
           text: Contact NSPCC if you’re concerned about a child
           href: https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/
+        - id: '0401'
+          text: Call Hourglass, if you're an older person or worried about an older person on <a href="tel:0808 808 8141” class="govuk-link">0808 808 8141</a>, or <a href="https://wearehourglass.org/" class=”govuk-link>find
+            out what support they offer</a>.
         - id: '0014'
           text: Find helplines if you’re an older person (Older People’s Commissioner
             for Wales)

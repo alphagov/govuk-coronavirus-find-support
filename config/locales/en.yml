@@ -268,22 +268,22 @@ en:
               not_sure:
                 label: Not sure
             custom_select_error: Select yes if you’re able to get food
-          able_to_leave:
-            title: Are you able to leave your home for food, medicine, or health reasons?
+          able_to_go_out:
+            title: Are you able to go out for food, medicine, or health reasons?
             options:
               option_yes:
                 label: 'Yes'
               option_has_symptoms:
-                label: No, I should not leave home because I have coronavirus symptoms,
+                label: No, I should not go out because I have coronavirus symptoms,
                   or someone in my household does
               option_high_risk:
-                label: No, I should not leave home because I have a medical condition
+                label: No, I should not go out because I have a medical condition
                   which means I’m extremely vulnerable to coronavirus
               option_disability:
                 label: No, I’m unable to go out because I have a disability
               option_other:
-                label: No, I’m unable to leave my home for another reason
-            custom_select_error: Select if you’re able to leave your home or not
+                label: No, I’m unable to go out for another reason
+            custom_select_error: Select if you’re able to go out or not
       being_unemployed:
         title: Being made redundant or unemployed, or not having any work
         questions:
@@ -545,18 +545,18 @@ en:
           show_to_nations:
           - Wales
         - id: '0020'
-          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice)
+          text: What to do if you cannot pay your bills or mortgage, including if you cannot go out to pay them (Citizens Advice)
           href: https://www.citizensadvice.org.uk/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/
           show_to_nations:
           - England
         - id: '0021'
-          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice)
+          text: What to do if you cannot pay your bills or mortgage, including if you cannot go out to pay them (Citizens Advice)
             Scotland)
           href: https://www.citizensadvice.org.uk/scotland/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/
           show_to_nations:
           - Scotland
         - id: '0022'
-          text: What to do if you cannot pay your bills or mortgage, including if you cannot leave your home to pay them (Citizens Advice)
+          text: What to do if you cannot pay your bills or mortgage, including if you cannot go out to pay them (Citizens Advice)
           href: https://www.citizensadvice.org.uk/wales/debt-and-money/if-you-cant-pay-your-bills-because-of-coronavirus/
           show_to_nations:
           - Wales

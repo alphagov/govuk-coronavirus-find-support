@@ -77,9 +77,9 @@ Rails.application.routes.draw do
     get "/mental-health-worries", to: "mental_health_worries#show"
     post "/mental-health-worries", to: "mental_health_worries#submit"
 
-    # Question: Are you able to leave your home if absolutely necessary?
-    get "/able-to-leave", to: "able_to_leave#show"
-    post "/able-to-leave", to: "able_to_leave#submit"
+    # Are you able to go out for food, medicine, or health reasons?
+    get "/able-to-go-out", to: "able_to_go_out#show"
+    post "/able-to-go-out", to: "able_to_go_out#submit"
 
     # Results
     get "/results", to: "results#show"

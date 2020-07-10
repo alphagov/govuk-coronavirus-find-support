@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-class CoronavirusForm::AbleToLeaveController < ApplicationController
+class CoronavirusForm::AbleToGoOutController < ApplicationController
   before_action :check_filter_question_answered
 
   def submit
     @form_responses = {
-      able_to_leave: strip_tags(params[:able_to_leave]).presence,
+      able_to_go_out: strip_tags(params[:able_to_go_out]).presence,
     }
 
     invalid_fields = validate_radio_field(
       controller_name,
       group,
-      radio: @form_responses[:able_to_leave],
+      radio: @form_responses[:able_to_go_out],
     )
 
     if invalid_fields.any?
@@ -28,7 +28,7 @@ class CoronavirusForm::AbleToLeaveController < ApplicationController
 private
 
   def update_session_store
-    session[:able_to_leave] = @form_responses[:able_to_leave]
+    session[:able_to_go_out] = @form_responses[:able_to_go_out]
   end
 
   def group

@@ -34,7 +34,7 @@ private
       group_and_subgroup: group_and_subgroup_string(group_key, subgroup, support_and_advice),
       text: result.fetch(:text),
       href: result.fetch(:href, ""),
-      show_to_nations: result.fetch(:show_to_nations, []).join(" OR "),
+      show_to_nations: [result[:show_to_nations]].flatten.compact.join(" OR "),
       group_key: group_key.to_s,
       subgroup_key: subgroup[0].to_s,
       support_and_advice: support_and_advice,

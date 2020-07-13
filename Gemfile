@@ -38,7 +38,7 @@ group :development, :test do
   gem "awesome_print", "~> 1.8"
   gem "brakeman", "~> 4.8"
   gem "byebug", "~> 11"
-  gem "dotenv-rails", "~> 2.7.5"
+  gem "dotenv-rails", "~> 2.7.6"
   gem "foreman", "~> 0.87.1"
   gem "google-api-client"
   gem "govuk_test", "~> 1.0"

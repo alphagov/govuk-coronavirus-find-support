@@ -192,9 +192,7 @@ en:
       location:
         questions:
           nation:
-            title: Where do you live?
-            title_caption: We will show you information which is relevant to where
-              you live.
+            title: Where do you want to find information about?
             options:
               option_england:
                 label: England
@@ -204,6 +202,7 @@ en:
                 label: Wales
               optopn_northern_ireland:
                 label: Northern Ireland
+            custom_select_error: Select where you want to find information about
       filter_questions:
         questions:
           need_help_with:

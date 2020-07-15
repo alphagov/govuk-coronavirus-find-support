@@ -15,7 +15,7 @@ RSpec.describe "mental-health-worries" do
         allow_any_instance_of(QuestionsHelper).to receive(:first_question_seen?).and_return(false)
       end
 
-      it "redirects to where do you live question" do
+      it "redirects to where do you want to find information about question" do
         get need_help_with_path
 
         expect(response).to redirect_to(nation_path)

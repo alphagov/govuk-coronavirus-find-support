@@ -25,7 +25,7 @@ Rails.application.routes.draw do
     # Redirect for old route (301 is default)
     get "/living-with-vulnerable", to: redirect("worried-about-work")
 
-    # Question: Where do you live
+    # Question: Where do you want to find information about?
     get "/nation", to: "nation#show"
     post "/nation", to: "nation#submit"
 

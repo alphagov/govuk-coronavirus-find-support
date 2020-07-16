@@ -13,7 +13,10 @@ require "rspec/rails"
 
 Dir[Rails.root.join("spec/support/**/*.rb")].sort.each { |f| require f }
 SimpleCov.start
-SimpleCov.formatter = SimpleCov::Formatter::CoberturaFormatter
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::CoberturaFormatter,
+])
 
 Capybara.javascript_driver = :apparition
 

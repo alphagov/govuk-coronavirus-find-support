@@ -570,6 +570,9 @@ en:
           href: https://www.housingrights.org.uk/
           show_to_nations:
           - Northern Ireland
+        - id: '0120'
+          text: Find out if you can get help paying for childcare
+          href: https://www.gov.uk/get-childcare
         - id: '0119'
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help
@@ -758,6 +761,13 @@ en:
           href: https://www.mygov.scot/benefits-support/
           show_to_nations:
           - Scotland
+        - id: '0121'
+          text: Search and apply for jobs
+          href: https://www.gov.uk/find-a-job
+          show_to_nations:
+          - Scotland
+          - Wales
+          - England
         - id: '0120'
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help
@@ -849,6 +859,9 @@ en:
         - id: '0068'
           text: What to do if you’re self-employed and getting less or no work
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work
+        - id: '0124'
+          text: Find financial support for your business
+          href: https://www.gov.uk/business-coronavirus-support-finder
         - id: '0070'
           text: Find out about the financial support and benefits you might be able
             to get (NI direct)
@@ -923,6 +936,9 @@ en:
           href: https://www.gov.uk/coronavirus-employee-risk-assessment
           show_to_nations:
           - England
+        - id: '0120'
+          text: Find out if you can get help paying for childcare
+          href: https://www.gov.uk/get-childcare
         support_and_advice_items:
         - id: '0081'
           text: What to do if you’ve been told to go back in to work and you’re worried

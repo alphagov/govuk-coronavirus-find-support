@@ -155,22 +155,6 @@ module FillInTheFormSteps
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
-  def and_is_not_able_to_go_out_if_absolutely_necessary
-    expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.title"))
-
-    choose I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.options.option_has_symptoms.label")
-
-    click_on I18n.t("coronavirus_form.submit_and_next")
-  end
-
-  def and_is_not_able_to_go_out_as_they_are_vulnerable
-    expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.title"))
-
-    choose I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.options.option_high_risk.label")
-
-    click_on I18n.t("coronavirus_form.submit_and_next")
-  end
-
   def they_view_the_results_page
     expect(page).to have_content(I18n.t("coronavirus_form.results.header.title"))
     expect(current_path).to eq "/results"
@@ -187,14 +171,6 @@ module FillInTheFormSteps
   def they_are_provided_with_information_about_getting_food
     expect(page).to have_content(I18n.t("results_link.getting_food.afford_food.title"))
     expect(page).to have_content(I18n.t("results_link.getting_food.get_food.title"))
-  end
-
-  def they_are_provided_with_information_about_getting_support_when_vulnerable
-    expect(page).to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
-  end
-
-  def they_are_not_provided_with_information_about_getting_support_when_vulnerable
-    expect(page).not_to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
   end
 
   def they_are_provided_with_information_about_being_self_employed

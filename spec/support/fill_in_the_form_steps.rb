@@ -155,6 +155,22 @@ module FillInTheFormSteps
     click_on I18n.t("coronavirus_form.submit_and_next")
   end
 
+  def and_is_not_able_to_go_out_if_absolutely_necessary
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.title"))
+
+    choose I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.options.option_has_symptoms.label")
+
+    click_on I18n.t("coronavirus_form.submit_and_next")
+  end
+
+  def and_is_not_able_to_go_out_as_they_are_vulnerable
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.title"))
+
+    choose I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.options.option_high_risk.label")
+
+    click_on I18n.t("coronavirus_form.submit_and_next")
+  end
+
   def they_view_the_results_page
     expect(page).to have_content(I18n.t("coronavirus_form.results.header.title"))
     expect(current_path).to eq "/results"

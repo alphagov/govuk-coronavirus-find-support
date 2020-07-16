@@ -1,0 +1,29 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: governmentpaas/cf-cli
+    tag: latest
+params:
+  CF_API: https://api.cloud.service.gov.uk
+  CF_USERNAME: ((paas-username))
+  CF_PASSWORD: ((paas-password))
+  CF_ORG: govuk_development
+  SENTRY_DSN: https://((sentry-dsn))
+  PUBLISHING_API_BEARER_TOKEN: ((publishing-api-bearer-token))
+  LINK_CHECKER_API_BEARER_TOKEN: ((link-checker-api-bearer-token))
+  CF_SPACE:
+run:
+  dir: src
+  path: sh
+  args:
+    - '-c'
+    - |
+      set -eu
+
+      cf api "$CF_API"
+      cf auth
+      cf t -o "$CF_ORG" -s "$CF_SPACE"
+      cf set-env govuk-coronavirus-find-support PUBLISHING_API_BEARER_TOKEN "$PUBLISHING_API_BEARER_TOKEN"
+      cf set-env govuk-coronavirus-find-support  LINK_CHECKER_API_BEARER_TOKEN "$LINK_CHECKER_API_BEARER_TOKEN"
+      cf run-task govuk-coronavirus-find-support "bundle exec rake link_checker"

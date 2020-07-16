@@ -267,22 +267,6 @@ en:
               not_sure:
                 label: Not sure
             custom_select_error: Select yes if you’re able to get food
-          able_to_go_out:
-            title: Are you able to go out for food, medicine, or health reasons?
-            options:
-              option_yes:
-                label: 'Yes'
-              option_has_symptoms:
-                label: No, I should not go out because I have coronavirus symptoms,
-                  or someone in my household does
-              option_high_risk:
-                label: No, I should not go out because I have a medical condition
-                  which means I’m extremely vulnerable to coronavirus
-              option_disability:
-                label: No, I’m unable to go out because I have a disability
-              option_other:
-                label: No, I’m unable to go out for another reason
-            custom_select_error: Select if you’re able to go out or not
       being_unemployed:
         title: Being made redundant or unemployed, or not having any work
         questions:

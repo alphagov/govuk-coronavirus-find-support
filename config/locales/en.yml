@@ -669,13 +669,6 @@ en:
         - 'No'
         - Not sure
         items:
-        - id: '0112'
-          text: Find out if you can get support as a clinically extremely vulnerable
-            person.
-          href: https://www.gov.uk/coronavirus-extremely-vulnerable/
-          show_to_nations:
-          - England
-          show_to_vulnerable_person: true
         - id: '0038'
           text: Find out if you can get help if you’re clinically at high risk from
             coronavirus (Gov.scot).

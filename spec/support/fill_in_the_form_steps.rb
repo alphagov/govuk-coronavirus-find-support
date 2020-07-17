@@ -189,14 +189,6 @@ module FillInTheFormSteps
     expect(page).to have_content(I18n.t("results_link.getting_food.get_food.title"))
   end
 
-  def they_are_provided_with_information_about_getting_support_when_vulnerable
-    expect(page).to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
-  end
-
-  def they_are_not_provided_with_information_about_getting_support_when_vulnerable
-    expect(page).not_to have_content(I18n.t("results_link.getting_food.get_food.items")[0][:text])
-  end
-
   def they_are_provided_with_information_about_being_self_employed
     expect(page).to have_content(I18n.t("results_link.being_unemployed.self_employed.title"))
   end

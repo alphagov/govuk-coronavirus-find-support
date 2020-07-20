@@ -58,16 +58,11 @@ private
   def filter_item_type_results_by_multiple_questions(item_type, question_results)
     question_results[item_type] ||= []
     question_results[item_type].select do |item|
-      show_to_nations_check(item) && show_to_vulnerable_check(item)
+      show_to_nations_check(item)
     end
   end
 
   def show_to_nations_check(item)
     item[:show_to_nations].nil? || item[:show_to_nations].include?(session[:nation])
-  end
-
-  def show_to_vulnerable_check(item)
-    item[:show_to_vulnerable_person].nil? ||
-      I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.options.option_high_risk.label") == session[:able_to_go_out]
   end
 end

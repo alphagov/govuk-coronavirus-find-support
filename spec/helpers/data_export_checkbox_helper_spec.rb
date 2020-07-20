@@ -37,31 +37,31 @@ RSpec.describe DataExportCheckboxHelper, type: :helper do
   describe "#usage_statistics" do
     it "returns data in correct format with no start_date or end_date" do
       expected = { "Getting food 2020-04-10" => [{ response: "Getting food", date: "Fri, 10 Apr 2020".to_date, count: 2 }],
-                   "Paying bills 2020-04-10" => [{ response: "Paying bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }],
-                   "Paying bills 2020-04-15" => [{ response: "Paying bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }],
-                   "Paying bills 2020-04-20" => [{ response: "Paying bills", date: "Mon, 20 Apr 2020".to_date, count: 1 }] }
+                   "Paying your rent, mortgage, or bills 2020-04-10" => [{ response: "Paying your rent, mortgage, or bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }],
+                   "Paying your rent, mortgage, or bills 2020-04-15" => [{ response: "Paying your rent, mortgage, or bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }],
+                   "Paying your rent, mortgage, or bills 2020-04-20" => [{ response: "Paying your rent, mortgage, or bills", date: "Mon, 20 Apr 2020".to_date, count: 1 }] }
 
       expect(helper.usage_statistics(nil, nil)).to eq(expected)
     end
 
     it "returns data in correct format with start_date and end_date" do
       expected = { "Getting food 2020-04-10" => [{ response: "Getting food", date: "Fri, 10 Apr 2020".to_date, count: 2 }],
-                   "Paying bills 2020-04-10" => [{ response: "Paying bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }],
-                   "Paying bills 2020-04-15" => [{ response: "Paying bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }] }
+                   "Paying your rent, mortgage, or bills 2020-04-10" => [{ response: "Paying your rent, mortgage, or bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }],
+                   "Paying your rent, mortgage, or bills 2020-04-15" => [{ response: "Paying your rent, mortgage, or bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }] }
 
       expect(helper.usage_statistics("2020-04-10", "2020-04-16")).to eq(expected)
     end
 
     it "returns data in correct format with start_date" do
-      expected = { "Paying bills 2020-04-15" => [{ response: "Paying bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }],
-                   "Paying bills 2020-04-20" => [{ response: "Paying bills", date: "Mon, 20 Apr 2020".to_date, count: 1 }]  }
+      expected = { "Paying your rent, mortgage, or bills 2020-04-15" => [{ response: "Paying your rent, mortgage, or bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }],
+                   "Paying your rent, mortgage, or bills 2020-04-20" => [{ response: "Paying your rent, mortgage, or bills", date: "Mon, 20 Apr 2020".to_date, count: 1 }]  }
 
       expect(helper.usage_statistics("2020-04-14", nil)).to eq(expected)
     end
 
     it "returns data in correct format with end_date" do
       expected = { "Getting food 2020-04-10" => [{ response: "Getting food", date: "Fri, 10 Apr 2020".to_date, count: 2 }],
-                   "Paying bills 2020-04-10" => [{ response: "Paying bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }]  }
+                   "Paying your rent, mortgage, or bills 2020-04-10" => [{ response: "Paying your rent, mortgage, or bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }]  }
 
       expect(helper.usage_statistics(nil, "2020-04-14")).to eq(expected)
     end
@@ -75,9 +75,9 @@ RSpec.describe DataExportCheckboxHelper, type: :helper do
       )
 
       expected = { "Getting food 2020-04-10" => [{ response: "Getting food", date: "Fri, 10 Apr 2020".to_date, count: 2 }],
-                   "Paying bills 2020-04-10" => [{ response: "Paying bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }],
-                   "Paying bills 2020-04-15" => [{ response: "Paying bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }],
-                   "Paying bills 2020-04-20" => [{ response: "Paying bills", date: "Mon, 20 Apr 2020".to_date, count: 1 }],
+                   "Paying your rent, mortgage, or bills 2020-04-10" => [{ response: "Paying your rent, mortgage, or bills", date: "Fri, 10 Apr 2020".to_date, count: 1 }],
+                   "Paying your rent, mortgage, or bills 2020-04-15" => [{ response: "Paying your rent, mortgage, or bills", date: "Wed, 15 Apr 2020".to_date, count: 1 }],
+                   "Paying your rent, mortgage, or bills 2020-04-20" => [{ response: "Paying your rent, mortgage, or bills", date: "Mon, 20 Apr 2020".to_date, count: 1 }],
                    "Not sure 2020-04-10" => [{ response: "Not sure", date: "Fri, 10 Apr 2020".to_date, count: 1 }] }
 
       expect(helper.usage_statistics(nil, nil)).to eq(expected)

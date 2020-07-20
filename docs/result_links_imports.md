@@ -1,10 +1,8 @@
-# Make changes to Result Links content
+# Result Links content exporter
 
 The find support app serves lists of links for Coronavirus Actions
 
-Content editors can make changes to [this spreadsheet](https://docs.google.com/spreadsheets/d/11jtiwMovC9736F7ZV9k3gDbOpMMGqnSsiRmlD0JFCpQ/edit#gid=754001789) on Google Drive, and then we can import the changes into the app via a rake task.
-
-The sheet allows for a single source of truth around content updates (which may be frequent), reduces human error on imports (compared to reading through docs and trying to copy paste changes), ensures required information is present, and helps to communicate to content editiors the status of their requested changes.
+Content editors can view content in [this spreadsheet](https://docs.google.com/spreadsheets/d/11jtiwMovC9736F7ZV9k3gDbOpMMGqnSsiRmlD0JFCpQ/edit#gid=754001789) on Google Drive.
 
 ### Contents:
 
@@ -27,20 +25,20 @@ GOOGLE_SHEET_ID="a-google-sheet-id"
 3. Run this take task:
 
 ```
-bundle exec rake content:import_locale_links_from_google_sheet
+bundle exec rake content:export_results_to_csv
 ```
 
 
 ## Updates to actions
 
-Result links are defined in the [en.yml locale file](https://github.com/alphagov/govuk-coronavirus-find-support/blob/master/config/locales/en.yml). To import changes from the spreadsheet, you will need to run the import rake task (see below).  When the file has changed in multiple ways, only commit the changes that were requested.
+Result links are defined in the [en.yml locale file](https://github.com/alphagov/govuk-coronavirus-find-support/blob/master/config/locales/en.yml). 
 
-```
-bundle exec rake content:import_locale_links_from_google_sheet
-```
+The google sheet should import results regularly, but there is a option in the sheet menu `Find Support Service -> Refresh Data` to import the data ad-hoc.
 
-You can also manually import from a provided CSV file
+The google sheet will access the service using the url
+`https://find-coronavirus-support.service.gov.uk/data-export-results-links.csv`
 
+There is also a rake task allowing a developer to run locally without pushing the file to google. 
 ```
-bundle exec rake content:import_locale_links[file_path]
+bundle exec rake content:export_results_to_csv
 ```

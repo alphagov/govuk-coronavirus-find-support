@@ -231,7 +231,7 @@ en:
             custom_select_error: Select if you feel safe where you live or if you’re
               worried about someone else
       paying_bills:
-        title: Paying bills
+        title: Paying your rent, mortgage, or bills
         questions:
           afford_rent_mortgage_bills:
             title: Are you finding it hard to pay your rent, mortgage or bills?

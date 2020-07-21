@@ -673,41 +673,42 @@ en:
         - Not sure
         items:
         - id: '0038'
-          text: Find out if you can get help if you’re clinically at high risk from
-            coronavirus (Gov.scot).
+          text: Find out if you can sign up for supermarket delivery priority access if you’re clinically at high risk from
+            coronavirus (Gov.scot)
           href: https://www.gov.scot/publications/covid-shielding/pages/overview/
+          show_to_nations:
+          - Scotland
+        - id: '0042'
+          text: Find out if you can get help from the Scottish Government
+          href: https://www.gov.scot/publications/coronavirus-covid-19-help-for-vulnerable-people
           show_to_nations:
           - Scotland
         - id: '0039'
           text: You might be able to phone or email your local shops to get a food
             delivery, or get food online.
-        - id: '0040'
-          text: If you can, ask friends, family or neighbours to help you get food.
-            <a href="https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies"
-            class="govuk-link">Find out how you can pay for your shopping safely.</a>
         - id: '0041'
-          text: If there’s no one to help you get food, prescriptions, or other essentials,
-            find out if you can get help from a volunteer through the <a href="https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating"
-            class="govuk-link"> NHS Volunteer Responders programme.</a>
-          show_to_nations:
-          - England
-          - Wales
-          - Northern Ireland
-        - id: '0042'
-          text: If there’s no one to help you get food, prescriptions, or other essentials,
-            <a href="https://www.gov.scot/publications/coronavirus-covid-19-help-for-vulnerable-people/"
-            class="govuk-link"> call the coronavirus helpline for Scotland </a> or
-            find out if you can get help from a volunteer through the <a href="https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating"
-            class="govuk-link"> NHS Volunteer Responders programme.</a>
-          show_to_nations:
-          - Scotland
-        - id: '0043'
-          text: If you need urgent help and have no other support, <a href="https://www.gov.uk/coronavirus-local-help"
-            class="govuk-link">contact your local council</a> to find out what services
-            are available in your area.
-        - id: '0044'
-          text: Get more information on accessing food and other essential supplies.
+          text: Find out if you can get help from a volunteer through the NHS Volunteer Responders programme
+          href: https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating
+        - id: '0040'
+          text: Find out how you can pay for your shopping safely if someone else is shopping for you
           href: https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies
+          show_to_nations: England
+        - id: '0140'
+          text: Find out how you can pay for your shopping safely if someone else is shopping for you
+          href: https://gov.wales/getting-food-and-essential-supplies-during-coronavirus-pandemic
+          show_to_nations: Wales
+        - id: '0043'
+          text: If you need urgent help contact your local council
+          href: https://www.gov.uk/coronavirus-local-help
+          support_and_advice_items:
+        - id: '0044'
+          text: Get more information on accessing food and other essential supplies
+          href: https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies
+          show_to_nations: England
+        - id: '0144'
+          text: Get more information on accessing food and other essential supplies
+          href: https://gov.wales/getting-food-and-essential-supplies-during-coronavirus-pandemic
+          show_to_nations: Wales
     being_unemployed:
       have_you_been_made_unemployed:
         title: If you’ve been made redundant or unemployed, or put on temporary leave (on furlough)

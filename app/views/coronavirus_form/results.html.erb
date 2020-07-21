@@ -1,4 +1,5 @@
-<% title = results_title(result_groups(session)) %>
+<% session_result_groups = result_groups(session) %>
+<% title = results_title(session_result_groups) %>
 
 <% content_for :title do %>
   <%= title %>
@@ -28,24 +29,16 @@
   %>
 <% end %>
 
-<% if result_groups(session).empty? %>
+<% if session_result_groups.empty? %>
   <%= sanitize(t("coronavirus_form.results.no_results")) %>
   <%= sanitize(t("coronavirus_form.results.no_results_#{session[:nation].downcase.gsub(" ", "_")}")) %>
+  <%= render "components/feedback" %>
 <% else %>
   <div data-track-ec-list="Find coronavirus support">
-    <% result_groups(session).each do |group| %>
-      <%= render "components/actions-group", {
-        title: group[1][:heading],
-        subsections: group[1][:questions]
-      } %>
+    <% session_result_groups.values.each do |group| %>
+      <%= render "components/actions-group", group %>
     <% end %>
   </div>
-<% end %>
-
-<%= render "components/callout", {
-  title: "Help us improve"
-} do %>
-  <%= link_to t("coronavirus_form.results.feedback.link_text"), t("coronavirus_form.results.feedback.link_href"), class: "govuk-link" %>
 <% end %>
 
 <% content_for :escape_link do %>

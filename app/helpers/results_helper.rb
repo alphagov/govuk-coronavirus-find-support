@@ -4,8 +4,9 @@ module ResultsHelper
       filtered_questions = filter_questions_by_session(group_key, session)
       unless filtered_questions.empty?
         {
-          heading: I18n.t("coronavirus_form.groups.#{group_key}.title"),
+          title: I18n.t("coronavirus_form.groups.#{group_key}.title"),
           questions: filtered_questions,
+          group_key: group_key,
         }
       end
     end

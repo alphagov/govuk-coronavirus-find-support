@@ -1,0 +1,9 @@
+<%
+  group_key ||= :default
+  link_text = t(:link_text, scope: :feedback)
+  link_href = t(:link_href, scope: :feedback)
+  title_text = t("titles.#{group_key}", scope: :feedback)
+%>
+<%= render("components/callout", title: title_text) do %>
+  <%= link_to link_text, link_href, class: "govuk-link" %>
+<% end %>

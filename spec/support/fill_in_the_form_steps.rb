@@ -215,6 +215,6 @@ module FillInTheFormSteps
   end
 
   def they_are_given_a_link_for_providing_feedback
-    expect(page).to have_content(I18n.t("coronavirus_form.results.feedback.link_text"))
+    expect(page).to have_content(I18n.t("feedback.link_text"))
   end
 end

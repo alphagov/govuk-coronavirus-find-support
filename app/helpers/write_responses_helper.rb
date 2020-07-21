@@ -3,7 +3,7 @@ module WriteResponsesHelper
     unwanted_fields = %w[_csrf_token check_answers_seen current_path previous_path session_id]
     redacted_session = session.to_hash.without(*unwanted_fields)
     unless smoke_tester?
-      FormResponse.create(
+      FormResponse.create!(
         form_response: redacted_session,
         created_at: time_hour_floor,
       )
@@ -20,6 +20,6 @@ private
   # We're using this method to reduce the precision of timekeeping so that
   # responses cannot be correlated with analytics data
   def time_hour_floor
-    Time.current.beginning_of_hour
+    Time.zone.now.beginning_of_hour
   end
 end

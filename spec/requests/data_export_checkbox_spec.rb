@@ -3,25 +3,25 @@ RSpec.describe "data-export-checkbox", type: :request do
   let(:end_date) { "2020-04-13" }
 
   before do
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.getting_food.title")],
       },
       created_at: "2020-04-10 10:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.getting_food.title")],
       },
       created_at: "2020-04-10 12:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.paying_bills.title")],
       },
       created_at: "2020-04-10 12:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.paying_bills.title")],
       },

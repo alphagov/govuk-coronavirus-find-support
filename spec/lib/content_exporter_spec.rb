@@ -1,52 +1,57 @@
-locale_results_link_fixture = {
-  group_one: {
-    subgroup_one: {
-      title: "I am the title for Group one subgroup one",
-      items: [
-        {
-          id: "0001",
-          text: "This is a row that only has text, it will appear like a paragraph",
-        },
-        {
-          id: "0002",
-          text: "This is a row and has text and an href, it will appear as an anchor tag",
-          href: "http://test.stubbed.gov.uk",
-        },
-        {
-          id: "0003",
-          text: "This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria",
-          href: "http://test.stubbed.llyw.cymru",
-          show_to_nations: %w[Wales],
-        },
-      ],
-      support_and_advice_items: [
-        {
-          id: "0004",
-          text: "This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria",
-          href: "http://test.stubbed.gb.gov.uk",
-          show_to_nations: %w[Wales Scotland England],
-        },
-      ],
-    },
-    subgroup_two: {
-      title: "I am the title for Group one subgroup two",
-      items: [{ id: "0005", text: "This is a row that only has text, it will appear like a paragraph" }],
-    },
-  },
-  group_two: {
-    subgroup_one: {
-      title: "I am the title for Group two subgroup one",
-      items: [{ id: "0006", text: "This is a row that only has text, it will appear like a paragraph" }],
-    },
-  },
-}
-
-locale_form_groups_fixture = {
-  group_one: { title: "I am the title for Group one" },
-  group_two: { title: "I am the title for Group two" },
-}
-
 RSpec.describe "ContentExporter" do
+  let(:nation) { %w[Wales] }
+  let(:locale_results_link_fixture) do
+    {
+      group_one: {
+        subgroup_one: {
+          title: "I am the title for Group one subgroup one",
+          items: [
+            {
+              id: "0001",
+              text: "This is a row that only has text, it will appear like a paragraph",
+            },
+            {
+              id: "0002",
+              text: "This is a row and has text and an href, it will appear as an anchor tag",
+              href: "http://test.stubbed.gov.uk",
+            },
+            {
+              id: "0003",
+              text: "This is a row and has text, an href and group criteria, it will appear as an anchor tag if the user's answers match the criteria",
+              href: "http://test.stubbed.llyw.cymru",
+              show_to_nations: nation,
+            },
+          ],
+          support_and_advice_items: [
+            {
+              id: "0004",
+              text: "This is a row and has text, an href and multiple group criteria, it will appear as an anchor tag if the user's answers match the more complex criteria",
+              href: "http://test.stubbed.gb.gov.uk",
+              show_to_nations: %w[Wales Scotland England],
+            },
+          ],
+        },
+        subgroup_two: {
+          title: "I am the title for Group one subgroup two",
+          items: [{ id: "0005", text: "This is a row that only has text, it will appear like a paragraph" }],
+        },
+      },
+      group_two: {
+        subgroup_one: {
+          title: "I am the title for Group two subgroup one",
+          items: [{ id: "0006", text: "This is a row that only has text, it will appear like a paragraph" }],
+        },
+      },
+    }
+  end
+
+  let(:locale_form_groups_fixture) do
+    {
+      group_one: { title: "I am the title for Group one" },
+      group_two: { title: "I am the title for Group two" },
+    }
+  end
+
   describe "#extract_results_links" do
     let(:results_rows) { ContentExporter.extract_results_links }
 
@@ -134,6 +139,14 @@ RSpec.describe "ContentExporter" do
 
     it "returns a single string when a link has a single :show_to_nations criteria" do
       expect(results_rows[2][:show_to_nations]).to eq("Wales")
+    end
+
+    context "show_to_nations is a string" do
+      let(:nation) { "Wales" }
+
+      it "returns a single string" do
+        expect(results_rows[2][:show_to_nations]).to eq("Wales")
+      end
     end
 
     it "returns a single string with joined with OR when a link has multiple :show_to_nations criteria" do

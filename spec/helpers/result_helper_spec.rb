@@ -93,48 +93,5 @@ RSpec.describe ResultsHelper, type: :helper do
       }
       expect(filter_results_by_multiple_questions(test_hash.dup)[:support_and_advice_items]).to eq([{ show_to_nations: "nation 1" }])
     end
-
-    let(:vulnerable_person_label) { I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.options.option_high_risk.label") }
-    let(:not_vulnerable_label) { I18n.t("coronavirus_form.groups.getting_food.questions.able_to_go_out.options.option_other.label") }
-
-    it "should return show_to_vulnerable_person items if the session able_to_go_out is high_risk" do
-      session.merge!({
-        "able_to_go_out": vulnerable_person_label,
-      })
-      test_hash = {
-        items: [
-          { show_to_vulnerable_person: true },
-          { _: nil },
-        ],
-      }
-      expect(filter_results_by_multiple_questions(test_hash.dup)[:items]).to eq([{ show_to_vulnerable_person: true }, { _: nil }])
-    end
-
-    it "should not return show_to_vulnerable_person items when the session able_to_go_out is not high_risk" do
-      session.merge!({
-        "able_to_go_out": not_vulnerable_label,
-      })
-      test_hash = {
-        items: [
-          { show_to_vulnerable_person: true },
-          { _: nil },
-        ],
-      }
-      expect(filter_results_by_multiple_questions(test_hash.dup)[:items]).to eq([{ _: nil }])
-    end
-
-    it "should filter multiple questions with AND condition" do
-      session.merge!({
-        "able_to_go_out": not_vulnerable_label,
-        "nation": "nation 1",
-      })
-      test_hash = {
-        items: [
-          { "nation": "nation 1", show_to_vulnerable_person: true },
-          { "nation": "nation 1" },
-        ],
-      }
-      expect(filter_results_by_multiple_questions(test_hash.dup)[:items]).to eq([{ "nation": "nation 1" }])
-    end
   end
 end

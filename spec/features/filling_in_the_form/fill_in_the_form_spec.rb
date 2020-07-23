@@ -14,7 +14,6 @@ RSpec.feature "Fill in the find support form" do
       and_is_finding_it_hard_to_afford_rent_mortgage_bills
       and_is_finding_it_hard_to_afford_food
       and_is_unable_to_get_food
-      and_is_not_able_to_go_out_if_absolutely_necessary
       and_is_not_self_employed_or_a_sole_trader
       and_has_not_been_told_to_stop_working
       and_is_off_work_because_ill_or_self_isolating

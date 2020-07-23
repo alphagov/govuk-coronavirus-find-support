@@ -1,6 +1,6 @@
 <%
   title ||= nil
-  subsections ||= []
+  questions ||= []
 %>
 <section class="app-c-actions-group">
   <div class="govuk-grid-row">
@@ -8,16 +8,16 @@
       <h2 class="govuk-heading-l"><%= title %></h2>
     </div>
     <div class="govuk-grid-column-two-thirds">
-      <% subsections.each do |subsection| %>
-        <div data-ec-list-subsection="<%= subsection[:title] %>">
-          <h3 class="govuk-heading-m"><%= subsection[:title] %></h3>
+      <% questions.each do |question| %>
+        <div data-ec-list-question="<%= question[:title] %>">
+          <h3 class="govuk-heading-m"><%= question[:title] %></h3>
           <% %i[items support_and_advice_items].each do |item_type| %>
-            <% if subsection[item_type]&.any? %>
+            <% if question[item_type]&.any? %>
               <% if item_type == :support_and_advice_items %>
                 <h4 class="govuk-heading-s"><%= t("coronavirus_form.results.support_and_advice_text") %></h4>
               <% end %>
               <ul class="govuk-list">
-              <% subsection[item_type].each do |item| %>
+              <% question[item_type].each do |item| %>
                 <li>
                   <% if item[:href] %>
                     <%= link_to item[:text], item[:href], class: "govuk-link" %>
@@ -31,6 +31,7 @@
           <% end %>
         </div>
       <% end %>
+      <%= render "components/feedback", group_key: group_key %>
     </div>
   </div>
 </section>

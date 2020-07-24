@@ -42,7 +42,7 @@ group :development, :test do
   gem "foreman", "~> 0.87.1"
   gem "google-api-client"
   gem "govuk_test", "~> 1.0"
-  gem "jasmine", "~> 3.5.1"
+  gem "jasmine", "~> 3.6.0"
   gem "jasmine_selenium_runner", "~> 3.0.0", require: false
   gem "pry", "~> 0.13.1"
   gem "pry-rails", "~> 0.3.9"

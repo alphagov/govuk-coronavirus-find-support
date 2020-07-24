@@ -2,7 +2,7 @@
 
 module FillInTheFormSteps
   def given_a_user_is_struggling_because_of_coronavirus
-    visit nation_path
+    visit need_help_with_path
   end
 
   def and_they_live_in_england
@@ -207,7 +207,7 @@ module FillInTheFormSteps
   end
 
   def expect_to_be_on_start_page
-    expect(page).to have_content(I18n.t("coronavirus_form.groups.location.questions.nation.title"))
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
   end
 
   def expect_to_be_on_need_help_page

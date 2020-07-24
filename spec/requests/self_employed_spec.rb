@@ -16,7 +16,7 @@ RSpec.describe "self-employed" do
       it "redirects to filter question" do
         get self_employed_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -95,10 +95,10 @@ RSpec.describe "self-employed" do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[self_employed])
       end
 
-      it "redirects to the results url" do
+      it "redirects to the nations url" do
         post self_employed_path, params: { self_employed: selected_option_text }
 
-        expect(response).to redirect_to(results_path)
+        expect(response).to redirect_to(nation_path)
       end
     end
   end

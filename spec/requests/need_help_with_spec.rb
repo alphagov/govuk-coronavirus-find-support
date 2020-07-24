@@ -7,18 +7,6 @@ RSpec.describe "need-help-with" do
   describe "GET /need-help-with" do
     let(:selected) { [I18n.t("coronavirus_form.groups.feeling_unsafe.title")] }
 
-    context "without session data" do
-      before do
-        allow_any_instance_of(QuestionsHelper).to receive(:first_question_seen?).and_return(false)
-      end
-
-      it "redirects to filter question" do
-        get need_help_with_path
-
-        expect(response).to redirect_to(nation_path)
-      end
-    end
-
     context "with session data" do
       before do
         page.set_rack_session(need_help_with: selected)

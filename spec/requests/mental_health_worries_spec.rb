@@ -10,18 +10,6 @@ RSpec.describe "mental-health-worries" do
   describe "GET /mental-health-worries" do
     let(:selected) { ["Feeling unsafe"] }
 
-    context "without user having answered the where do you live question" do
-      before do
-        allow_any_instance_of(QuestionsHelper).to receive(:first_question_seen?).and_return(false)
-      end
-
-      it "redirects to where do you want to find information about question" do
-        get need_help_with_path
-
-        expect(response).to redirect_to(nation_path)
-      end
-    end
-
     context "without any questions to ask in the session data" do
       before do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(nil)
@@ -30,7 +18,7 @@ RSpec.describe "mental-health-worries" do
       it "redirects to filter question" do
         get mental_health_worries_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -96,10 +84,10 @@ RSpec.describe "mental-health-worries" do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[mental_health_worries])
       end
 
-      it "redirects to the results url" do
+      it "redirects to the nations url" do
         post mental_health_worries_path, params: { mental_health_worries: selected_option_text }
 
-        expect(response).to redirect_to(results_path)
+        expect(response).to redirect_to(nation_path)
       end
     end
   end

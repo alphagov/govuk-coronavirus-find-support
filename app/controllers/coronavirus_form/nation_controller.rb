@@ -18,7 +18,7 @@ class CoronavirusForm::NationController < ApplicationController
       render controller_path
     else
       update_session_store
-      redirect_to need_help_with_url
+      redirect_to results_url
     end
   end
 
@@ -33,6 +33,6 @@ private
   end
 
   def previous_path
-    "/"
+    polymorphic_path(previous_question(controller_name))
   end
 end

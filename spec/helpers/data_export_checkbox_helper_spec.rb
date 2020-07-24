@@ -2,31 +2,31 @@ require "spec_helper"
 
 RSpec.describe DataExportCheckboxHelper, type: :helper do
   before do
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.getting_food.title")],
       },
       created_at: "2020-04-10 12:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.getting_food.title")],
       },
       created_at: "2020-04-10 12:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.paying_bills.title")],
       },
       created_at: "2020-04-10 12:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.paying_bills.title")],
       },
       created_at: "2020-04-15 12:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         need_help_with: [I18n.t("coronavirus_form.groups.paying_bills.title")],
       },
@@ -67,7 +67,7 @@ RSpec.describe DataExportCheckboxHelper, type: :helper do
     end
 
     it "returns data in correct format with checkbox option selected" do
-      FormResponse.create(
+      FormResponse.create!(
         form_response: {
           need_help_with: [I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.options").first],
         },

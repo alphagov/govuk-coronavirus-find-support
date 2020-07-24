@@ -3,25 +3,25 @@ RSpec.describe "data-export", type: :request do
   let(:end_date) { "2020-04-13" }
 
   before do
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
       },
       created_at: "2020-04-10 10:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
       },
       created_at: "2020-04-10 10:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_yes.label"),
       },
       created_at: "2020-04-12 10:00:00",
     )
-    FormResponse.create(
+    FormResponse.create!(
       form_response: {
         get_food: I18n.t("coronavirus_form.groups.getting_food.questions.get_food.options.option_no.label"),
       },

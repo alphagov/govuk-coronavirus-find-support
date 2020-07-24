@@ -418,7 +418,7 @@ en:
         - id: '0004'
           text: If you’re a child or young person call Childline on <a href="tel:0800
             1111" class="govuk-link">0800 1111</a> or <a href="https://www.childline.org.uk"
-            class="govuk-link">get help online</a> .
+            class="govuk-link">get help online</a>.
         - id: '0007'
           text: Get help from Nexus NI
           href: https://nexusni.org/domestic-and-sexual-abuse-24-hour-helpline/
@@ -440,10 +440,10 @@ en:
           show_to_nations:
           - Scotland
         - id: '0013'
-          text: Contact NSPCC if you’re concerned about a child
+          text: Contact NSPCC if you’re concerned about a child.
           href: https://www.nspcc.org.uk/keeping-children-safe/our-services/nspcc-helpline/
         - id: '0401'
-          text: Call Hourglass, if you're an older person or worried about an older person on <a href="tel:0808 808 8141” class="govuk-link">0808 808 8141</a>, or <a href="https://wearehourglass.org/" class=”govuk-link>find
+          text: Call Hourglass, if you're an older person or worried about an older person on <a href="tel:0808 808 8141" class="govuk-link">0808 808 8141</a>, or <a href="https://wearehourglass.org/" class="govuk-link">find
             out what support they offer</a>.
         - id: '0014'
           text: Find helplines if you’re an older person (Older People’s Commissioner
@@ -457,8 +457,8 @@ en:
           show_to_nations:
           - Wales
         - id: '0122'
-          text: Call Galop, the LGBT+ helpline on  <a href="tel:0800 999 5428” class="govuk-link">0800
-            999 5428</a>, or <a href="http://www.galop.org.uk/how-we-can-help/" class=”govuk-link>find
+          text: Call Galop, the LGBT+ helpline on  <a href="tel:0800 999 5428" class="govuk-link">0800
+            999 5428</a>, or <a href="http://www.galop.org.uk/how-we-can-help/" class="govuk-link>find
             out what support they offer</a>.
         - id: '0123'
           text: Call Men’s Advice Line on <a href="tel:0808 8010327" class="govuk-link">0808

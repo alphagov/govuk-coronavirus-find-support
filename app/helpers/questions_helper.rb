@@ -16,11 +16,16 @@ module QuestionsHelper
     return first_question if current_question == FILTER_QUESTION
 
     current_question_index = questions_to_ask.index(current_question)
-    questions_to_ask[current_question_index + 1] || "results"
+    questions_to_ask[current_question_index + 1] || "nation"
   end
 
   def previous_question(current_question)
-    return FILTER_QUESTION if current_question == first_question
+    if current_question == first_question
+      return FILTER_QUESTION
+    end
+    if current_question == "nation"
+      return questions_to_ask.last
+    end
 
     current_question_index = questions_to_ask.index(current_question)
     questions_to_ask[current_question_index + -1]
@@ -39,7 +44,7 @@ module QuestionsHelper
   end
 
   def first_question_seen?
-    session[:nation].present?
+    session[:questions_to_ask].present?
   end
 
   def last_question

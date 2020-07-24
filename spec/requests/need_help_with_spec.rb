@@ -1,7 +1,6 @@
 RSpec.describe "need-help-with" do
   before do
     allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[get_food feel_safe])
-    allow_any_instance_of(QuestionsHelper).to receive(:first_question_seen?).and_return(true)
   end
 
   describe "GET /need-help-with" do

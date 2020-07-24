@@ -67,6 +67,6 @@ private
   end
 
   def check_session_exists
-    session_expired unless first_question_seen?
+    session_expired unless last_question_seen?
   end
 end

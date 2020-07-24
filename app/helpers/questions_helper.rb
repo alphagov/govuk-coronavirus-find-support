@@ -43,8 +43,8 @@ module QuestionsHelper
     questions_to_ask.first
   end
 
-  def first_question_seen?
-    session[:questions_to_ask].present?
+  def last_question_seen?
+    session[:nation].present?
   end
 
   def all_questions

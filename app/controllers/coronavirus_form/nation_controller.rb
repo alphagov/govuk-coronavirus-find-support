@@ -18,6 +18,7 @@ class CoronavirusForm::NationController < ApplicationController
       render controller_path
     else
       update_session_store
+      write_responses
       redirect_to results_url
     end
   end

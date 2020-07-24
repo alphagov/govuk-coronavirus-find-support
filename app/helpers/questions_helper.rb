@@ -47,10 +47,6 @@ module QuestionsHelper
     session[:questions_to_ask].present?
   end
 
-  def last_question
-    questions_to_ask.last
-  end
-
   def all_questions
     I18n.t("coronavirus_form.groups").map { |_, group| group[:questions].keys if group[:title] }.compact.flatten.map(&:to_s)
   end

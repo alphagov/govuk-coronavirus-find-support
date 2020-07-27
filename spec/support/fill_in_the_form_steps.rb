@@ -201,4 +201,16 @@ module FillInTheFormSteps
   def they_are_given_a_link_for_providing_feedback
     expect(page).to have_content(I18n.t("feedback.link_text"))
   end
+
+  def click_on_back_link
+    click_on I18n.t("components.back_link.back")
+  end
+
+  def expect_to_be_on_start_page
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.location.questions.nation.title"))
+  end
+
+  def expect_to_be_on_need_help_page
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.filter_questions.questions.need_help_with.title"))
+  end
 end

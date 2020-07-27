@@ -1,14 +1,10 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::AccessibilityStatementController < ApplicationController
+  include SetPreviousPage
+
   def show
-    @previous_page = return_path
+    set_previous_page
     super
-  end
-
-private
-
-  def return_path
-    request.referer.presence ? first_question_path : request.referer
   end
 end

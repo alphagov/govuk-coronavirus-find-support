@@ -30,13 +30,6 @@ private
     raise NotImplementedError, "Define a previous path"
   end
 
-  def set_session_history
-    if session[:current_path] != request.path
-      session[:previous_path] = session[:current_path]
-    end
-    session[:current_path] = request.path
-  end
-
   def first_question_path
     nation_path
   end

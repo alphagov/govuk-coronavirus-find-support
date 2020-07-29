@@ -16,7 +16,7 @@ RSpec.describe "worried-about-work" do
       it "redirects to filter question" do
         get worried_about_work_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -82,10 +82,10 @@ RSpec.describe "worried-about-work" do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[worried_about_work])
       end
 
-      it "redirects to the results url" do
+      it "redirects to the nations url" do
         post worried_about_work_path, params: { worried_about_work: selected_option_text }
 
-        expect(response).to redirect_to(results_path)
+        expect(response).to redirect_to(nation_path)
       end
     end
   end

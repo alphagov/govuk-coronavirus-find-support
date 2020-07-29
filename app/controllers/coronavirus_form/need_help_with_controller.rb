@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class CoronavirusForm::NeedHelpWithController < ApplicationController
-  before_action :check_first_question_answered
-
   def submit
     @form_responses = {
       need_help_with: Array(params[:need_help_with]).map { |item| strip_tags(item).presence }.compact,
@@ -82,7 +80,7 @@ private
   end
 
   def previous_path
-    nation_path
+    "/"
   end
 
   def group

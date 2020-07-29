@@ -16,7 +16,7 @@ RSpec.describe "afford-food" do
       it "redirects to filter question" do
         get afford_food_path
 
-        expect(response).to redirect_to(need_help_with_path)
+        expect(response).to redirect_to(nation_path)
       end
     end
 

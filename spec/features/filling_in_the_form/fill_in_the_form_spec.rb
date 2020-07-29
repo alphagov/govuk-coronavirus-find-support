@@ -8,6 +8,7 @@ RSpec.feature "Fill in the find support form" do
   shared_examples "filling in the form" do
     scenario "Complete the form when not self employed" do
       given_a_user_is_struggling_because_of_coronavirus
+      and_they_live_in_england
       and_needs_help_with_all_options
       and_feels_unsafe_where_they_live
       and_is_finding_it_hard_to_afford_rent_mortgage_bills
@@ -20,7 +21,6 @@ RSpec.feature "Fill in the find support form" do
       and_has_nowhere_to_live
       and_has_been_evicted
       and_is_worried_about_mental_health
-      and_they_live_in_england
       they_view_the_results_page
       they_are_provided_with_information_about_feeling_unsafe
       they_are_provided_with_information_about_paying_bills
@@ -44,10 +44,10 @@ RSpec.feature "Fill in the find support form" do
 
   scenario "Complete the form when not self employed but furloughed" do
     given_a_user_is_struggling_because_of_coronavirus
+    and_they_live_in_england
     and_needs_help_with_being_unemployed
     and_is_not_self_employed_or_a_sole_trader
     and_has_been_told_to_stop_working
-    and_they_live_in_england
     they_view_the_results_page
     they_are_provided_with_information_about_being_unemployed
     they_are_given_a_link_for_providing_feedback
@@ -55,9 +55,9 @@ RSpec.feature "Fill in the find support form" do
 
   scenario "Complete the form when self employed" do
     given_a_user_is_struggling_because_of_coronavirus
+    and_they_live_in_england
     and_needs_help_with_being_unemployed
     and_is_self_employed_or_a_sole_trader
-    and_they_live_in_england
     they_view_the_results_page
     they_are_provided_with_information_about_being_self_employed
     they_are_given_a_link_for_providing_feedback

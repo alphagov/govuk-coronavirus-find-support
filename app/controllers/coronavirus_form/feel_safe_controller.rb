@@ -21,6 +21,7 @@ class CoronavirusForm::FeelSafeController < ApplicationController
       render controller_path
     else
       update_session_store
+      write_responses if last_question == controller_name
       redirect_to polymorphic_url(next_question(controller_name))
     end
   end

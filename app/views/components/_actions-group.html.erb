@@ -9,7 +9,7 @@
     </div>
     <div class="govuk-grid-column-two-thirds">
       <% questions.each do |question| %>
-        <div data-ec-list-question="<%= question[:title] %>">
+        <div data-ec-list-subsection="<%= question[:title] %>">
           <h3 class="govuk-heading-m"><%= question[:title] %></h3>
           <% %i[items support_and_advice_items].each do |item_type| %>
             <% if question[item_type]&.any? %>

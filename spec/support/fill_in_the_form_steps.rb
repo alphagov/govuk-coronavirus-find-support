@@ -2,7 +2,7 @@
 
 module FillInTheFormSteps
   def given_a_user_is_struggling_because_of_coronavirus
-    visit need_help_with_path
+    visit nation_path
   end
 
   def and_they_live_in_england

@@ -16,7 +16,7 @@ RSpec.describe "afford-rent-mortgage-bills" do
       it "redirects to filter question" do
         get afford_rent_mortgage_bills_path
 
-        expect(response).to redirect_to(need_help_with_path)
+        expect(response).to redirect_to(nation_path)
       end
     end
 
@@ -82,10 +82,10 @@ RSpec.describe "afford-rent-mortgage-bills" do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[afford_rent_mortgage_bills])
       end
 
-      it "redirects to the nations url" do
+      it "redirects to the results url" do
         post afford_rent_mortgage_bills_path, params: { afford_rent_mortgage_bills: selected_option_text }
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(results_path)
       end
     end
   end

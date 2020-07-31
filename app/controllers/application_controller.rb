@@ -31,7 +31,7 @@ private
   end
 
   def first_question_path
-    need_help_with_path
+    nation_path
   end
 
   def group; end
@@ -49,9 +49,15 @@ private
     redirect_to session_expired_url
   end
 
+  def check_first_question_answered
+    unless first_question_seen?
+      redirect_to nation_url
+    end
+  end
+
   def check_filter_question_answered
     if questions_to_ask.blank?
-      redirect_to need_help_with_url
+      redirect_to nation_url
     end
   end
 
@@ -60,6 +66,6 @@ private
   end
 
   def check_session_exists
-    session_expired unless last_question_seen?
+    session_expired unless first_question_seen?
   end
 end

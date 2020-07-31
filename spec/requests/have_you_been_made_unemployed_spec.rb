@@ -16,7 +16,7 @@ RSpec.describe "have-you-been-made-unemployed" do
       it "redirects to filter question" do
         get have_you_been_made_unemployed_path
 
-        expect(response).to redirect_to(need_help_with_path)
+        expect(response).to redirect_to(nation_path)
       end
     end
 
@@ -94,10 +94,10 @@ RSpec.describe "have-you-been-made-unemployed" do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[have_you_been_made_unemployed])
       end
 
-      it "redirects to the nations url" do
+      it "redirects to the results url" do
         post have_you_been_made_unemployed_path, params: { have_you_been_made_unemployed: selected_option_text }
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(results_path)
       end
     end
   end

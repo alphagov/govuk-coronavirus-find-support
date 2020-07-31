@@ -16,7 +16,7 @@ RSpec.describe "get-food" do
       it "redirects to filter question" do
         get get_food_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 

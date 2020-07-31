@@ -9,6 +9,7 @@ RSpec.describe CoronavirusForm::ResultsController, type: :controller do
     subject { get :show }
 
     before do
+      session[:questions_to_ask] = %w[feel_safe]
       session[:nation] = "England"
     end
 

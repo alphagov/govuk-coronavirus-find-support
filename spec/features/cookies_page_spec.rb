@@ -14,7 +14,6 @@ RSpec.feature "Access the cookies page" do
 
   scenario "Access cookies page via link on form and return" do
     given_a_user_is_struggling_because_of_coronavirus
-    and_they_live_in_england
     expect_to_be_on_need_help_page
     click_on_cookies_link
     expect_to_be_on_cookies_page

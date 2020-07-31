@@ -16,7 +16,7 @@ RSpec.describe "feel-safe" do
       it "redirects to filter question" do
         get feel_safe_path
 
-        expect(response).to redirect_to(nation_path)
+        expect(response).to redirect_to(need_help_with_path)
       end
     end
 
@@ -82,10 +82,10 @@ RSpec.describe "feel-safe" do
         allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[feel_safe])
       end
 
-      it "redirects to the results url" do
+      it "redirects to the nations url" do
         post feel_safe_path, params: { feel_safe: selected_option_text }
 
-        expect(response).to redirect_to(results_path)
+        expect(response).to redirect_to(nation_path)
       end
     end
   end

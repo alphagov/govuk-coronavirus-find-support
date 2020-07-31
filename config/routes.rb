@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get "/", to: redirect("https://www.gov.uk/find-coronavirus-support")
 
   scope module: "coronavirus_form" do
-    first_question = "/nation"
+    first_question = "/need-help-with"
 
     get "/start", to: redirect(path: first_question)
 

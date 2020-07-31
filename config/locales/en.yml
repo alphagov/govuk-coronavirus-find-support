@@ -652,12 +652,6 @@ en:
         - 'No'
         - Not sure
         items:
-        - id: '0038'
-          text: Find out if you can sign up for supermarket delivery priority access if you’re clinically at high risk from
-            coronavirus (Gov.scot)
-          href: https://www.gov.scot/publications/covid-shielding/pages/overview/
-          show_to_nations:
-          - Scotland
         - id: '0042'
           text: Find out if you can get help from the Scottish Government
           href: https://www.gov.scot/publications/coronavirus-covid-19-help-for-vulnerable-people

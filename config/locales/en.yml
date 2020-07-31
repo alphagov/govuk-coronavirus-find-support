@@ -700,18 +700,15 @@ en:
         - id: '0301'
           text: Your rights if you’ve been made redundant, including information on how much redundancy pay you can get and your notice period
           href: https://www.gov.uk/redundancy-your-rights
-        - id: '0302'
-          text: Check if your redundancy is fair (Citizens Advice)
-          href: https://www.citizensadvice.org.uk/work/leaving-a-job/redundancy/check-if-your-redundancy-is-fair/
-          show_to_nations: England
-        - id: '0303'
-          text: Check if your redundancy is fair (Citizens Advice)
-          href: https://www.citizensadvice.org.uk/wales/work/leaving-a-job/redundancy/check-if-your-redundancy-is-fair/
-          show_to_nations: Wales
-        - id: '0304'
-          text: Check if your redundancy is fair (Citizens Advice Scotland)
-          href: https://www.citizensadvice.org.uk/scotland/work/leaving-a-job/redundancy/check-if-your-redundancy-is-fair/
-          show_to_nations: Scotland
+        - id: '0301'
+          text: Your rights if you think you might have been discriminated against at work 
+          href: https://www.gov.uk/discrimination-your-rights/discrimination-at-work
+        - id: '0301'
+          text: Find out what rights you have if your pregnant 
+          href: https://www.gov.uk/working-when-pregnant-your-rights
+        - id: '0047'
+          text: What to do if your employer has ended your employment but you have not been made redundant
+          href: https://www.gov.uk/dismissal
         - id: '0052'
           text: Find out about the financial support and benefits you might be able
             to get (NI direct)
@@ -740,9 +737,30 @@ en:
           text: Find out if you can get help in your local area
           href: https://www.gov.uk/coronavirus-local-help
         support_and_advice_items:
-        - id: '0047'
-          text: What to do if your employer has ended your employment but you have not been made redundant
-          href: https://www.gov.uk/dismissal
+        - id: '0302'
+          text: Check if your redundancy is fair (Citizens Advice)
+          href: https://www.citizensadvice.org.uk/work/leaving-a-job/redundancy/check-if-your-redundancy-is-fair/
+          show_to_nations: England
+        - id: '0303'
+          text: Check if your redundancy is fair (Citizens Advice)
+          href: https://www.citizensadvice.org.uk/wales/work/leaving-a-job/redundancy/check-if-your-redundancy-is-fair/
+          show_to_nations: Wales
+        - id: '0304'
+          text: Check if your redundancy is fair (Citizens Advice Scotland)
+          href: https://www.citizensadvice.org.uk/scotland/work/leaving-a-job/redundancy/check-if-your-redundancy-is-fair/
+          show_to_nations: Scotland
+        - id: '0302'
+          text: What to do if you do not think you’re getting your maternity rights (Citizens Advice)
+          href: https://www.citizensadvice.org.uk/work/rights-at-work/parental-rights/if-you-dont-get-your-maternity-rights/
+          show_to_nations: England
+        - id: '0303'
+          text: What to do if you do not think you’re getting your maternity rights (Citizens Advice)
+          href: https://www.citizensadvice.org.uk/wales/work/rights-at-work/parental-rights/if-you-dont-get-your-maternity-rights/
+          show_to_nations: Wales
+        - id: '0304'
+          text: What to do if you do not think you’re getting your maternity rights (Citizens Advice Scotland)
+          href: https://www.citizensadvice.org.uk/scotland/work/rights-at-work/parental-rights/if-you-dont-get-your-maternity-rights/
+          show_to_nations: Scotland
         - id: '0049'
           text: Advice if you’ve been furloughed (Citizens Advice)
           href: https://www.citizensadvice.org.uk/work/coronavirus-being-furloughed-if-you-cant-work/

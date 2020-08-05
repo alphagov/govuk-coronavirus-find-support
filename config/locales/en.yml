@@ -1124,22 +1124,22 @@ en:
           text: How to manage specific mental health needs (Mind)
           href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing
         - id: '0106'
-          text: Get advice on looking after your mental health during coronavirus
-            (NHS)
+          text: Get advice on looking after your mental health during coronavirus (NHS)
           href: https://www.nhs.uk/oneyou/every-mind-matters
-        - id: '0107'
-          text: Things you can do to support the mental health and wellbeing of children
-            and young people (Public Health England)
-          href: https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak
+        - id: '0106'
+          text: Help for mental health problems if you're LGBT (NHS)
+          href: https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-issues-if-you-are-gay-lesbian-or-bisexual
         - id: '0116'
           text: Advice and guidance on where you can get help with your mental health
             if you’re a young person (Young Minds)
           href: https://youngminds.org.uk/find-help/looking-after-yourself/coronavirus-and-mental-health/
         support_and_advice_items:
         - id: '0105'
-          text: Looking after your mental health during coronavirus (Public Health
-            England)
+          text: Looking after your mental health during coronavirus (Public Health England)
           href: https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing
+        - id: '0107'
+          text: Things you can do to support the mental health and wellbeing of children and young people (Public Health England)
+          href: https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak
         - id: '0108'
           text: Additional information about taking care of your mental health (NI
             direct)

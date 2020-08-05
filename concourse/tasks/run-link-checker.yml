@@ -26,4 +26,4 @@ run:
       cf t -o "$CF_ORG" -s "$CF_SPACE"
       cf set-env govuk-coronavirus-find-support PUBLISHING_API_BEARER_TOKEN "$PUBLISHING_API_BEARER_TOKEN"
       cf set-env govuk-coronavirus-find-support  LINK_CHECKER_API_BEARER_TOKEN "$LINK_CHECKER_API_BEARER_TOKEN"
-      cf run-task govuk-coronavirus-find-support "bundle exec rake link_checker"
+      cf run-task govuk-coronavirus-find-support --command "bundle exec rake link_checker" --name link_checker

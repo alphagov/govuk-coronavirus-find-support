@@ -1126,7 +1126,7 @@ en:
         - id: '0106'
           text: Get advice on looking after your mental health during coronavirus (NHS)
           href: https://www.nhs.uk/oneyou/every-mind-matters
-         - id: '0106'
+        - id: '0106'
           text: Help for mental health problems if you're LGBT (NHS)
           href: https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-issues-if-you-are-gay-lesbian-or-bisexual
         - id: '0116'
@@ -1137,7 +1137,7 @@ en:
         - id: '0105'
           text: Looking after your mental health during coronavirus (Public Health England)
           href: https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing
-           - id: '0107'
+        - id: '0107'
           text: Things you can do to support the mental health and wellbeing of children and young people (Public Health England)
           href: https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak
         - id: '0108'

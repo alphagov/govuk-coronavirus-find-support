@@ -271,7 +271,7 @@ en:
         title: Being made redundant or unemployed, or not having any work
         questions:
           self_employed:
-            title: Are you self-employed or a sole trader?
+            title: Are you self-employed, a freelancer, or a sole trader?
             title_caption: Being unemployed or not having any work
             options:
               option_yes:
@@ -282,13 +282,13 @@ en:
                 label: Not sure
             skip_next_question_options:
             - 'Yes'
-            custom_select_error: Select yes if you’re self-employed or a sole trader
+            custom_select_error: Select yes if you’re self-employed, a freelancer, or a sole trader
           have_you_been_made_unemployed:
             title: Have you been made redundant or told to stop working?
             title_caption: Being made redundant or unemployed, or not having any work
             options:
               option_yes:
-                label: Yes, I’ve been made redundant or unemployed, or I might be soon
+                label: Yes, I’ve been made redundant or I’m out of work, or I might be soon
               option_might_be:
                 label: Yes, I’ve been put on temporary leave (on furlough), or might
                   be soon
@@ -297,10 +297,10 @@ en:
               not_sure:
                 label: Not sure
             skip_next_question_options:
-            - Yes, I’ve been made redundant or unemployed, or I might be soon
+            - Yes, I’ve been made redundant or I’m out of work, or I might be soon
             - Yes, I’ve been put on temporary leave (on furlough), or might be soon
-            custom_select_error: Select if you’ve been made redundant or unemployed, or put on
-              temporary leave (on furlough)
+            custom_select_error: Select if you’ve been made redundant, put on
+              temporary leave (on furlough), or you’re out of work
           are_you_off_work_ill:
             title: Are you off work because you’re ill or self-isolating?
             title_caption: Going in to work
@@ -693,7 +693,7 @@ en:
       have_you_been_made_unemployed:
         title: If you’ve been made redundant or unemployed, or put on temporary leave (on furlough)
         show_options:
-        - Yes, I’ve been made redundant or unemployed, or I might be soon
+        - Yes, I’ve been made redundant or I’m out of work, or I might be soon
         - Yes, I’ve been put on temporary leave (on furlough), or might be soon
         - Not sure
         items:
@@ -703,6 +703,9 @@ en:
         - id: '0048'
           text: What to do if you’ve been furloughed
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
+        - id: '0048'
+          text: Check if you can get Universal Credit
+          href: https://www.gov.uk/how-to-claim-universal-credit
         - id: '0301'
           text: Your rights if you’ve been made redundant, including information on how much redundancy pay you can get and your notice period
           href: https://www.gov.uk/redundancy-your-rights
@@ -843,13 +846,13 @@ en:
             (Acas)
           href: https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay
       self_employed:
-        title: If you’re self employed or a sole trader
+        title: If you’re self employed, a freelancer, or a sole trader
         show_options:
         - 'Yes'
         - Not sure
         items:
         - id: '0068'
-          text: What to do if you’re self-employed and getting less or no work
+          text: What to do if you’re self-employed, a freelancer, or a sole trader and you’re getting less or no work
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-self-employed-and-getting-less-work-or-no-work
         - id: '0124'
           text: Find financial support for your business

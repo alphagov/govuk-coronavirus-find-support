@@ -1142,6 +1142,9 @@ en:
           text: Advice and guidance on where you can get help with your mental health
             if you’re a young person (Young Minds)
           href: https://youngminds.org.uk/find-help/looking-after-yourself/coronavirus-and-mental-health/
+        - id: '2000'
+          text: Register for phone calls from a volunteer if you’re shielding, isolating, a carer, or having less contact with other people (NHS Volunteer Responders)
+          href: https://nhsvolunteerresponders.org.uk/services
         support_and_advice_items:
         - id: '0105'
           text: Looking after your mental health during coronavirus (Public Health England)
@@ -1149,6 +1152,9 @@ en:
         - id: '0107'
           text: Things you can do to support the mental health and wellbeing of children and young people (Public Health England)
           href: https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak
+        - id: '2001'
+          text: Get advice from Age UK if you’re an older person, their carer, their family or friend
+          href: https://www.ageuk.org.uk/services/age-uk-advice-line/
         - id: '0108'
           text: Additional information about taking care of your mental health (NI
             direct)

@@ -622,12 +622,6 @@ en:
           - England
           - Wales
           - Northern Ireland
-        - id: '0033'
-          text: Find out if you can apply for Best Start Grant and Best Start Foods
-            if you have a child (mygov.scot)
-          href: https://www.mygov.scot/best-start-grant-best-start-foods/
-          show_to_nations:
-          - Scotland
         - id: '0034'
           text: Find out if you’re eligible for the Scottish Welfare Fund (mygov.scot)
           href: https://www.mygov.scot/scottish-welfare-fund/
@@ -668,7 +662,7 @@ en:
             delivery, or get food online.
         - id: '0041'
           text: Find out if you can get help from a volunteer through the NHS Volunteer Responders programme
-          href: https://volunteering.royalvoluntaryservice.org.uk/nhs-volunteer-responders-portal/isolating
+          href: https://nhsvolunteerresponders.org.uk/services
         - id: '0040'
           text: Find out how you can pay for your shopping safely if someone else is shopping for you
           href: https://www.gov.uk/guidance/coronavirus-covid-19-accessing-food-and-essential-supplies

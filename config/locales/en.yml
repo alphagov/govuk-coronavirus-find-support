@@ -822,8 +822,11 @@ en:
         - 'Yes'
         items:
         - id: '0064'
-          text: What to do if you’re employed but cannot work
+          text: What to do if you’re employed but cannot work, for example if you’re ill
           href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
+        - id: '1000'
+          text: Your employment rights if you’re self-isolating after returning to the UK
+          href: https://www.gov.uk/guidance/self-isolating-after-returning-to-the-uk-your-employment-rights
         - id: '0067'
           text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
             Government)

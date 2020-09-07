@@ -302,7 +302,7 @@ en:
             custom_select_error: Select if you’ve been made redundant, put on
               temporary leave (on furlough), or you’re out of work
       going_in_to_work:
-        title: Going in to work
+        title: Being worried about working, or off work because you’re self-isolating
         questions:
           worried_about_work:
             title: Are you worried about going in to work?

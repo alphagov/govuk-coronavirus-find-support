@@ -100,9 +100,9 @@ module FillInTheFormSteps
   end
 
   def and_is_off_work_because_ill_or_self_isolating
-    expect(page).to have_content(I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.title"))
+    expect(page).to have_content(I18n.t("coronavirus_form.groups.going_in_to_work.questions.are_you_off_work_ill.title"))
 
-    choose I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label")
+    choose I18n.t("coronavirus_form.groups.going_in_to_work.questions.are_you_off_work_ill.options.option_yes.label")
 
     click_on I18n.t("coronavirus_form.submit_and_next")
   end

@@ -15,8 +15,8 @@ RSpec.feature "Fill in the find support form" do
       and_is_unable_to_get_food
       and_is_not_self_employed_or_a_sole_trader
       and_has_not_been_told_to_stop_working
-      and_is_off_work_because_ill_or_self_isolating
       and_is_worried_about_going_to_work_because_of_living_with_someone_vulnerable
+      and_is_off_work_because_ill_or_self_isolating
       and_has_nowhere_to_live
       and_has_been_evicted
       and_is_worried_about_mental_health

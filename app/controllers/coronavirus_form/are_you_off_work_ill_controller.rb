@@ -36,6 +36,6 @@ private
   end
 
   def group
-    "being_unemployed"
+    "going_in_to_work"
   end
 end

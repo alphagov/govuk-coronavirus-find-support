@@ -26,13 +26,11 @@ RSpec.describe ResultsHelper, type: :helper do
       session.merge!({
         "selected_groups": %i[being_unemployed],
         "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
-        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
         "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
         "nation": I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label"),
       })
       result_array = [
         I18n.t("results_link.being_unemployed.have_you_been_made_unemployed.title"),
-        I18n.t("results_link.being_unemployed.are_you_off_work_ill.title"),
         I18n.t("results_link.being_unemployed.self_employed.title"),
       ]
       expect(result_groups(session)[:being_unemployed][:questions].map { |q| q[:title] }).to eq(result_array)
@@ -42,7 +40,7 @@ RSpec.describe ResultsHelper, type: :helper do
       session.merge!({
         "selected_groups": %i[being_unemployed getting_food],
         "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
-        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_yes.label"),
+        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.going_in_to_work.questions.are_you_off_work_ill.options.option_yes.label"),
         "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
         "afford_food": I18n.t("coronavirus_form.groups.getting_food.questions.afford_food.options.option_no.label"),
         "nation": I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label"),
@@ -56,7 +54,7 @@ RSpec.describe ResultsHelper, type: :helper do
       session.merge!({
         "selected_groups": %i[being_unemployed],
         "have_you_been_made_unemployed": I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.options.option_might_be.label"),
-        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.being_unemployed.questions.are_you_off_work_ill.options.option_no.label"),
+        "are_you_off_work_ill": I18n.t("coronavirus_form.groups.going_in_to_work.questions.are_you_off_work_ill.options.option_no.label"),
         "self_employed": I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.options.option_yes.label"),
         "nation": I18n.t("coronavirus_form.groups.location.questions.nation.options.option_england.label"),
       })

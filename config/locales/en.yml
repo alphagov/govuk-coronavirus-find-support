@@ -1124,31 +1124,26 @@ en:
         - Not sure
         items:
         - id: '0103'
-          text: Where to get urgent help for mental health (NHS)
+          text: Getting urgent help for mental health issues (NHS)
           href: https://www.nhs.uk/using-the-nhs/nhs-services/mental-health-services/dealing-with-a-mental-health-crisis-or-emergency/
-        - id: '0104'
-          text: How to manage specific mental health needs (Mind)
-          href: https://www.mind.org.uk/information-support/coronavirus/coronavirus-and-your-wellbeing
         - id: '0106'
-          text: Get advice on looking after your mental health during coronavirus (NHS)
+          text: Coronavirus and wellbeing (NHS)
           href: https://www.nhs.uk/oneyou/every-mind-matters
+        - id: '0104'
+          text: Coping with mental health problems during coronavirus (Mind)
+          href: https://www.mind.org.uk/information-support/coronavirus/coping-with-mental-health-problems-during-coronavirus/
+        - id: '0144'
+          text: Managing feelings about lockdown easing (Mind)
+          href: https://www.mind.org.uk/information-support/coronavirus/managing-feelings-about-lockdown-easing/
         - id: '0106'
           text: Help for mental health problems if you're LGBT (NHS)
           href: https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-issues-if-you-are-gay-lesbian-or-bisexual
         - id: '0116'
-          text: Advice and guidance on where you can get help with your mental health
-            if you’re a young person (Young Minds)
+          text: Getting help with your mental health if you’re a young person (Young Minds)
           href: https://youngminds.org.uk/find-help/looking-after-yourself/coronavirus-and-mental-health/
         - id: '2000'
           text: Register for phone calls from a volunteer if you’re shielding, isolating, a carer, or having less contact with other people (NHS Volunteer Responders)
           href: https://nhsvolunteerresponders.org.uk/services
-        support_and_advice_items:
-        - id: '0105'
-          text: Looking after your mental health during coronavirus (Public Health England)
-          href: https://www.gov.uk/government/publications/covid-19-guidance-for-the-public-on-mental-health-and-wellbeing
-        - id: '0107'
-          text: Things you can do to support the mental health and wellbeing of children and young people (Public Health England)
-          href: https://www.gov.uk/government/publications/covid-19-guidance-on-supporting-children-and-young-peoples-mental-health-and-wellbeing/guidance-for-parents-and-carers-on-supporting-children-and-young-peoples-mental-health-and-wellbeing-during-the-coronavirus-covid-19-outbreak
         - id: '2001'
           text: Get advice from Age UK if you’re an older person, their carer, their family or friend
           href: https://www.ageuk.org.uk/services/age-uk-advice-line/
@@ -1171,7 +1166,7 @@ en:
           show_to_nations:
           - Scotland
         - id: '0117'
-          text: Advice on supporting children’s mental health during coronavirus (Young
+          text: Supporting children’s mental health during coronavirus (Young
             Minds)
           href: https://youngminds.org.uk/find-help/for-parents/supporting-your-child-during-the-coronavirus-pandemic/
   feedback:

@@ -4,7 +4,7 @@ RSpec.describe "worried-about-work" do
   let(:selected_option_text) { I18n.t("coronavirus_form.groups.going_in_to_work.questions.worried_about_work.options.#{selected_option}.label") }
 
   before do
-    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[worried_about_work feel_safe])
+    allow_any_instance_of(QuestionsHelper).to receive(:questions_to_ask).and_return(%w[worried_about_work are_you_off_work_ill feel_safe])
   end
 
   describe "GET /worried-about-work" do
@@ -67,7 +67,7 @@ RSpec.describe "worried-about-work" do
     it "redirects to the next question" do
       post worried_about_work_path, params: { worried_about_work: selected_option_text }
 
-      expect(response).to redirect_to(feel_safe_path)
+      expect(response).to redirect_to(are_you_off_work_ill_path)
     end
 
     it "shows an error when no radio button selected" do

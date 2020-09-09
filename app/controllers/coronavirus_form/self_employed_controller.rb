@@ -30,9 +30,9 @@ private
 
   def update_questions_to_ask
     session[:questions_to_ask] = if I18n.t("coronavirus_form.groups.being_unemployed.questions.self_employed.skip_next_question_options").include? @form_responses[:self_employed]
-                                   remove_questions(%w[have_you_been_made_unemployed are_you_off_work_ill])
+                                   remove_questions(%w[have_you_been_made_unemployed])
                                  else
-                                   add_questions(%w[have_you_been_made_unemployed are_you_off_work_ill], controller_name)
+                                   add_questions(%w[have_you_been_made_unemployed], controller_name)
                                  end
   end
 

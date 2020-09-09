@@ -73,7 +73,7 @@ RSpec.describe "self-employed" do
     it "redirects to the next question for no response" do
       post self_employed_path, params: { self_employed: negative_response }
 
-      expect(session[:questions_to_ask]).to eq(%w[self_employed have_you_been_made_unemployed are_you_off_work_ill feel_safe])
+      expect(session[:questions_to_ask]).to eq(%w[self_employed have_you_been_made_unemployed feel_safe])
       expect(response).to redirect_to(have_you_been_made_unemployed_path)
     end
 

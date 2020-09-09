@@ -301,18 +301,8 @@ en:
             - Yes, I’ve been put on temporary leave (on furlough), or might be soon
             custom_select_error: Select if you’ve been made redundant, put on
               temporary leave (on furlough), or you’re out of work
-          are_you_off_work_ill:
-            title: Are you off work because you’re ill or self-isolating?
-            title_caption: Going in to work
-            options:
-              option_yes:
-                label: 'Yes'
-              option_no:
-                label: 'No'
-            custom_select_error: Select yes if you’re off work because you’re ill
-              or self-isolating
       going_in_to_work:
-        title: Going in to work
+        title: Being worried about working, or off work because you’re self-isolating
         questions:
           worried_about_work:
             title: Are you worried about going in to work?
@@ -324,6 +314,15 @@ en:
               not_sure:
                 label: Not sure
             custom_select_error: Select yes if you’re worried about going in to work
+          are_you_off_work_ill:
+            title: Are you off work because you’re ill or self-isolating?
+            options:
+              option_yes:
+                label: 'Yes'
+              option_no:
+                label: 'No'
+            custom_select_error: Select yes if you’re off work because you’re ill
+              or self-isolating
       somewhere_to_live:
         title: Having somewhere to live
         questions:
@@ -816,32 +815,6 @@ en:
           href: https://www.mygov.scot/help-redundancy/
           show_to_nations:
           - Scotland
-      are_you_off_work_ill:
-        title: If you’re off work because you’re ill or self isolating
-        show_options:
-        - 'Yes'
-        items:
-        - id: '0064'
-          text: What to do if you’re employed but cannot work, for example if you’re ill
-          href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
-        - id: '1000'
-          text: Your employment rights if you’re self-isolating after returning to the UK
-          href: https://www.gov.uk/guidance/self-isolating-after-returning-to-the-uk-your-employment-rights
-        - id: '0067'
-          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
-            Government)
-          href: https://gov.wales/discretionary-assistance-fund-daf
-          show_to_nations:
-          - Wales
-        support_and_advice_items:
-        - id: '0066'
-          text: Find out about the help you can get if you’re self-employed or work
-            in the gig economy (Money Advice Service)
-          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you
-        - id: '0065'
-          text: Find out about getting statutory sick pay if you’re self-isolating
-            (Acas)
-          href: https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay
       self_employed:
         title: If you’re self employed, a freelancer, or a sole trader
         show_options:
@@ -991,6 +964,32 @@ en:
         - id: '0084'
           text: Your rights if you think you might have been discriminated against at work 
           href: https://www.gov.uk/discrimination-your-rights/discrimination-at-work
+      are_you_off_work_ill:
+        title: If you’re off work because you’re ill or self isolating
+        show_options:
+        - 'Yes'
+        items:
+        - id: '0064'
+          text: What to do if you’re employed but cannot work, for example if you’re ill
+          href: https://www.gov.uk/guidance/coronavirus-covid-19-what-to-do-if-youre-employed-and-cannot-work
+        - id: '1000'
+          text: Your employment rights if you’re self-isolating after returning to the UK
+          href: https://www.gov.uk/guidance/self-isolating-after-returning-to-the-uk-your-employment-rights
+        - id: '0067'
+          text: Check if you’re eligible for the Discretionary Assistance Fund (Welsh
+            Government)
+          href: https://gov.wales/discretionary-assistance-fund-daf
+          show_to_nations:
+          - Wales
+        support_and_advice_items:
+        - id: '0066'
+          text: Find out about the help you can get if you’re self-employed or work
+            in the gig economy (Money Advice Service)
+          href: https://www.moneyadviceservice.org.uk/en/articles/coronavirus-what-it-means-for-you
+        - id: '0065'
+          text: Find out about getting statutory sick pay if you’re self-isolating
+            (Acas)
+          href: https://www.acas.org.uk/coronavirus/self-isolation-and-sick-pay
     somewhere_to_live:
       have_somewhere_to_live:
         title: If you do not have somewhere to live or might become homeless

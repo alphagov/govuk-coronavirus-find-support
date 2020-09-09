@@ -21,20 +21,11 @@ class CoronavirusForm::HaveYouBeenMadeUnemployedController < ApplicationControll
       render controller_path
     else
       update_session_store
-      update_questions_to_ask
       redirect_to polymorphic_url(next_question(controller_name))
     end
   end
 
 private
-
-  def update_questions_to_ask
-    session[:questions_to_ask] = if I18n.t("coronavirus_form.groups.being_unemployed.questions.have_you_been_made_unemployed.skip_next_question_options").include? @form_responses[:have_you_been_made_unemployed]
-                                   remove_questions(%w[are_you_off_work_ill])
-                                 else
-                                   add_questions(%w[are_you_off_work_ill], controller_name)
-                                 end
-  end
 
   def update_session_store
     session[:have_you_been_made_unemployed] = @form_responses[:have_you_been_made_unemployed]

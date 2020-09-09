@@ -53,10 +53,6 @@ Rails.application.routes.draw do
     get "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#show"
     post "/have-you-been-made-unemployed", to: "have_you_been_made_unemployed#submit"
 
-    # Question: Are you off work because you're ill or self-isolating?
-    get "/are-you-off-work-ill", to: "are_you_off_work_ill#show"
-    post "/are-you-off-work-ill", to: "are_you_off_work_ill#submit"
-
     # Question: Are you self-employed or a sole trader?
     get "/self-employed", to: "self_employed#show"
     post "/self-employed", to: "self_employed#submit"
@@ -64,6 +60,10 @@ Rails.application.routes.draw do
     # Question: Are you worried about going into work?
     get "/worried-about-work", to: "worried_about_work#show"
     post "/worried-about-work", to: "worried_about_work#submit"
+
+    # Question: Are you off work because you're ill or self-isolating?
+    get "/are-you-off-work-ill", to: "are_you_off_work_ill#show"
+    post "/are-you-off-work-ill", to: "are_you_off_work_ill#submit"
 
     # Question: Have you got somewhere to live?
     get "/have-somewhere-to-live", to: "have_somewhere_to_live#show"

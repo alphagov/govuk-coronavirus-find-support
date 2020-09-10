@@ -925,7 +925,7 @@ en:
           show_to_nations:
           - Northern Ireland
         - id: '0084'
-          text: You might have a right to request flexible working, for example working from home - find out how you can make a request (ACAS)
+          text: You might have a right to request flexible working, for example working from home - find out how you can make a request (Acas)
           href: https://www.acas.org.uk/making-a-flexible-working-request
         - id: '0084'
           text: Find out if you can take time off for your family and dependents, and what to do if you have problems taking time off
@@ -959,7 +959,7 @@ en:
           show_to_nations:
           - Scotland
         - id: '0084'
-          text: Advice on returning to work after being off (ACAS)
+          text: Advice on returning to work after being off (Acas)
           href: https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence
         - id: '0084'
           text: Your rights if you think you might have been discriminated against at work 

@@ -200,7 +200,7 @@ en:
                 label: Scotland
               option_wales:
                 label: Wales
-              optopn_northern_ireland:
+              option_northern_ireland:
                 label: Northern Ireland
             custom_select_error: Select where you want to find information about
       filter_questions:
@@ -378,11 +378,11 @@ en:
         <p class="govuk-body">Based on your answers, there’s no specific information for you in this service at the moment. It will be updated regularly.</p>
 
         <p class="govuk-body"><a href="https://www.gov.uk/coronavirus/worker-support" class="govuk-link">Financial help and information on staying safe at work</a></p>
-        
+
         <p class="govuk-body"><a href="https://www.gov.uk/coronavirus/business-support" class="govuk-link">Information for businesses on getting financial help and keeping the workplace safe</a></p>
-        
+
         <p class="govuk-body"><a href="https://www.gov.uk/coronavirus/education-and-childcare" class="govuk-link">Information for teachers, school leaders, carers, parents and students</a></p>
-        
+
         <p class="govuk-body"><a href="https://www.gov.uk/coronavirus-local-help" class="govuk-link">Find out if you can get help from your local council</a></p>
       no_results_england: <p class="govuk-body"><a href="https://www.citizensadvice.org.uk/health/coronavirus-what-it-means-for-you/"
         class="govuk-link">Find information about what you can do from Citizens Advice</a></p>
@@ -703,10 +703,10 @@ en:
           text: Your rights if you’ve been made redundant, including information on how much redundancy pay you can get and your notice period
           href: https://www.gov.uk/redundancy-your-rights
         - id: '0301'
-          text: Your rights if you think you might have been discriminated against at work 
+          text: Your rights if you think you might have been discriminated against at work
           href: https://www.gov.uk/discrimination-your-rights/discrimination-at-work
         - id: '0301'
-          text: Find out what rights you have if you're pregnant 
+          text: Find out what rights you have if you're pregnant
           href: https://www.gov.uk/working-when-pregnant-your-rights
         - id: '0047'
           text: What to do if your employer has ended your employment but you have not been made redundant
@@ -962,7 +962,7 @@ en:
           text: Advice on returning to work after being off (Acas)
           href: https://www.acas.org.uk/absence-from-work/returning-to-work-after-absence
         - id: '0084'
-          text: Your rights if you think you might have been discriminated against at work 
+          text: Your rights if you think you might have been discriminated against at work
           href: https://www.gov.uk/discrimination-your-rights/discrimination-at-work
       are_you_off_work_ill:
         title: If you’re off work because you’re ill or self isolating

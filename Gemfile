@@ -42,7 +42,7 @@ group :development, :test do
   gem "dotenv-rails", "~> 2.7.6"
   gem "foreman", "~> 0.87.1"
   gem "google-api-client"
-  gem "govuk_test", "~> 1.0"
+  gem "govuk_test", "~> 2.0"
   gem "jasmine", "~> 3.6.0"
   gem "jasmine_selenium_runner", "~> 3.0.0", require: false
   gem "pry", "~> 0.13.1"

@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 
   get "/", to: redirect("https://www.gov.uk/find-coronavirus-support")
 
+  if Rails.env.production?
+    get "*everything", to: redirect("https://www.gov.uk/find-coronavirus-support")
+  end
+
   scope module: "coronavirus_form" do
     first_question = "/need-help-with"
 

@@ -1,4 +1,12 @@
-# GOV.UK coronavirus - find support
+# GOV.UK coronavirus - find support (ARCHIVED ⚠️)
+
+This repository is the old Coronavirus Find Support service - https://find-coronavirus-support.service.gov.uk.
+
+**It is no longer deployed or in active development.**
+
+The service was migrated to [Smart Answers](https://github.com/alphagov/smart-answers/blob/master/lib/smart_answer_flows/find-coronavirus-support.rb) and is now available here: https://www.gov.uk/find-coronavirus-support
+
+---
 
 ![Run tests](https://github.com/alphagov/govuk-coronavirus-find-support/workflows/Run%20tests/badge.svg)
 
